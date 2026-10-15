@@ -1,0 +1,11 @@
+{
+  "name": "mon-carnet-rando",
+  "version": "1.0.0",
+  "private": true,
+  "type": "module",
+  "description": "Carnet de randonnées personnel, compatible GitHub Pages, sans dépendance.",
+  "scripts": {
+    "test": "node --test tests/*.test.mjs",
+    "check": "node scripts/check.mjs"
+  }
+}

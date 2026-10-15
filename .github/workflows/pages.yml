@@ -1,0 +1,43 @@
+name: Publier le carnet sur GitHub Pages
+on:
+  push:
+    branches: [main]
+  workflow_dispatch:
+permissions:
+  contents: read
+  pages: write
+  id-token: write
+concurrency:
+  group: pages
+  cancel-in-progress: false
+jobs:
+  verify-and-deploy:
+    runs-on: ubuntu-latest
+    environment:
+      name: github-pages
+      url: ${{ steps.deployment.outputs.page_url }}
+    steps:
+      - name: Récupérer le dépôt
+        uses: actions/checkout@v6
+      - name: Installer Node pour les vérifications
+        uses: actions/setup-node@v4
+        with:
+          node-version: '22'
+      - name: Vérifier les fonctions et les fichiers
+        run: |
+          npm test
+          npm run check
+      - name: Préparer les seuls fichiers publics
+        run: |
+          mkdir _site
+          cp index.html app.js core.js data.js styles.css sw.js manifest.webmanifest .nojekyll _site/
+          cp -R assets _site/
+      - name: Configurer Pages
+        uses: actions/configure-pages@v5
+      - name: Préparer les fichiers du site
+        uses: actions/upload-pages-artifact@v4
+        with:
+          path: _site
+      - name: Publier
+        id: deployment
+        uses: actions/deploy-pages@v4

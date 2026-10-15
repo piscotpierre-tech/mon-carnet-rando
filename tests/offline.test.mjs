@@ -1,0 +1,55 @@
+import test from 'node:test';
+import assert from 'node:assert/strict';
+import vm from 'node:vm';
+import fs from 'node:fs';
+
+function harness(){
+  const events={},stores=new Map();let offline=false;
+  const address=x=>typeof x==='string'?x:x.url;
+  const caches={
+    async open(name){if(!stores.has(name))stores.set(name,new Map());const store=stores.get(name);return {
+      async addAll(urls){for(const u of urls)store.set(address(u),new Response('shell:'+address(u)));},
+      async match(request){return store.get(address(request))?.clone();},
+      async put(request,response){store.set(address(request),response.clone());},
+    };},
+    async keys(){return [...stores.keys()];},async delete(name){return stores.delete(name);},
+  };
+  const self={location:{href:'https://exemple.github.io/mon-carnet-rando/sw.js'},addEventListener:(name,fn)=>events[name]=fn,skipWaiting:()=>Promise.resolve(),clients:{claim:()=>Promise.resolve()}};
+  const fetch=async request=>{if(offline)throw new Error('Offline');const r=new Response('network:'+address(request));Object.defineProperty(r,'type',{value:'basic'});return r;};
+  vm.runInNewContext(fs.readFileSync(new URL('../sw.js',import.meta.url),'utf8'),{self,caches,URL,fetch,Response});
+  return {stores,caches,offline(value){offline=value;},async lifecycle(name){let promise;events[name]({waitUntil:p=>promise=p});await promise;},async request(url,{mode='cors',method='GET'}={}){let promise;events.fetch({request:{url,mode,method},respondWith:p=>promise=p});return promise;}};
+}
+
+test('le cache de l’application fonctionne dans un sous-dossier GitHub Pages',async()=>{
+  const h=harness();await h.lifecycle('install');
+  const keys=[...h.stores.get('pierre-rando-v1-shell').keys()];
+  assert(keys.includes('https://exemple.github.io/mon-carnet-rando/index.html'));
+  assert(keys.every(k=>k.startsWith('https://exemple.github.io/mon-carnet-rando/')));
+  h.offline(true);
+  const r=await h.request('https://exemple.github.io/mon-carnet-rando/',{mode:'navigate'});
+  assert.match(await r.text(),/index.html/);
+});
+test('une carte ouverte reste accessible après la perte du réseau',async()=>{
+  const h=harness();await h.lifecycle('install');
+  const url='https://exemple.github.io/mon-carnet-rando/assets/maps/19.webp';
+  const first=await h.request(url);assert.equal(await first.text(),'network:'+url);
+  h.offline(true);const second=await h.request(url);assert.equal(await second.text(),'network:'+url);
+});
+test('le code de l’application se rafraîchit en ligne et retombe sur sa copie sans réseau',async()=>{
+  const h=harness();await h.lifecycle('install');
+  const url='https://exemple.github.io/mon-carnet-rando/app.js';
+  const live=await h.request(url);assert.equal(await live.text(),'network:'+url);
+  h.offline(true);
+  const cached=await h.request(url);assert.equal(await cached.text(),'network:'+url);
+});
+test('le service worker laisse tranquilles les autres dépôts et sites externes',async()=>{
+  const h=harness();
+  assert.equal(await h.request('https://exemple.github.io/forge/index.html'),undefined);
+  assert.equal(await h.request('https://www.google.com/maps/'),undefined);
+  assert.equal(await h.request('https://exemple.github.io/mon-carnet-rando/',{method:'POST'}),undefined);
+});
+test('l’activation nettoie ses anciennes versions en préservant les caches d’autres applications',async()=>{
+  const h=harness();await h.caches.open('forge-cache-v9');await h.caches.open('pierre-rando-v0-shell');await h.caches.open('pierre-rando-v1-assets');
+  await h.lifecycle('activate');
+  assert(h.stores.has('forge-cache-v9'));assert(h.stores.has('pierre-rando-v1-assets'));assert(!h.stores.has('pierre-rando-v0-shell'));
+});

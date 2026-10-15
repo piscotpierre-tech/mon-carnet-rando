@@ -1,0 +1,24 @@
+import fs from 'node:fs';
+import path from 'node:path';
+import assert from 'node:assert/strict';
+import {fileURLToPath} from 'node:url';
+import {ROUTES} from '../data.js';
+const root=path.resolve(path.dirname(fileURLToPath(import.meta.url)),'..');
+const html=fs.readFileSync(path.join(root,'index.html'),'utf8');
+const app=fs.readFileSync(path.join(root,'app.js'),'utf8');
+const ids=[...html.matchAll(/\bid="([^"]+)"/g)].map(m=>m[1]);
+assert.equal(ids.length,new Set(ids).size,'Duplicate HTML id');
+const refs=[...app.matchAll(/\$\('#([\w-]+)'\)/g)].map(m=>m[1]);
+const dynamic=['route-cache-status','route-timer','timer-actions'];
+for(const id of refs)assert(ids.includes(id)||dynamic.includes(id),'Missing element: '+id);
+let total=0;
+for(const r of ROUTES){for(const key of ['map','thumb']){const p=path.join(root,r[key]);assert(fs.existsSync(p),'Missing asset: '+r[key]);assert(fs.statSync(p).size>1000);total+=fs.statSync(p).size;}}
+for(const match of html.matchAll(/(?:src|href)="\.\/([^"#]+)"/g))assert(fs.existsSync(path.join(root,match[1])),'Missing HTML asset: '+match[1]);
+const manifest=JSON.parse(fs.readFileSync(path.join(root,'manifest.webmanifest'),'utf8'));
+assert.equal(manifest.scope,'./');assert.equal(manifest.start_url,'./#explorer');
+for(const icon of manifest.icons)assert(fs.existsSync(path.join(root,icon.src)));
+for(const name of ['app.js','core.js','data.js','styles.css','index.html','manifest.webmanifest'])assert(fs.readFileSync(path.join(root,'sw.js'),'utf8').includes(name),'Missing shell asset: '+name);
+assert(!/<script[^>]+src="https?:/i.test(html),'Unexpected external script');
+assert(!/<link[^>]+href="https?:/i.test(html),'Unexpected external stylesheet');
+assert(!/\/assets\//.test(html.replaceAll('./assets/','')),'Assets must use relative paths');
+console.log(`OK : ${ROUTES.length} circuits, ${ROUTES.length*2} images, ${ids.length} identifiants HTML uniques. Cartes et aperçus : ${(total/1e6).toFixed(2)} Mo. Chemins relatifs GitHub Pages vérifiés.`);
