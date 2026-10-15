@@ -53,3 +53,16 @@ test('l’activation nettoie ses anciennes versions en préservant les caches d�
   await h.lifecycle('activate');
   assert(h.stores.has('forge-cache-v9'));assert(h.stores.has('pierre-rando-v1-assets'));assert(!h.stores.has('pierre-rando-v0-shell'));
 });
+
+test('les traces téléchargées restent lisibles sans réseau et Leaflet est embarqué',async()=>{
+  const h=harness();await h.lifecycle('install');
+  for(const filename of ['31.geojson','31.gpx']) {
+    const url='https://exemple.github.io/mon-carnet-rando/assets/traces/'+filename;
+    const assets=await h.caches.open('pierre-rando-v1-assets');await assets.put(url,new Response('saved:'+filename));
+    h.offline(true);assert.equal(await (await h.request(url)).text(),'saved:'+filename);
+  }
+  const shell=h.stores.get('pierre-rando-v1-shell');
+  assert(shell.has('https://exemple.github.io/mon-carnet-rando/assets/vendor/leaflet/leaflet.js'));
+  assert(shell.has('https://exemple.github.io/mon-carnet-rando/assets/vendor/leaflet/leaflet.css'));
+  assert.equal(await h.request('https://tile.openstreetmap.org/13/4070/2800.png'),undefined);
+});

@@ -1,13 +1,15 @@
 # Mon carnet rando - Pierre
 
-Application personnelle de randonnée, autonome et compatible GitHub Pages. Les 28 cartes viennent du fichier fourni **Plan Balisage GTM.PDF**, document de travail de la FFRandonnée Manche du 10 février 2022.
+Application personnelle de randonnée, autonome et compatible GitHub Pages. 48 circuits couvrent les cinq départements normands : 28 cartes viennent du fichier fourni **Plan Balisage GTM.PDF**, document de travail de la FFRandonnée Manche du 10 février 2022, complétés par 20 circuits et GPX officiels consultés le 15 octobre 2026.
 
 ## Ce qui fonctionne
 
-- Recherche par nom, commune et numéro, sans tenir compte des accents.
+- Filtre par département (Calvados, Eure, Manche, Orne, Seine-Maritime).
+- Recherche par nom, commune, département et numéro, sans tenir compte des accents.
 - Filtres jusqu’à 6 km, plus de 6 à 10 km, plus de 10 km ; plusieurs tris.
 - Favoris et repérage des circuits déjà parcourus.
-- Fiches et cartes agrandissables, déplacement de la carte après zoom.
+- Fiches et cartes agrandissables ; 20 nouveaux GPX consultables sur une carte Leaflet avec fond OpenStreetMap en ligne.
+- Départs, durées, difficultés et dénivelés lorsqu’ils sont fournis ; liens vers les PDF officiels et téléchargement GPX.
 - Recherche du lieu de départ dans Google Maps, sauf départs ambigus.
 - Chronomètre avec pause, reprise et conservation au rechargement.
 - Journal : date, kilomètres réels, durée, note et souvenir ; modification et suppression.
@@ -52,12 +54,18 @@ Pour un développement local classique, servir le dossier avec un serveur HTTP l
 
 ## Sources et limites des cartes
 
-Voir [SOURCES.md](SOURCES.md). Les cartes ne sont pas des traces géoréférencées. Leurs tracés n’ont pas été redessinés. Les zones blanches sous les cartes ont été retirées ; la carte, sa légende, les logos et les mentions d’origine sont conservés. Cette adaptation personnelle ne prétend à aucune affiliation avec les organismes figurant sur les cartes.
+Voir [SOURCES.md](SOURCES.md). Les 28 cartes GTM sont des images non géoréférencées, dont les tracés n’ont pas été redessinés. Les 20 nouveaux parcours emploient les coordonnées des GPX officiels : aperçus SVG sans fond et GeoJSON interactif. Les PDF externes ne sont pas réhébergés. Les zones blanches sous les cartes ont été retirées ; la carte, sa légende, les logos et les mentions d’origine sont conservés. Cette adaptation personnelle ne prétend à aucune affiliation avec les organismes figurant sur les cartes.
 
-L’application ne donne pas un statut actuel d’ouverture des chemins. Les distances proviennent du document de 2022, à l’exception de la précision expliquée pour le circuit 27. Aucun dénivelé ou niveau de difficulté n’est inventé.
+L’application ne donne pas un statut actuel d’ouverture des chemins. Les distances d’origine proviennent du document de 2022, à l’exception de la précision expliquée pour le circuit 27. Les nouvelles distances proviennent des fiches officielles citées dans SOURCES.md. Aucun dénivelé ou niveau de difficulté n’est inventé.
 
 ## Vérification de cette livraison
 
-Les tests automatisés couvrent les filtres, les limites de distance, les données invalides, l’import avec conservation des sorties, les statistiques, le chronomètre et le service worker dans un sous-dossier GitHub Pages. Les contrôles de fichiers vérifient les 28 paires d’images, les chemins relatifs, les identifiants HTML et le manifeste.
+Les tests automatisés couvrent les filtres, les limites de distance, les données invalides, l’import avec conservation des sorties, les statistiques, le chronomètre et le service worker dans un sous-dossier GitHub Pages. Les contrôles de fichiers vérifient les 48 paires d’images et 20 traces GPX / GeoJSON, les chemins relatifs, les identifiants HTML et le manifeste.
 
 Les tests du service worker utilisent une simulation Node ; ils ne remplacent pas un test de navigateur. La vérification visuelle réelle à 360/390/430 pixels, l’installation sur Android et la disponibilité après arrêt complet du navigateur restent à exécuter sur la version publiée.
+
+## Fond de carte et hors ligne
+
+Leaflet 1.9.4 est embarqué dans assets/vendor/leaflet avec sa licence. Le fond © OpenStreetMap contributors est demandé seulement pendant la consultation interactive, avec attribution visible. Les tuiles externes sont exclues du service worker et du téléchargement hors ligne ; seul le cache HTTP normal du navigateur s’applique. Les aperçus, GPX et GeoJSON locaux peuvent être gardés hors ligne. Sans réseau, la carte interactive affiche le tracé seul.
+
+La clé de stockage et les identifiants des 28 anciens circuits sont conservés. Les exports JSON de l’ancienne version restent compatibles.

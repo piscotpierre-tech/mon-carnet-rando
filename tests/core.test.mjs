@@ -7,8 +7,8 @@ const ids=new Set(ROUTES.map(r=>r.id));
 const trip=(override={})=>({id:'sortie-1',routeId:19,date:'2026-10-15',distance:6.4,minutes:103,rating:5,note:'Belle lumière sur la baie.',...override});
 const filters={search:'',band:'all',sort:'featured'};
 
-test('28 fiches, sans inventer les cartes manquantes ni masquer les départs ambigus',()=>{
-  assert.equal(ROUTES.length,28);assert.equal(ids.size,28);
+test('48 fiches, dont les 28 d’origine, sans inventer les cartes manquantes ni masquer les départs ambigus',()=>{
+  assert.equal(ROUTES.length,48);assert.equal(ids.size,48);assert.equal(ROUTES.filter(r=>!r.isNew).length,28);
   assert.equal(ids.has(3),false);assert.equal(ids.has(11),false);
   assert.deepEqual(ROUTES.filter(r=>r.ambiguous).map(r=>r.id),[9,13,14,25]);
   assert.equal(ROUTES.find(r=>r.id===27).km,12.5);
@@ -19,12 +19,12 @@ test('recherche insensible aux accents, casse et espace périphérique',()=>{
   assert.deepEqual(new Set(result.map(r=>r.id)),new Set([2,23,24]));
   assert.equal(filterRoutes(ROUTES,{...filters,search:'endroit-inexistant'},emptyState()).length,0);
 });
-test('les tranches de distance partitionnent les 28 circuits, y compris les bornes 6 et 10 km',()=>{
+test('les tranches de distance partitionnent tous les circuits, y compris les bornes 6 et 10 km',()=>{
   const short=filterRoutes(ROUTES,{...filters,band:'short'},emptyState());
   const medium=filterRoutes(ROUTES,{...filters,band:'medium'},emptyState());
   const long=filterRoutes(ROUTES,{...filters,band:'long'},emptyState());
-  assert.equal(short.length+medium.length+long.length,28);
-  assert.equal(new Set([...short,...medium,...long].map(r=>r.id)).size,28);
+  assert.equal(short.length+medium.length+long.length,ROUTES.length);
+  assert.equal(new Set([...short,...medium,...long].map(r=>r.id)).size,ROUTES.length);
   assert(short.some(r=>r.km===6));assert(medium.some(r=>r.km===10));
   assert(!medium.some(r=>r.km===6));assert(!long.some(r=>r.km===10));
 });
@@ -67,4 +67,20 @@ test('les champs inconnus sont éliminés et le chrono d’une sauvegarde ne rem
 test('la date par défaut utilise les composantes locales, sans conversion UTC',()=>{
   const fake={getFullYear:()=>2026,getMonth:()=>9,getDate:()=>15};
   assert.equal(localDate(fake),'2026-10-15');
+});
+
+test('le filtre par département se combine à la recherche, aux distances et favoris',()=>{
+  for(const department of ['14','27','50','61','76']) {
+    const result=filterRoutes(ROUTES,{...filters,department},emptyState());
+    assert.equal(result.length,department==='50'?32:4);assert(result.every(r=>r.department===department));
+  }
+  assert.equal(filterRoutes(ROUTES,{...filters,search:'seine-maritime'},emptyState()).length,4);
+  assert.deepEqual(filterRoutes(ROUTES,{...filters,department:'14',band:'short'},emptyState()).map(r=>r.id),[33]);
+  assert.deepEqual(filterRoutes(ROUTES,{...filters,department:'61',onlyFavorites:true},{...emptyState(),favorites:[19,45]}).map(r=>r.id),[45]);
+});
+test('les anciennes données restent identiques et les nouveaux circuits peuvent être enregistrés',()=>{
+  const previous={...emptyState(),favorites:[1,19,27],trips:[trip()],timer:{routeId:19,elapsedMs:5600,startedAt:null}};
+  assert.deepEqual(validateState(previous,ROUTES),previous);
+  const next={...previous,favorites:[...previous.favorites,50],trips:[...previous.trips,trip({id:'nouveau',routeId:50})]};
+  assert.deepEqual(validateState(next,ROUTES),next);
 });

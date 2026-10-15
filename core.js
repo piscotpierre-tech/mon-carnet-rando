@@ -7,7 +7,8 @@ export const emptyState = () => ({version:1, favorites:[], trips:[], timer:null}
 export function filterRoutes(routes, filters, state) {
   const q = normalise(filters.search || '');
   const result = routes.filter(r => {
-    if (q && !normalise(`${r.name} ${r.town} ${r.start} ${r.id}`).includes(q)) return false;
+    if (q && !normalise(`${r.name} ${r.town} ${r.start} ${r.departmentName} ${r.department} ${r.id}`).includes(q)) return false;
+    if (filters.department && filters.department !== 'all' && r.department !== filters.department) return false;
     if (filters.band === 'short' && r.km > 6) return false;
     if (filters.band === 'medium' && (r.km <= 6 || r.km > 10)) return false;
     if (filters.band === 'long' && r.km <= 10) return false;
@@ -15,7 +16,7 @@ export function filterRoutes(routes, filters, state) {
     if (filters.onlyDone && !state.trips.some(t => t.routeId === r.id)) return false;
     return true;
   });
-  const featured = [19,27,20,24];
+  const featured = [19,31,35,39,43,47,27,20,24];
   const rank = r => featured.includes(r.id) ? featured.indexOf(r.id) : 100+r.id;
   return result.sort((a,b) => filters.sort === 'distance-asc' ? a.km-b.km || a.id-b.id : filters.sort === 'distance-desc' ? b.km-a.km || a.id-b.id : filters.sort === 'name' ? a.name.localeCompare(b.name,'fr') : rank(a)-rank(b));
 }

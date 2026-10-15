@@ -13,6 +13,15 @@ const dynamic=['route-cache-status','route-timer','timer-actions'];
 for(const id of refs)assert(ids.includes(id)||dynamic.includes(id),'Missing element: '+id);
 let total=0;
 for(const r of ROUTES){for(const key of ['map','thumb']){const p=path.join(root,r[key]);assert(fs.existsSync(p),'Missing asset: '+r[key]);assert(fs.statSync(p).size>1000);total+=fs.statSync(p).size;}}
+for(const r of ROUTES.filter(r=>r.isNew)) {
+  assert(r.official.startsWith('https://'),'Official source missing');
+  for(const key of ['trace','gpx'])assert(fs.existsSync(path.join(root,r[key])),'Missing trace: '+r[key]);
+  const geo=JSON.parse(fs.readFileSync(path.join(root,r.trace),'utf8'));
+  const segments=geo.geometry.type==='LineString'?[geo.geometry.coordinates]:geo.geometry.coordinates;
+  const points=segments.flat();assert.equal(points.length,r.tracePointCount);
+  assert(points.length>5);assert(points.every(([lon,lat])=>lon>-2.1&&lon<1.9&&lat>48&&lat<50.2),'Trace outside Normandy');
+  assert(!fs.readFileSync(path.join(root,r.map),'utf8').includes('https://'),'Preview must be self-contained');
+}
 for(const match of html.matchAll(/(?:src|href)="\.\/([^"#]+)"/g))assert(fs.existsSync(path.join(root,match[1])),'Missing HTML asset: '+match[1]);
 const manifest=JSON.parse(fs.readFileSync(path.join(root,'manifest.webmanifest'),'utf8'));
 assert.equal(manifest.scope,'./');assert.equal(manifest.start_url,'./#explorer');
