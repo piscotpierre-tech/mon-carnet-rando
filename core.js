@@ -78,21 +78,24 @@ export function validateTrip(value, routeIds) {
   return {id:value.id,routeId:value.routeId,date:value.date,distance:value.distance,minutes:value.minutes,rating:value.rating,note:value.note};
 }
 
-export function validateState(value, routes, {backup=false}={}) {
+export function validateState(value, routes, {backup=false,aliases={}}={}) {
   if (!value || typeof value !== 'object' || value.version !== 1) throw new Error('Ce format de sauvegarde n’est pas compatible.');
   if (backup && value.app !== APP_ID) throw new Error('Ce fichier ne vient pas de Mon carnet rando.');
   const ids = new Set(routes.map(r=>r.id));
-  if (!Array.isArray(value.favorites) || !value.favorites.every(id=>ids.has(id))) throw new Error('La liste des favoris contient un circuit inconnu.');
+  const canonical=id=>ids.has(id)?id:Number.isSafeInteger(id)&&Object.hasOwn(aliases,id)&&ids.has(aliases[id])?aliases[id]:id;
+  if (!Array.isArray(value.favorites)) throw new Error('La liste des favoris contient un circuit inconnu.');
+  const favorites=value.favorites.map(canonical);
+  if (!favorites.every(id=>ids.has(id))) throw new Error('La liste des favoris contient un circuit inconnu.');
   if (!Array.isArray(value.trips) || value.trips.length > 5000) throw new Error('La liste des sorties est invalide ou trop longue.');
-  const trips = value.trips.map(t=>validateTrip(t,ids));
+  const trips = value.trips.map(t=>validateTrip(t&&typeof t==='object'?{...t,routeId:canonical(t.routeId)}:t,ids));
   if (new Set(trips.map(t=>t.id)).size !== trips.length) throw new Error('Des identifiants de sorties sont en double.');
   let timer=null;
   if (!backup && value.timer) {
-    const t=value.timer;
+    const t={...value.timer,routeId:canonical(value.timer.routeId)};
     if (!ids.has(t.routeId) || !Number.isFinite(t.elapsedMs) || t.elapsedMs<0 || t.elapsedMs>604800000 || (t.startedAt!==null && (!Number.isFinite(t.startedAt) || t.startedAt<0 || t.startedAt>Date.now()+300000))) throw new Error('Le chronomètre enregistré est invalide.');
     timer={routeId:t.routeId,elapsedMs:t.elapsedMs,startedAt:t.startedAt};
   }
-  return {version:1,favorites:[...new Set(value.favorites)],trips,timer};
+  return {version:1,favorites:[...new Set(favorites)],trips,timer};
 }
 
 export function mergeBackup(current, incoming) {

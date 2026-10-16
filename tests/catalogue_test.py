@@ -157,5 +157,18 @@ class CatalogueTests(unittest.TestCase):
         for raw,expected in [(87.49999999999997,90),(87.50000000000003,90),(87.499,85),(87.501,90),(0,0)]:
             self.assertEqual(elevations.rounded_relief(raw),expected)
 
+    def test_deduplicated_sources_export_aliases_for_the_four_previously_integrable_ids(self):
+        ids=json.loads((Path(__file__).resolve().parent.parent/'catalogue/route-ids.json').read_text())
+        mappings=[('ORNE-GEOTREK-32647',2323,1622),('ORNE-GEOTREK-29',2298,1610),
+                  ('ORNE-GEOTREK-16',2282,1620),('ORNE-GEOTREK-32',2302,1611)]
+        for source,reserved,_ in mappings:self.assertEqual(ids[source],reserved)
+        report=[{'sourceId':source,'routeId':target} for source,_,target in mappings]
+        routes=[{'id':target} for _,_,target in mappings]
+        self.assertEqual(build.catalogue_aliases(report,ids,[{'id':19}],routes),
+                         {reserved:target for _,reserved,target in mappings})
+        self.assertEqual(build.catalogue_aliases(report,ids,[{'id':19}],[]),{})
+        with self.assertRaises(ValueError):
+            build.catalogue_aliases([{'sourceId':'protected','routeId':1622}],{'protected':19},[{'id':19}],routes)
+
 
 if __name__=='__main__':unittest.main()

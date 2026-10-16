@@ -1,5 +1,5 @@
-import {ROUTES,SOURCE_DATE} from './data.js?v=normandie-20261016';
-import {APP_ID,STORAGE_KEY,CACHE_NAME,emptyState,filterRoutes,validateState,validateTrip,mergeBackup,stats,timerElapsed,pauseTimer,resumeTimer,localDate,routeElevation,routeMapsUrl} from './core.js?v=normandie-20261016';
+import {ROUTES,SOURCE_DATE,CATALOGUE_ALIASES} from './data.js?v=normandie-20261016-r2';
+import {APP_ID,STORAGE_KEY,CACHE_NAME,emptyState,filterRoutes,validateState,validateTrip,mergeBackup,stats,timerElapsed,pauseTimer,resumeTimer,localDate,routeElevation,routeMapsUrl} from './core.js?v=normandie-20261016-r2';
 
 const $=s=>document.querySelector(s);
 const icon=name=>`<svg class="icon" aria-hidden="true"><use href="#i-${name}"/></svg>`;
@@ -19,7 +19,7 @@ let toastTimeout,visibleLimit=24,catalogueData=null,downloadCancel=false;
 function warning(message) {$('#storage-warning').textContent=message;$('#storage-warning').hidden=false;}
 try {
   previousRaw=localStorage.getItem(STORAGE_KEY);
-  if(previousRaw) state=validateState(JSON.parse(previousRaw),ROUTES);
+  if(previousRaw) state=validateState(JSON.parse(previousRaw),ROUTES,{aliases:CATALOGUE_ALIASES});
 } catch(error) {
   // Keep unreadable data intact before permitting any new write.
   if(previousRaw){
@@ -35,7 +35,7 @@ function toast(message) {
 function persist(next) {
   if(storageBlocked){toast('Enregistrement suspendu pour préserver tes anciennes données.');return false;}
   try {
-    const clean=validateState(next,ROUTES);
+    const clean=validateState(next,ROUTES,{aliases:CATALOGUE_ALIASES});
     localStorage.setItem(STORAGE_KEY,JSON.stringify(clean));
     state=clean;
     return true;
@@ -316,7 +316,7 @@ $('#import-file').addEventListener('change',async e=>{
   const file=e.target.files[0];e.target.value='';if(!file)return;
   try {
     if(file.size>2_000_000)throw new Error('Le fichier dépasse la limite de 2 Mo.');
-    pendingImport=validateState(JSON.parse(await file.text()),ROUTES,{backup:true});
+    pendingImport=validateState(JSON.parse(await file.text()),ROUTES,{backup:true,aliases:CATALOGUE_ALIASES});
     $('#info-title').textContent='Importer ma sauvegarde';
     const merged=mergeBackup(state,pendingImport),added=merged.trips.length-state.trips.length;
     $('#info-content').innerHTML=`<h3>Une sauvegarde reconnue</h3><p>Ce fichier contient ${pendingImport.trips.length} sortie(s) et ${pendingImport.favorites.length} favori(s).</p><p><strong>${added} nouvelle(s) sortie(s)</strong> seront ajoutées. Tes sorties actuelles seront conservées ; les doublons portant le même identifiant seront ignorés.</p><button class="button" data-action="confirm-import">Ajouter à mon carnet</button>`;
@@ -419,9 +419,9 @@ function onlineUI(){$('#offline-banner').hidden=navigator.onLine;}
 window.addEventListener('online',onlineUI);window.addEventListener('offline',onlineUI);
 window.addEventListener('beforeinstallprompt',e=>{e.preventDefault();installPrompt=e;$('#install-button').hidden=false;});
 window.addEventListener('appinstalled',()=>{$('#install-button').hidden=true;installPrompt=null;});
-window.addEventListener('storage',e=>{if(e.key!==STORAGE_KEY)return;try{state=e.newValue?validateState(JSON.parse(e.newValue),ROUTES):emptyState();renderCards();renderJournal();updateTimerUI();}catch{warning('Une autre fenêtre a enregistré des données illisibles. Ferme-la puis recharge le carnet.');}});
+window.addEventListener('storage',e=>{if(e.key!==STORAGE_KEY)return;try{state=e.newValue?validateState(JSON.parse(e.newValue),ROUTES,{aliases:CATALOGUE_ALIASES}):emptyState();renderCards();renderJournal();updateTimerUI();}catch{warning('Une autre fenêtre a enregistré des données illisibles. Ferme-la puis recharge le carnet.');}});
 for(const dialog of document.querySelectorAll('dialog'))dialog.addEventListener('click',e=>{if(e.target!==dialog)return;const r=dialog.getBoundingClientRect();if(e.clientX<r.left||e.clientX>r.right||e.clientY<r.top||e.clientY>r.bottom)dialog.close();});
-if('serviceWorker' in navigator && isSecureContext){navigator.serviceWorker.register('./sw.js?v=normandie-20261016',{updateViaCache:'none'}).catch(()=>toast('Le mode hors ligne n’a pas pu être activé. Le carnet reste utilisable en ligne.'));}
+if('serviceWorker' in navigator && isSecureContext){navigator.serviceWorker.register('./sw.js?v=normandie-20261016-r2',{updateViaCache:'none'}).catch(()=>toast('Le mode hors ligne n’a pas pu être activé. Le carnet reste utilisable en ligne.'));}
 setInterval(updateTimerUI,1000);
 $('#total-routes').textContent=ROUTES.length;
 $('#distance-range').textContent=`${fmt(Math.min(...ROUTES.map(r=>r.km)))} à ${fmt(Math.max(...ROUTES.map(r=>r.km)))}`;

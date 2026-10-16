@@ -1,4 +1,5 @@
-import {CATALOGUE_ROUTES} from './catalogue-routes.js?v=normandie-20261016';
+import {CATALOGUE_ROUTES,CATALOGUE_ALIASES} from './catalogue-routes.js?v=normandie-20261016-r2';
+export {CATALOGUE_ALIASES};
 export const ORIGINAL_ROUTES = [
   {
     "id": 1,

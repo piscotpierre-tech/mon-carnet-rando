@@ -195,6 +195,22 @@ def build(record):
     return result
 
 
+def catalogue_aliases(report, ids, originals, routes):
+    """Keep saved references usable when another source becomes canonical."""
+    original_ids = {r['id'] for r in originals}
+    available = original_ids | {r['id'] for r in routes}
+    aliases = {}
+    for record in report:
+        reserved = ids.get(record['sourceId'])
+        target = record.get('routeId')
+        if reserved is None or target not in available or reserved == target:
+            continue
+        if reserved in original_ids or reserved in available:
+            raise ValueError(f'Un circuit conservé ne peut pas devenir un alias : {reserved}')
+        aliases[reserved] = target
+    return aliases
+
+
 def main():
     inventory=json.loads((ROOT / 'catalogue/inventaire-regional.json').read_text())
     regional_total=inventory['collectedTotal']
@@ -330,7 +346,9 @@ def main():
             item.pop('routeId',None)
     for folder in ['maps','thumbs','profiles','traces']:
         shutil.copytree(GENERATED / f'assets/{folder}',ROOT / f'assets/{folder}',dirs_exist_ok=True)
-    (ROOT / 'catalogue-routes.js').write_text('export const CATALOGUE_ROUTES = '+json.dumps(routes,ensure_ascii=False,separators=(',',':'))+';\n')
+    aliases=catalogue_aliases(report,ids,originals,routes)
+    (ROOT / 'catalogue-routes.js').write_text('export const CATALOGUE_ROUTES = '+json.dumps(routes,ensure_ascii=False,separators=(',',':'))+';\n'
+        +'export const CATALOGUE_ALIASES = '+json.dumps(aliases,separators=(',',':'))+';\n')
     output={k:v for k,v in inventory.items() if k not in ['records','pages']}
     output.update(records=report,collectedTotal=len(report),regionalTotal=regional_total,sourceCatalogues=extra['sources'],integratedNew=len(routes),usableTotal=len(originals)+len(routes),
                   withProfiles=sum(bool(r.get('elevation')) for r in originals+routes),
