@@ -9,7 +9,7 @@ export function routeElevation(route) {
   const profile=route.elevation;
   return {
     ascent:valid(profile?.ascent)?profile.ascent:valid(route.elevationGain)?route.elevationGain:null,
-    descent:valid(profile?.descent)?profile.descent:null,
+    descent:valid(profile?.descent)?profile.descent:valid(route.elevationLoss)?route.elevationLoss:null,
     estimated:Boolean(profile?.estimated),
   };
 }

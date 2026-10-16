@@ -13,10 +13,13 @@ test('le catalogue conserve les circuits originaux et les identifiants des sorti
 test('aucune fiche officielle ne disparaît du suivi, même sans fichier exploitable',()=>{
   const source=JSON.parse(fs.readFileSync(new URL('../catalogue/inventaire-regional.json',import.meta.url)));
   const report=JSON.parse(fs.readFileSync(new URL('../assets/catalogue.json',import.meta.url)));
+  const extraPath=new URL('../catalogue/inventaire-complementaire.json',import.meta.url);
+  const extra=fs.existsSync(extraPath)?JSON.parse(fs.readFileSync(extraPath)).records:[];
+  const expected=[...source.records,...extra];
   assert.equal(source.collectedTotal,source.records.length);
-  assert.equal(source.records.length,report.records.length);
-  assert.deepEqual(new Set(report.records.map(r=>r.sourceId)),new Set(source.records.map(r=>r.sourceId)));
-  assert.equal(new Set(report.records.map(r=>r.sourceId)).size,source.records.length);
+  assert.equal(expected.length,report.records.length);
+  assert.deepEqual(new Set(report.records.map(r=>r.sourceId)),new Set(expected.map(r=>r.sourceId)));
+  assert.equal(new Set(report.records.map(r=>r.sourceId)).size,expected.length);
   assert.equal(report.exhaustiveNormandy,false);
   for(const r of report.records){assert(r.status);if(r.routeId)assert(ROUTES.some(x=>x.id===r.routeId));}
   assert.equal(report.usableTotal,ROUTES.length);

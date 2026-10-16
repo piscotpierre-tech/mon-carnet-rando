@@ -8,6 +8,7 @@ import concurrent.futures
 import gzip
 import hashlib
 import importlib
+import inspect
 import json
 import math
 from pathlib import Path
@@ -21,6 +22,7 @@ sys.path.insert(0, str(ROOT / 'scripts'))
 prepare = importlib.import_module('prepare-catalogue')
 maps = importlib.import_module('build-maps')
 elevations = importlib.import_module('build-elevations')
+comparison = importlib.import_module('trace-comparison')
 GENERATED = ROOT / '.generated-catalogue'
 GENERATED.mkdir(exist_ok=True)
 for folder in ['assets/maps', 'assets/thumbs', 'assets/profiles', 'assets/traces', 'records']:
@@ -28,7 +30,18 @@ for folder in ['assets/maps', 'assets/thumbs', 'assets/profiles', 'assets/traces
 maps.ROOT = elevations.ROOT = GENERATED
 DEPARTMENTS = prepare.source.DEPARTMENTS
 DATE = prepare.source.DATE
-BUILD_VERSION = hashlib.sha256(b''.join((ROOT/'scripts'/name).read_bytes() for name in ['build-catalogue.py','build-maps.py','build-elevations.py'])).hexdigest()
+
+
+def rendering_version():
+    # Inventory-only changes must not download hundreds of identical maps again.
+    # Keep compatibility with the first published renderer while its actual
+    # geometry, map and profile recipes remain byte-for-byte unchanged.
+    signature=hashlib.sha256((ROOT/'scripts/build-maps.py').read_bytes()+
+        (ROOT/'scripts/build-elevations.py').read_bytes()+inspect.getsource(build_map).encode()+
+        inspect.getsource(write_geometry).encode()+
+        inspect.getsource(build).split('    try:\n        write_geometry',1)[1].encode()).hexdigest()
+    return ('a88eac0bb75023206d3e52772bb5f47268b2754f1bed58087937f7d60c95db5e'
+            if signature=='7a0bdbf02de9aaf7f5e8b839b23b709026b3b96de636ce39f2a03ae8b7c365a2' else signature)
 
 
 def canonical(segments):
@@ -98,7 +111,7 @@ def write_geometry(route, segments):
 def build(record):
     r=record['route']
     checkpoint=GENERATED / f"records/{r['id']}.json"
-    source_hash=hashlib.sha256((BUILD_VERSION+json.dumps(record,ensure_ascii=False,sort_keys=True)).encode()).hexdigest()
+    source_hash=hashlib.sha256((rendering_version()+json.dumps(record,ensure_ascii=False,sort_keys=True)).encode()).hexdigest()
     if checkpoint.exists():
         old=json.loads(checkpoint.read_text())
         if old.get('sourceHash')==source_hash:
@@ -132,6 +145,11 @@ def build(record):
 
 def main():
     inventory=json.loads((ROOT / 'catalogue/inventaire-regional.json').read_text())
+    regional_total=inventory['collectedTotal']
+    extra_path=ROOT/'catalogue/inventaire-complementaire.json'
+    extra=json.loads(extra_path.read_text()) if extra_path.exists() else {'records':[],'overrides':[],'sources':[]}
+    overrides={r['sourceId']:r for r in extra['overrides']}
+    inventory['records']=[overrides.get(r['sourceId'],r) for r in inventory['records']]+extra['records']
     originals=json.loads(subprocess.check_output(['node','--input-type=module','-e',
         "import{ORIGINAL_ROUTES}from'./data.js';console.log(JSON.stringify(ORIGINAL_ROUTES))"],cwd=ROOT))
     ids_path=ROOT / 'catalogue/route-ids.json'
@@ -149,14 +167,17 @@ def main():
             if i%50==0:print(f"Sources {i}/{len(inventory['records'])}",flush=True)
     by_url={r.get('gpxSource') or r.get('elevationTraceSource'):r for r in originals if r.get('gpxSource') or r.get('elevationTraceSource')}
     by_name={(prepare.normal(r['name']),prepare.normal(r['town'])):r for r in originals}
-    geometry_keys={}
+    geometry_keys={};geometry_shapes=[]
     for r in originals:
         if r.get('trace'):
             geo=json.loads((ROOT/r['trace']).read_text())['geometry']
             segs=[geo['coordinates']] if geo['type']=='LineString' else geo['coordinates']
             geometry_keys[canonical(segs)]=r['id']
+            geometry_shapes.append((r['id'],comparison.describe(segs)))
         elif r.get('elevationTrace'):
-            geometry_keys[canonical(prepare.parse((ROOT/r['elevationTrace']).read_bytes()))]=r['id']
+            segs=prepare.parse((ROOT/r['elevationTrace']).read_bytes())
+            geometry_keys[canonical(segs)]=r['id']
+            geometry_shapes.append((r['id'],comparison.describe(segs)))
     candidates=[];report=[]
     for record in records:
         item={k:v for k,v in record.items() if k!='segments'}
@@ -168,11 +189,18 @@ def main():
             item.update(status='deja-present',routeId=existing['id'],duplicateReason='Même GPX publié ou même nom, commune et distance compatible')
         elif record['status']=='trace-verifiee' and record.get('department'):
             key=canonical(record['segments'])
-            if key in geometry_keys:
+            shape=None;near_match=None
+            if key not in geometry_keys:
+                shape=comparison.describe(record['segments'])
+                near_match=next((identifier for identifier,previous in geometry_shapes if comparison.equivalent(shape,previous)),None)
+            if near_match is not None:
+                item.update(status='doublon-geometrique-proche',routeId=near_match,duplicateReason='Tracés comparés dans les deux sens tous les 4 m : écart observé ≤ 2 m, longueurs compatibles à 1 %.')
+            elif key in geometry_keys:
                 item.update(status='doublon-geometrique',routeId=geometry_keys[key],duplicateReason='Géométrie identique, indépendamment du départ et du sens')
             else:
                 route_id=ids[record['sourceId']]
                 geometry_keys[key]=route_id
+                geometry_shapes.append((route_id,shape or comparison.describe(record['segments'])))
                 km=record.get('km') or round(record['geometryKm'],1)
                 coordinate=record['segments'][0][0][:2]
                 r={'id':route_id,'sourceId':record['sourceId'],'name':record['name'],'town':record['town'],
@@ -182,10 +210,24 @@ def main():
                    'marking':'Non renseigné','ambiguous':False,
                    'note':'Le point de départ correspond au début du GPX ; il ne garantit pas un parking. Vérifie la fiche officielle avant de partir.',
                    'isNew':True,'catalogue':True,'official':record['official'],'sourceCheckedAt':DATE,
-                   'gpxSource':record['gpxSource'],'gpxSourceSha256':record['gpxSha256'],
+                   'gpxSource':record.get('gpxSource') or record['sourceTraceUrl'],
                    'gpx':f'assets/traces/{route_id}.gpx','trace':f'assets/traces/{route_id}.geojson',
                    'tracePointCount':record['pointCount'],'geometryKm':record['geometryKm'],
                    'map':f'assets/maps/{route_id}-ign.webp','thumb':f'assets/thumbs/{route_id}-ign.webp','basemap':'IGN Plan IGN'}
+                if record.get('gpxSha256'):r['gpxSourceSha256']=record['gpxSha256']
+                if record.get('sourceFormat')=='GeoJSON':
+                    r.update(originalFormat='GeoJSON',sourceEdition=record['sourceEdition'],
+                             sourceDatasetSha256=record['sourceDatasetSha256'],sourceFeatureId=record['sourceFeatureId'],
+                             start='Premier point du tracé officiel',departurePrecision='trace',
+                             note=f"Tracé officiel : {record['sourceEdition']}. Le premier point du tracé ne garantit pas un parking. La distance est calculée sur la géométrie publiée.")
+                if record.get('sourceDeparture'):
+                    r['start']=record['sourceDeparture']
+                if record.get('sourceParking'):
+                    r['startCoordinate']=record['sourceParking']
+                    r['departurePrecision']='source'
+                    r['note']='Le stationnement et le départ sont indiqués par l’organisme. Vérifie les conditions actuelles sur sa fiche.'
+                for field,target in [('sourceDurationMinutes','durationMinutes'),('sourceAscent','elevationGain'),('sourceDescent','elevationLoss')]:
+                    if record.get(field) is not None:r[target]=record[field]
                 candidates.append({**record,'route':r})
                 item.update(status='a-construire',routeId=route_id)
         report.append(item)
@@ -194,7 +236,7 @@ def main():
         selected=set(sys.argv[sys.argv.index('--only')+1:])
         candidates=[r for r in candidates if r['sourceId'] in selected]
     results={}
-    with concurrent.futures.ThreadPoolExecutor(max_workers=4) as pool:
+    with concurrent.futures.ThreadPoolExecutor(max_workers=5) as pool:
         for i,result in enumerate(pool.map(build,candidates),1):
             results[result['sourceId']]=result
             print(f"Carte {i}/{len(candidates)} · {result['sourceId']} · {result['status']}",flush=True)
@@ -207,13 +249,13 @@ def main():
         if result:
             item.update({k:v for k,v in result.items() if k not in ['route','sourceHash']})
         if item.get('routeId') not in available:
-            if item['status']=='doublon-geometrique':item.update(status='doublon-a-reprendre',issue='Le circuit de référence n’a pas pu être construit.')
+            if item['status'] in ['doublon-geometrique','doublon-geometrique-proche']:item.update(status='doublon-a-reprendre',issue='Le circuit de référence n’a pas pu être construit.')
             item.pop('routeId',None)
     for folder in ['maps','thumbs','profiles','traces']:
         shutil.copytree(GENERATED / f'assets/{folder}',ROOT / f'assets/{folder}',dirs_exist_ok=True)
     (ROOT / 'catalogue-routes.js').write_text('export const CATALOGUE_ROUTES = '+json.dumps(routes,ensure_ascii=False,separators=(',',':'))+';\n')
     output={k:v for k,v in inventory.items() if k not in ['records','pages']}
-    output.update(records=report,integratedNew=len(routes),usableTotal=len(originals)+len(routes),
+    output.update(records=report,collectedTotal=len(report),regionalTotal=regional_total,sourceCatalogues=extra['sources'],integratedNew=len(routes),usableTotal=len(originals)+len(routes),
                   withProfiles=sum(bool(r.get('elevation')) for r in originals+routes),
                   exhaustiveNormandy=False,departmentReconciliation='À poursuivre : catalogues départementaux, offices locaux et itinéraires non publiés dans ce catalogue régional.')
     (ROOT / 'assets/catalogue.json').write_text(json.dumps(output,ensure_ascii=False,separators=(',',':'))+'\n')

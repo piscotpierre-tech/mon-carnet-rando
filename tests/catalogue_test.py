@@ -6,6 +6,8 @@ import unittest
 sys.path.insert(0,str(Path(__file__).resolve().parent.parent/'scripts'))
 prepare=importlib.import_module('prepare-catalogue')
 build=importlib.import_module('build-catalogue')
+comparison=importlib.import_module('trace-comparison')
+elevations=importlib.import_module('build-elevations')
 
 
 class CatalogueTests(unittest.TestCase):
@@ -37,6 +39,20 @@ class CatalogueTests(unittest.TestCase):
         segment=prepare.parse(raw)[0]
         self.assertEqual(len(segment),6)
         self.assertTrue(all(len(p)==2 for p in segment))
+
+    def test_same_path_with_different_sampling_is_merged(self):
+        a=[[[0,49],[.01,49],[.01,49.01]]]
+        b=[[[0,49],[.005,49],[.01,49],[.01,49.005],[.01,49.01]]]
+        self.assertTrue(comparison.equivalent(comparison.describe(a),comparison.describe(b)))
+
+    def test_nearby_alternative_and_shortcuts_stay_distinct(self):
+        a=[[[0,49],[.01,49],[.01,49.01]]]
+        for b in [[[[0,49.0001],[.01,49.0001],[.01,49.0101]]],[[[0,49],[.01,49.01]]]]:
+            self.assertFalse(comparison.equivalent(comparison.describe(a),comparison.describe(b)))
+
+    def test_relief_rounding_uses_the_same_precision_as_its_provenance(self):
+        for raw,expected in [(87.49999999999997,90),(87.50000000000003,90),(87.499,85),(87.501,90),(0,0)]:
+            self.assertEqual(elevations.rounded_relief(raw),expected)
 
 
 if __name__=='__main__':unittest.main()

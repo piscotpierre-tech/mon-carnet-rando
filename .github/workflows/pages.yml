@@ -30,12 +30,20 @@ jobs:
       - name: Installer le moteur d’images
         run: python -m pip install Pillow==12.3.0
       - name: Retrouver les cartes déjà construites
-        uses: actions/cache@v4
+        id: catalogue-cache
+        uses: actions/cache/restore@v5
         with:
           path: .generated-catalogue
-          key: cartes-normandie-${{ hashFiles('catalogue/inventaire-regional.json', 'catalogue/route-ids.json', 'catalogue/snapshots/**', 'scripts/*catalogue.py', 'scripts/build-maps.py', 'scripts/build-elevations.py') }}
+          key: cartes-normandie-${{ hashFiles('catalogue/inventaire*.json', 'catalogue/route-ids.json', 'catalogue/snapshots/**', 'scripts/*catalogue.py', 'scripts/build-maps.py', 'scripts/build-elevations.py', 'scripts/trace-comparison.py') }}
+          restore-keys: cartes-normandie-
       - name: Construire le catalogue, ses cartes IGN et ses profils
         run: python -u scripts/build-catalogue.py
+      - name: Conserver la construction avant les vérifications finales
+        if: ${{ always() && steps.catalogue-cache.outputs.cache-hit != 'true' && hashFiles('.generated-catalogue/records/*.json') != '' }}
+        uses: actions/cache/save@v5
+        with:
+          path: .generated-catalogue
+          key: ${{ steps.catalogue-cache.outputs.cache-primary-key }}
       - name: Vérifier les fonctions et les fichiers
         run: |
           python -m unittest discover -s tests -p '*_test.py'

@@ -283,3 +283,24 @@ Sources complémentaires à rapprocher :
 - Calvados Tourisme : https://www.explore-calvados.com/sejour/activites/balades-et-randonnees/a-pied/
 - Orne Tourisme : https://www.ornetourisme.com/vivre-l-orne/balades-et-randonnees-orne/
 - Offices de tourisme locaux et portails départementaux : restent à croiser et documenter. La couverture complète de tous les itinéraires normands n’est pas démontrée.
+
+
+### Catalogues départementaux supplémentaires
+
+La collecte des cinq catalogues pédestres repérés est terminée pour cet instantané :
+
+| Source officielle | Références pédestres | Résultat |
+| --- | ---: | --- |
+| Calvados Tourisme | 168 | 166 identifiants SIT déjà régionaux, 2 supplémentaires |
+| Attitude Manche | 186 | 168 identifiants déjà régionaux, 18 supplémentaires |
+| Eurêka, agence d’attractivité de l’Eure | 97 | 96 identifiants déjà régionaux, 1 supplémentaire ; pagination dédupliquée |
+| Orne Tourisme / Geotrek | 158 | Pratique « Pédestre » n° 4, géométries à comparer |
+| Département de Seine-Maritime, PDESI | 267 | 291 lignes reçues, dont 24 autres pratiques exclues |
+
+Liens officiels, dates, empreintes, identifiants et sources GPX / GeoJSON figurent dans `catalogue/inventaire-complementaire.json` et les instantanés compressés correspondants. Les 446 références supplémentaires portent l’inventaire à 1 431 références avant rapprochement des géométries. Neuf fichiers ont également été récupérés pour des fiches régionales incomplètes. Les descriptions touristiques et les photographies n’ont pas été recopiées.
+
+Les GPX Orne proviennent des liens publiés par https://randonnee-normandie.com/ et de son API publique https://admin-rando-orne.com/api/v2/ . Seule la pratique explicitement libellée « Pédestre » par le portail est retenue. Les stationnements et départs publiés sont conservés lorsqu’ils existent ; la commune absente reste indiquée largement « Orne ».
+
+Le PDESI de Seine-Maritime fournit une géométrie GeoJSON par itinéraire. Le GPX téléchargeable dans le carnet est un export de cette géométrie officielle ; le lien d’origine est présenté comme GeoJSON. Les empreintes de l’ensemble source, les identifiants d’entité et l’édition de janvier 2025 sont conservés. Les distances affichées sont calculées sur le tracé et signalées comme telles. Les tracés de pratiques équestres ou trail non marquées pédestres ne sont pas transformés en randonnées pédestres.
+
+Les tracés identiques après rééchantillonnage sont rapprochés par une comparaison dans les deux sens à pas de 4 mètres, écart observé maximal 2 mètres et longueurs compatibles à 1 %. Les méthodes exactes et approchées gardent des motifs distincts dans le suivi. Les variantes qui sortent de ces critères restent distinctes. Les dénivelés sont arrondis à partir des cumuls documentés à trois décimales, ce qui évite une différence de 5 mètres au seuil d’arrondi entre Python et JavaScript.

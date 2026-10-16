@@ -25,6 +25,12 @@ RESOURCE = "ign_rge_alti_wld"
 DATE = "2026-10-16"
 
 
+def rounded_relief(value):
+    # The provenance JSON stores millimetres. Round that same documented value
+    # in every language, avoiding 87.49999999999997 becoming 85 instead of 90 m.
+    return int(5 * math.floor(round(value, 3) / 5 + .5))
+
+
 def distance(a, b):
     lon1, lat1, *_ = a
     lon2, lat2, *_ = b
@@ -135,7 +141,7 @@ def build(route):
             altitudes.append(z)
         results.append(profile)
     summary = {
-        "ascent": int(5 * math.floor(gain / 5 + .5)), "descent": int(5 * math.floor(loss / 5 + .5)),
+        "ascent": rounded_relief(gain), "descent": rounded_relief(loss),
         "min": math.floor(min(altitudes)), "max": math.ceil(max(altitudes)),
         "distanceKm": round(walked / 1000, 3), "estimated": True,
         "provider": "GPX officiel" if gpx_altitudes else "IGN RGE ALTI", "checkedAt": DATE,
