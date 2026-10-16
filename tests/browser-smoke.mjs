@@ -23,11 +23,18 @@ const selected=departments.map(department=>{
 });
 
 await mkdir(artifacts,{recursive:true});
+const serverRequests=[],probeHits=new Set();
 const server=createServer(async(req,res)=>{
   try {
-    const pathname=decodeURIComponent(new URL(req.url,'http://localhost').pathname);
+    serverRequests.push(req.url);
+    const address=new URL(req.url,'http://localhost');
+    const pathname=decodeURIComponent(address.pathname);
     if(pathname===base.slice(0,-1)){res.writeHead(302,{Location:base});res.end();return;}
     if(!pathname.startsWith(base)){res.writeHead(404);res.end();return;}
+    if(pathname===base+'__smoke-network-probe') {
+      probeHits.add(address.searchParams.get('nonce'));
+      res.writeHead(204,{'Cache-Control':'no-store'});res.end();return;
+    }
     let filename=resolve(root,pathname.slice(base.length)||'index.html');
     if(!filename.startsWith(root+sep)&&filename!==resolve(root)){res.writeHead(403);res.end();return;}
     if((await stat(filename)).isDirectory())filename=resolve(filename,'index.html');
@@ -42,7 +49,25 @@ await new Promise((ok,reject)=>{server.once('error',reject);server.listen(0,'127
 const origin=`http://127.0.0.1:${server.address().port}`;
 const url=origin+base;
 let browser,activePage,stage='launch';
-const evidence={base,viewports:[],geojsonExport:null,offline:null};
+const evidence={base,viewports:[],geojsonExport:null,offlineDiagnostics:[],offline:null};
+
+async function probeNetwork(page,label) {
+  // A fresh, previously uncached URL plus the origin's request counter proves
+  // network loss independently of navigator.onLine and the offline banner.
+  const nonce=crypto.randomUUID();
+  const result=await page.evaluate(async target=>{
+    let status=null;
+    try {status=(await fetch(target,{cache:'no-store',signal:AbortSignal.timeout(5000)})).status;}catch {}
+    return {navigatorOnline:navigator.onLine,controlled:Boolean(navigator.serviceWorker.controller),status};
+  },url+'__smoke-network-probe?nonce='+nonce);
+  const diagnostic={label,...result,originReceived:probeHits.has(nonce)};
+  evidence.offlineDiagnostics.push(diagnostic);
+  return diagnostic;
+}
+function assertNetworkBlocked(probe) {
+  assert.equal(probe.status,null,`${probe.label}: a fresh network request unexpectedly succeeded`);
+  assert.equal(probe.originReceived,false,`${probe.label}: the origin was reached while offline`);
+}
 
 async function noOverflow(page,label) {
   const dimensions=await page.evaluate(()=>({viewport:innerWidth,width:document.documentElement.scrollWidth,dialogs:[...document.querySelectorAll('dialog[open]')].map(d=>({left:d.getBoundingClientRect().left,right:d.getBoundingClientRect().right}))}));
@@ -168,9 +193,32 @@ try {
         await openRoute(page,route);
         await page.locator('#route-content [data-action="download-route"]').click();
         await page.waitForFunction(()=>document.querySelector('#route-cache-status')?.textContent.includes('disponibles hors ligne'));
+        const live=await probeNetwork(page,'online-before-offline');
+        assert.equal(live.status,204);assert.equal(live.originReceived,true);
+        const requestsBeforeOffline=serverRequests.length;
         await context.setOffline(true);
-        await page.reload({waitUntil:'domcontentloaded'});
-        await ready(page);await page.locator('#offline-banner').waitFor({state:'visible'});
+        assertNetworkBlocked(await probeNetwork(page,'offline-before-reload'));
+        const reload=await page.reload({waitUntil:'domcontentloaded'});
+        await ready(page);
+        const afterReload=await probeNetwork(page,'offline-after-reload');
+        assertNetworkBlocked(afterReload);
+        assert.equal(reload?.fromServiceWorker(),true,'Offline reload was not supplied by the service worker');
+        const originRequestsDuringReload=serverRequests.slice(requestsBeforeOffline);
+        evidence.offlineReload={fromServiceWorker:reload.fromServiceWorker(),originRequests:originRequestsDuringReload};
+        assert.deepEqual(originRequestsDuringReload,[],'The origin received requests during the offline reload');
+        if(afterReload.navigatorOnline) {
+          // Chromium's emulated network state can reset its online hint when a
+          // controlled document reloads. Reissue a real CDP network transition;
+          // never override navigator.onLine or dispatch synthetic DOM events.
+          // The preceding assertions already prove that the reload was offline.
+          await context.setOffline(false);
+          await context.setOffline(true);
+          const reapplied=await probeNetwork(page,'offline-transition-reapplied');
+          assertNetworkBlocked(reapplied);
+          assert.equal(reapplied.navigatorOnline,false,'Chromium did not apply the offline network hint');
+        }
+        const requestsDuringOfflineUse=serverRequests.length;
+        await page.locator('#offline-banner').waitFor({state:'visible'});
         await openRoute(page,route);await preserved(page);await noOverflow(page,'offline-fiche');
         await screenshot(page,'offline-390-fiche');
         await checkGpx(page,route,'offline-390-download');
@@ -182,6 +230,8 @@ try {
         await page.locator('#interactive-map .leaflet-overlay-pane path').first().waitFor();
         assert.match(await page.locator('#trace-status').textContent(),/Hors ligne.*IGN/);
         await noOverflow(page,'offline-interactive');await screenshot(page,'offline-390-interactive');
+        assertNetworkBlocked(await probeNetwork(page,'offline-after-cache-use'));
+        assert.deepEqual(serverRequests.slice(requestsDuringOfflineUse),[],'Offline map/profile/GPX use reached the origin');
         evidence.offline={width,routeId:route.id,shell:true,map:true,interactiveBasemap:true,profile:true,gpxDownload:true,legacyPreserved:true};
         await context.setOffline(false);
       }
