@@ -25,7 +25,7 @@ test('le cache de l’application fonctionne dans un sous-dossier GitHub Pages',
   const keys=[...h.stores.get('pierre-rando-v1-shell').keys()];
   assert(keys.includes('https://exemple.github.io/mon-carnet-rando/index.html'));
   assert(keys.every(k=>k.startsWith('https://exemple.github.io/mon-carnet-rando/')));
-  for(const name of ['app.js','styles.css','data.js','core.js','catalogue-routes.js'])assert(keys.includes('https://exemple.github.io/mon-carnet-rando/'+name+'?v=normandie-20261016-r2'));
+  for(const name of ['app.js','styles.css','data.js','core.js','catalogue-routes.js'])assert(keys.includes('https://exemple.github.io/mon-carnet-rando/'+name+'?v=normandie-20261016-r3'));
   h.offline(true);
   const r=await h.request('https://exemple.github.io/mon-carnet-rando/',{mode:'navigate'});
   assert.match(await r.text(),/index.html/);

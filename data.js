@@ -1,4 +1,4 @@
-import {CATALOGUE_ROUTES,CATALOGUE_ALIASES} from './catalogue-routes.js?v=normandie-20261016-r2';
+import {CATALOGUE_ROUTES,CATALOGUE_ALIASES} from './catalogue-routes.js?v=normandie-20261016-r3';
 export {CATALOGUE_ALIASES};
 export const ORIGINAL_ROUTES = [
   {

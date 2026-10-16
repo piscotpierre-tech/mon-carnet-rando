@@ -105,12 +105,14 @@ async function checkGpx(page,route,label) {
   const pending=page.waitForEvent('download');
   await link.click();
   const download=await pending;
+  assert(download.url().startsWith('blob:'),`${label}: GPX must download from local bytes, without a native asset request`);
   assert.equal(await download.failure(),null,`${label}: GPX download failed`);
   const target=resolve(artifacts,label+'.gpx');
   await download.saveAs(target);
   const xml=await readFile(target,'utf8');
   assert.match(xml,/<(?:\w+:)?gpx\b/);
   assert.match(xml,/<(?:\w+:)?(?:trkpt|rtept)\b/);
+  assert.deepEqual(await readFile(target),await readFile(resolve(root,route.gpx)),`${label}: downloaded GPX differs from the selected circuit`);
 }
 async function preserved(page) {
   const stored=await page.evaluate(key=>JSON.parse(localStorage.getItem(key)),STORAGE_KEY);
