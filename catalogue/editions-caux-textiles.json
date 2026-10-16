@@ -1,0 +1,32 @@
+{
+  "sourceId": "CAUX-SEINE-150690",
+  "official": "https://randotrailencauxseine.fr/fr/parcours/150690",
+  "webFacts": {
+    "distanceKm": 17.21,
+    "ascentM": 270,
+    "descentM": 270,
+    "durationMinutes": 270
+  },
+  "editions": [
+    {
+      "url": "https://randotrailencauxseine.fr/assets/resources/res7066_4396.pdf",
+      "sha256": "8370388f3735a06794bc5b37e74be396737c6d3e2d7f066ab99f281820930d62",
+      "page": 2,
+      "distanceKm": 17.8,
+      "durationMinutes": 270,
+      "departure": "La Frenaye, place de l’Europe, parking Brassens",
+      "pdfCreationDate": "2014-03-14",
+      "pdfModificationDate": "2021-05-21"
+    },
+    {
+      "url": "https://randotrailencauxseine.fr/assets/resources/res8033_8518.pdf",
+      "sha256": "6c85b9900c592c6f29d70b1b65e98eca66ee1700d162f75bd580e35ed72423ee",
+      "page": 1,
+      "distanceKm": 17.2,
+      "ascentM": 290,
+      "descentM": 290,
+      "pdfCreationDate": "2021-07-19"
+    }
+  ],
+  "policy": "Les valeurs de la fiche, du GPX et de chaque PDF demeurent séparées ; aucun recalage de trace et aucune assimilation du stationnement PDF au départ GPX."
+}

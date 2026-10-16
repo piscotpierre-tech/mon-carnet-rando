@@ -1,0 +1,244 @@
+{
+  "checkedAt": "2026-10-16T15:05:08.238966+00:00",
+  "knownSnapshotReferences": 1597,
+  "knownSnapshots": [
+    {
+      "path": "catalogue/snapshots/14.json.gz",
+      "sha256": "da34afeb56217187787e1d80ea9ec392e5f34ed50d6bd2631822474ef5f63ad3",
+      "rows": 265
+    },
+    {
+      "path": "catalogue/snapshots/27.json.gz",
+      "sha256": "94325b7d9735b443a3d37c9b3920c6f2732e3289bf062e999fadcd485fb40d7c",
+      "rows": 107
+    },
+    {
+      "path": "catalogue/snapshots/50.json.gz",
+      "sha256": "275a53488268f6d4a09399c7672f076282311a738f476a7cd960e2bb0cb19b32",
+      "rows": 168
+    },
+    {
+      "path": "catalogue/snapshots/61.json.gz",
+      "sha256": "34df92eb31a4c3e898683eb8653af4cdb2b07335dc2aa327425294fb094cbc2e",
+      "rows": 118
+    },
+    {
+      "path": "catalogue/snapshots/76.json.gz",
+      "sha256": "30f4fbd860a6dda1e35e0a7f63b982b32b8926c4296a1c764ac323269286f781",
+      "rows": 325
+    },
+    {
+      "path": "catalogue/snapshots/cd76.json.gz",
+      "sha256": "b870eecfea4828f8d66dbcdaeecb3dda9e694039e91cb4d557e4aef11b7bfd3e",
+      "rows": 267
+    },
+    {
+      "path": "catalogue/snapshots/complements.json.gz",
+      "sha256": "db31fd82ecd574d149c08357b3177d46ef02055a045e5ad500295c0a8020773f",
+      "rows": 188
+    },
+    {
+      "path": "catalogue/snapshots/marais.json.gz",
+      "sha256": "084efac96188d717705b67db294918798af43361a8fa8f43eb2ed1db80ce4c00",
+      "rows": 35
+    },
+    {
+      "path": "catalogue/snapshots/multi.json.gz",
+      "sha256": "55fa3e5d121b3e8d36888949d8b7151c22e4bae272050c93df030108e75ca94f",
+      "rows": 2
+    },
+    {
+      "path": "catalogue/snapshots/perche.json.gz",
+      "sha256": "6ff2754f9dd6609a788ca5b19d3541cc68dfe9d01369d9a011c1c6a25ee90784",
+      "rows": 131
+    },
+    {
+      "path": "catalogue/snapshots/zz-recovered-gpx.json.gz",
+      "sha256": "d8e3f98d6310eb655f6017955107c2612cd1d28fee6a1ef5ae9ade0d3d458be3",
+      "rows": 22
+    }
+  ],
+  "officialWalkingReferences": 20,
+  "categoryCounts": {
+    "trail": 9,
+    "rando": 20,
+    "vtt": 8,
+    "cyclo": 7,
+    "equestre": 8,
+    "loisirs": 0,
+    "circuitspatrimoine": 6,
+    "naturel": 0,
+    "culturel": 0
+  },
+  "validatedGpx": 20,
+  "referencesMatchingGeometry": 1,
+  "referencesMatchingEarlierCauxGeometry": 0,
+  "newGeometryCandidates": 19,
+  "records": [
+    {
+      "sourceId": "CAUX-SEINE-188320",
+      "name": "Les clos-masures",
+      "status": "trace-verifiee",
+      "geometryMatches": [],
+      "internalGeometryMatches": [],
+      "newGeometryCandidate": true
+    },
+    {
+      "sourceId": "CAUX-SEINE-151280",
+      "name": "La Forêt d'Arelaune",
+      "status": "trace-verifiee",
+      "geometryMatches": [],
+      "internalGeometryMatches": [],
+      "newGeometryCandidate": true
+    },
+    {
+      "sourceId": "CAUX-SEINE-248267",
+      "name": "Les secrets de l'Abbaye",
+      "status": "trace-verifiee",
+      "geometryMatches": [],
+      "internalGeometryMatches": [],
+      "newGeometryCandidate": true
+    },
+    {
+      "sourceId": "CAUX-SEINE-151278",
+      "name": "Entre Seine et Terre",
+      "status": "trace-verifiee",
+      "geometryMatches": [
+        {
+          "sourceId": "ITINOR076V51ZQF0",
+          "method": "exact-geometry-6-decimals"
+        }
+      ],
+      "internalGeometryMatches": [],
+      "newGeometryCandidate": false
+    },
+    {
+      "sourceId": "CAUX-SEINE-151277",
+      "name": "Les Comtes d'Evreux",
+      "status": "trace-verifiee",
+      "geometryMatches": [],
+      "internalGeometryMatches": [],
+      "newGeometryCandidate": true
+    },
+    {
+      "sourceId": "CAUX-SEINE-151276",
+      "name": "Le Val de l'Abbesse",
+      "status": "trace-verifiee",
+      "geometryMatches": [],
+      "internalGeometryMatches": [],
+      "newGeometryCandidate": true
+    },
+    {
+      "sourceId": "CAUX-SEINE-151272",
+      "name": "Le Hamel au Coeur",
+      "status": "trace-verifiee",
+      "geometryMatches": [],
+      "internalGeometryMatches": [],
+      "newGeometryCandidate": true
+    },
+    {
+      "sourceId": "CAUX-SEINE-150690",
+      "name": "Les Chemins des Textiles",
+      "status": "trace-verifiee",
+      "geometryMatches": [],
+      "internalGeometryMatches": [],
+      "newGeometryCandidate": true
+    },
+    {
+      "sourceId": "CAUX-SEINE-151285",
+      "name": "La Chapelle du Bout du vent",
+      "status": "trace-verifiee",
+      "geometryMatches": [],
+      "internalGeometryMatches": [],
+      "newGeometryCandidate": true
+    },
+    {
+      "sourceId": "CAUX-SEINE-150689",
+      "name": "La Croix de Pierre",
+      "status": "trace-verifiee",
+      "geometryMatches": [],
+      "internalGeometryMatches": [],
+      "newGeometryCandidate": true
+    },
+    {
+      "sourceId": "CAUX-SEINE-150688",
+      "name": "Les Terres Romaines",
+      "status": "trace-verifiee",
+      "geometryMatches": [],
+      "internalGeometryMatches": [],
+      "newGeometryCandidate": true
+    },
+    {
+      "sourceId": "CAUX-SEINE-151286",
+      "name": "Aux Sources du Bebec",
+      "status": "trace-verifiee",
+      "geometryMatches": [],
+      "internalGeometryMatches": [],
+      "newGeometryCandidate": true
+    },
+    {
+      "sourceId": "CAUX-SEINE-150687",
+      "name": "Sentier de la Gribane",
+      "status": "trace-verifiee",
+      "geometryMatches": [],
+      "internalGeometryMatches": [],
+      "newGeometryCandidate": true
+    },
+    {
+      "sourceId": "CAUX-SEINE-150686",
+      "name": "Le Gibet",
+      "status": "trace-verifiee",
+      "geometryMatches": [],
+      "internalGeometryMatches": [],
+      "newGeometryCandidate": true
+    },
+    {
+      "sourceId": "CAUX-SEINE-150664",
+      "name": "La Sente des Manoirs",
+      "status": "trace-verifiee",
+      "geometryMatches": [],
+      "internalGeometryMatches": [],
+      "newGeometryCandidate": true
+    },
+    {
+      "sourceId": "CAUX-SEINE-150685",
+      "name": "Le Bliquetuit",
+      "status": "trace-verifiee",
+      "geometryMatches": [],
+      "internalGeometryMatches": [],
+      "newGeometryCandidate": true
+    },
+    {
+      "sourceId": "CAUX-SEINE-150683",
+      "name": "Beau Soleil",
+      "status": "trace-verifiee",
+      "geometryMatches": [],
+      "internalGeometryMatches": [],
+      "newGeometryCandidate": true
+    },
+    {
+      "sourceId": "CAUX-SEINE-150682",
+      "name": "Le Val Godard",
+      "status": "trace-verifiee",
+      "geometryMatches": [],
+      "internalGeometryMatches": [],
+      "newGeometryCandidate": true
+    },
+    {
+      "sourceId": "CAUX-SEINE-150681",
+      "name": "La Sente aux Moines",
+      "status": "trace-verifiee",
+      "geometryMatches": [],
+      "internalGeometryMatches": [],
+      "newGeometryCandidate": true
+    },
+    {
+      "sourceId": "CAUX-SEINE-150672",
+      "name": "La Coutume",
+      "status": "trace-verifiee",
+      "geometryMatches": [],
+      "internalGeometryMatches": [],
+      "newGeometryCandidate": true
+    }
+  ]
+}

@@ -77,6 +77,24 @@ class SourceRecoveryTests(unittest.TestCase):
             self.assertEqual(result['validatedGpxSha256'], hashlib.sha256(track()).hexdigest())
             self.assertEqual(cached.read_bytes(), raw)
 
+    def test_public_download_sends_its_documented_source_referer_on_cache_miss(self):
+        url = 'https://example.org/gpx/20'
+        page = 'https://example.org/parcours/20'
+        class Response:
+            def __enter__(self): return self
+            def __exit__(self, *args): pass
+            def read(self): return track()
+        with tempfile.TemporaryDirectory() as folder, patch.object(prepare, 'CACHE', Path(folder)), \
+                patch('urllib.request.urlopen', return_value=Response()) as fetch:
+            result = prepare.validate({'gpxSource': url, 'sourceDownloadReferer': page})
+            self.assertEqual(result['status'], 'trace-verifiee')
+            self.assertEqual(fetch.call_args.args[0].get_header('Referer'), page)
+        with tempfile.TemporaryDirectory() as folder, patch.object(prepare, 'CACHE', Path(folder)), \
+                patch('urllib.request.urlopen') as fetch:
+            result = prepare.validate({'gpxSource': url, 'sourceDownloadReferer': 'https://other.example/parcours/20'})
+            self.assertEqual(result['status'], 'gpx-inexploitable')
+            fetch.assert_not_called()
+
 
 if __name__ == '__main__':
     unittest.main()

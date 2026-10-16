@@ -292,7 +292,7 @@ def main():
                 if record.get('pdf') or record.get('sourcePdf'):r['pdf']=record.get('pdf') or record['sourcePdf']
                 if record.get('sourceMarking'):r['marking']=record['sourceMarking']
                 if record.get('sourceDifficulty'):r['difficulty']=record['sourceDifficulty']
-                for field in ['sourceEdition','sourceApi','sourceApiSha256','sourceApiPages','sourceAdvisedParking','sourceDatasetSha256','sourceFeatureId','sourceUpdatedAt','sourceCityCodes','sourceDepartureCityCode','scopeEvidence','gpxRepairs','validatedGpxSha256']:
+                for field in ['sourceEdition','sourceApi','sourceApiSha256','sourceApiPages','sourceAdvisedParking','sourcePdfs','sourceDownloadReferer','sourceAlternativePage','sourceScopeConflict','sourceDatasetSha256','sourceFeatureId','sourceUpdatedAt','sourceCityCodes','sourceDepartureCityCode','scopeEvidence','gpxRepairs','validatedGpxSha256']:
                     if record.get(field) is not None:r[field]=record[field]
                 if record.get('sourceFormat')=='GeoJSON':
                     r.update(originalFormat='GeoJSON',sourceEdition=record['sourceEdition'],
@@ -314,6 +314,8 @@ def main():
                     r['note']+=' Stationnement indiqué par l’organisme : '+str(parking_text)+'.'
                 if record.get('gpxRepairs'):
                     r['note']+=' Un défaut de format du fichier officiel a été corrigé sans modifier ses coordonnées ; le fichier original reste accessible.'
+                if record.get('sourceScopeConflict'):
+                    r['note']+=' '+record['sourceScopeConflict']
                 for field,target in [('sourceDurationMinutes','durationMinutes'),('sourceAscent','elevationGain'),('sourceDescent','elevationLoss')]:
                     if record.get(field) is not None:r[target]=record[field]
                 if hints:

@@ -336,7 +336,7 @@ Les ressources GeoJSON et GPKG du registre officiel « circuits qualité » Calv
 
 Les rapprochements seulement nominaux ne suppriment plus un parcours exploitable : les historiques sans trace comparable et les variantes géométriques restent distincts avec une mention à vérifier. Les profils manquants sur erreur temporaire sont retentés au prochain passage, sans redemander les cartes déjà construites.
 
-### Registres supplémentaires repérés, non intégrés à ce stade
+### Registres supplémentaires examinés
 
 - Caux Seine Normandie Tourisme, https://randotrailencauxseine.fr/fr/activites : 20 identifiants distincts dans la catégorie Randonnée du HTML public ; l’accueil annonce encore 18. Les six circuits patrimoniaux sont séparés et restent à qualifier. Aucun ajout net n’est établi avant comparaison des GPX. Exemple https://randotrailencauxseine.fr/fr/parcours/150690 : 17,21 km et D+/D− 270 m sur la fiche, contre 17,8 km dans un ancien PDF et 17,2 km/290 m sur une carte PDF ; les éditions ne doivent pas être fusionnées.
 - Ancien portail Normandie-Maine https://tourisme.parc-naturel-normandie-maine.fr/ : HTTP 502 ; total pédestre actuel inconnu. Son lancement est documenté par le Parc en 2017 : https://www.parc-naturel-normandie-maine.fr/actualites/laissez-vous-tenter-par-la-destination-normandie-maine-_253.html .
@@ -345,3 +345,11 @@ Les rapprochements seulement nominaux ne suppriment plus un parcours exploitable
 - FFRandonnée Normandie https://normandie.ffrandonnee.fr/sentiers-3/ : HTTP 403 ; inventaire des GR non vérifiable pendant ce contrôle.
 
 Les alias de catalogue sont conservés séparément des géométries : ils permettent de lire une ancienne sauvegarde après changement de référence canonique. Ils ne constituent pas une nouvelle preuve de doublon. Quatre identifiants de la construction précédente (2323, 2298, 2282, 2302) sont notamment rattachés aux tracés équivalents devenus disponibles après réparation ; les souvenirs et chronomètres ne sont pas effacés.
+
+### Caux Seine : GPX publics réellement récupérés
+
+Les vingt fiches explicitement classées Randonnée ont été parcourues et leurs vingt GPX validés. Le bouton public original renvoie vers la page Espaces Trail correspondante ; le téléchargement utilise le Referer de cette fiche, comme un clic normal du bouton, sans compte, cookie ou jeton. Les URL initiales, réponses d’orientation, pages alternatives, code du bouton, condition d’accès et empreintes des GPX sont conservés dans `catalogue/inventaire-caux-seine.json` et `catalogue/snapshots/caux-seine.json.gz`. L’application fournit le GPX local et renvoie à la fiche du producteur pour obtenir l’original, car un lien direct hors de cette fiche ne livre pas le fichier.
+
+Le rapprochement avec les 1 597 références précédentes a trouvé un doublon exact (CAUX-SEINE-151278, Entre Seine et Terre, et ITINOR076V51ZQF0) et dix-neuf géométries candidates nouvelles, sans prétendre prouver dix-neuf ajouts nets avant la construction. Aucun doublon interne n’a été trouvé. `catalogue/audit-caux-seine.json` garde les preuves de comparaison. `scripts/collect-caux.py --repo .` reproduit cette collecte vers un dossier temporaire. Une seconde exécution sans réseau a reproduit le même instantané.
+
+Heurteauville est indiqué à tort dans le département 27 par une fiche. Le référentiel officiel https://geo.api.gouv.fr/communes?nom=Heurteauville&fields=nom,code,codeDepartement&format=json confirme le code INSEE 76362 et le département 76 ; cette preuve et la contradiction originale restent conservées. Les deux PDF des Chemins des Textiles restent des éditions séparées dans `catalogue/editions-caux-textiles.json` : les valeurs 17,8 km, 17,2 km/290 m et 17,21 km/270 m ne sont pas amalgamées. Les six circuits patrimoniaux et les autres pratiques n’ont pas été convertis en randonnées par supposition.

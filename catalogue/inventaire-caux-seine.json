@@ -1,0 +1,1416 @@
+{
+  "checkedAt": "2026-10-16T15:05:08.238966+00:00",
+  "sources": [
+    {
+      "source": "https://randotrailencauxseine.fr/fr/activites",
+      "department": "76",
+      "total": 20,
+      "announcedTotal": 20,
+      "collectedAll": true,
+      "scope": "#container-rando only",
+      "categoryCounts": {
+        "trail": 9,
+        "rando": 20,
+        "vtt": 8,
+        "cyclo": 7,
+        "equestre": 8,
+        "loisirs": 0,
+        "circuitspatrimoine": 6,
+        "naturel": 0,
+        "culturel": 0
+      },
+      "note": "Références explicitement Randonnée dans la liste activités. Les autres activités sont exclues. Les PDF liés sont conservés comme éditions distinctes ; leurs chiffres ne remplacent pas ceux du portail. Aucune licence ouverte générale identifiée ; uniquement faits et GPX publics liés."
+    }
+  ],
+  "records": [
+    {
+      "sourceId": "CAUX-SEINE-188320",
+      "name": "Les clos-masures",
+      "town": "Hattenville",
+      "department": "76",
+      "km": 9.05,
+      "official": "https://randotrailencauxseine.fr/fr/parcours/188320",
+      "gpxSource": "https://espacestrail.run/fr/seinedetrail/gpx/188320",
+      "sourceAscent": 45,
+      "sourceDescent": 45,
+      "sourceDurationMinutes": null,
+      "sourceDurationRangeMinutes": null,
+      "sourceCategory": "Randonnée",
+      "sourceListing": "https://randotrailencauxseine.fr/fr/activites",
+      "scopeEvidence": {
+        "method": "Explicit official activity category",
+        "category": "Randonnée",
+        "selector": "#container-rando",
+        "listingId": 188320,
+        "officialTown": "Hattenville",
+        "officialDepartment": "76"
+      },
+      "sourceListingSha256": "18f153cd2e23c30f50e0dd809ae677b09d6c6ed897ae33ecf4bab3a7cba60375",
+      "sourceGpxLinkEvidence": {
+        "url": "https://espacestrail.run/assets/js/blocParcours.js",
+        "sha256": "79b39d7609ca8d0ea3b649a455d0e1649b62c3196399287ea6af33d4b2826ff0",
+        "method": "Official downloadGpx handler + alternative page explicitly supplied by the original GPX endpoint"
+      },
+      "sourcePageSha256": "d8ff5afab246583829cb7c45a93439e18005f697e9ccd3ac62995e8b0aa19e37",
+      "sourcePdfs": [
+        {
+          "url": "https://randotrailencauxseine.fr/assets/resources/res11400_5731.pdf",
+          "label": "Les clos masures"
+        }
+      ],
+      "sourceFacts": {
+        "Distance": "9.05 km",
+        "Dénivelé positif": "45 m",
+        "Dénivelé négatif": "45 m",
+        "Altitude min.": "116 m",
+        "Altitude max.": "136 m",
+        "Durée (selon allure)": "2h15",
+        "Balisage": "Vert"
+      },
+      "sourceMarking": "Vert",
+      "sourceDeparture": null,
+      "sourceParking": null,
+      "sourceOriginalGpxUrl": "https://randotrailencauxseine.fr/fr/gpx/188320",
+      "sourceOriginalGpxResponseSha256": "d35948269134b530e89afd2c2dbbec01d01ab395eace07c2ef79a93b21847e41",
+      "sourceAlternativePage": "https://espacestrail.run/fr/seinedetrail/parcours/188320",
+      "sourceDownloadReferer": "https://espacestrail.run/fr/seinedetrail/parcours/188320",
+      "sourceGpxAccess": "Téléchargement public ; Referer de la fiche officielle requis comme lors du clic navigateur ; sans compte ni cookie.",
+      "gpxSha256": "f81a3c25b982a554858d01afea97c125095b5d37390daf8b7c4f8cb5a854a47b",
+      "geometryKm": 9.036,
+      "pointCount": 307,
+      "status": "trace-verifiee",
+      "officialLocation": [
+        0.53677,
+        49.65181
+      ],
+      "officialLocationPrecision": "Premier point du GPX officiel ; stationnement non vérifié"
+    },
+    {
+      "sourceId": "CAUX-SEINE-151280",
+      "name": "La Forêt d'Arelaune",
+      "town": "Vatteville-la-Rue",
+      "department": "76",
+      "km": 18.78,
+      "official": "https://randotrailencauxseine.fr/fr/parcours/151280",
+      "gpxSource": "https://espacestrail.run/fr/seinedetrail/gpx/151280",
+      "sourceAscent": 140,
+      "sourceDescent": 140,
+      "sourceDurationMinutes": 285,
+      "sourceDurationRangeMinutes": [
+        285,
+        285
+      ],
+      "sourceCategory": "Randonnée",
+      "sourceListing": "https://randotrailencauxseine.fr/fr/activites",
+      "scopeEvidence": {
+        "method": "Explicit official activity category",
+        "category": "Randonnée",
+        "selector": "#container-rando",
+        "listingId": 151280,
+        "officialTown": "Vatteville-la-Rue",
+        "officialDepartment": "76"
+      },
+      "sourceListingSha256": "18f153cd2e23c30f50e0dd809ae677b09d6c6ed897ae33ecf4bab3a7cba60375",
+      "sourceGpxLinkEvidence": {
+        "url": "https://espacestrail.run/assets/js/blocParcours.js",
+        "sha256": "79b39d7609ca8d0ea3b649a455d0e1649b62c3196399287ea6af33d4b2826ff0",
+        "method": "Official downloadGpx handler + alternative page explicitly supplied by the original GPX endpoint"
+      },
+      "sourcePageSha256": "19aaae23db6d2fc7dbd4da7d041434058bc2650b2805fc350a6481d720ec85da",
+      "sourcePdfs": [
+        {
+          "url": "https://randotrailencauxseine.fr/assets/resources/res7072_3578.pdf",
+          "label": "Randonnée pédestre - La forêt d'Arelaune"
+        },
+        {
+          "url": "https://randotrailencauxseine.fr/assets/resources/res12855_1915.pdf",
+          "label": "Carte PDF"
+        }
+      ],
+      "sourceFacts": {
+        "Distance": "18.78 km",
+        "Dénivelé positif": "140 m",
+        "Dénivelé négatif": "140 m",
+        "Altitude min.": "3 m",
+        "Altitude max.": "76 m",
+        "Durée (selon allure)": "4h45",
+        "Balisage": "Bleu Outremer"
+      },
+      "sourceMarking": "Bleu Outremer",
+      "sourceDeparture": null,
+      "sourceParking": null,
+      "sourceOriginalGpxUrl": "https://randotrailencauxseine.fr/fr/gpx/151280",
+      "sourceOriginalGpxResponseSha256": "bad38fd4a5e57ce4021f40d0b6b81241b3b0bc53bb301e38993933d0374320ad",
+      "sourceAlternativePage": "https://espacestrail.run/fr/seinedetrail/parcours/151280",
+      "sourceDownloadReferer": "https://espacestrail.run/fr/seinedetrail/parcours/151280",
+      "sourceGpxAccess": "Téléchargement public ; Referer de la fiche officielle requis comme lors du clic navigateur ; sans compte ni cookie.",
+      "gpxSha256": "db01cc4babe28882363337e61aea39a1ec94dd465be34193c1aa3abd855785d3",
+      "geometryKm": 18.748,
+      "pointCount": 555,
+      "status": "trace-verifiee",
+      "officialLocation": [
+        0.68563,
+        49.49059
+      ],
+      "officialLocationPrecision": "Premier point du GPX officiel ; stationnement non vérifié"
+    },
+    {
+      "sourceId": "CAUX-SEINE-248267",
+      "name": "Les secrets de l'Abbaye",
+      "town": "Abbaye du Valasse",
+      "department": "76",
+      "km": 3.1,
+      "official": "https://randotrailencauxseine.fr/fr/parcours/248267",
+      "gpxSource": "https://espacestrail.run/fr/seinedetrail/gpx/248267",
+      "sourceAscent": 40,
+      "sourceDescent": 40,
+      "sourceDurationMinutes": null,
+      "sourceDurationRangeMinutes": [
+        40,
+        90
+      ],
+      "sourceCategory": "Randonnée",
+      "sourceListing": "https://randotrailencauxseine.fr/fr/activites",
+      "scopeEvidence": {
+        "method": "Explicit official activity category",
+        "category": "Randonnée",
+        "selector": "#container-rando",
+        "listingId": 248267,
+        "officialTown": "Abbaye du Valasse",
+        "officialDepartment": "76"
+      },
+      "sourceListingSha256": "18f153cd2e23c30f50e0dd809ae677b09d6c6ed897ae33ecf4bab3a7cba60375",
+      "sourceGpxLinkEvidence": {
+        "url": "https://espacestrail.run/assets/js/blocParcours.js",
+        "sha256": "79b39d7609ca8d0ea3b649a455d0e1649b62c3196399287ea6af33d4b2826ff0",
+        "method": "Official downloadGpx handler + alternative page explicitly supplied by the original GPX endpoint"
+      },
+      "sourcePageSha256": "e903b04b63ed594f67faecb82423e1a9cdb08c4714457377ad40d916b696342e",
+      "sourcePdfs": [],
+      "sourceFacts": {
+        "Distance": "3.1 km",
+        "Dénivelé positif": "40 m",
+        "Dénivelé négatif": "40 m",
+        "Altitude min.": "10 m",
+        "Altitude max.": "43 m",
+        "Durée (selon allure)": "0h40 à  1h30"
+      },
+      "sourceMarking": null,
+      "sourceDeparture": null,
+      "sourceParking": null,
+      "sourceOriginalGpxUrl": "https://randotrailencauxseine.fr/fr/gpx/248267",
+      "sourceOriginalGpxResponseSha256": "8f05db3ad7d13671e1eeeba06632acea3c47aeb761023a0f6a9e45a2ea02657c",
+      "sourceAlternativePage": "https://espacestrail.run/fr/seinedetrail/parcours/248267",
+      "sourceDownloadReferer": "https://espacestrail.run/fr/seinedetrail/parcours/248267",
+      "sourceGpxAccess": "Téléchargement public ; Referer de la fiche officielle requis comme lors du clic navigateur ; sans compte ni cookie.",
+      "gpxSha256": "408c096013c07a76ba0afbbfc4e7fae7f7fddb1caf9c693b7a798262cfe3ddf0",
+      "geometryKm": 3.554,
+      "pointCount": 199,
+      "status": "trace-verifiee",
+      "officialLocation": [
+        0.50516,
+        49.53714
+      ],
+      "officialLocationPrecision": "Premier point du GPX officiel ; stationnement non vérifié"
+    },
+    {
+      "sourceId": "CAUX-SEINE-151278",
+      "name": "Entre Seine et Terre",
+      "town": "Norville",
+      "department": "76",
+      "km": 12.1,
+      "official": "https://randotrailencauxseine.fr/fr/parcours/151278",
+      "gpxSource": "https://espacestrail.run/fr/seinedetrail/gpx/151278",
+      "sourceAscent": 120,
+      "sourceDescent": 130,
+      "sourceDurationMinutes": 190,
+      "sourceDurationRangeMinutes": [
+        190,
+        190
+      ],
+      "sourceCategory": "Randonnée",
+      "sourceListing": "https://randotrailencauxseine.fr/fr/activites",
+      "scopeEvidence": {
+        "method": "Explicit official activity category",
+        "category": "Randonnée",
+        "selector": "#container-rando",
+        "listingId": 151278,
+        "officialTown": "Norville",
+        "officialDepartment": "76"
+      },
+      "sourceListingSha256": "18f153cd2e23c30f50e0dd809ae677b09d6c6ed897ae33ecf4bab3a7cba60375",
+      "sourceGpxLinkEvidence": {
+        "url": "https://espacestrail.run/assets/js/blocParcours.js",
+        "sha256": "79b39d7609ca8d0ea3b649a455d0e1649b62c3196399287ea6af33d4b2826ff0",
+        "method": "Official downloadGpx handler + alternative page explicitly supplied by the original GPX endpoint"
+      },
+      "sourcePageSha256": "2c9ccb217bbcc555b0cd5685b6cc7069c4b67f9a1069976aaf8f4e28760c17a8",
+      "sourcePdfs": [
+        {
+          "url": "https://randotrailencauxseine.fr/assets/resources/res7071_5340.pdf",
+          "label": "Randonnée pédestre - Entre Seine et Terre"
+        },
+        {
+          "url": "https://randotrailencauxseine.fr/assets/resources/res12851_7979.pdf",
+          "label": "Carte PDF"
+        }
+      ],
+      "sourceFacts": {
+        "Distance": "12.1 km",
+        "Dénivelé positif": "120 m",
+        "Dénivelé négatif": "130 m",
+        "Altitude min.": "2 m",
+        "Altitude max.": "106 m",
+        "Durée (selon allure)": "3h10",
+        "Balisage": "Bleu Outremer"
+      },
+      "sourceMarking": "Bleu Outremer",
+      "sourceDeparture": null,
+      "sourceParking": null,
+      "sourceOriginalGpxUrl": "https://randotrailencauxseine.fr/fr/gpx/151278",
+      "sourceOriginalGpxResponseSha256": "f2a0463a860b23bdbf95fd2c62b566d1839d00602e8ddfa0ec03a45a98274abb",
+      "sourceAlternativePage": "https://espacestrail.run/fr/seinedetrail/parcours/151278",
+      "sourceDownloadReferer": "https://espacestrail.run/fr/seinedetrail/parcours/151278",
+      "sourceGpxAccess": "Téléchargement public ; Referer de la fiche officielle requis comme lors du clic navigateur ; sans compte ni cookie.",
+      "gpxSha256": "e36cf30c84d940b771fccad755b13e4bfd4de81da8abb7b93fe6ab9954a5cb52",
+      "geometryKm": 12.103,
+      "pointCount": 351,
+      "status": "trace-verifiee",
+      "officialLocation": [
+        0.63844,
+        49.47626
+      ],
+      "officialLocationPrecision": "Premier point du GPX officiel ; stationnement non vérifié"
+    },
+    {
+      "sourceId": "CAUX-SEINE-151277",
+      "name": "Les Comtes d'Evreux",
+      "town": "Triquerville",
+      "department": "76",
+      "km": 17.6,
+      "official": "https://randotrailencauxseine.fr/fr/parcours/151277",
+      "gpxSource": "https://espacestrail.run/fr/seinedetrail/gpx/151277",
+      "sourceAscent": 280,
+      "sourceDescent": 280,
+      "sourceDurationMinutes": 255,
+      "sourceDurationRangeMinutes": [
+        255,
+        255
+      ],
+      "sourceCategory": "Randonnée",
+      "sourceListing": "https://randotrailencauxseine.fr/fr/activites",
+      "scopeEvidence": {
+        "method": "Explicit official activity category",
+        "category": "Randonnée",
+        "selector": "#container-rando",
+        "listingId": 151277,
+        "officialTown": "Triquerville",
+        "officialDepartment": "76"
+      },
+      "sourceListingSha256": "18f153cd2e23c30f50e0dd809ae677b09d6c6ed897ae33ecf4bab3a7cba60375",
+      "sourceGpxLinkEvidence": {
+        "url": "https://espacestrail.run/assets/js/blocParcours.js",
+        "sha256": "79b39d7609ca8d0ea3b649a455d0e1649b62c3196399287ea6af33d4b2826ff0",
+        "method": "Official downloadGpx handler + alternative page explicitly supplied by the original GPX endpoint"
+      },
+      "sourcePageSha256": "885f8f5df5b9d886abb341d6ea11a74e7398d603faf4a93c8e8d48477e116f2a",
+      "sourcePdfs": [
+        {
+          "url": "https://randotrailencauxseine.fr/assets/resources/res7070_1398.pdf",
+          "label": "Randonnée pédestre - Les Comtes d'Evreux"
+        },
+        {
+          "url": "https://randotrailencauxseine.fr/assets/resources/res12846_4009.pdf",
+          "label": "Carte PDF"
+        }
+      ],
+      "sourceFacts": {
+        "Distance": "17.6 km",
+        "Dénivelé positif": "280 m",
+        "Dénivelé négatif": "280 m",
+        "Altitude min.": "38 m",
+        "Altitude max.": "144 m",
+        "Durée (selon allure)": "4h15",
+        "Balisage": "Fuschia"
+      },
+      "sourceMarking": "Fuschia",
+      "sourceDeparture": null,
+      "sourceParking": null,
+      "sourceOriginalGpxUrl": "https://randotrailencauxseine.fr/fr/gpx/151277",
+      "sourceOriginalGpxResponseSha256": "1d7465fa568ee55f2a158a3a85eecdf45faafe36070522fb0fb29c8e0975f393",
+      "sourceAlternativePage": "https://espacestrail.run/fr/seinedetrail/parcours/151277",
+      "sourceDownloadReferer": "https://espacestrail.run/fr/seinedetrail/parcours/151277",
+      "sourceGpxAccess": "Téléchargement public ; Referer de la fiche officielle requis comme lors du clic navigateur ; sans compte ni cookie.",
+      "gpxSha256": "d229ad790e95e8bbf0f82633d2433352c09cd1c95cc9a80461a6286a8322b4f4",
+      "geometryKm": 17.603,
+      "pointCount": 579,
+      "status": "trace-verifiee",
+      "officialLocation": [
+        0.62776,
+        49.5035
+      ],
+      "officialLocationPrecision": "Premier point du GPX officiel ; stationnement non vérifié"
+    },
+    {
+      "sourceId": "CAUX-SEINE-151276",
+      "name": "Le Val de l'Abbesse",
+      "town": "Saint-Nicolas-de-la-Taille",
+      "department": "76",
+      "km": 11.31,
+      "official": "https://randotrailencauxseine.fr/fr/parcours/151276",
+      "gpxSource": "https://espacestrail.run/fr/seinedetrail/gpx/151276",
+      "sourceAscent": 220,
+      "sourceDescent": 220,
+      "sourceDurationMinutes": 180,
+      "sourceDurationRangeMinutes": [
+        180,
+        180
+      ],
+      "sourceCategory": "Randonnée",
+      "sourceListing": "https://randotrailencauxseine.fr/fr/activites",
+      "scopeEvidence": {
+        "method": "Explicit official activity category",
+        "category": "Randonnée",
+        "selector": "#container-rando",
+        "listingId": 151276,
+        "officialTown": "Saint-Nicolas-de-la-Taille",
+        "officialDepartment": "76"
+      },
+      "sourceListingSha256": "18f153cd2e23c30f50e0dd809ae677b09d6c6ed897ae33ecf4bab3a7cba60375",
+      "sourceGpxLinkEvidence": {
+        "url": "https://espacestrail.run/assets/js/blocParcours.js",
+        "sha256": "79b39d7609ca8d0ea3b649a455d0e1649b62c3196399287ea6af33d4b2826ff0",
+        "method": "Official downloadGpx handler + alternative page explicitly supplied by the original GPX endpoint"
+      },
+      "sourcePageSha256": "620e12e441f0aa565d3450ac37f6dd0faf8ceace231488a60c9a9a144ac05189",
+      "sourcePdfs": [
+        {
+          "url": "https://randotrailencauxseine.fr/assets/resources/res7069_9569.pdf",
+          "label": "Randonnée pédestre - Le Val de l'Abbesse"
+        },
+        {
+          "url": "https://randotrailencauxseine.fr/assets/resources/res12845_8109.pdf",
+          "label": "Carte PDF"
+        }
+      ],
+      "sourceFacts": {
+        "Distance": "11.31 km",
+        "Dénivelé positif": "220 m",
+        "Dénivelé négatif": "220 m",
+        "Altitude min.": "4 m",
+        "Altitude max.": "116 m",
+        "Durée (selon allure)": "3h",
+        "Balisage": "Fuschia"
+      },
+      "sourceMarking": "Fuschia",
+      "sourceDeparture": null,
+      "sourceParking": null,
+      "sourceOriginalGpxUrl": "https://randotrailencauxseine.fr/fr/gpx/151276",
+      "sourceOriginalGpxResponseSha256": "67523525eaf30ed2d3f90e13c331ec7edd75de41b3858d25cd8e15ec4fd35737",
+      "sourceAlternativePage": "https://espacestrail.run/fr/seinedetrail/parcours/151276",
+      "sourceDownloadReferer": "https://espacestrail.run/fr/seinedetrail/parcours/151276",
+      "sourceGpxAccess": "Téléchargement public ; Referer de la fiche officielle requis comme lors du clic navigateur ; sans compte ni cookie.",
+      "gpxSha256": "18bb29c1212298ca06018572e71f6abf8d27a4e4a1795defcbff63040b4259f5",
+      "geometryKm": 11.274,
+      "pointCount": 364,
+      "status": "trace-verifiee",
+      "officialLocation": [
+        0.47344,
+        49.51234
+      ],
+      "officialLocationPrecision": "Premier point du GPX officiel ; stationnement non vérifié"
+    },
+    {
+      "sourceId": "CAUX-SEINE-151272",
+      "name": "Le Hamel au Coeur",
+      "town": "Saint-Jean-de-Folleville",
+      "department": "76",
+      "km": 8.07,
+      "official": "https://randotrailencauxseine.fr/fr/parcours/151272",
+      "gpxSource": "https://espacestrail.run/fr/seinedetrail/gpx/151272",
+      "sourceAscent": 130,
+      "sourceDescent": 130,
+      "sourceDurationMinutes": 120,
+      "sourceDurationRangeMinutes": [
+        120,
+        120
+      ],
+      "sourceCategory": "Randonnée",
+      "sourceListing": "https://randotrailencauxseine.fr/fr/activites",
+      "scopeEvidence": {
+        "method": "Explicit official activity category",
+        "category": "Randonnée",
+        "selector": "#container-rando",
+        "listingId": 151272,
+        "officialTown": "Saint-Jean-de-Folleville",
+        "officialDepartment": "76"
+      },
+      "sourceListingSha256": "18f153cd2e23c30f50e0dd809ae677b09d6c6ed897ae33ecf4bab3a7cba60375",
+      "sourceGpxLinkEvidence": {
+        "url": "https://espacestrail.run/assets/js/blocParcours.js",
+        "sha256": "79b39d7609ca8d0ea3b649a455d0e1649b62c3196399287ea6af33d4b2826ff0",
+        "method": "Official downloadGpx handler + alternative page explicitly supplied by the original GPX endpoint"
+      },
+      "sourcePageSha256": "da16dc9b29fc5794df518c9188555d7538c4f9199a13b1a6c0b98754e3011dcc",
+      "sourcePdfs": [
+        {
+          "url": "https://randotrailencauxseine.fr/assets/resources/res7068_4350.pdf",
+          "label": "Randonnée pédestre - Le Hamel au Coeur"
+        },
+        {
+          "url": "https://randotrailencauxseine.fr/assets/resources/res8034_7420.pdf",
+          "label": "Carte pdf"
+        }
+      ],
+      "sourceFacts": {
+        "Distance": "8.07 km",
+        "Dénivelé positif": "130 m",
+        "Dénivelé négatif": "130 m",
+        "Altitude min.": "25 m",
+        "Altitude max.": "132 m",
+        "Durée (selon allure)": "2h",
+        "Balisage": "Bleu Outremer"
+      },
+      "sourceMarking": "Bleu Outremer",
+      "sourceDeparture": null,
+      "sourceParking": null,
+      "sourceOriginalGpxUrl": "https://randotrailencauxseine.fr/fr/gpx/151272",
+      "sourceOriginalGpxResponseSha256": "2575b6eb2dd34ecb9537bdd1d287e45575b764592ca161860591db6bb4a438ea",
+      "sourceAlternativePage": "https://espacestrail.run/fr/seinedetrail/parcours/151272",
+      "sourceDownloadReferer": "https://espacestrail.run/fr/seinedetrail/parcours/151272",
+      "sourceGpxAccess": "Téléchargement public ; Referer de la fiche officielle requis comme lors du clic navigateur ; sans compte ni cookie.",
+      "gpxSha256": "57a2872c2a4efcccbbca2678c3c76b490e7a2e22f48d636cf61a4ef341db24d1",
+      "geometryKm": 8.056,
+      "pointCount": 259,
+      "status": "trace-verifiee",
+      "officialLocation": [
+        0.508,
+        49.52205
+      ],
+      "officialLocationPrecision": "Premier point du GPX officiel ; stationnement non vérifié"
+    },
+    {
+      "sourceId": "CAUX-SEINE-150690",
+      "name": "Les Chemins des Textiles",
+      "town": "La Frenaye",
+      "department": "76",
+      "km": 17.21,
+      "official": "https://randotrailencauxseine.fr/fr/parcours/150690",
+      "gpxSource": "https://espacestrail.run/fr/seinedetrail/gpx/150690",
+      "sourceAscent": 270,
+      "sourceDescent": 270,
+      "sourceDurationMinutes": 270,
+      "sourceDurationRangeMinutes": [
+        270,
+        270
+      ],
+      "sourceCategory": "Randonnée",
+      "sourceListing": "https://randotrailencauxseine.fr/fr/activites",
+      "scopeEvidence": {
+        "method": "Explicit official activity category",
+        "category": "Randonnée",
+        "selector": "#container-rando",
+        "listingId": 150690,
+        "officialTown": "La Frenaye",
+        "officialDepartment": "76"
+      },
+      "sourceListingSha256": "18f153cd2e23c30f50e0dd809ae677b09d6c6ed897ae33ecf4bab3a7cba60375",
+      "sourceGpxLinkEvidence": {
+        "url": "https://espacestrail.run/assets/js/blocParcours.js",
+        "sha256": "79b39d7609ca8d0ea3b649a455d0e1649b62c3196399287ea6af33d4b2826ff0",
+        "method": "Official downloadGpx handler + alternative page explicitly supplied by the original GPX endpoint"
+      },
+      "sourcePageSha256": "9fcf8dd8dc05dfa0ab427d2e766c567129278c6a00d79dffa16ba124544f2828",
+      "sourcePdfs": [
+        {
+          "url": "https://randotrailencauxseine.fr/assets/resources/res7066_4396.pdf",
+          "label": "Randonnée pédestre - Les chemins des textiles",
+          "sha256": "8370388f3735a06794bc5b37e74be396737c6d3e2d7f066ab99f281820930d62",
+          "publishedKm": 17.8,
+          "publishedDurationMinutes": 270,
+          "publishedDeparture": "La Frenaye, place de l’Europe, parking Brassens",
+          "metadataCreatedAt": "2014-03-14",
+          "metadataModifiedAt": "2021-05-21",
+          "note": "Brochure liée distincte ; 17,8 km, contre 17,21 km sur la fiche web. Métadonnées PDF datées, sans déduire une date de terrain."
+        },
+        {
+          "url": "https://randotrailencauxseine.fr/assets/resources/res8033_8518.pdf",
+          "label": "Carte pdf",
+          "sha256": "6c85b9900c592c6f29d70b1b65e98eca66ee1700d162f75bd580e35ed72423ee",
+          "publishedKm": 17.2,
+          "publishedAscent": 290,
+          "publishedDescent": 290,
+          "metadataCreatedAt": "2021-07-19",
+          "note": "Carte PDF liée : D+ et D− de 290 m chacun, contre 270 m chacun sur la fiche web. Métadonnées PDF datées, sans déduire une date de terrain."
+        }
+      ],
+      "sourceFacts": {
+        "Distance": "17.21 km",
+        "Dénivelé positif": "270 m",
+        "Dénivelé négatif": "270 m",
+        "Altitude min.": "7 m",
+        "Altitude max.": "146 m",
+        "Durée (selon allure)": "4h30",
+        "Balisage": "Bleu Outremer"
+      },
+      "sourceMarking": "Bleu Outremer",
+      "sourceDeparture": null,
+      "sourceParking": null,
+      "sourceOriginalGpxUrl": "https://randotrailencauxseine.fr/fr/gpx/150690",
+      "sourceOriginalGpxResponseSha256": "568ccf9e0863addeb1d2767b9e016d6d451471048084970951df35a52a442796",
+      "sourceAlternativePage": "https://espacestrail.run/fr/seinedetrail/parcours/150690",
+      "sourceDownloadReferer": "https://espacestrail.run/fr/seinedetrail/parcours/150690",
+      "sourceGpxAccess": "Téléchargement public ; Referer de la fiche officielle requis comme lors du clic navigateur ; sans compte ni cookie.",
+      "gpxSha256": "185671fd7b9e27c1bea25fe32281d2ed15b6f2d1a14a55c92d88a669c5447763",
+      "geometryKm": 17.172,
+      "pointCount": 560,
+      "status": "trace-verifiee",
+      "officialLocation": [
+        0.56908,
+        49.52749
+      ],
+      "officialLocationPrecision": "Premier point du GPX officiel ; stationnement non vérifié"
+    },
+    {
+      "sourceId": "CAUX-SEINE-151285",
+      "name": "La Chapelle du Bout du vent",
+      "town": "Arelaune-en-Seine",
+      "department": "76",
+      "km": 15.4,
+      "official": "https://randotrailencauxseine.fr/fr/parcours/151285",
+      "gpxSource": "https://espacestrail.run/fr/seinedetrail/gpx/151285",
+      "sourceAscent": 50,
+      "sourceDescent": 50,
+      "sourceDurationMinutes": 240,
+      "sourceDurationRangeMinutes": [
+        240,
+        240
+      ],
+      "sourceCategory": "Randonnée",
+      "sourceListing": "https://randotrailencauxseine.fr/fr/activites",
+      "scopeEvidence": {
+        "method": "Explicit official activity category",
+        "category": "Randonnée",
+        "selector": "#container-rando",
+        "listingId": 151285,
+        "officialTown": "Arelaune-en-Seine",
+        "officialDepartment": "76"
+      },
+      "sourceListingSha256": "18f153cd2e23c30f50e0dd809ae677b09d6c6ed897ae33ecf4bab3a7cba60375",
+      "sourceGpxLinkEvidence": {
+        "url": "https://espacestrail.run/assets/js/blocParcours.js",
+        "sha256": "79b39d7609ca8d0ea3b649a455d0e1649b62c3196399287ea6af33d4b2826ff0",
+        "method": "Official downloadGpx handler + alternative page explicitly supplied by the original GPX endpoint"
+      },
+      "sourcePageSha256": "89d95c7030e1b711a1d45526e86f2b41aafe839fbd7495f542323169bf68c492",
+      "sourcePdfs": [
+        {
+          "url": "https://randotrailencauxseine.fr/assets/resources/res7073_7144.pdf",
+          "label": "Randonnée pédestre - La chapelle du Bout du vent"
+        },
+        {
+          "url": "https://randotrailencauxseine.fr/assets/resources/res8039_7067.pdf",
+          "label": "Carte pdf"
+        }
+      ],
+      "sourceFacts": {
+        "Distance": "15.4 km",
+        "Dénivelé positif": "50 m",
+        "Dénivelé négatif": "50 m",
+        "Altitude min.": "2 m",
+        "Altitude max.": "24 m",
+        "Durée (selon allure)": "4h",
+        "Balisage": "Bleu Outremer"
+      },
+      "sourceMarking": "Bleu Outremer",
+      "sourceDeparture": null,
+      "sourceParking": null,
+      "sourceOriginalGpxUrl": "https://randotrailencauxseine.fr/fr/gpx/151285",
+      "sourceOriginalGpxResponseSha256": "4c8761c0e4b6d858ba8e85215d4f022c7f4bd1b08d6a1a688ae946b8c6557c66",
+      "sourceAlternativePage": "https://espacestrail.run/fr/seinedetrail/parcours/151285",
+      "sourceDownloadReferer": "https://espacestrail.run/fr/seinedetrail/parcours/151285",
+      "sourceGpxAccess": "Téléchargement public ; Referer de la fiche officielle requis comme lors du clic navigateur ; sans compte ni cookie.",
+      "gpxSha256": "78f0c7be102179191b3c3a8d5d310725de8d37798771a843350d1385d2780dcb",
+      "geometryKm": 15.422,
+      "pointCount": 456,
+      "status": "trace-verifiee",
+      "officialLocation": [
+        0.77404,
+        49.48322
+      ],
+      "officialLocationPrecision": "Premier point du GPX officiel ; stationnement non vérifié"
+    },
+    {
+      "sourceId": "CAUX-SEINE-150689",
+      "name": "La Croix de Pierre",
+      "town": "Beuzevillette",
+      "department": "76",
+      "km": 12.2,
+      "official": "https://randotrailencauxseine.fr/fr/parcours/150689",
+      "gpxSource": "https://espacestrail.run/fr/seinedetrail/gpx/150689",
+      "sourceAscent": 110,
+      "sourceDescent": 110,
+      "sourceDurationMinutes": 180,
+      "sourceDurationRangeMinutes": [
+        180,
+        180
+      ],
+      "sourceCategory": "Randonnée",
+      "sourceListing": "https://randotrailencauxseine.fr/fr/activites",
+      "scopeEvidence": {
+        "method": "Explicit official activity category",
+        "category": "Randonnée",
+        "selector": "#container-rando",
+        "listingId": 150689,
+        "officialTown": "Beuzevillette",
+        "officialDepartment": "76"
+      },
+      "sourceListingSha256": "18f153cd2e23c30f50e0dd809ae677b09d6c6ed897ae33ecf4bab3a7cba60375",
+      "sourceGpxLinkEvidence": {
+        "url": "https://espacestrail.run/assets/js/blocParcours.js",
+        "sha256": "79b39d7609ca8d0ea3b649a455d0e1649b62c3196399287ea6af33d4b2826ff0",
+        "method": "Official downloadGpx handler + alternative page explicitly supplied by the original GPX endpoint"
+      },
+      "sourcePageSha256": "c7d64f1391443ac0dabbed5df1d11532dd2896ae80639d60aae6f3bffc0b95e1",
+      "sourcePdfs": [
+        {
+          "url": "https://randotrailencauxseine.fr/assets/resources/res7065_8650.pdf",
+          "label": "Randonnée pédestre - La croix de pierre"
+        },
+        {
+          "url": "https://randotrailencauxseine.fr/assets/resources/res8032_3568.pdf",
+          "label": "Carte pdf"
+        }
+      ],
+      "sourceFacts": {
+        "Distance": "12.2 km",
+        "Dénivelé positif": "110 m",
+        "Dénivelé négatif": "110 m",
+        "Altitude min.": "93 m",
+        "Altitude max.": "155 m",
+        "Durée (selon allure)": "3h",
+        "Balisage": "Bleu Outremer"
+      },
+      "sourceMarking": "Bleu Outremer",
+      "sourceDeparture": null,
+      "sourceParking": null,
+      "sourceOriginalGpxUrl": "https://randotrailencauxseine.fr/fr/gpx/150689",
+      "sourceOriginalGpxResponseSha256": "29e9ac0262ad119236459b33d82d2b84aea9535b4344f123d7a5357adb5e0034",
+      "sourceAlternativePage": "https://espacestrail.run/fr/seinedetrail/parcours/150689",
+      "sourceDownloadReferer": "https://espacestrail.run/fr/seinedetrail/parcours/150689",
+      "sourceGpxAccess": "Téléchargement public ; Referer de la fiche officielle requis comme lors du clic navigateur ; sans compte ni cookie.",
+      "gpxSha256": "70b21f78a8d5e91db46946ba17f8a28cc6df28c23af6d665a6e7bcef710e036a",
+      "geometryKm": 12.222,
+      "pointCount": 368,
+      "status": "trace-verifiee",
+      "officialLocation": [
+        0.53586,
+        49.57127
+      ],
+      "officialLocationPrecision": "Premier point du GPX officiel ; stationnement non vérifié"
+    },
+    {
+      "sourceId": "CAUX-SEINE-150688",
+      "name": "Les Terres Romaines",
+      "town": "Trouville",
+      "department": "76",
+      "km": 13.83,
+      "official": "https://randotrailencauxseine.fr/fr/parcours/150688",
+      "gpxSource": "https://espacestrail.run/fr/seinedetrail/gpx/150688",
+      "sourceAscent": 60,
+      "sourceDescent": 60,
+      "sourceDurationMinutes": 210,
+      "sourceDurationRangeMinutes": [
+        210,
+        210
+      ],
+      "sourceCategory": "Randonnée",
+      "sourceListing": "https://randotrailencauxseine.fr/fr/activites",
+      "scopeEvidence": {
+        "method": "Explicit official activity category",
+        "category": "Randonnée",
+        "selector": "#container-rando",
+        "listingId": 150688,
+        "officialTown": "Trouville",
+        "officialDepartment": "76"
+      },
+      "sourceListingSha256": "18f153cd2e23c30f50e0dd809ae677b09d6c6ed897ae33ecf4bab3a7cba60375",
+      "sourceGpxLinkEvidence": {
+        "url": "https://espacestrail.run/assets/js/blocParcours.js",
+        "sha256": "79b39d7609ca8d0ea3b649a455d0e1649b62c3196399287ea6af33d4b2826ff0",
+        "method": "Official downloadGpx handler + alternative page explicitly supplied by the original GPX endpoint"
+      },
+      "sourcePageSha256": "debd35c36baa35f9d29a73266cc7fe4fb5d10afea330be9062233e8b405a301a",
+      "sourcePdfs": [
+        {
+          "url": "https://randotrailencauxseine.fr/assets/resources/res7064_9976.pdf",
+          "label": "Randonnée pédestre - Les Terres Romaines"
+        },
+        {
+          "url": "https://randotrailencauxseine.fr/assets/resources/res8031_7206.pdf",
+          "label": "Carte pdf"
+        }
+      ],
+      "sourceFacts": {
+        "Distance": "13.83 km",
+        "Dénivelé positif": "60 m",
+        "Dénivelé négatif": "60 m",
+        "Altitude min.": "131 m",
+        "Altitude max.": "155 m",
+        "Durée (selon allure)": "3h30",
+        "Balisage": "Jaune Citron"
+      },
+      "sourceMarking": "Jaune Citron",
+      "sourceDeparture": null,
+      "sourceParking": null,
+      "sourceOriginalGpxUrl": "https://randotrailencauxseine.fr/fr/gpx/150688",
+      "sourceOriginalGpxResponseSha256": "989f87017f890eb2546e8ac4825ea805b9cb635a5bbce0df9ef1ff8564752ea1",
+      "sourceAlternativePage": "https://espacestrail.run/fr/seinedetrail/parcours/150688",
+      "sourceDownloadReferer": "https://espacestrail.run/fr/seinedetrail/parcours/150688",
+      "sourceGpxAccess": "Téléchargement public ; Referer de la fiche officielle requis comme lors du clic navigateur ; sans compte ni cookie.",
+      "gpxSha256": "2b1c2ce3d3a9784dbf7aeec9b311b91cd11b34334a63e9d30558c25be75ca791",
+      "geometryKm": 13.812,
+      "pointCount": 344,
+      "status": "trace-verifiee",
+      "officialLocation": [
+        0.59821,
+        49.58173
+      ],
+      "officialLocationPrecision": "Premier point du GPX officiel ; stationnement non vérifié"
+    },
+    {
+      "sourceId": "CAUX-SEINE-151286",
+      "name": "Aux Sources du Bebec",
+      "town": "Villequier",
+      "department": "76",
+      "km": 11.8,
+      "official": "https://randotrailencauxseine.fr/fr/parcours/151286",
+      "gpxSource": "https://espacestrail.run/fr/seinedetrail/gpx/151286",
+      "sourceAscent": 170,
+      "sourceDescent": 170,
+      "sourceDurationMinutes": 195,
+      "sourceDurationRangeMinutes": [
+        195,
+        195
+      ],
+      "sourceCategory": "Randonnée",
+      "sourceListing": "https://randotrailencauxseine.fr/fr/activites",
+      "scopeEvidence": {
+        "method": "Explicit official activity category",
+        "category": "Randonnée",
+        "selector": "#container-rando",
+        "listingId": 151286,
+        "officialTown": "Villequier",
+        "officialDepartment": "76"
+      },
+      "sourceListingSha256": "18f153cd2e23c30f50e0dd809ae677b09d6c6ed897ae33ecf4bab3a7cba60375",
+      "sourceGpxLinkEvidence": {
+        "url": "https://espacestrail.run/assets/js/blocParcours.js",
+        "sha256": "79b39d7609ca8d0ea3b649a455d0e1649b62c3196399287ea6af33d4b2826ff0",
+        "method": "Official downloadGpx handler + alternative page explicitly supplied by the original GPX endpoint"
+      },
+      "sourcePageSha256": "d738885b574757704cc2f8b92b4582a716c97a4d464618880e0b8c6b2d2066a1",
+      "sourcePdfs": [
+        {
+          "url": "https://randotrailencauxseine.fr/assets/resources/res7074_8079.pdf",
+          "label": "Randonnée pédestre - Aux sources du Bebec"
+        },
+        {
+          "url": "https://randotrailencauxseine.fr/assets/resources/res8040_3216.pdf",
+          "label": "Carte pdf"
+        }
+      ],
+      "sourceFacts": {
+        "Distance": "11.8 km",
+        "Dénivelé positif": "170 m",
+        "Dénivelé négatif": "170 m",
+        "Altitude min.": "59 m",
+        "Altitude max.": "141 m",
+        "Durée (selon allure)": "3h15",
+        "Balisage": "Vert Forêt"
+      },
+      "sourceMarking": "Vert Forêt",
+      "sourceDeparture": null,
+      "sourceParking": null,
+      "sourceOriginalGpxUrl": "https://randotrailencauxseine.fr/fr/gpx/151286",
+      "sourceOriginalGpxResponseSha256": "8a27de9c9563a2d9993307165cf32be02c1825751140de7522069e7c3b578f41",
+      "sourceAlternativePage": "https://espacestrail.run/fr/seinedetrail/parcours/151286",
+      "sourceDownloadReferer": "https://espacestrail.run/fr/seinedetrail/parcours/151286",
+      "sourceGpxAccess": "Téléchargement public ; Referer de la fiche officielle requis comme lors du clic navigateur ; sans compte ni cookie.",
+      "gpxSha256": "befaebe87ca325b0f9ec2e5eebb7bce2ff1884146c118de57187f0ec12525900",
+      "geometryKm": 11.78,
+      "pointCount": 364,
+      "status": "trace-verifiee",
+      "officialLocation": [
+        0.63948,
+        49.51297
+      ],
+      "officialLocationPrecision": "Premier point du GPX officiel ; stationnement non vérifié"
+    },
+    {
+      "sourceId": "CAUX-SEINE-150687",
+      "name": "Sentier de la Gribane",
+      "town": "Caudebec-en-Caux",
+      "department": "76",
+      "km": 3.7,
+      "official": "https://randotrailencauxseine.fr/fr/parcours/150687",
+      "gpxSource": "https://espacestrail.run/fr/seinedetrail/gpx/150687",
+      "sourceAscent": 90,
+      "sourceDescent": 90,
+      "sourceDurationMinutes": 60,
+      "sourceDurationRangeMinutes": [
+        60,
+        60
+      ],
+      "sourceCategory": "Randonnée",
+      "sourceListing": "https://randotrailencauxseine.fr/fr/activites",
+      "scopeEvidence": {
+        "method": "Explicit official activity category",
+        "category": "Randonnée",
+        "selector": "#container-rando",
+        "listingId": 150687,
+        "officialTown": "Caudebec-en-Caux",
+        "officialDepartment": "76"
+      },
+      "sourceListingSha256": "18f153cd2e23c30f50e0dd809ae677b09d6c6ed897ae33ecf4bab3a7cba60375",
+      "sourceGpxLinkEvidence": {
+        "url": "https://espacestrail.run/assets/js/blocParcours.js",
+        "sha256": "79b39d7609ca8d0ea3b649a455d0e1649b62c3196399287ea6af33d4b2826ff0",
+        "method": "Official downloadGpx handler + alternative page explicitly supplied by the original GPX endpoint"
+      },
+      "sourcePageSha256": "e780adffd0dee2cf93baf899512a51b6d9278ddfd362bda2f0cea30a14e509e4",
+      "sourcePdfs": [
+        {
+          "url": "https://randotrailencauxseine.fr/assets/resources/res7063_5264.pdf",
+          "label": "Randonnée pédestre - Sentier de la Gribane"
+        },
+        {
+          "url": "https://randotrailencauxseine.fr/assets/resources/res8030_2287.pdf",
+          "label": "Carte pdf"
+        }
+      ],
+      "sourceFacts": {
+        "Distance": "3.7 km",
+        "Dénivelé positif": "90 m",
+        "Dénivelé négatif": "90 m",
+        "Altitude min.": "-1 m",
+        "Altitude max.": "83 m",
+        "Durée (selon allure)": "1h",
+        "Balisage": "Vert Forêt"
+      },
+      "sourceMarking": "Vert Forêt",
+      "sourceDeparture": null,
+      "sourceParking": null,
+      "sourceOriginalGpxUrl": "https://randotrailencauxseine.fr/fr/gpx/150687",
+      "sourceOriginalGpxResponseSha256": "b5075b6922a32487628a73a55117f56949e0fdba5298f55ee8ce9500d6b130d1",
+      "sourceAlternativePage": "https://espacestrail.run/fr/seinedetrail/parcours/150687",
+      "sourceDownloadReferer": "https://espacestrail.run/fr/seinedetrail/parcours/150687",
+      "sourceGpxAccess": "Téléchargement public ; Referer de la fiche officielle requis comme lors du clic navigateur ; sans compte ni cookie.",
+      "gpxSha256": "9538d810119e80af3541790175d780be766fe27f3a6f0a5ad9beb4fd27bf7531",
+      "geometryKm": 3.746,
+      "pointCount": 136,
+      "status": "trace-verifiee",
+      "officialLocation": [
+        0.7284,
+        49.52452
+      ],
+      "officialLocationPrecision": "Premier point du GPX officiel ; stationnement non vérifié"
+    },
+    {
+      "sourceId": "CAUX-SEINE-150686",
+      "name": "Le Gibet",
+      "town": "Saint-Arnoult",
+      "department": "76",
+      "km": 13.6,
+      "official": "https://randotrailencauxseine.fr/fr/parcours/150686",
+      "gpxSource": "https://espacestrail.run/fr/seinedetrail/gpx/150686",
+      "sourceAscent": 280,
+      "sourceDescent": 280,
+      "sourceDurationMinutes": 210,
+      "sourceDurationRangeMinutes": [
+        210,
+        210
+      ],
+      "sourceCategory": "Randonnée",
+      "sourceListing": "https://randotrailencauxseine.fr/fr/activites",
+      "scopeEvidence": {
+        "method": "Explicit official activity category",
+        "category": "Randonnée",
+        "selector": "#container-rando",
+        "listingId": 150686,
+        "officialTown": "Saint-Arnoult",
+        "officialDepartment": "76"
+      },
+      "sourceListingSha256": "18f153cd2e23c30f50e0dd809ae677b09d6c6ed897ae33ecf4bab3a7cba60375",
+      "sourceGpxLinkEvidence": {
+        "url": "https://espacestrail.run/assets/js/blocParcours.js",
+        "sha256": "79b39d7609ca8d0ea3b649a455d0e1649b62c3196399287ea6af33d4b2826ff0",
+        "method": "Official downloadGpx handler + alternative page explicitly supplied by the original GPX endpoint"
+      },
+      "sourcePageSha256": "c701c168cf0c0938bcc7eb1b5b6cca8bfcfadf3e52367a6cc6260c80ac0fce64",
+      "sourcePdfs": [
+        {
+          "url": "https://randotrailencauxseine.fr/assets/resources/res7062_4677.pdf",
+          "label": "Randonnée pédestre - Le Gibet"
+        },
+        {
+          "url": "https://randotrailencauxseine.fr/assets/resources/res8029_5817.pdf",
+          "label": "Carte pdf"
+        }
+      ],
+      "sourceFacts": {
+        "Distance": "13.6 km",
+        "Dénivelé positif": "280 m",
+        "Dénivelé négatif": "280 m",
+        "Altitude min.": "6 m",
+        "Altitude max.": "140 m",
+        "Durée (selon allure)": "3h30",
+        "Balisage": "Bleu Outremer"
+      },
+      "sourceMarking": "Bleu Outremer",
+      "sourceDeparture": null,
+      "sourceParking": null,
+      "sourceOriginalGpxUrl": "https://randotrailencauxseine.fr/fr/gpx/150686",
+      "sourceOriginalGpxResponseSha256": "084a757e419bc17c64ff7479d68df1867e5827b32d5e7ff66563fa742cf247ee",
+      "sourceAlternativePage": "https://espacestrail.run/fr/seinedetrail/parcours/150686",
+      "sourceDownloadReferer": "https://espacestrail.run/fr/seinedetrail/parcours/150686",
+      "sourceGpxAccess": "Téléchargement public ; Referer de la fiche officielle requis comme lors du clic navigateur ; sans compte ni cookie.",
+      "gpxSha256": "f7b0105ae503aac264c6bfc74559d5afd65947c298c968cbf53a5dcd9cd9a928",
+      "geometryKm": 13.589,
+      "pointCount": 447,
+      "status": "trace-verifiee",
+      "officialLocation": [
+        0.66801,
+        49.52853
+      ],
+      "officialLocationPrecision": "Premier point du GPX officiel ; stationnement non vérifié"
+    },
+    {
+      "sourceId": "CAUX-SEINE-150664",
+      "name": "La Sente des Manoirs",
+      "town": "Gruchet-le-Valasse",
+      "department": "76",
+      "km": 12.16,
+      "official": "https://randotrailencauxseine.fr/fr/parcours/150664",
+      "gpxSource": "https://espacestrail.run/fr/seinedetrail/gpx/150664",
+      "sourceAscent": 290,
+      "sourceDescent": 290,
+      "sourceDurationMinutes": 210,
+      "sourceDurationRangeMinutes": [
+        210,
+        210
+      ],
+      "sourceCategory": "Randonnée",
+      "sourceListing": "https://randotrailencauxseine.fr/fr/activites",
+      "scopeEvidence": {
+        "method": "Explicit official activity category",
+        "category": "Randonnée",
+        "selector": "#container-rando",
+        "listingId": 150664,
+        "officialTown": "Gruchet-le-Valasse",
+        "officialDepartment": "76"
+      },
+      "sourceListingSha256": "18f153cd2e23c30f50e0dd809ae677b09d6c6ed897ae33ecf4bab3a7cba60375",
+      "sourceGpxLinkEvidence": {
+        "url": "https://espacestrail.run/assets/js/blocParcours.js",
+        "sha256": "79b39d7609ca8d0ea3b649a455d0e1649b62c3196399287ea6af33d4b2826ff0",
+        "method": "Official downloadGpx handler + alternative page explicitly supplied by the original GPX endpoint"
+      },
+      "sourcePageSha256": "cc7bacebe44a3cdc52845e17d9d61103a4e7853225c7e15a9417b317d43e7da4",
+      "sourcePdfs": [
+        {
+          "url": "https://randotrailencauxseine.fr/assets/resources/res7057_5030.pdf",
+          "label": "Randonnée pédestre - La sente des Manoirs"
+        },
+        {
+          "url": "https://randotrailencauxseine.fr/assets/resources/res8024_7017.pdf",
+          "label": "Carte pdf"
+        }
+      ],
+      "sourceFacts": {
+        "Distance": "12.16 km",
+        "Dénivelé positif": "290 m",
+        "Dénivelé négatif": "290 m",
+        "Altitude min.": "12 m",
+        "Altitude max.": "125 m",
+        "Durée (selon allure)": "3h30",
+        "Balisage": "Fuschia"
+      },
+      "sourceMarking": "Fuschia",
+      "sourceDeparture": null,
+      "sourceParking": null,
+      "sourceOriginalGpxUrl": "https://randotrailencauxseine.fr/fr/gpx/150664",
+      "sourceOriginalGpxResponseSha256": "75420c812ecd42336d580c54380038317c1cf735a095c0c2560f3836278234ea",
+      "sourceAlternativePage": "https://espacestrail.run/fr/seinedetrail/parcours/150664",
+      "sourceDownloadReferer": "https://espacestrail.run/fr/seinedetrail/parcours/150664",
+      "sourceGpxAccess": "Téléchargement public ; Referer de la fiche officielle requis comme lors du clic navigateur ; sans compte ni cookie.",
+      "gpxSha256": "2fb5d919ede01c826054bc530a0a13597a815be7407b03f3f851290e3eaf7baf",
+      "geometryKm": 12.119,
+      "pointCount": 376,
+      "status": "trace-verifiee",
+      "officialLocation": [
+        0.48463,
+        49.55837
+      ],
+      "officialLocationPrecision": "Premier point du GPX officiel ; stationnement non vérifié"
+    },
+    {
+      "sourceId": "CAUX-SEINE-150685",
+      "name": "Le Bliquetuit",
+      "town": "Notre-Dame-de-Bliquetuit",
+      "department": "76",
+      "km": 11.82,
+      "official": "https://randotrailencauxseine.fr/fr/parcours/150685",
+      "gpxSource": "https://espacestrail.run/fr/seinedetrail/gpx/150685",
+      "sourceAscent": 30,
+      "sourceDescent": 30,
+      "sourceDurationMinutes": 180,
+      "sourceDurationRangeMinutes": [
+        180,
+        180
+      ],
+      "sourceCategory": "Randonnée",
+      "sourceListing": "https://randotrailencauxseine.fr/fr/activites",
+      "scopeEvidence": {
+        "method": "Explicit official activity category",
+        "category": "Randonnée",
+        "selector": "#container-rando",
+        "listingId": 150685,
+        "officialTown": "Notre-Dame-de-Bliquetuit",
+        "officialDepartment": "76"
+      },
+      "sourceListingSha256": "18f153cd2e23c30f50e0dd809ae677b09d6c6ed897ae33ecf4bab3a7cba60375",
+      "sourceGpxLinkEvidence": {
+        "url": "https://espacestrail.run/assets/js/blocParcours.js",
+        "sha256": "79b39d7609ca8d0ea3b649a455d0e1649b62c3196399287ea6af33d4b2826ff0",
+        "method": "Official downloadGpx handler + alternative page explicitly supplied by the original GPX endpoint"
+      },
+      "sourcePageSha256": "26e406d84697549c2518d265745f9c2515c401030d53300f9278e364748c7643",
+      "sourcePdfs": [
+        {
+          "url": "https://randotrailencauxseine.fr/assets/resources/res7061_7966.pdf",
+          "label": "Randonnée pédestre - Le Bliquetuit"
+        },
+        {
+          "url": "https://randotrailencauxseine.fr/assets/resources/res8028_9404.pdf",
+          "label": "Carte pdf"
+        }
+      ],
+      "sourceFacts": {
+        "Distance": "11.82 km",
+        "Dénivelé positif": "30 m",
+        "Dénivelé négatif": "30 m",
+        "Altitude min.": "2 m",
+        "Altitude max.": "17 m",
+        "Durée (selon allure)": "3h",
+        "Balisage": "Vert Forêt"
+      },
+      "sourceMarking": "Vert Forêt",
+      "sourceDeparture": null,
+      "sourceParking": null,
+      "sourceOriginalGpxUrl": "https://randotrailencauxseine.fr/fr/gpx/150685",
+      "sourceOriginalGpxResponseSha256": "600b9a4dc15ccc87192bf53f52836b4d9452cc49ebb668029450e03aa2375164",
+      "sourceAlternativePage": "https://espacestrail.run/fr/seinedetrail/parcours/150685",
+      "sourceDownloadReferer": "https://espacestrail.run/fr/seinedetrail/parcours/150685",
+      "sourceGpxAccess": "Téléchargement public ; Referer de la fiche officielle requis comme lors du clic navigateur ; sans compte ni cookie.",
+      "gpxSha256": "c9107eda92e4d179980477bbcab0d15f9e8e17f2222d9cc7bc9d9c7b1112b863",
+      "geometryKm": 11.804,
+      "pointCount": 338,
+      "status": "trace-verifiee",
+      "officialLocation": [
+        0.75904,
+        49.49743
+      ],
+      "officialLocationPrecision": "Premier point du GPX officiel ; stationnement non vérifié"
+    },
+    {
+      "sourceId": "CAUX-SEINE-150683",
+      "name": "Beau Soleil",
+      "town": "Saint-Gilles-de-Crétot",
+      "department": "76",
+      "km": 6.96,
+      "official": "https://randotrailencauxseine.fr/fr/parcours/150683",
+      "gpxSource": "https://espacestrail.run/fr/seinedetrail/gpx/150683",
+      "sourceAscent": 100,
+      "sourceDescent": 100,
+      "sourceDurationMinutes": 120,
+      "sourceDurationRangeMinutes": [
+        120,
+        120
+      ],
+      "sourceCategory": "Randonnée",
+      "sourceListing": "https://randotrailencauxseine.fr/fr/activites",
+      "scopeEvidence": {
+        "method": "Explicit official activity category",
+        "category": "Randonnée",
+        "selector": "#container-rando",
+        "listingId": 150683,
+        "officialTown": "Saint-Gilles-de-Crétot",
+        "officialDepartment": "76"
+      },
+      "sourceListingSha256": "18f153cd2e23c30f50e0dd809ae677b09d6c6ed897ae33ecf4bab3a7cba60375",
+      "sourceGpxLinkEvidence": {
+        "url": "https://espacestrail.run/assets/js/blocParcours.js",
+        "sha256": "79b39d7609ca8d0ea3b649a455d0e1649b62c3196399287ea6af33d4b2826ff0",
+        "method": "Official downloadGpx handler + alternative page explicitly supplied by the original GPX endpoint"
+      },
+      "sourcePageSha256": "127baadd252e801f93dc7f748b5eaebe78cd7979e174af60741d8b8c5de0e85a",
+      "sourcePdfs": [
+        {
+          "url": "https://randotrailencauxseine.fr/assets/resources/res7060_8264.pdf",
+          "label": "Randonnée pédestre - Beau Soleil"
+        },
+        {
+          "url": "https://randotrailencauxseine.fr/assets/resources/res8027_1289.pdf",
+          "label": "Carte pdf"
+        }
+      ],
+      "sourceFacts": {
+        "Distance": "6.96 km",
+        "Dénivelé positif": "100 m",
+        "Dénivelé négatif": "100 m",
+        "Altitude min.": "56 m",
+        "Altitude max.": "147 m",
+        "Durée (selon allure)": "2h",
+        "Balisage": "Bleu Outremer"
+      },
+      "sourceMarking": "Bleu Outremer",
+      "sourceDeparture": null,
+      "sourceParking": null,
+      "sourceOriginalGpxUrl": "https://randotrailencauxseine.fr/fr/gpx/150683",
+      "sourceOriginalGpxResponseSha256": "cf3f5c313ea45bdacd00d57d9a3b55244a70ffa90ddf082c36944ffc17d0d910",
+      "sourceAlternativePage": "https://espacestrail.run/fr/seinedetrail/parcours/150683",
+      "sourceDownloadReferer": "https://espacestrail.run/fr/seinedetrail/parcours/150683",
+      "sourceGpxAccess": "Téléchargement public ; Referer de la fiche officielle requis comme lors du clic navigateur ; sans compte ni cookie.",
+      "gpxSha256": "f7e3ed00c9f77bf563f6c63615f45130be36f908577782a23efae734c8e9ffcd",
+      "geometryKm": 6.953,
+      "pointCount": 246,
+      "status": "trace-verifiee",
+      "officialLocation": [
+        0.64328,
+        49.55905
+      ],
+      "officialLocationPrecision": "Premier point du GPX officiel ; stationnement non vérifié"
+    },
+    {
+      "sourceId": "CAUX-SEINE-150682",
+      "name": "Le Val Godard",
+      "town": "Maulévrier-Sainte-Gertrude",
+      "department": "76",
+      "km": 5.54,
+      "official": "https://randotrailencauxseine.fr/fr/parcours/150682",
+      "gpxSource": "https://espacestrail.run/fr/seinedetrail/gpx/150682",
+      "sourceAscent": 140,
+      "sourceDescent": 140,
+      "sourceDurationMinutes": 75,
+      "sourceDurationRangeMinutes": [
+        75,
+        75
+      ],
+      "sourceCategory": "Randonnée",
+      "sourceListing": "https://randotrailencauxseine.fr/fr/activites",
+      "scopeEvidence": {
+        "method": "Explicit official activity category",
+        "category": "Randonnée",
+        "selector": "#container-rando",
+        "listingId": 150682,
+        "officialTown": "Maulévrier-Sainte-Gertrude",
+        "officialDepartment": "76"
+      },
+      "sourceListingSha256": "18f153cd2e23c30f50e0dd809ae677b09d6c6ed897ae33ecf4bab3a7cba60375",
+      "sourceGpxLinkEvidence": {
+        "url": "https://espacestrail.run/assets/js/blocParcours.js",
+        "sha256": "79b39d7609ca8d0ea3b649a455d0e1649b62c3196399287ea6af33d4b2826ff0",
+        "method": "Official downloadGpx handler + alternative page explicitly supplied by the original GPX endpoint"
+      },
+      "sourcePageSha256": "68b7937347444468307e4c6fd19478eacea44418d1a41a76bdadd04b5fa45ef9",
+      "sourcePdfs": [
+        {
+          "url": "https://randotrailencauxseine.fr/assets/resources/res7059_9440.pdf",
+          "label": "Randonnée pédestre - Le Val Godard"
+        },
+        {
+          "url": "https://randotrailencauxseine.fr/assets/resources/res8026_3191.pdf",
+          "label": "Carte pdf"
+        }
+      ],
+      "sourceFacts": {
+        "Distance": "5.54 km",
+        "Dénivelé positif": "140 m",
+        "Dénivelé négatif": "140 m",
+        "Altitude min.": "14 m",
+        "Altitude max.": "123 m",
+        "Durée (selon allure)": "1h15",
+        "Balisage": "Bleu Outremer"
+      },
+      "sourceMarking": "Bleu Outremer",
+      "sourceDeparture": null,
+      "sourceParking": null,
+      "sourceOriginalGpxUrl": "https://randotrailencauxseine.fr/fr/gpx/150682",
+      "sourceOriginalGpxResponseSha256": "3a2249a5ab8f08861a5a4934a14a49457c02224c5699cab912f03e8a13aafb81",
+      "sourceAlternativePage": "https://espacestrail.run/fr/seinedetrail/parcours/150682",
+      "sourceDownloadReferer": "https://espacestrail.run/fr/seinedetrail/parcours/150682",
+      "sourceGpxAccess": "Téléchargement public ; Referer de la fiche officielle requis comme lors du clic navigateur ; sans compte ni cookie.",
+      "gpxSha256": "bcfd88250f78604c95c23678261fa932874b0188a6710073ad0a47304f7dd284",
+      "geometryKm": 5.524,
+      "pointCount": 186,
+      "status": "trace-verifiee",
+      "officialLocation": [
+        0.70521,
+        49.54589
+      ],
+      "officialLocationPrecision": "Premier point du GPX officiel ; stationnement non vérifié"
+    },
+    {
+      "sourceId": "CAUX-SEINE-150681",
+      "name": "La Sente aux Moines",
+      "town": "Heurteauville",
+      "department": "76",
+      "km": 19.4,
+      "official": "https://randotrailencauxseine.fr/fr/parcours/150681",
+      "gpxSource": "https://espacestrail.run/fr/seinedetrail/gpx/150681",
+      "sourceAscent": 260,
+      "sourceDescent": 260,
+      "sourceDurationMinutes": 285,
+      "sourceDurationRangeMinutes": [
+        285,
+        285
+      ],
+      "sourceCategory": "Randonnée",
+      "sourceListing": "https://randotrailencauxseine.fr/fr/activites",
+      "scopeEvidence": {
+        "method": "Explicit official activity category",
+        "category": "Randonnée",
+        "selector": "#container-rando",
+        "listingId": 150681,
+        "officialTown": "Heurteauville",
+        "officialDepartment": "27",
+        "administrativeReference": {
+          "url": "https://geo.api.gouv.fr/communes?nom=Heurteauville&fields=nom,code,codeDepartement&format=json",
+          "sha256": "1cba9a114a347d2be6fc241ee7dae7925f6234ee71b52ae991903c10ef2daf87",
+          "commune": {
+            "nom": "Heurteauville",
+            "code": "76362",
+            "codeDepartement": "76",
+            "_score": 1
+          },
+          "note": "Département résolu par le référentiel officiel API Découpage administratif ; la déclaration contradictoire (27) reste conservée."
+        }
+      },
+      "sourceListingSha256": "18f153cd2e23c30f50e0dd809ae677b09d6c6ed897ae33ecf4bab3a7cba60375",
+      "sourceGpxLinkEvidence": {
+        "url": "https://espacestrail.run/assets/js/blocParcours.js",
+        "sha256": "79b39d7609ca8d0ea3b649a455d0e1649b62c3196399287ea6af33d4b2826ff0",
+        "method": "Official downloadGpx handler + alternative page explicitly supplied by the original GPX endpoint"
+      },
+      "sourcePageSha256": "4fa213d333f8ebef9014484781f2ce03b3567fd9cc0226929ad71b48fde1d76a",
+      "sourceScopeConflict": "La fiche Caux Seine indique Heurteauville (27). Le référentiel officiel identifie Heurteauville, code INSEE 76362, en Seine-Maritime (76).",
+      "sourcePdfs": [
+        {
+          "url": "https://randotrailencauxseine.fr/assets/resources/res7058_7582.pdf",
+          "label": "Randonnée pédestre - La sente aux moines"
+        },
+        {
+          "url": "https://randotrailencauxseine.fr/assets/resources/res8025_3325.pdf",
+          "label": "Carte pdf"
+        }
+      ],
+      "sourceFacts": {
+        "Distance": "19.4 km",
+        "Dénivelé positif": "260 m",
+        "Dénivelé négatif": "260 m",
+        "Altitude min.": "-1 m",
+        "Altitude max.": "119 m",
+        "Durée (selon allure)": "4h45",
+        "Balisage": "Fuschia"
+      },
+      "sourceMarking": "Fuschia",
+      "sourceDeparture": null,
+      "sourceParking": null,
+      "sourceOriginalGpxUrl": "https://randotrailencauxseine.fr/fr/gpx/150681",
+      "sourceOriginalGpxResponseSha256": "b1989ed5f3cb33df7a54962660905e40eab4cf0309cdcb5475ed0d29fec435ed",
+      "sourceAlternativePage": "https://espacestrail.run/fr/seinedetrail/parcours/150681",
+      "sourceDownloadReferer": "https://espacestrail.run/fr/seinedetrail/parcours/150681",
+      "sourceGpxAccess": "Téléchargement public ; Referer de la fiche officielle requis comme lors du clic navigateur ; sans compte ni cookie.",
+      "gpxSha256": "ca24f3b5d26383a591d000e2883a30715a8f23208f4e6c0163dfa9173996e1e3",
+      "geometryKm": 19.356,
+      "pointCount": 604,
+      "status": "trace-verifiee",
+      "officialLocation": [
+        0.80063,
+        49.42977
+      ],
+      "officialLocationPrecision": "Premier point du GPX officiel ; stationnement non vérifié"
+    },
+    {
+      "sourceId": "CAUX-SEINE-150672",
+      "name": "La Coutume",
+      "town": "Saint-Wandrille-Rançon",
+      "department": "76",
+      "km": 8.8,
+      "official": "https://randotrailencauxseine.fr/fr/parcours/150672",
+      "gpxSource": "https://espacestrail.run/fr/seinedetrail/gpx/150672",
+      "sourceAscent": 130,
+      "sourceDescent": 130,
+      "sourceDurationMinutes": 150,
+      "sourceDurationRangeMinutes": [
+        150,
+        150
+      ],
+      "sourceCategory": "Randonnée",
+      "sourceListing": "https://randotrailencauxseine.fr/fr/activites",
+      "scopeEvidence": {
+        "method": "Explicit official activity category",
+        "category": "Randonnée",
+        "selector": "#container-rando",
+        "listingId": 150672,
+        "officialTown": "Saint-Wandrille-Rançon",
+        "officialDepartment": "76"
+      },
+      "sourceListingSha256": "18f153cd2e23c30f50e0dd809ae677b09d6c6ed897ae33ecf4bab3a7cba60375",
+      "sourceGpxLinkEvidence": {
+        "url": "https://espacestrail.run/assets/js/blocParcours.js",
+        "sha256": "79b39d7609ca8d0ea3b649a455d0e1649b62c3196399287ea6af33d4b2826ff0",
+        "method": "Official downloadGpx handler + alternative page explicitly supplied by the original GPX endpoint"
+      },
+      "sourcePageSha256": "c279aece1f95f21d93a1b6c8be09099b9446fa6ae5eda73c3358dfb30431af3d",
+      "sourcePdfs": [
+        {
+          "url": "https://randotrailencauxseine.fr/assets/resources/res7056_9573.pdf",
+          "label": "Randonnée pédestre - La coutume"
+        },
+        {
+          "url": "https://randotrailencauxseine.fr/assets/resources/res8023_8342.pdf",
+          "label": "Carte pdf"
+        }
+      ],
+      "sourceFacts": {
+        "Distance": "8.8 km",
+        "Dénivelé positif": "130 m",
+        "Dénivelé négatif": "130 m",
+        "Altitude min.": "16 m",
+        "Altitude max.": "120 m",
+        "Durée (selon allure)": "2h30",
+        "Balisage": "Vert Forêt"
+      },
+      "sourceMarking": "Vert Forêt",
+      "sourceDeparture": null,
+      "sourceParking": null,
+      "sourceOriginalGpxUrl": "https://randotrailencauxseine.fr/fr/gpx/150672",
+      "sourceOriginalGpxResponseSha256": "84eb62423e91865866e26a74338dde74f078763f77de4d61eac352d5cc4f9e8f",
+      "sourceAlternativePage": "https://espacestrail.run/fr/seinedetrail/parcours/150672",
+      "sourceDownloadReferer": "https://espacestrail.run/fr/seinedetrail/parcours/150672",
+      "sourceGpxAccess": "Téléchargement public ; Referer de la fiche officielle requis comme lors du clic navigateur ; sans compte ni cookie.",
+      "gpxSha256": "90d22f0da5b204a00da77bb96073bb878ded8bc149ed0c826dff7265dd1a80e0",
+      "geometryKm": 8.779,
+      "pointCount": 296,
+      "status": "trace-verifiee",
+      "officialLocation": [
+        0.76642,
+        49.52783
+      ],
+      "officialLocationPrecision": "Premier point du GPX officiel ; stationnement non vérifié"
+    }
+  ],
+  "overrides": []
+}

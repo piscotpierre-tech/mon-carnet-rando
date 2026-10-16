@@ -13,6 +13,7 @@ import subprocess
 import sys
 import unicodedata
 import urllib.request
+import urllib.parse
 import xml.etree.ElementTree as ET
 
 ROOT = Path(__file__).resolve().parent.parent
@@ -130,7 +131,12 @@ def validate(record):
         if target.exists():
             raw = target.read_bytes()
         else:
-            req = urllib.request.Request(url, headers={'User-Agent': 'MonCarnetRando/1.0'})
+            headers = {'User-Agent': 'MonCarnetRando/1.0'}
+            if record.get('sourceDownloadReferer'):
+                referer = urllib.parse.urlsplit(record['sourceDownloadReferer'])
+                assert referer.scheme == 'https' and referer.netloc == urllib.parse.urlsplit(url).netloc, 'GPX referer must be its own official source'
+                headers['Referer'] = record['sourceDownloadReferer']
+            req = urllib.request.Request(url, headers=headers)
             with urllib.request.urlopen(req, timeout=40) as response:
                 raw = response.read()
             target.write_bytes(raw)

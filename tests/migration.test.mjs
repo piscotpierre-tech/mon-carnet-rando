@@ -1,5 +1,6 @@
 import test from 'node:test';
 import assert from 'node:assert/strict';
+import {readFileSync} from 'node:fs';
 import {APP_ID,emptyState,validateState,mergeBackup,timerElapsed} from '../core.js';
 import {ROUTES,CATALOGUE_ALIASES,ORIGINAL_ROUTES} from '../data.js';
 
@@ -57,3 +58,11 @@ test('les alias publiés ciblent des circuits disponibles sans remplacer les 48 
     assert(available.has(target));
   }
 });
+
+const report=JSON.parse(readFileSync(new URL('../assets/catalogue.json',import.meta.url),'utf8'));
+test('le catalogue complet conserve les quatre anciens IDs ou leurs alias vers une cible publiée',
+  {skip:report.integratedNew<=5},()=>{
+    const available=new Set(ROUTES.map(r=>r.id));
+    for(const id of [2323,2298,2282,2302])assert(available.has(id)||available.has(CATALOGUE_ALIASES[id]),
+      `Le circuit ${id} a disparu sans alias vers un circuit publié ; les sauvegardes deviendraient illisibles.`);
+  });
