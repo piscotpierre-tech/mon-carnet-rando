@@ -20,7 +20,7 @@ for(const r of ROUTES.filter(r=>r.isNew)) {
   const geo=JSON.parse(fs.readFileSync(path.join(root,r.trace),'utf8'));
   const segments=geo.geometry.type==='LineString'?[geo.geometry.coordinates]:geo.geometry.coordinates;
   const points=segments.flat();assert.equal(points.length,r.tracePointCount);
-  assert(points.length>5);assert(points.every(([lon,lat])=>r.catalogue?(lon>-6&&lon<10&&lat>42&&lat<52):(lon>-2.1&&lon<1.9&&lat>48&&lat<50.2)),'Trace outside expected geography');
+  assert(segments.length>0&&segments.every(segment=>segment.length>=2),'Every line segment needs at least two points');assert(points.every(([lon,lat])=>r.catalogue?(lon>-6&&lon<10&&lat>42&&lat<52):(lon>-2.1&&lon<1.9&&lat>48&&lat<50.2)),'Trace outside expected geography');
   assert.equal(r.basemap,'IGN Plan IGN','Every new circuit needs a real background map');
   const metadata=JSON.parse(fs.readFileSync(path.join(root,`assets/maps/${r.id}-ign.json`),'utf8'));
   assert.equal(metadata.routeId,r.id);assert.equal(metadata.crs,'EPSG:3857');

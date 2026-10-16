@@ -116,7 +116,7 @@ def parse(raw):
                 segment.append(coordinate)
         if len(segment) > 1:
             segments.append(segment)
-    assert segments and sum(map(len, segments)) > 5, 'No usable GPX track'
+    assert segments and all(len(segment) >= 2 for segment in segments), 'No usable GPX track'
     return segments
 
 

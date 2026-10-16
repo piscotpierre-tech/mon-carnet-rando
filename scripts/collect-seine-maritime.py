@@ -22,6 +22,19 @@ DATASET='https://www.opendata76.fr/datasets/seine-maritime::itineraires-randonne
 URL=ENDPOINT+'?where=1%3D1&outFields=*&outSR=4326&f=geojson'
 
 
+def validate_geometry(geo):
+    """Validate official line geometry, including legitimately short GR parts."""
+    assert geo['type'] in ['LineString','MultiLineString'], 'Expected line geometry'
+    segments=[geo['coordinates']] if geo['type']=='LineString' else geo['coordinates']
+    # Two points define a line. Sampling density is not a validity criterion.
+    assert segments and all(len(s)>=2 for s in segments), 'A line needs at least two points per segment'
+    assert all(len(p)>=2 and all(math.isfinite(v) for v in p) and -6<p[0]<10 and 42<p[1]<52 for s in segments for p in s), 'Invalid coordinates'
+    length=sum(prepare.distance(a,b) for s in segments for a,b in zip(s,s[1:]))/1000
+    assert .1<=length<=1200, 'Implausible route length'
+    return {'segments':segments,'pointCount':sum(map(len,segments)),
+            'geometryKm':round(length,3),'officialLocation':segments[0][0][:2]}
+
+
 def collect():
     raw=source.get(URL);data=json.loads(raw)
     assert len(data['features'])==291 and not data.get('exceededTransferLimit')
@@ -39,14 +52,7 @@ def collect():
            'sourceDatasetUrl':URL,'sourceDatasetSha256':hashlib.sha256(raw.encode()).hexdigest(),
            'sourceFeatureId':identifier}
         try:
-            geo=feature['geometry']
-            assert geo['type'] in ['LineString','MultiLineString']
-            segments=[geo['coordinates']] if geo['type']=='LineString' else geo['coordinates']
-            assert all(len(s)>1 for s in segments) and sum(map(len,segments))>5
-            assert all(len(p)>=2 and all(math.isfinite(v) for v in p) and -6<p[0]<10 and 42<p[1]<52 for s in segments for p in s)
-            length=sum(prepare.distance(a,b) for s in segments for a,b in zip(s,s[1:]))/1000
-            assert .1<=length<=1200
-            r.update(status='trace-verifiee',segments=segments,pointCount=sum(map(len,segments)),geometryKm=round(length,3),officialLocation=segments[0][0][:2])
+            r.update(status='trace-verifiee',**validate_geometry(feature['geometry']))
         except Exception as error:r.update(status='trace-inexploitable',issue=str(error))
         records.append(r)
     target=ROOT/'catalogue/inventaire-complementaire.json'

@@ -8922,8 +8922,27 @@
       "sourceDatasetUrl": "https://services-eu1.arcgis.com/Nt9PzCzX9tz2k5Lq/arcgis/rest/services/Itineraires_randonnees_pedestres_PDESI_CD76_janvier_2025/FeatureServer/0/query?where=1%3D1&outFields=*&outSR=4326&f=geojson",
       "sourceDatasetSha256": "11ed6ad5b1139b3e6bc60d7356d91b23d5d33e494e71cfeca8c6d7c5067506bb",
       "sourceFeatureId": 13592,
-      "status": "trace-inexploitable",
-      "issue": ""
+      "status": "trace-verifiee",
+      "pointCount": 5,
+      "geometryKm": 0.355,
+      "officialLocation": [
+        1.1208383192081,
+        49.9382263218285
+      ],
+      "sourceValidationCorrection": {
+        "reason": "Seuil arbitraire de plus de cinq points remplacé par le minimum géométrique de deux points par segment.",
+        "previousStatus": "trace-inexploitable",
+        "originalSnapshot": "catalogue/snapshots/cd76.json.gz",
+        "sourceDatasetSha256": "11ed6ad5b1139b3e6bc60d7356d91b23d5d33e494e71cfeca8c6d7c5067506bb",
+        "coordinatesUnchanged": true
+      },
+      "sourceFeatureFacts": {
+        "OBJECTID": 13592,
+        "Nom_iti": "Portion du GR21 sur chemin du Camp de César",
+        "Type": "gr",
+        "Pedestre": "oui",
+        "SHAPE_Leng": 356.416690679
+      }
     },
     {
       "sourceId": "CD76-PDESI-2025-13610",
