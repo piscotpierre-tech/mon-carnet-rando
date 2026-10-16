@@ -1,0 +1,3380 @@
+{
+  "checkedAt": "2026-10-16",
+  "sources": [
+    {
+      "department": "14",
+      "source": "https://parc-cotentin-bessin.fr/desmarais-du-parc-toutes-les-balades-pres-de-chez-vous",
+      "api": "https://services5.arcgis.com/2wtm4KHYRBa9T8Yt/arcgis/rest/services/APIRANDO_CIRCUITS/FeatureServer/0/query?where=1%3D1&outFields=FID%2CID%2CNOMCIRCUIT%2CID_CIRCUIT%2CID_ARBO%2CTYPE%2CCOM_DEPART%2CC_DEP%2CAGO_APPLI%2CAGO_PDF%2CAGO_GPX%2CAGO_COORD%2CPARKING%2CDIFFICULTE%2CBALISAGE%2CMAJ%2CSOURCE%2CDIST_KM%2CDUREE_H%2CXW84%2CYW84&returnGeometry=false&f=json",
+      "total": 6,
+      "announcedTotal": 6,
+      "collectedAll": true,
+      "registerTotal": 144,
+      "registerPedestrianTotal": 76,
+      "registerPublishedPedestrianTotal": 35,
+      "validatedTraces": 6,
+      "sourceDatasetSha256": "0af5542416019614ed4c7cb5e0824707e00ccc43957bfe6fbddffa8f389c2559",
+      "note": "Sélection explicite TYPE=A pied et AGO_APPLI=OUI ; édition propre à chaque fiche (majoritairement décembre 2019). Variantes non publiées exclues. Coordonnées source non assimilées à des parkings vérifiés."
+    },
+    {
+      "department": "50",
+      "source": "https://parc-cotentin-bessin.fr/desmarais-du-parc-toutes-les-balades-pres-de-chez-vous",
+      "api": "https://services5.arcgis.com/2wtm4KHYRBa9T8Yt/arcgis/rest/services/APIRANDO_CIRCUITS/FeatureServer/0/query?where=1%3D1&outFields=FID%2CID%2CNOMCIRCUIT%2CID_CIRCUIT%2CID_ARBO%2CTYPE%2CCOM_DEPART%2CC_DEP%2CAGO_APPLI%2CAGO_PDF%2CAGO_GPX%2CAGO_COORD%2CPARKING%2CDIFFICULTE%2CBALISAGE%2CMAJ%2CSOURCE%2CDIST_KM%2CDUREE_H%2CXW84%2CYW84&returnGeometry=false&f=json",
+      "total": 29,
+      "announcedTotal": 29,
+      "collectedAll": true,
+      "registerTotal": 144,
+      "registerPedestrianTotal": 76,
+      "registerPublishedPedestrianTotal": 35,
+      "validatedTraces": 25,
+      "sourceDatasetSha256": "0af5542416019614ed4c7cb5e0824707e00ccc43957bfe6fbddffa8f389c2559",
+      "note": "Sélection explicite TYPE=A pied et AGO_APPLI=OUI ; édition propre à chaque fiche (majoritairement décembre 2019). Variantes non publiées exclues. Coordonnées source non assimilées à des parkings vérifiés."
+    }
+  ],
+  "records": [
+    {
+      "sourceId": "MARAIS-CD-1",
+      "sourceFeatureId": 1,
+      "sourceObjectIdField": "FID",
+      "sourceCircuitCode": "pied01",
+      "sourceArboCode": "pied01_met_madeleine",
+      "name": "De Madeleine à Marguerie",
+      "town": "Méautis",
+      "department": "50",
+      "km": 23.0,
+      "official": "https://parc-cotentin-bessin.fr/desmarais-du-parc-toutes-les-balades-pres-de-chez-vous",
+      "gpxSource": "https://parc-cotentin-bessin.fr/pnrmcb_data/arcgisonline/AGO_RANDO/AGO_PJ/pied01_met_madeleine.gpx",
+      "pdf": "https://parc-cotentin-bessin.fr/pnrmcb_data/arcgisonline/AGO_RANDO/AGO_PJ/pied01_met_madeleine.pdf",
+      "sourcePdf": "https://parc-cotentin-bessin.fr/pnrmcb_data/arcgisonline/AGO_RANDO/AGO_PJ/pied01_met_madeleine.pdf",
+      "sourcePractice": "A pied",
+      "sourcePublished": "OUI",
+      "sourceOrigin": "PNRMCB, GA",
+      "sourceUpdatedAt": "2019-12-12",
+      "sourceEdition": "PNR Marais du Cotentin et du Bessin · mise à jour source 2019-12-12",
+      "sourceDatasetUrl": "https://services5.arcgis.com/2wtm4KHYRBa9T8Yt/arcgis/rest/services/APIRANDO_CIRCUITS/FeatureServer/0/query?where=1%3D1&outFields=FID%2CID%2CNOMCIRCUIT%2CID_CIRCUIT%2CID_ARBO%2CTYPE%2CCOM_DEPART%2CC_DEP%2CAGO_APPLI%2CAGO_PDF%2CAGO_GPX%2CAGO_COORD%2CPARKING%2CDIFFICULTE%2CBALISAGE%2CMAJ%2CSOURCE%2CDIST_KM%2CDUREE_H%2CXW84%2CYW84&returnGeometry=false&f=json",
+      "sourceDatasetSha256": "0af5542416019614ed4c7cb5e0824707e00ccc43957bfe6fbddffa8f389c2559",
+      "sourceApi": "https://services5.arcgis.com/2wtm4KHYRBa9T8Yt/arcgis/rest/services/APIRANDO_CIRCUITS/FeatureServer/0/query?where=FID%3D1&outFields=FID%2CID%2CNOMCIRCUIT%2CID_CIRCUIT%2CID_ARBO%2CTYPE%2CCOM_DEPART%2CC_DEP%2CAGO_APPLI%2CAGO_PDF%2CAGO_GPX%2CAGO_COORD%2CPARKING%2CDIFFICULTE%2CBALISAGE%2CMAJ%2CSOURCE%2CDIST_KM%2CDUREE_H%2CXW84%2CYW84&returnGeometry=false&f=json",
+      "sourceApplication": "http://pnrmcb.maps.arcgis.com/apps/webappviewer/index.html?id=3b8cef41bbb840eab30ded104d0188f6",
+      "sourceParkingDescription": "Aux alentours de la mairie",
+      "sourceDifficulty": "Difficile",
+      "sourceMarking": "Jaune",
+      "sourceDurationMinutes": 345,
+      "sourceGoogleMaps": "https://www.google.com/maps/dir/?api=1&destination=49.27831,-1.29962",
+      "sourceXYLocation": [
+        -1.34172,
+        49.29322
+      ],
+      "sourceLocationNote": "Coordonnées XW84/YW84 et destination Google Maps conservées séparément. Aucune n’est déclarée parking vérifié.",
+      "gpxSha256": "570745821724e0fc7b59ee1274e90805b71abb044d7a335892e01c55d1b31a1d",
+      "geometryKm": 22.706,
+      "pointCount": 290,
+      "status": "trace-verifiee",
+      "sourceOriginalGpx": "catalogue/sources/marais/pied01-1.gpx",
+      "sourceGpxTrackCount": 1,
+      "officialLocation": [
+        -1.299621,
+        49.278314
+      ],
+      "officialLocationPrecision": "gpx",
+      "sourceCoordinateOffsetsMetres": {
+        "XW84/YW84": 3474.3,
+        "AGO_COORD": 0.5
+      },
+      "sourceAdministrativeLocation": {
+        "url": "https://geo.api.gouv.fr/communes?lon=-1.299621&lat=49.278314&fields=nom%2Ccode%2CcodeDepartement%2CcodesPostaux&format=json",
+        "sha256": "85f2812c112f3e2675f93cd4944e18c41e946220d47767755988b37919346043",
+        "method": "Premier point du GPX géolocalisé par l’API officielle des communes ; ce point n’est pas un parking vérifié.",
+        "coordinate": [
+          -1.299621,
+          49.278314
+        ],
+        "commune": {
+          "nom": "Méautis",
+          "code": "50298",
+          "codeDepartement": "50",
+          "codesPostaux": [
+            "50500"
+          ]
+        }
+      },
+      "sourcePdfStatus": "pdf-recupere",
+      "sourcePdfSha256": "539f6443b0cfc7b4a1d0acd26f65e2c262d623c1093bded4ae2627884aa220b7",
+      "sourcePdfBytes": 1353066,
+      "geometryReconciliation": {
+        "comparedSnapshotRecords": 1382,
+        "equivalentSourceIds": [],
+        "method": "Comparaison bidirectionnelle à pas de 4 m, écart maximal 2 m et longueur compatible à 1 %. Indice préalable ; déduplication finale par le pipeline."
+      }
+    },
+    {
+      "sourceId": "MARAIS-CD-6",
+      "sourceFeatureId": 6,
+      "sourceObjectIdField": "FID",
+      "sourceCircuitCode": "pied02",
+      "sourceArboCode": "pied02_car_tresors",
+      "name": "Les trésors cachés de Carentan",
+      "town": "Carentan",
+      "department": "50",
+      "km": 6.0,
+      "official": "https://parc-cotentin-bessin.fr/desmarais-du-parc-toutes-les-balades-pres-de-chez-vous",
+      "gpxSource": "https://parc-cotentin-bessin.fr/pnrmcb_data/arcgisonline/AGO_RANDO/AGO_PJ/pied02_car_tresors.gpx",
+      "pdf": "https://parc-cotentin-bessin.fr/pnrmcb_data/arcgisonline/AGO_RANDO/AGO_PJ/pied02_car_tresors.pdf",
+      "sourcePdf": "https://parc-cotentin-bessin.fr/pnrmcb_data/arcgisonline/AGO_RANDO/AGO_PJ/pied02_car_tresors.pdf",
+      "sourcePractice": "A pied",
+      "sourcePublished": "OUI",
+      "sourceOrigin": "PNRMCB, GA",
+      "sourceUpdatedAt": "2019-12-12",
+      "sourceEdition": "PNR Marais du Cotentin et du Bessin · mise à jour source 2019-12-12",
+      "sourceDatasetUrl": "https://services5.arcgis.com/2wtm4KHYRBa9T8Yt/arcgis/rest/services/APIRANDO_CIRCUITS/FeatureServer/0/query?where=1%3D1&outFields=FID%2CID%2CNOMCIRCUIT%2CID_CIRCUIT%2CID_ARBO%2CTYPE%2CCOM_DEPART%2CC_DEP%2CAGO_APPLI%2CAGO_PDF%2CAGO_GPX%2CAGO_COORD%2CPARKING%2CDIFFICULTE%2CBALISAGE%2CMAJ%2CSOURCE%2CDIST_KM%2CDUREE_H%2CXW84%2CYW84&returnGeometry=false&f=json",
+      "sourceDatasetSha256": "0af5542416019614ed4c7cb5e0824707e00ccc43957bfe6fbddffa8f389c2559",
+      "sourceApi": "https://services5.arcgis.com/2wtm4KHYRBa9T8Yt/arcgis/rest/services/APIRANDO_CIRCUITS/FeatureServer/0/query?where=FID%3D6&outFields=FID%2CID%2CNOMCIRCUIT%2CID_CIRCUIT%2CID_ARBO%2CTYPE%2CCOM_DEPART%2CC_DEP%2CAGO_APPLI%2CAGO_PDF%2CAGO_GPX%2CAGO_COORD%2CPARKING%2CDIFFICULTE%2CBALISAGE%2CMAJ%2CSOURCE%2CDIST_KM%2CDUREE_H%2CXW84%2CYW84&returnGeometry=false&f=json",
+      "sourceApplication": "http://pnrmcb.maps.arcgis.com/apps/webappviewer/index.html?id=3b8cef41bbb840eab30ded104d0188f6",
+      "sourceParkingDescription": "Place de la République",
+      "sourceDifficulty": "Très facile",
+      "sourceMarking": "Jaune",
+      "sourceDurationMinutes": 120,
+      "sourceGoogleMaps": "https://www.google.com/maps/dir/?api=1&destination=49.30472,-1.24336",
+      "sourceXYLocation": [
+        -1.24339,
+        49.3025
+      ],
+      "sourceLocationNote": "Coordonnées XW84/YW84 et destination Google Maps conservées séparément. Aucune n’est déclarée parking vérifié.",
+      "gpxSha256": "8ea2cfc137399a030325536898c68ee4bb54d5268c077700fd19c207362fd454",
+      "geometryKm": 5.702,
+      "pointCount": 120,
+      "status": "trace-verifiee",
+      "sourceOriginalGpx": "catalogue/sources/marais/pied02-6.gpx",
+      "sourceGpxTrackCount": 1,
+      "officialLocation": [
+        -1.244226,
+        49.304535
+      ],
+      "officialLocationPrecision": "gpx",
+      "sourceCoordinateOffsetsMetres": {
+        "XW84/YW84": 234.3,
+        "AGO_COORD": 66.1
+      },
+      "sourceAdministrativeLocation": {
+        "url": "https://geo.api.gouv.fr/communes?lon=-1.244226&lat=49.304535&fields=nom%2Ccode%2CcodeDepartement%2CcodesPostaux&format=json",
+        "sha256": "3a31772fae9fb49ef7ab69ec87ea3cc68ae289b56005736d1a98e81420dfdc96",
+        "method": "Premier point du GPX géolocalisé par l’API officielle des communes ; ce point n’est pas un parking vérifié.",
+        "coordinate": [
+          -1.244226,
+          49.304535
+        ],
+        "commune": {
+          "nom": "Carentan-les-Marais",
+          "code": "50099",
+          "codeDepartement": "50",
+          "codesPostaux": [
+            "50480",
+            "50500",
+            "50620"
+          ]
+        }
+      },
+      "sourcePdfStatus": "pdf-recupere",
+      "sourcePdfSha256": "bd2784118af4c0b11c0631735b9bf1ca35526c884ba590a4c1213fcc656a8ec7",
+      "sourcePdfBytes": 986252,
+      "geometryReconciliation": {
+        "comparedSnapshotRecords": 1382,
+        "equivalentSourceIds": [],
+        "method": "Comparaison bidirectionnelle à pas de 4 m, écart maximal 2 m et longueur compatible à 1 %. Indice préalable ; déduplication finale par le pipeline."
+      }
+    },
+    {
+      "sourceId": "MARAIS-CD-7",
+      "sourceFeatureId": 7,
+      "sourceObjectIdField": "FID",
+      "sourceCircuitCode": "pied03",
+      "sourceArboCode": "pied03_scm_unelles",
+      "name": "Les chasses des Unelles",
+      "town": "Saint-Côme-du-Mont",
+      "department": "50",
+      "km": 16.0,
+      "official": "https://parc-cotentin-bessin.fr/desmarais-du-parc-toutes-les-balades-pres-de-chez-vous",
+      "gpxSource": "https://parc-cotentin-bessin.fr/pnrmcb_data/arcgisonline/AGO_RANDO/AGO_PJ/pied03_scm_unelles.gpx",
+      "pdf": "https://parc-cotentin-bessin.fr/pnrmcb_data/arcgisonline/AGO_RANDO/AGO_PJ/pied03_scm_unelles.pdf",
+      "sourcePdf": "https://parc-cotentin-bessin.fr/pnrmcb_data/arcgisonline/AGO_RANDO/AGO_PJ/pied03_scm_unelles.pdf",
+      "sourcePractice": "A pied",
+      "sourcePublished": "OUI",
+      "sourceOrigin": "PNRMCB, GA",
+      "sourceUpdatedAt": "2019-12-13",
+      "sourceEdition": "PNR Marais du Cotentin et du Bessin · mise à jour source 2019-12-13",
+      "sourceDatasetUrl": "https://services5.arcgis.com/2wtm4KHYRBa9T8Yt/arcgis/rest/services/APIRANDO_CIRCUITS/FeatureServer/0/query?where=1%3D1&outFields=FID%2CID%2CNOMCIRCUIT%2CID_CIRCUIT%2CID_ARBO%2CTYPE%2CCOM_DEPART%2CC_DEP%2CAGO_APPLI%2CAGO_PDF%2CAGO_GPX%2CAGO_COORD%2CPARKING%2CDIFFICULTE%2CBALISAGE%2CMAJ%2CSOURCE%2CDIST_KM%2CDUREE_H%2CXW84%2CYW84&returnGeometry=false&f=json",
+      "sourceDatasetSha256": "0af5542416019614ed4c7cb5e0824707e00ccc43957bfe6fbddffa8f389c2559",
+      "sourceApi": "https://services5.arcgis.com/2wtm4KHYRBa9T8Yt/arcgis/rest/services/APIRANDO_CIRCUITS/FeatureServer/0/query?where=FID%3D7&outFields=FID%2CID%2CNOMCIRCUIT%2CID_CIRCUIT%2CID_ARBO%2CTYPE%2CCOM_DEPART%2CC_DEP%2CAGO_APPLI%2CAGO_PDF%2CAGO_GPX%2CAGO_COORD%2CPARKING%2CDIFFICULTE%2CBALISAGE%2CMAJ%2CSOURCE%2CDIST_KM%2CDUREE_H%2CXW84%2CYW84&returnGeometry=false&f=json",
+      "sourceApplication": "http://pnrmcb.maps.arcgis.com/apps/webappviewer/index.html?id=3b8cef41bbb840eab30ded104d0188f6",
+      "sourceParkingDescription": "Maison du Parc",
+      "sourceDifficulty": "Moyen",
+      "sourceMarking": "Jaune",
+      "sourceDurationMinutes": 240,
+      "sourceGoogleMaps": "https://www.google.com/maps/dir/?api=1&destination=49.32182,-1.26569",
+      "sourceXYLocation": [
+        -1.26569,
+        49.32182
+      ],
+      "sourceLocationNote": "Coordonnées XW84/YW84 et destination Google Maps conservées séparément. Aucune n’est déclarée parking vérifié.",
+      "gpxSha256": "81e48a1998b18924ca4fbd0e4c11cf4affc83b5cc2ed9eb1ec5be26088fddf4b",
+      "geometryKm": 16.258,
+      "pointCount": 209,
+      "status": "trace-verifiee",
+      "sourceOriginalGpx": "catalogue/sources/marais/pied03-7.gpx",
+      "sourceGpxTrackCount": 1,
+      "officialLocation": [
+        -1.265688,
+        49.321818
+      ],
+      "officialLocationPrecision": "gpx",
+      "sourceCoordinateOffsetsMetres": {
+        "XW84/YW84": 0.3,
+        "AGO_COORD": 0.3
+      },
+      "sourceAdministrativeLocation": {
+        "url": "https://geo.api.gouv.fr/communes?lon=-1.265688&lat=49.321818&fields=nom%2Ccode%2CcodeDepartement%2CcodesPostaux&format=json",
+        "sha256": "3a31772fae9fb49ef7ab69ec87ea3cc68ae289b56005736d1a98e81420dfdc96",
+        "method": "Premier point du GPX géolocalisé par l’API officielle des communes ; ce point n’est pas un parking vérifié.",
+        "coordinate": [
+          -1.265688,
+          49.321818
+        ],
+        "commune": {
+          "nom": "Carentan-les-Marais",
+          "code": "50099",
+          "codeDepartement": "50",
+          "codesPostaux": [
+            "50480",
+            "50500",
+            "50620"
+          ]
+        }
+      },
+      "sourcePdfStatus": "pdf-recupere",
+      "sourcePdfSha256": "480a78577a77cebaeac6d27dd29cd6ac89c835618da74439abeac1f4568f94d3",
+      "sourcePdfBytes": 1423450,
+      "geometryReconciliation": {
+        "comparedSnapshotRecords": 1382,
+        "equivalentSourceIds": [],
+        "method": "Comparaison bidirectionnelle à pas de 4 m, écart maximal 2 m et longueur compatible à 1 %. Indice préalable ; déduplication finale par le pipeline."
+      }
+    },
+    {
+      "sourceId": "MARAIS-CD-12",
+      "sourceFeatureId": 12,
+      "sourceObjectIdField": "FID",
+      "sourceCircuitCode": "pied05",
+      "sourceArboCode": "pied05_sme_sources",
+      "name": "Retour aux sources",
+      "town": "Sainte-Mère-Eglise",
+      "department": "50",
+      "km": 10.0,
+      "official": "https://parc-cotentin-bessin.fr/desmarais-du-parc-toutes-les-balades-pres-de-chez-vous",
+      "gpxSource": "https://parc-cotentin-bessin.fr/pnrmcb_data/arcgisonline/AGO_RANDO/AGO_PJ/pied05_sme_sources.gpx",
+      "pdf": "https://parc-cotentin-bessin.fr/pnrmcb_data/arcgisonline/AGO_RANDO/AGO_PJ/pied05_sme_sources.pdf",
+      "sourcePdf": "https://parc-cotentin-bessin.fr/pnrmcb_data/arcgisonline/AGO_RANDO/AGO_PJ/pied05_sme_sources.pdf",
+      "sourcePractice": "A pied",
+      "sourcePublished": "OUI",
+      "sourceOrigin": "PNRMCB, GA",
+      "sourceUpdatedAt": "2019-12-13",
+      "sourceEdition": "PNR Marais du Cotentin et du Bessin · mise à jour source 2019-12-13",
+      "sourceDatasetUrl": "https://services5.arcgis.com/2wtm4KHYRBa9T8Yt/arcgis/rest/services/APIRANDO_CIRCUITS/FeatureServer/0/query?where=1%3D1&outFields=FID%2CID%2CNOMCIRCUIT%2CID_CIRCUIT%2CID_ARBO%2CTYPE%2CCOM_DEPART%2CC_DEP%2CAGO_APPLI%2CAGO_PDF%2CAGO_GPX%2CAGO_COORD%2CPARKING%2CDIFFICULTE%2CBALISAGE%2CMAJ%2CSOURCE%2CDIST_KM%2CDUREE_H%2CXW84%2CYW84&returnGeometry=false&f=json",
+      "sourceDatasetSha256": "0af5542416019614ed4c7cb5e0824707e00ccc43957bfe6fbddffa8f389c2559",
+      "sourceApi": "https://services5.arcgis.com/2wtm4KHYRBa9T8Yt/arcgis/rest/services/APIRANDO_CIRCUITS/FeatureServer/0/query?where=FID%3D12&outFields=FID%2CID%2CNOMCIRCUIT%2CID_CIRCUIT%2CID_ARBO%2CTYPE%2CCOM_DEPART%2CC_DEP%2CAGO_APPLI%2CAGO_PDF%2CAGO_GPX%2CAGO_COORD%2CPARKING%2CDIFFICULTE%2CBALISAGE%2CMAJ%2CSOURCE%2CDIST_KM%2CDUREE_H%2CXW84%2CYW84&returnGeometry=false&f=json",
+      "sourceApplication": "http://pnrmcb.maps.arcgis.com/apps/webappviewer/index.html?id=3b8cef41bbb840eab30ded104d0188f6",
+      "sourceParkingDescription": "Centre ville",
+      "sourceDifficulty": "Facile",
+      "sourceMarking": "Jaune",
+      "sourceDurationMinutes": 180,
+      "sourceGoogleMaps": "https://www.google.com/maps/dir/?api=1&destination=49.40903,-1.31604",
+      "sourceXYLocation": [
+        -1.27355,
+        49.40719
+      ],
+      "sourceLocationNote": "Coordonnées XW84/YW84 et destination Google Maps conservées séparément. Aucune n’est déclarée parking vérifié.",
+      "gpxSha256": "f970d6a2337d3eec36b90153c6158345cefc561b19bb6ea488af0deac325b01e",
+      "geometryKm": 9.827,
+      "pointCount": 143,
+      "status": "trace-verifiee",
+      "sourceOriginalGpx": "catalogue/sources/marais/pied05-12.gpx",
+      "sourceGpxTrackCount": 1,
+      "officialLocation": [
+        -1.31609,
+        49.409046
+      ],
+      "officialLocationPrecision": "gpx",
+      "sourceCoordinateOffsetsMetres": {
+        "XW84/YW84": 3084.7,
+        "AGO_COORD": 4.0
+      },
+      "sourceAdministrativeLocation": {
+        "url": "https://geo.api.gouv.fr/communes?lon=-1.31609&lat=49.409046&fields=nom%2Ccode%2CcodeDepartement%2CcodesPostaux&format=json",
+        "sha256": "569d3526acd5108832bfd1dbce264a3950b87256b546559af4ec8e08696fb066",
+        "method": "Premier point du GPX géolocalisé par l’API officielle des communes ; ce point n’est pas un parking vérifié.",
+        "coordinate": [
+          -1.31609,
+          49.409046
+        ],
+        "commune": {
+          "nom": "Sainte-Mère-Église",
+          "code": "50523",
+          "codeDepartement": "50",
+          "codesPostaux": [
+            "50480"
+          ]
+        }
+      },
+      "sourcePdfStatus": "pdf-recupere",
+      "sourcePdfSha256": "825450adf3b856e9d8ddbaa50c3a0843c3ed3a0a497296c01f5289a0dfad5ad1",
+      "sourcePdfBytes": 1336034,
+      "geometryReconciliation": {
+        "comparedSnapshotRecords": 1382,
+        "equivalentSourceIds": [],
+        "method": "Comparaison bidirectionnelle à pas de 4 m, écart maximal 2 m et longueur compatible à 1 %. Indice préalable ; déduplication finale par le pipeline."
+      }
+    },
+    {
+      "sourceId": "MARAIS-CD-13",
+      "sourceFeatureId": 13,
+      "sourceObjectIdField": "FID",
+      "sourceCircuitCode": "pied06",
+      "sourceArboCode": "pied06_smv_utah_beach",
+      "name": "Utah Beach, entre mer et marais",
+      "town": "Saint-Martin-de-Varreville",
+      "department": "50",
+      "km": 17.2,
+      "official": "https://parc-cotentin-bessin.fr/desmarais-du-parc-toutes-les-balades-pres-de-chez-vous",
+      "gpxSource": "https://parc-cotentin-bessin.fr/pnrmcb_data/arcgisonline/AGO_RANDO/AGO_PJ/pied06_smv_utah_beach.gpx",
+      "pdf": "https://parc-cotentin-bessin.fr/pnrmcb_data/arcgisonline/AGO_RANDO/AGO_PJ/pied06_smv_utah_beach.pdf",
+      "sourcePdf": "https://parc-cotentin-bessin.fr/pnrmcb_data/arcgisonline/AGO_RANDO/AGO_PJ/pied06_smv_utah_beach.pdf",
+      "sourcePractice": "A pied",
+      "sourcePublished": "OUI",
+      "sourceOrigin": "PNRMCB, GA",
+      "sourceUpdatedAt": "2019-12-13",
+      "sourceEdition": "PNR Marais du Cotentin et du Bessin · mise à jour source 2019-12-13",
+      "sourceDatasetUrl": "https://services5.arcgis.com/2wtm4KHYRBa9T8Yt/arcgis/rest/services/APIRANDO_CIRCUITS/FeatureServer/0/query?where=1%3D1&outFields=FID%2CID%2CNOMCIRCUIT%2CID_CIRCUIT%2CID_ARBO%2CTYPE%2CCOM_DEPART%2CC_DEP%2CAGO_APPLI%2CAGO_PDF%2CAGO_GPX%2CAGO_COORD%2CPARKING%2CDIFFICULTE%2CBALISAGE%2CMAJ%2CSOURCE%2CDIST_KM%2CDUREE_H%2CXW84%2CYW84&returnGeometry=false&f=json",
+      "sourceDatasetSha256": "0af5542416019614ed4c7cb5e0824707e00ccc43957bfe6fbddffa8f389c2559",
+      "sourceApi": "https://services5.arcgis.com/2wtm4KHYRBa9T8Yt/arcgis/rest/services/APIRANDO_CIRCUITS/FeatureServer/0/query?where=FID%3D13&outFields=FID%2CID%2CNOMCIRCUIT%2CID_CIRCUIT%2CID_ARBO%2CTYPE%2CCOM_DEPART%2CC_DEP%2CAGO_APPLI%2CAGO_PDF%2CAGO_GPX%2CAGO_COORD%2CPARKING%2CDIFFICULTE%2CBALISAGE%2CMAJ%2CSOURCE%2CDIST_KM%2CDUREE_H%2CXW84%2CYW84&returnGeometry=false&f=json",
+      "sourceApplication": "http://pnrmcb.maps.arcgis.com/apps/webappviewer/index.html?id=3b8cef41bbb840eab30ded104d0188f6",
+      "sourceParkingDescription": "Monument Leclerc sur la D 421",
+      "sourceDifficulty": "Difficile",
+      "sourceMarking": "Jaune",
+      "sourceDurationMinutes": 255,
+      "sourceGoogleMaps": "https://www.google.com/maps/dir/?api=1&destination=49.44364,-1.20974",
+      "sourceXYLocation": [
+        -1.25504,
+        49.4423
+      ],
+      "sourceLocationNote": "Coordonnées XW84/YW84 et destination Google Maps conservées séparément. Aucune n’est déclarée parking vérifié.",
+      "gpxSha256": "19280014366a1a247913546ad2715642c905051d52988b2644aec3f5fa1269a3",
+      "geometryKm": 17.439,
+      "pointCount": 222,
+      "status": "trace-verifiee",
+      "sourceOriginalGpx": "catalogue/sources/marais/pied06-13.gpx",
+      "sourceGpxTrackCount": 1,
+      "officialLocation": [
+        -1.209916,
+        49.443572
+      ],
+      "officialLocationPrecision": "gpx",
+      "sourceCoordinateOffsetsMetres": {
+        "XW84/YW84": 3265.5,
+        "AGO_COORD": 14.8
+      },
+      "sourceAdministrativeLocation": {
+        "url": "https://geo.api.gouv.fr/communes?lon=-1.209916&lat=49.443572&fields=nom%2Ccode%2CcodeDepartement%2CcodesPostaux&format=json",
+        "sha256": "60576079ffef5c08b680753b2e43acf4db11bcfe281a3a3bfe25233b969ecb6b",
+        "method": "Premier point du GPX géolocalisé par l’API officielle des communes ; ce point n’est pas un parking vérifié.",
+        "coordinate": [
+          -1.209916,
+          49.443572
+        ],
+        "commune": {
+          "nom": "Saint-Martin-de-Varreville",
+          "code": "50517",
+          "codeDepartement": "50",
+          "codesPostaux": [
+            "50480"
+          ]
+        }
+      },
+      "sourcePdfStatus": "pdf-recupere",
+      "sourcePdfSha256": "b74febf2727446838977e67afe8d898a0f53c740f6a7aa4a3b5fc550f771bc01",
+      "sourcePdfBytes": 1214593,
+      "geometryReconciliation": {
+        "comparedSnapshotRecords": 1382,
+        "equivalentSourceIds": [],
+        "method": "Comparaison bidirectionnelle à pas de 4 m, écart maximal 2 m et longueur compatible à 1 %. Indice préalable ; déduplication finale par le pipeline."
+      }
+    },
+    {
+      "sourceId": "MARAIS-CD-16",
+      "sourceFeatureId": 16,
+      "sourceObjectIdField": "FID",
+      "sourceCircuitCode": "pied07",
+      "sourceArboCode": "pied07_qui_la_sinope",
+      "name": "De la Sinope à la mer",
+      "town": "Quinéville",
+      "department": "50",
+      "km": 8.0,
+      "official": "https://parc-cotentin-bessin.fr/desmarais-du-parc-toutes-les-balades-pres-de-chez-vous",
+      "gpxSource": "https://parc-cotentin-bessin.fr/pnrmcb_data/arcgisonline/AGO_RANDO/AGO_PJ/pied07_qui_la_sinope.gpx",
+      "pdf": "https://parc-cotentin-bessin.fr/pnrmcb_data/arcgisonline/AGO_RANDO/AGO_PJ/pied07_qui_la_sinope.pdf",
+      "sourcePdf": "https://parc-cotentin-bessin.fr/pnrmcb_data/arcgisonline/AGO_RANDO/AGO_PJ/pied07_qui_la_sinope.pdf",
+      "sourcePractice": "A pied",
+      "sourcePublished": "OUI",
+      "sourceOrigin": "PNRMCB, GA",
+      "sourceUpdatedAt": "2019-12-13",
+      "sourceEdition": "PNR Marais du Cotentin et du Bessin · mise à jour source 2019-12-13",
+      "sourceDatasetUrl": "https://services5.arcgis.com/2wtm4KHYRBa9T8Yt/arcgis/rest/services/APIRANDO_CIRCUITS/FeatureServer/0/query?where=1%3D1&outFields=FID%2CID%2CNOMCIRCUIT%2CID_CIRCUIT%2CID_ARBO%2CTYPE%2CCOM_DEPART%2CC_DEP%2CAGO_APPLI%2CAGO_PDF%2CAGO_GPX%2CAGO_COORD%2CPARKING%2CDIFFICULTE%2CBALISAGE%2CMAJ%2CSOURCE%2CDIST_KM%2CDUREE_H%2CXW84%2CYW84&returnGeometry=false&f=json",
+      "sourceDatasetSha256": "0af5542416019614ed4c7cb5e0824707e00ccc43957bfe6fbddffa8f389c2559",
+      "sourceApi": "https://services5.arcgis.com/2wtm4KHYRBa9T8Yt/arcgis/rest/services/APIRANDO_CIRCUITS/FeatureServer/0/query?where=FID%3D16&outFields=FID%2CID%2CNOMCIRCUIT%2CID_CIRCUIT%2CID_ARBO%2CTYPE%2CCOM_DEPART%2CC_DEP%2CAGO_APPLI%2CAGO_PDF%2CAGO_GPX%2CAGO_COORD%2CPARKING%2CDIFFICULTE%2CBALISAGE%2CMAJ%2CSOURCE%2CDIST_KM%2CDUREE_H%2CXW84%2CYW84&returnGeometry=false&f=json",
+      "sourceApplication": "http://pnrmcb.maps.arcgis.com/apps/webappviewer/index.html?id=3b8cef41bbb840eab30ded104d0188f6",
+      "sourceParkingDescription": "Musée, avenue de la Plage",
+      "sourceDifficulty": "Facile",
+      "sourceMarking": "Jaune",
+      "sourceDurationMinutes": 160,
+      "sourceGoogleMaps": "https://www.google.com/maps/dir/?api=1&destination=49.51527,-1.28597",
+      "sourceXYLocation": [
+        -1.31832,
+        49.51628
+      ],
+      "sourceLocationNote": "Coordonnées XW84/YW84 et destination Google Maps conservées séparément. Aucune n’est déclarée parking vérifié.",
+      "gpxSha256": "18d5ace98e17535ba311b893a890d97269c9fd472fc2f4799d33b1a3b05cf564",
+      "geometryKm": 8.264,
+      "pointCount": 126,
+      "status": "trace-verifiee",
+      "sourceOriginalGpx": "catalogue/sources/marais/pied07-16.gpx",
+      "sourceGpxTrackCount": 1,
+      "officialLocation": [
+        -1.285879,
+        49.515308
+      ],
+      "officialLocationPrecision": "gpx",
+      "sourceCoordinateOffsetsMetres": {
+        "XW84/YW84": 2344.5,
+        "AGO_COORD": 7.8
+      },
+      "sourceAdministrativeLocation": {
+        "url": "https://geo.api.gouv.fr/communes?lon=-1.285879&lat=49.515308&fields=nom%2Ccode%2CcodeDepartement%2CcodesPostaux&format=json",
+        "sha256": "b96cbe4d79c8a208921920d949969bc37a915e5672c2b497e9c37d0c5268b384",
+        "method": "Premier point du GPX géolocalisé par l’API officielle des communes ; ce point n’est pas un parking vérifié.",
+        "coordinate": [
+          -1.285879,
+          49.515308
+        ],
+        "commune": {
+          "nom": "Quinéville",
+          "code": "50421",
+          "codeDepartement": "50",
+          "codesPostaux": [
+            "50310"
+          ]
+        }
+      },
+      "sourcePdfStatus": "pdf-recupere",
+      "sourcePdfSha256": "6cb315ad6f5f853bf95617126ecc7526a0813f944225c74085e37f47f9729978",
+      "sourcePdfBytes": 1179259,
+      "geometryReconciliation": {
+        "comparedSnapshotRecords": 1382,
+        "equivalentSourceIds": [],
+        "method": "Comparaison bidirectionnelle à pas de 4 m, écart maximal 2 m et longueur compatible à 1 %. Indice préalable ; déduplication finale par le pipeline."
+      }
+    },
+    {
+      "sourceId": "MARAIS-CD-17",
+      "sourceFeatureId": 17,
+      "sourceObjectIdField": "FID",
+      "sourceCircuitCode": "pied10",
+      "sourceArboCode": "pied10_bon_au_creux",
+      "name": "Au creux du bocage",
+      "town": "La Bonneville",
+      "department": "50",
+      "km": 12.0,
+      "official": "https://parc-cotentin-bessin.fr/desmarais-du-parc-toutes-les-balades-pres-de-chez-vous",
+      "gpxSource": "https://parc-cotentin-bessin.fr/pnrmcb_data/arcgisonline/AGO_RANDO/AGO_PJ/pied10_bon_au_creux.gpx",
+      "pdf": "https://parc-cotentin-bessin.fr/pnrmcb_data/arcgisonline/AGO_RANDO/AGO_PJ/pied10_bon_au_creux.pdf",
+      "sourcePdf": "https://parc-cotentin-bessin.fr/pnrmcb_data/arcgisonline/AGO_RANDO/AGO_PJ/pied10_bon_au_creux.pdf",
+      "sourcePractice": "A pied",
+      "sourcePublished": "OUI",
+      "sourceOrigin": "PNRMCB, GA",
+      "sourceUpdatedAt": "2019-12-13",
+      "sourceEdition": "PNR Marais du Cotentin et du Bessin · mise à jour source 2019-12-13",
+      "sourceDatasetUrl": "https://services5.arcgis.com/2wtm4KHYRBa9T8Yt/arcgis/rest/services/APIRANDO_CIRCUITS/FeatureServer/0/query?where=1%3D1&outFields=FID%2CID%2CNOMCIRCUIT%2CID_CIRCUIT%2CID_ARBO%2CTYPE%2CCOM_DEPART%2CC_DEP%2CAGO_APPLI%2CAGO_PDF%2CAGO_GPX%2CAGO_COORD%2CPARKING%2CDIFFICULTE%2CBALISAGE%2CMAJ%2CSOURCE%2CDIST_KM%2CDUREE_H%2CXW84%2CYW84&returnGeometry=false&f=json",
+      "sourceDatasetSha256": "0af5542416019614ed4c7cb5e0824707e00ccc43957bfe6fbddffa8f389c2559",
+      "sourceApi": "https://services5.arcgis.com/2wtm4KHYRBa9T8Yt/arcgis/rest/services/APIRANDO_CIRCUITS/FeatureServer/0/query?where=FID%3D17&outFields=FID%2CID%2CNOMCIRCUIT%2CID_CIRCUIT%2CID_ARBO%2CTYPE%2CCOM_DEPART%2CC_DEP%2CAGO_APPLI%2CAGO_PDF%2CAGO_GPX%2CAGO_COORD%2CPARKING%2CDIFFICULTE%2CBALISAGE%2CMAJ%2CSOURCE%2CDIST_KM%2CDUREE_H%2CXW84%2CYW84&returnGeometry=false&f=json",
+      "sourceApplication": "http://pnrmcb.maps.arcgis.com/apps/webappviewer/index.html?id=3b8cef41bbb840eab30ded104d0188f6",
+      "sourceParkingDescription": "A côté de l'église",
+      "sourceDifficulty": "Moyen",
+      "sourceMarking": "Jaune",
+      "sourceDurationMinutes": 180,
+      "sourceGoogleMaps": "https://www.google.com/maps/dir/?api=1&destination=49.39321,-1.4546",
+      "sourceXYLocation": [
+        -1.45992,
+        49.40219
+      ],
+      "sourceLocationNote": "Coordonnées XW84/YW84 et destination Google Maps conservées séparément. Aucune n’est déclarée parking vérifié.",
+      "gpxSha256": "089f7c7822cd581d73e1ef3be2614b2317760f8a7345c482a50a4c3747aee439",
+      "geometryKm": 11.62,
+      "pointCount": 137,
+      "status": "trace-verifiee",
+      "sourceOriginalGpx": "catalogue/sources/marais/pied10-17.gpx",
+      "sourceGpxTrackCount": 1,
+      "officialLocation": [
+        -1.4546,
+        49.39321
+      ],
+      "officialLocationPrecision": "gpx",
+      "sourceCoordinateOffsetsMetres": {
+        "XW84/YW84": 1070.2,
+        "AGO_COORD": 0.0
+      },
+      "sourceAdministrativeLocation": {
+        "url": "https://geo.api.gouv.fr/communes?lon=-1.4546&lat=49.39321&fields=nom%2Ccode%2CcodeDepartement%2CcodesPostaux&format=json",
+        "sha256": "eb02bf335e4e39c2c14c3189d76f97eac736059e169bf7e3b41efedebba377b8",
+        "method": "Premier point du GPX géolocalisé par l’API officielle des communes ; ce point n’est pas un parking vérifié.",
+        "coordinate": [
+          -1.4546,
+          49.39321
+        ],
+        "commune": {
+          "nom": "La Bonneville",
+          "code": "50064",
+          "codeDepartement": "50",
+          "codesPostaux": [
+            "50360"
+          ]
+        }
+      },
+      "sourcePdfStatus": "pdf-recupere",
+      "sourcePdfSha256": "da0d2e961a0161d287d225701e53e24288541a03f6ccdda1158a2a31ecc5f0c8",
+      "sourcePdfBytes": 1380837,
+      "geometryReconciliation": {
+        "comparedSnapshotRecords": 1382,
+        "equivalentSourceIds": [],
+        "method": "Comparaison bidirectionnelle à pas de 4 m, écart maximal 2 m et longueur compatible à 1 %. Indice préalable ; déduplication finale par le pipeline."
+      }
+    },
+    {
+      "sourceId": "MARAIS-CD-22",
+      "sourceFeatureId": 22,
+      "sourceObjectIdField": "FID",
+      "sourceCircuitCode": "pied14",
+      "sourceArboCode": "pied14_mba_sortileges",
+      "name": "Le Cotentin des sortilèges",
+      "town": "Les Moitiers-en-Bauptois",
+      "department": "50",
+      "km": 25.0,
+      "official": "https://parc-cotentin-bessin.fr/desmarais-du-parc-toutes-les-balades-pres-de-chez-vous",
+      "gpxSource": "https://parc-cotentin-bessin.fr/pnrmcb_data/arcgisonline/AGO_RANDO/AGO_PJ/pied14_mba_sortileges.gpx",
+      "pdf": "https://parc-cotentin-bessin.fr/pnrmcb_data/arcgisonline/AGO_RANDO/AGO_PJ/pied14_mba_sortileges.pdf",
+      "sourcePdf": "https://parc-cotentin-bessin.fr/pnrmcb_data/arcgisonline/AGO_RANDO/AGO_PJ/pied14_mba_sortileges.pdf",
+      "sourcePractice": "A pied",
+      "sourcePublished": "OUI",
+      "sourceOrigin": "PNRMCB, GA",
+      "sourceUpdatedAt": "2019-12-13",
+      "sourceEdition": "PNR Marais du Cotentin et du Bessin · mise à jour source 2019-12-13",
+      "sourceDatasetUrl": "https://services5.arcgis.com/2wtm4KHYRBa9T8Yt/arcgis/rest/services/APIRANDO_CIRCUITS/FeatureServer/0/query?where=1%3D1&outFields=FID%2CID%2CNOMCIRCUIT%2CID_CIRCUIT%2CID_ARBO%2CTYPE%2CCOM_DEPART%2CC_DEP%2CAGO_APPLI%2CAGO_PDF%2CAGO_GPX%2CAGO_COORD%2CPARKING%2CDIFFICULTE%2CBALISAGE%2CMAJ%2CSOURCE%2CDIST_KM%2CDUREE_H%2CXW84%2CYW84&returnGeometry=false&f=json",
+      "sourceDatasetSha256": "0af5542416019614ed4c7cb5e0824707e00ccc43957bfe6fbddffa8f389c2559",
+      "sourceApi": "https://services5.arcgis.com/2wtm4KHYRBa9T8Yt/arcgis/rest/services/APIRANDO_CIRCUITS/FeatureServer/0/query?where=FID%3D22&outFields=FID%2CID%2CNOMCIRCUIT%2CID_CIRCUIT%2CID_ARBO%2CTYPE%2CCOM_DEPART%2CC_DEP%2CAGO_APPLI%2CAGO_PDF%2CAGO_GPX%2CAGO_COORD%2CPARKING%2CDIFFICULTE%2CBALISAGE%2CMAJ%2CSOURCE%2CDIST_KM%2CDUREE_H%2CXW84%2CYW84&returnGeometry=false&f=json",
+      "sourceApplication": "http://pnrmcb.maps.arcgis.com/apps/webappviewer/index.html?id=3b8cef41bbb840eab30ded104d0188f6",
+      "sourceParkingDescription": "Hameau de Longuerac",
+      "sourceDifficulty": "Difficile",
+      "sourceMarking": "Jaune",
+      "sourceDurationMinutes": 390,
+      "sourceGoogleMaps": "https://www.google.com/maps/dir/?api=1&destination=49.36556,-1.45802",
+      "sourceXYLocation": [
+        -1.45801,
+        49.36557
+      ],
+      "sourceLocationNote": "Coordonnées XW84/YW84 et destination Google Maps conservées séparément. Aucune n’est déclarée parking vérifié.",
+      "gpxSha256": "55f245bcef5115ccda4c850bd2d819ecc959493f04c0c9a98dea8bda11d39f69",
+      "geometryKm": 25.898,
+      "pointCount": 351,
+      "status": "trace-verifiee",
+      "sourceOriginalGpx": "catalogue/sources/marais/pied14-22.gpx",
+      "sourceGpxTrackCount": 1,
+      "officialLocation": [
+        -1.458013,
+        49.365567
+      ],
+      "officialLocationPrecision": "gpx",
+      "sourceCoordinateOffsetsMetres": {
+        "XW84/YW84": 0.4,
+        "AGO_COORD": 0.9
+      },
+      "sourceAdministrativeLocation": {
+        "url": "https://geo.api.gouv.fr/communes?lon=-1.458013&lat=49.365567&fields=nom%2Ccode%2CcodeDepartement%2CcodesPostaux&format=json",
+        "sha256": "8196e50524b6d41a822254f9c24624aa0ab86660ad785d5b6630250c17603bdf",
+        "method": "Premier point du GPX géolocalisé par l’API officielle des communes ; ce point n’est pas un parking vérifié.",
+        "coordinate": [
+          -1.458013,
+          49.365567
+        ],
+        "commune": {
+          "nom": "Picauville",
+          "code": "50400",
+          "codeDepartement": "50",
+          "codesPostaux": [
+            "50250",
+            "50360",
+            "50480"
+          ]
+        }
+      },
+      "sourcePdfStatus": "pdf-recupere",
+      "sourcePdfSha256": "da48993ac9ce0d58c36b16719f6be20fe6d01c8b8de1826573f00c409082fdc4",
+      "sourcePdfBytes": 1301546,
+      "geometryReconciliation": {
+        "comparedSnapshotRecords": 1382,
+        "equivalentSourceIds": [],
+        "method": "Comparaison bidirectionnelle à pas de 4 m, écart maximal 2 m et longueur compatible à 1 %. Indice préalable ; déduplication finale par le pipeline."
+      }
+    },
+    {
+      "sourceId": "MARAIS-CD-23",
+      "sourceFeatureId": 23,
+      "sourceObjectIdField": "FID",
+      "sourceCircuitCode": "pied15",
+      "sourceArboCode": "pied15_hay_vieilles_pierres",
+      "name": "Les vieilles pierres du mont Castre",
+      "town": "Lithaire",
+      "department": "50",
+      "km": 7.0,
+      "official": "https://parc-cotentin-bessin.fr/desmarais-du-parc-toutes-les-balades-pres-de-chez-vous",
+      "gpxSource": "https://parc-cotentin-bessin.fr/pnrmcb_data/arcgisonline/AGO_RANDO/AGO_PJ/pied15_hay_vieilles_pierres.gpx",
+      "pdf": "https://parc-cotentin-bessin.fr/pnrmcb_data/arcgisonline/AGO_RANDO/AGO_PJ/pied15_hay_vieilles_pierres.pdf",
+      "sourcePdf": "https://parc-cotentin-bessin.fr/pnrmcb_data/arcgisonline/AGO_RANDO/AGO_PJ/pied15_hay_vieilles_pierres.pdf",
+      "sourcePractice": "A pied",
+      "sourcePublished": "OUI",
+      "sourceOrigin": "PNRMCB, GA",
+      "sourceUpdatedAt": "2019-12-13",
+      "sourceEdition": "PNR Marais du Cotentin et du Bessin · mise à jour source 2019-12-13",
+      "sourceDatasetUrl": "https://services5.arcgis.com/2wtm4KHYRBa9T8Yt/arcgis/rest/services/APIRANDO_CIRCUITS/FeatureServer/0/query?where=1%3D1&outFields=FID%2CID%2CNOMCIRCUIT%2CID_CIRCUIT%2CID_ARBO%2CTYPE%2CCOM_DEPART%2CC_DEP%2CAGO_APPLI%2CAGO_PDF%2CAGO_GPX%2CAGO_COORD%2CPARKING%2CDIFFICULTE%2CBALISAGE%2CMAJ%2CSOURCE%2CDIST_KM%2CDUREE_H%2CXW84%2CYW84&returnGeometry=false&f=json",
+      "sourceDatasetSha256": "0af5542416019614ed4c7cb5e0824707e00ccc43957bfe6fbddffa8f389c2559",
+      "sourceApi": "https://services5.arcgis.com/2wtm4KHYRBa9T8Yt/arcgis/rest/services/APIRANDO_CIRCUITS/FeatureServer/0/query?where=FID%3D23&outFields=FID%2CID%2CNOMCIRCUIT%2CID_CIRCUIT%2CID_ARBO%2CTYPE%2CCOM_DEPART%2CC_DEP%2CAGO_APPLI%2CAGO_PDF%2CAGO_GPX%2CAGO_COORD%2CPARKING%2CDIFFICULTE%2CBALISAGE%2CMAJ%2CSOURCE%2CDIST_KM%2CDUREE_H%2CXW84%2CYW84&returnGeometry=false&f=json",
+      "sourceApplication": "http://pnrmcb.maps.arcgis.com/apps/webappviewer/index.html?id=3b8cef41bbb840eab30ded104d0188f6",
+      "sourceParkingDescription": "Plan d'eau du mont Castre",
+      "sourceDifficulty": "Facile",
+      "sourceMarking": "Jaune",
+      "sourceDurationMinutes": 135,
+      "sourceGoogleMaps": "https://www.google.com/maps/dir/?api=1&destination=49.28777,-1.49185",
+      "sourceXYLocation": [
+        -1.52925,
+        49.28648
+      ],
+      "sourceLocationNote": "Coordonnées XW84/YW84 et destination Google Maps conservées séparément. Aucune n’est déclarée parking vérifié.",
+      "gpxSha256": "04f8891d324b5c21243ab1e3a558a9e044e45f92014778e7e0720c331ba0c7a4",
+      "geometryKm": 6.878,
+      "pointCount": 97,
+      "status": "trace-verifiee",
+      "sourceOriginalGpx": "catalogue/sources/marais/pied15-23.gpx",
+      "sourceGpxTrackCount": 1,
+      "officialLocation": [
+        -1.491865,
+        49.287811
+      ],
+      "officialLocationPrecision": "gpx",
+      "sourceCoordinateOffsetsMetres": {
+        "XW84/YW84": 2715.5,
+        "AGO_COORD": 4.7
+      },
+      "sourceAdministrativeLocation": {
+        "url": "https://geo.api.gouv.fr/communes?lon=-1.491865&lat=49.287811&fields=nom%2Ccode%2CcodeDepartement%2CcodesPostaux&format=json",
+        "sha256": "5a16ba84287ff3c5db6e3c6aa4a083ed1ad53d845c4550c092680e829c0845e0",
+        "method": "Premier point du GPX géolocalisé par l’API officielle des communes ; ce point n’est pas un parking vérifié.",
+        "coordinate": [
+          -1.491865,
+          49.287811
+        ],
+        "commune": {
+          "nom": "Montsenelle",
+          "code": "50273",
+          "codeDepartement": "50",
+          "codesPostaux": [
+            "50250"
+          ]
+        }
+      },
+      "sourcePdfStatus": "pdf-recupere",
+      "sourcePdfSha256": "c3759369567c4c0da81a2febd4ea7370e1c08aa665d500981f1a6f01d613acd6",
+      "sourcePdfBytes": 1661235,
+      "geometryReconciliation": {
+        "comparedSnapshotRecords": 1382,
+        "equivalentSourceIds": [],
+        "method": "Comparaison bidirectionnelle à pas de 4 m, écart maximal 2 m et longueur compatible à 1 %. Indice préalable ; déduplication finale par le pipeline."
+      }
+    },
+    {
+      "sourceId": "MARAIS-CD-24",
+      "sourceFeatureId": 24,
+      "sourceObjectIdField": "FID",
+      "sourceCircuitCode": "pied16",
+      "sourceArboCode": "pied16_cre_les_mielles",
+      "name": "Les mielles de créances",
+      "town": "Créances",
+      "department": "50",
+      "km": 8.0,
+      "official": "https://parc-cotentin-bessin.fr/desmarais-du-parc-toutes-les-balades-pres-de-chez-vous",
+      "gpxSource": "https://parc-cotentin-bessin.fr/pnrmcb_data/arcgisonline/AGO_RANDO/AGO_PJ/pied16_cre_les_mielles.gpx",
+      "pdf": "https://parc-cotentin-bessin.fr/pnrmcb_data/arcgisonline/AGO_RANDO/AGO_PJ/pied16_cre_les_mielles.pdf",
+      "sourcePdf": "https://parc-cotentin-bessin.fr/pnrmcb_data/arcgisonline/AGO_RANDO/AGO_PJ/pied16_cre_les_mielles.pdf",
+      "sourcePractice": "A pied",
+      "sourcePublished": "OUI",
+      "sourceOrigin": "PNRMCB, GA",
+      "sourceUpdatedAt": "2019-12-13",
+      "sourceEdition": "PNR Marais du Cotentin et du Bessin · mise à jour source 2019-12-13",
+      "sourceDatasetUrl": "https://services5.arcgis.com/2wtm4KHYRBa9T8Yt/arcgis/rest/services/APIRANDO_CIRCUITS/FeatureServer/0/query?where=1%3D1&outFields=FID%2CID%2CNOMCIRCUIT%2CID_CIRCUIT%2CID_ARBO%2CTYPE%2CCOM_DEPART%2CC_DEP%2CAGO_APPLI%2CAGO_PDF%2CAGO_GPX%2CAGO_COORD%2CPARKING%2CDIFFICULTE%2CBALISAGE%2CMAJ%2CSOURCE%2CDIST_KM%2CDUREE_H%2CXW84%2CYW84&returnGeometry=false&f=json",
+      "sourceDatasetSha256": "0af5542416019614ed4c7cb5e0824707e00ccc43957bfe6fbddffa8f389c2559",
+      "sourceApi": "https://services5.arcgis.com/2wtm4KHYRBa9T8Yt/arcgis/rest/services/APIRANDO_CIRCUITS/FeatureServer/0/query?where=FID%3D24&outFields=FID%2CID%2CNOMCIRCUIT%2CID_CIRCUIT%2CID_ARBO%2CTYPE%2CCOM_DEPART%2CC_DEP%2CAGO_APPLI%2CAGO_PDF%2CAGO_GPX%2CAGO_COORD%2CPARKING%2CDIFFICULTE%2CBALISAGE%2CMAJ%2CSOURCE%2CDIST_KM%2CDUREE_H%2CXW84%2CYW84&returnGeometry=false&f=json",
+      "sourceApplication": "http://pnrmcb.maps.arcgis.com/apps/webappviewer/index.html?id=3b8cef41bbb840eab30ded104d0188f6",
+      "sourceParkingDescription": "Boulevard de la Mer, en bord de mer",
+      "sourceDifficulty": "Facile",
+      "sourceMarking": "Jaune",
+      "sourceDurationMinutes": 160,
+      "sourceGoogleMaps": "https://www.google.com/maps/dir/?api=1&destination=49.19735,-1.60512",
+      "sourceXYLocation": [
+        -1.60512,
+        49.19735
+      ],
+      "sourceLocationNote": "Coordonnées XW84/YW84 et destination Google Maps conservées séparément. Aucune n’est déclarée parking vérifié.",
+      "gpxSha256": "a719eea25940d1b0d4c653ce8892de46d71c654ad03ece728d65141a12689b2b",
+      "geometryKm": 8.523,
+      "pointCount": 182,
+      "status": "trace-verifiee",
+      "sourceOriginalGpx": "catalogue/sources/marais/pied16-24.gpx",
+      "sourceGpxTrackCount": 1,
+      "officialLocation": [
+        -1.605123,
+        49.197348
+      ],
+      "officialLocationPrecision": "gpx",
+      "sourceCoordinateOffsetsMetres": {
+        "XW84/YW84": 0.3,
+        "AGO_COORD": 0.3
+      },
+      "sourceAdministrativeLocation": {
+        "url": "https://geo.api.gouv.fr/communes?lon=-1.605123&lat=49.197348&fields=nom%2Ccode%2CcodeDepartement%2CcodesPostaux&format=json",
+        "sha256": "ac2cbfe138db613968dc89326cdf06f56a564bf10e900e1009487463a2317f1f",
+        "method": "Premier point du GPX géolocalisé par l’API officielle des communes ; ce point n’est pas un parking vérifié.",
+        "coordinate": [
+          -1.605123,
+          49.197348
+        ],
+        "commune": {
+          "nom": "Créances",
+          "code": "50151",
+          "codeDepartement": "50",
+          "codesPostaux": [
+            "50710"
+          ]
+        }
+      },
+      "sourcePdfStatus": "pdf-recupere",
+      "sourcePdfSha256": "2a78b0c120be21303a7905f5145a4d61030f8875556098631ee2939baa65a8ff",
+      "sourcePdfBytes": 1279725,
+      "geometryReconciliation": {
+        "comparedSnapshotRecords": 1382,
+        "equivalentSourceIds": [],
+        "method": "Comparaison bidirectionnelle à pas de 4 m, écart maximal 2 m et longueur compatible à 1 %. Indice préalable ; déduplication finale par le pipeline."
+      }
+    },
+    {
+      "sourceId": "MARAIS-CD-25",
+      "sourceFeatureId": 25,
+      "sourceObjectIdField": "FID",
+      "sourceCircuitCode": "pied17",
+      "sourceArboCode": "pied17_pir_donjon",
+      "name": "Donjon et moulin de Pirou",
+      "town": "Pirou",
+      "department": "50",
+      "km": 10.5,
+      "official": "https://parc-cotentin-bessin.fr/desmarais-du-parc-toutes-les-balades-pres-de-chez-vous",
+      "gpxSource": "https://parc-cotentin-bessin.fr/pnrmcb_data/arcgisonline/AGO_RANDO/AGO_PJ/pied17_pir_donjon.gpx",
+      "pdf": "https://parc-cotentin-bessin.fr/pnrmcb_data/arcgisonline/AGO_RANDO/AGO_PJ/pied17_pir_donjon.pdf",
+      "sourcePdf": "https://parc-cotentin-bessin.fr/pnrmcb_data/arcgisonline/AGO_RANDO/AGO_PJ/pied17_pir_donjon.pdf",
+      "sourcePractice": "A pied",
+      "sourcePublished": "OUI",
+      "sourceOrigin": "PNRMCB, GA",
+      "sourceUpdatedAt": "2019-12-13",
+      "sourceEdition": "PNR Marais du Cotentin et du Bessin · mise à jour source 2019-12-13",
+      "sourceDatasetUrl": "https://services5.arcgis.com/2wtm4KHYRBa9T8Yt/arcgis/rest/services/APIRANDO_CIRCUITS/FeatureServer/0/query?where=1%3D1&outFields=FID%2CID%2CNOMCIRCUIT%2CID_CIRCUIT%2CID_ARBO%2CTYPE%2CCOM_DEPART%2CC_DEP%2CAGO_APPLI%2CAGO_PDF%2CAGO_GPX%2CAGO_COORD%2CPARKING%2CDIFFICULTE%2CBALISAGE%2CMAJ%2CSOURCE%2CDIST_KM%2CDUREE_H%2CXW84%2CYW84&returnGeometry=false&f=json",
+      "sourceDatasetSha256": "0af5542416019614ed4c7cb5e0824707e00ccc43957bfe6fbddffa8f389c2559",
+      "sourceApi": "https://services5.arcgis.com/2wtm4KHYRBa9T8Yt/arcgis/rest/services/APIRANDO_CIRCUITS/FeatureServer/0/query?where=FID%3D25&outFields=FID%2CID%2CNOMCIRCUIT%2CID_CIRCUIT%2CID_ARBO%2CTYPE%2CCOM_DEPART%2CC_DEP%2CAGO_APPLI%2CAGO_PDF%2CAGO_GPX%2CAGO_COORD%2CPARKING%2CDIFFICULTE%2CBALISAGE%2CMAJ%2CSOURCE%2CDIST_KM%2CDUREE_H%2CXW84%2CYW84&returnGeometry=false&f=json",
+      "sourceApplication": "http://pnrmcb.maps.arcgis.com/apps/webappviewer/index.html?id=3b8cef41bbb840eab30ded104d0188f6",
+      "sourceParkingDescription": "Parking de l'école derrière l'aire de pique-nique",
+      "sourceDifficulty": "Moyen",
+      "sourceMarking": "Jaune",
+      "sourceDurationMinutes": 195,
+      "sourceGoogleMaps": "https://www.google.com/maps/dir/?api=1&destination=49.16501,-1.56837",
+      "sourceXYLocation": [
+        -1.56837,
+        49.16501
+      ],
+      "sourceLocationNote": "Coordonnées XW84/YW84 et destination Google Maps conservées séparément. Aucune n’est déclarée parking vérifié.",
+      "gpxSha256": "13295b086871080c783f7875bf9a32fa1e74f16886f334f0dd3bdcade2e3fb0e",
+      "geometryKm": 10.517,
+      "pointCount": 140,
+      "status": "trace-verifiee",
+      "sourceOriginalGpx": "catalogue/sources/marais/pied17-25.gpx",
+      "sourceGpxTrackCount": 1,
+      "officialLocation": [
+        -1.568371,
+        49.165015
+      ],
+      "officialLocationPrecision": "gpx",
+      "sourceCoordinateOffsetsMetres": {
+        "XW84/YW84": 0.6,
+        "AGO_COORD": 0.6
+      },
+      "sourceAdministrativeLocation": {
+        "url": "https://geo.api.gouv.fr/communes?lon=-1.568371&lat=49.165015&fields=nom%2Ccode%2CcodeDepartement%2CcodesPostaux&format=json",
+        "sha256": "ea3f79b89249d6eac23b25619a25f40075924628999e9543da438e264feb475a",
+        "method": "Premier point du GPX géolocalisé par l’API officielle des communes ; ce point n’est pas un parking vérifié.",
+        "coordinate": [
+          -1.568371,
+          49.165015
+        ],
+        "commune": {
+          "nom": "Pirou",
+          "code": "50403",
+          "codeDepartement": "50",
+          "codesPostaux": [
+            "50770"
+          ]
+        }
+      },
+      "sourcePdfStatus": "pdf-recupere",
+      "sourcePdfSha256": "999da412096b9357410e83785f8f41c7de426022c73a44e49e8e28862ec147e8",
+      "sourcePdfBytes": 1185933,
+      "geometryReconciliation": {
+        "comparedSnapshotRecords": 1382,
+        "equivalentSourceIds": [],
+        "method": "Comparaison bidirectionnelle à pas de 4 m, écart maximal 2 m et longueur compatible à 1 %. Indice préalable ; déduplication finale par le pipeline."
+      }
+    },
+    {
+      "sourceId": "MARAIS-CD-31",
+      "sourceFeatureId": 31,
+      "sourceObjectIdField": "FID",
+      "sourceCircuitCode": "pied18",
+      "sourceArboCode": "pied18_les_rives_ay",
+      "name": "Des rives de l'Ay aux landes de Lessay",
+      "town": "Lessay",
+      "department": "50",
+      "km": 14.0,
+      "official": "https://parc-cotentin-bessin.fr/desmarais-du-parc-toutes-les-balades-pres-de-chez-vous",
+      "gpxSource": "https://parc-cotentin-bessin.fr/pnrmcb_data/arcgisonline/AGO_RANDO/AGO_PJ/pied18_les_rives_ay.gpx",
+      "pdf": "https://parc-cotentin-bessin.fr/pnrmcb_data/arcgisonline/AGO_RANDO/AGO_PJ/pied18_les_rives_ay.pdf",
+      "sourcePdf": "https://parc-cotentin-bessin.fr/pnrmcb_data/arcgisonline/AGO_RANDO/AGO_PJ/pied18_les_rives_ay.pdf",
+      "sourcePractice": "A pied",
+      "sourcePublished": "OUI",
+      "sourceOrigin": "PNRMCB, GA",
+      "sourceUpdatedAt": "2024-05-21",
+      "sourceEdition": "PNR Marais du Cotentin et du Bessin · mise à jour source 2024-05-21",
+      "sourceDatasetUrl": "https://services5.arcgis.com/2wtm4KHYRBa9T8Yt/arcgis/rest/services/APIRANDO_CIRCUITS/FeatureServer/0/query?where=1%3D1&outFields=FID%2CID%2CNOMCIRCUIT%2CID_CIRCUIT%2CID_ARBO%2CTYPE%2CCOM_DEPART%2CC_DEP%2CAGO_APPLI%2CAGO_PDF%2CAGO_GPX%2CAGO_COORD%2CPARKING%2CDIFFICULTE%2CBALISAGE%2CMAJ%2CSOURCE%2CDIST_KM%2CDUREE_H%2CXW84%2CYW84&returnGeometry=false&f=json",
+      "sourceDatasetSha256": "0af5542416019614ed4c7cb5e0824707e00ccc43957bfe6fbddffa8f389c2559",
+      "sourceApi": "https://services5.arcgis.com/2wtm4KHYRBa9T8Yt/arcgis/rest/services/APIRANDO_CIRCUITS/FeatureServer/0/query?where=FID%3D31&outFields=FID%2CID%2CNOMCIRCUIT%2CID_CIRCUIT%2CID_ARBO%2CTYPE%2CCOM_DEPART%2CC_DEP%2CAGO_APPLI%2CAGO_PDF%2CAGO_GPX%2CAGO_COORD%2CPARKING%2CDIFFICULTE%2CBALISAGE%2CMAJ%2CSOURCE%2CDIST_KM%2CDUREE_H%2CXW84%2CYW84&returnGeometry=false&f=json",
+      "sourceApplication": "http://pnrmcb.maps.arcgis.com/apps/webappviewer/index.html?id=3b8cef41bbb840eab30ded104d0188f6",
+      "sourceParkingDescription": "Plan d'eau de Lessay",
+      "sourceDifficulty": "Moyen",
+      "sourceMarking": "Jaune",
+      "sourceDurationMinutes": 210,
+      "sourceGoogleMaps": "https://www.google.com/maps/dir/?api=1&destination=49.22217,-1.53218",
+      "sourceXYLocation": [
+        16312.78022,
+        49.21103
+      ],
+      "sourceLocationNote": "Coordonnées XW84/YW84 et destination Google Maps conservées séparément. Aucune n’est déclarée parking vérifié.",
+      "gpxSha256": "a5da02f7fd79d51731f59bc2d0b0b7c25545e100bc8489c270c6cde0c9c0cb3c",
+      "geometryKm": 25.936,
+      "pointCount": 431,
+      "status": "distance-a-verifier",
+      "issue": "Fiche 14.0 km ; GPX 25.9 km",
+      "sourceOriginalGpx": "catalogue/sources/marais/pied18-31.gpx",
+      "sourceGpxTrackCount": 2,
+      "sourceGpxIssue": "Le GPX publié contient plusieurs traces ; elles sont conservées sans sélection arbitraire.",
+      "officialLocation": [
+        -1.539765,
+        49.332001
+      ],
+      "officialLocationPrecision": "gpx",
+      "sourceCoordinateOffsetsMetres": {
+        "XW84/YW84": 7393076.5,
+        "AGO_COORD": 12225.0
+      },
+      "sourceAdministrativeLocation": {
+        "url": "https://geo.api.gouv.fr/communes?lon=-1.539765&lat=49.332001&fields=nom%2Ccode%2CcodeDepartement%2CcodesPostaux&format=json",
+        "sha256": "ef65b0bd8c654cff56c330b836ea1141e39bb3536cb532372a1055d80e3ba817",
+        "method": "Premier point du GPX géolocalisé par l’API officielle des communes ; ce point n’est pas un parking vérifié.",
+        "coordinate": [
+          -1.539765,
+          49.332001
+        ],
+        "commune": {
+          "nom": "Doville",
+          "code": "50166",
+          "codeDepartement": "50",
+          "codesPostaux": [
+            "50250"
+          ]
+        }
+      },
+      "sourcePdfStatus": "pdf-recupere",
+      "sourcePdfSha256": "6fbdd7d8f940e3ff353d81a572026513489e4b5a9ce687736bc22b8c42b458dc",
+      "sourcePdfBytes": 654781
+    },
+    {
+      "sourceId": "MARAIS-CD-32",
+      "sourceFeatureId": 32,
+      "sourceObjectIdField": "FID",
+      "sourceCircuitCode": "pied19",
+      "sourceArboCode": "pied19_mil_landes",
+      "name": "Landes de Millières",
+      "town": "Millières",
+      "department": "50",
+      "km": 7.0,
+      "official": "https://parc-cotentin-bessin.fr/desmarais-du-parc-toutes-les-balades-pres-de-chez-vous",
+      "gpxSource": "https://parc-cotentin-bessin.fr/pnrmcb_data/arcgisonline/AGO_RANDO/AGO_PJ/pied19_mil_landes.gpx",
+      "pdf": "https://parc-cotentin-bessin.fr/pnrmcb_data/arcgisonline/AGO_RANDO/AGO_PJ/pied19_mil_landes.pdf",
+      "sourcePdf": "https://parc-cotentin-bessin.fr/pnrmcb_data/arcgisonline/AGO_RANDO/AGO_PJ/pied19_mil_landes.pdf",
+      "sourcePractice": "A pied",
+      "sourcePublished": "OUI",
+      "sourceOrigin": "PNRMCB, GA",
+      "sourceUpdatedAt": "2019-12-16",
+      "sourceEdition": "PNR Marais du Cotentin et du Bessin · mise à jour source 2019-12-16",
+      "sourceDatasetUrl": "https://services5.arcgis.com/2wtm4KHYRBa9T8Yt/arcgis/rest/services/APIRANDO_CIRCUITS/FeatureServer/0/query?where=1%3D1&outFields=FID%2CID%2CNOMCIRCUIT%2CID_CIRCUIT%2CID_ARBO%2CTYPE%2CCOM_DEPART%2CC_DEP%2CAGO_APPLI%2CAGO_PDF%2CAGO_GPX%2CAGO_COORD%2CPARKING%2CDIFFICULTE%2CBALISAGE%2CMAJ%2CSOURCE%2CDIST_KM%2CDUREE_H%2CXW84%2CYW84&returnGeometry=false&f=json",
+      "sourceDatasetSha256": "0af5542416019614ed4c7cb5e0824707e00ccc43957bfe6fbddffa8f389c2559",
+      "sourceApi": "https://services5.arcgis.com/2wtm4KHYRBa9T8Yt/arcgis/rest/services/APIRANDO_CIRCUITS/FeatureServer/0/query?where=FID%3D32&outFields=FID%2CID%2CNOMCIRCUIT%2CID_CIRCUIT%2CID_ARBO%2CTYPE%2CCOM_DEPART%2CC_DEP%2CAGO_APPLI%2CAGO_PDF%2CAGO_GPX%2CAGO_COORD%2CPARKING%2CDIFFICULTE%2CBALISAGE%2CMAJ%2CSOURCE%2CDIST_KM%2CDUREE_H%2CXW84%2CYW84&returnGeometry=false&f=json",
+      "sourceApplication": "http://pnrmcb.maps.arcgis.com/apps/webappviewer/index.html?id=3b8cef41bbb840eab30ded104d0188f6",
+      "sourceParkingDescription": "Stade de football, a la Bezanterie",
+      "sourceDifficulty": "Facile",
+      "sourceMarking": "Jaune",
+      "sourceDurationMinutes": 140,
+      "sourceGoogleMaps": "https://www.google.com/maps/dir/?api=1&destination=49.21553,-1.45949",
+      "sourceXYLocation": [
+        -1.46576,
+        49.20276
+      ],
+      "sourceLocationNote": "Coordonnées XW84/YW84 et destination Google Maps conservées séparément. Aucune n’est déclarée parking vérifié.",
+      "gpxSha256": "2f10f372a04113212a22e3065c375a32dd3092ca1f759cd2b0f063f87bb62746",
+      "geometryKm": 6.364,
+      "pointCount": 133,
+      "status": "trace-verifiee",
+      "sourceOriginalGpx": "catalogue/sources/marais/pied19-32.gpx",
+      "sourceGpxTrackCount": 1,
+      "officialLocation": [
+        -1.459618,
+        49.215621
+      ],
+      "officialLocationPrecision": "gpx",
+      "sourceCoordinateOffsetsMetres": {
+        "XW84/YW84": 1498.1,
+        "AGO_COORD": 13.7
+      },
+      "sourceAdministrativeLocation": {
+        "url": "https://geo.api.gouv.fr/communes?lon=-1.459618&lat=49.215621&fields=nom%2Ccode%2CcodeDepartement%2CcodesPostaux&format=json",
+        "sha256": "dab8243464b31c04b633f14d0c69db86061ff970f17b303ecf68d57608e83092",
+        "method": "Premier point du GPX géolocalisé par l’API officielle des communes ; ce point n’est pas un parking vérifié.",
+        "coordinate": [
+          -1.459618,
+          49.215621
+        ],
+        "commune": {
+          "nom": "Millières",
+          "code": "50328",
+          "codeDepartement": "50",
+          "codesPostaux": [
+            "50190"
+          ]
+        }
+      },
+      "sourcePdfStatus": "pdf-recupere",
+      "sourcePdfSha256": "44be859a5c7b25b1b55370337df667035f713ea6a17a8ac857c5a2ae3436cefe",
+      "sourcePdfBytes": 513469,
+      "geometryReconciliation": {
+        "comparedSnapshotRecords": 1382,
+        "equivalentSourceIds": [],
+        "method": "Comparaison bidirectionnelle à pas de 4 m, écart maximal 2 m et longueur compatible à 1 %. Indice préalable ; déduplication finale par le pipeline."
+      }
+    },
+    {
+      "sourceId": "MARAIS-CD-33",
+      "sourceFeatureId": 33,
+      "sourceObjectIdField": "FID",
+      "sourceCircuitCode": "pied20",
+      "sourceArboCode": "pied20_spc_sept_lieux",
+      "name": "Les sept lieux de la lande et du bocage",
+      "town": "Saint-Patrice-de-Claids",
+      "department": "50",
+      "km": 19.0,
+      "official": "https://parc-cotentin-bessin.fr/desmarais-du-parc-toutes-les-balades-pres-de-chez-vous",
+      "gpxSource": "https://parc-cotentin-bessin.fr/pnrmcb_data/arcgisonline/AGO_RANDO/AGO_PJ/pied20_spc_sept_lieux.gpx",
+      "pdf": "https://parc-cotentin-bessin.fr/pnrmcb_data/arcgisonline/AGO_RANDO/AGO_PJ/pied20_spc_sept_lieux.pdf",
+      "sourcePdf": "https://parc-cotentin-bessin.fr/pnrmcb_data/arcgisonline/AGO_RANDO/AGO_PJ/pied20_spc_sept_lieux.pdf",
+      "sourcePractice": "A pied",
+      "sourcePublished": "OUI",
+      "sourceOrigin": "PNRMCB, GA",
+      "sourceUpdatedAt": "2019-12-16",
+      "sourceEdition": "PNR Marais du Cotentin et du Bessin · mise à jour source 2019-12-16",
+      "sourceDatasetUrl": "https://services5.arcgis.com/2wtm4KHYRBa9T8Yt/arcgis/rest/services/APIRANDO_CIRCUITS/FeatureServer/0/query?where=1%3D1&outFields=FID%2CID%2CNOMCIRCUIT%2CID_CIRCUIT%2CID_ARBO%2CTYPE%2CCOM_DEPART%2CC_DEP%2CAGO_APPLI%2CAGO_PDF%2CAGO_GPX%2CAGO_COORD%2CPARKING%2CDIFFICULTE%2CBALISAGE%2CMAJ%2CSOURCE%2CDIST_KM%2CDUREE_H%2CXW84%2CYW84&returnGeometry=false&f=json",
+      "sourceDatasetSha256": "0af5542416019614ed4c7cb5e0824707e00ccc43957bfe6fbddffa8f389c2559",
+      "sourceApi": "https://services5.arcgis.com/2wtm4KHYRBa9T8Yt/arcgis/rest/services/APIRANDO_CIRCUITS/FeatureServer/0/query?where=FID%3D33&outFields=FID%2CID%2CNOMCIRCUIT%2CID_CIRCUIT%2CID_ARBO%2CTYPE%2CCOM_DEPART%2CC_DEP%2CAGO_APPLI%2CAGO_PDF%2CAGO_GPX%2CAGO_COORD%2CPARKING%2CDIFFICULTE%2CBALISAGE%2CMAJ%2CSOURCE%2CDIST_KM%2CDUREE_H%2CXW84%2CYW84&returnGeometry=false&f=json",
+      "sourceApplication": "http://pnrmcb.maps.arcgis.com/apps/webappviewer/index.html?id=3b8cef41bbb840eab30ded104d0188f6",
+      "sourceParkingDescription": "Devant l'église",
+      "sourceDifficulty": "Difficile",
+      "sourceMarking": "Jaune",
+      "sourceDurationMinutes": 300,
+      "sourceGoogleMaps": "https://www.google.com/maps/dir/?api=1&destination=49.23111,-1.43159",
+      "sourceXYLocation": [
+        -1.43234,
+        49.22947
+      ],
+      "sourceLocationNote": "Coordonnées XW84/YW84 et destination Google Maps conservées séparément. Aucune n’est déclarée parking vérifié.",
+      "gpxSha256": "885e47b409b9e36d0e02409524aac836f05392761ac78e3906948bbc65bf0a8e",
+      "geometryKm": 19.635,
+      "pointCount": 289,
+      "status": "trace-verifiee",
+      "sourceOriginalGpx": "catalogue/sources/marais/pied20-33.gpx",
+      "sourceGpxTrackCount": 1,
+      "officialLocation": [
+        -1.431774,
+        49.230469
+      ],
+      "officialLocationPrecision": "gpx",
+      "sourceCoordinateOffsetsMetres": {
+        "XW84/YW84": 118.4,
+        "AGO_COORD": 72.5
+      },
+      "sourceAdministrativeLocation": {
+        "url": "https://geo.api.gouv.fr/communes?lon=-1.431774&lat=49.230469&fields=nom%2Ccode%2CcodeDepartement%2CcodesPostaux&format=json",
+        "sha256": "d5ea8cd011d1f9f4c56db70ac705e5dd9602b74b9932c0bee39fd9a00da86365",
+        "method": "Premier point du GPX géolocalisé par l’API officielle des communes ; ce point n’est pas un parking vérifié.",
+        "coordinate": [
+          -1.431774,
+          49.230469
+        ],
+        "commune": {
+          "nom": "Saint-Patrice-de-Claids",
+          "code": "50533",
+          "codeDepartement": "50",
+          "codesPostaux": [
+            "50190"
+          ]
+        }
+      },
+      "sourcePdfStatus": "pdf-recupere",
+      "sourcePdfSha256": "245192e6d5af1de98ef78233f38f6a5efcb0599a8fe31b99c3db5104449981d9",
+      "sourcePdfBytes": 1196413,
+      "geometryReconciliation": {
+        "comparedSnapshotRecords": 1382,
+        "equivalentSourceIds": [],
+        "method": "Comparaison bidirectionnelle à pas de 4 m, écart maximal 2 m et longueur compatible à 1 %. Indice préalable ; déduplication finale par le pipeline."
+      }
+    },
+    {
+      "sourceId": "MARAIS-CD-36",
+      "sourceFeatureId": 36,
+      "sourceObjectIdField": "FID",
+      "sourceCircuitCode": "pied21",
+      "sourceArboCode": "pied21_gor_chapelle",
+      "name": "Chapelle et tourbière de Gorges",
+      "town": "Gorges",
+      "department": "50",
+      "km": 8.0,
+      "official": "https://parc-cotentin-bessin.fr/desmarais-du-parc-toutes-les-balades-pres-de-chez-vous",
+      "gpxSource": "https://parc-cotentin-bessin.fr/pnrmcb_data/arcgisonline/AGO_RANDO/AGO_PJ/pied21_gor_chapelle.gpx",
+      "pdf": "https://parc-cotentin-bessin.fr/pnrmcb_data/arcgisonline/AGO_RANDO/AGO_PJ/pied21_gor_chapelle.pdf",
+      "sourcePdf": "https://parc-cotentin-bessin.fr/pnrmcb_data/arcgisonline/AGO_RANDO/AGO_PJ/pied21_gor_chapelle.pdf",
+      "sourcePractice": "A pied",
+      "sourcePublished": "OUI",
+      "sourceOrigin": "PNRMCB, GA",
+      "sourceUpdatedAt": "2019-12-17",
+      "sourceEdition": "PNR Marais du Cotentin et du Bessin · mise à jour source 2019-12-17",
+      "sourceDatasetUrl": "https://services5.arcgis.com/2wtm4KHYRBa9T8Yt/arcgis/rest/services/APIRANDO_CIRCUITS/FeatureServer/0/query?where=1%3D1&outFields=FID%2CID%2CNOMCIRCUIT%2CID_CIRCUIT%2CID_ARBO%2CTYPE%2CCOM_DEPART%2CC_DEP%2CAGO_APPLI%2CAGO_PDF%2CAGO_GPX%2CAGO_COORD%2CPARKING%2CDIFFICULTE%2CBALISAGE%2CMAJ%2CSOURCE%2CDIST_KM%2CDUREE_H%2CXW84%2CYW84&returnGeometry=false&f=json",
+      "sourceDatasetSha256": "0af5542416019614ed4c7cb5e0824707e00ccc43957bfe6fbddffa8f389c2559",
+      "sourceApi": "https://services5.arcgis.com/2wtm4KHYRBa9T8Yt/arcgis/rest/services/APIRANDO_CIRCUITS/FeatureServer/0/query?where=FID%3D36&outFields=FID%2CID%2CNOMCIRCUIT%2CID_CIRCUIT%2CID_ARBO%2CTYPE%2CCOM_DEPART%2CC_DEP%2CAGO_APPLI%2CAGO_PDF%2CAGO_GPX%2CAGO_COORD%2CPARKING%2CDIFFICULTE%2CBALISAGE%2CMAJ%2CSOURCE%2CDIST_KM%2CDUREE_H%2CXW84%2CYW84&returnGeometry=false&f=json",
+      "sourceApplication": "http://pnrmcb.maps.arcgis.com/apps/webappviewer/index.html?id=3b8cef41bbb840eab30ded104d0188f6",
+      "sourceParkingDescription": "Place du bourg",
+      "sourceDifficulty": "Facile",
+      "sourceMarking": "Jaune",
+      "sourceDurationMinutes": 160,
+      "sourceGoogleMaps": "https://www.google.com/maps/dir/?api=1&destination=49.25651,-1.40697",
+      "sourceXYLocation": [
+        -1.4073,
+        49.25689
+      ],
+      "sourceLocationNote": "Coordonnées XW84/YW84 et destination Google Maps conservées séparément. Aucune n’est déclarée parking vérifié.",
+      "gpxSha256": "9eb8eb884d368cfd53c6c3b382f0eb3856103121748c4e96d3e2739af21e55b2",
+      "geometryKm": 8.249,
+      "pointCount": 128,
+      "status": "trace-verifiee",
+      "sourceOriginalGpx": "catalogue/sources/marais/pied21-36.gpx",
+      "sourceGpxTrackCount": 1,
+      "officialLocation": [
+        -1.406967,
+        49.256506
+      ],
+      "officialLocationPrecision": "gpx",
+      "sourceCoordinateOffsetsMetres": {
+        "XW84/YW84": 49.1,
+        "AGO_COORD": 0.5
+      },
+      "sourceAdministrativeLocation": {
+        "url": "https://geo.api.gouv.fr/communes?lon=-1.406967&lat=49.256506&fields=nom%2Ccode%2CcodeDepartement%2CcodesPostaux&format=json",
+        "sha256": "aadd96235d21163486a0c7bf41f383246ee881dfcd9052508e4b47a674d5a509",
+        "method": "Premier point du GPX géolocalisé par l’API officielle des communes ; ce point n’est pas un parking vérifié.",
+        "coordinate": [
+          -1.406967,
+          49.256506
+        ],
+        "commune": {
+          "nom": "Gorges",
+          "code": "50210",
+          "codeDepartement": "50",
+          "codesPostaux": [
+            "50190"
+          ]
+        }
+      },
+      "sourcePdfStatus": "pdf-recupere",
+      "sourcePdfSha256": "045de0fc28c1eeeebf9c2cf56b0096c452fbaf2491deb71e526fa667c307b51e",
+      "sourcePdfBytes": 871779,
+      "geometryReconciliation": {
+        "comparedSnapshotRecords": 1382,
+        "equivalentSourceIds": [
+          "ITINOR050V526FC7"
+        ],
+        "method": "Comparaison bidirectionnelle à pas de 4 m, écart maximal 2 m et longueur compatible à 1 %. Indice préalable ; déduplication finale par le pipeline."
+      }
+    },
+    {
+      "sourceId": "MARAIS-CD-39",
+      "sourceFeatureId": 39,
+      "sourceObjectIdField": "FID",
+      "sourceCircuitCode": "pied22",
+      "sourceArboCode": "pied22_rai_eglises_marais",
+      "name": "Eglises et marais de la Taute",
+      "town": "Raids",
+      "department": "50",
+      "km": 14.5,
+      "official": "https://parc-cotentin-bessin.fr/desmarais-du-parc-toutes-les-balades-pres-de-chez-vous",
+      "gpxSource": "https://parc-cotentin-bessin.fr/pnrmcb_data/arcgisonline/AGO_RANDO/AGO_PJ/pied22_rai_eglises_marais.gpx",
+      "pdf": "https://parc-cotentin-bessin.fr/pnrmcb_data/arcgisonline/AGO_RANDO/AGO_PJ/pied22_rai_eglises_marais.pdf",
+      "sourcePdf": "https://parc-cotentin-bessin.fr/pnrmcb_data/arcgisonline/AGO_RANDO/AGO_PJ/pied22_rai_eglises_marais.pdf",
+      "sourcePractice": "A pied",
+      "sourcePublished": "OUI",
+      "sourceOrigin": "PNRMCB, GA",
+      "sourceUpdatedAt": "2019-12-17",
+      "sourceEdition": "PNR Marais du Cotentin et du Bessin · mise à jour source 2019-12-17",
+      "sourceDatasetUrl": "https://services5.arcgis.com/2wtm4KHYRBa9T8Yt/arcgis/rest/services/APIRANDO_CIRCUITS/FeatureServer/0/query?where=1%3D1&outFields=FID%2CID%2CNOMCIRCUIT%2CID_CIRCUIT%2CID_ARBO%2CTYPE%2CCOM_DEPART%2CC_DEP%2CAGO_APPLI%2CAGO_PDF%2CAGO_GPX%2CAGO_COORD%2CPARKING%2CDIFFICULTE%2CBALISAGE%2CMAJ%2CSOURCE%2CDIST_KM%2CDUREE_H%2CXW84%2CYW84&returnGeometry=false&f=json",
+      "sourceDatasetSha256": "0af5542416019614ed4c7cb5e0824707e00ccc43957bfe6fbddffa8f389c2559",
+      "sourceApi": "https://services5.arcgis.com/2wtm4KHYRBa9T8Yt/arcgis/rest/services/APIRANDO_CIRCUITS/FeatureServer/0/query?where=FID%3D39&outFields=FID%2CID%2CNOMCIRCUIT%2CID_CIRCUIT%2CID_ARBO%2CTYPE%2CCOM_DEPART%2CC_DEP%2CAGO_APPLI%2CAGO_PDF%2CAGO_GPX%2CAGO_COORD%2CPARKING%2CDIFFICULTE%2CBALISAGE%2CMAJ%2CSOURCE%2CDIST_KM%2CDUREE_H%2CXW84%2CYW84&returnGeometry=false&f=json",
+      "sourceApplication": "http://pnrmcb.maps.arcgis.com/apps/webappviewer/index.html?id=3b8cef41bbb840eab30ded104d0188f6",
+      "sourceParkingDescription": "Place de l'Eglise",
+      "sourceDifficulty": "Moyen",
+      "sourceMarking": "Jaune",
+      "sourceDurationMinutes": 210,
+      "sourceGoogleMaps": "https://www.google.com/maps/dir/?api=1&destination=49.21744,-1.34501",
+      "sourceXYLocation": [
+        -1.32533,
+        49.20635
+      ],
+      "sourceLocationNote": "Coordonnées XW84/YW84 et destination Google Maps conservées séparément. Aucune n’est déclarée parking vérifié.",
+      "gpxSha256": "f63ae333d490f522eaf040ad95ebd75a5c7ece4b0b6576406a4d27179418790e",
+      "geometryKm": 14.433,
+      "pointCount": 186,
+      "status": "trace-verifiee",
+      "sourceOriginalGpx": "catalogue/sources/marais/pied22-39.gpx",
+      "sourceGpxTrackCount": 1,
+      "officialLocation": [
+        -1.345013,
+        49.217438
+      ],
+      "officialLocationPrecision": "gpx",
+      "sourceCoordinateOffsetsMetres": {
+        "XW84/YW84": 1887.9,
+        "AGO_COORD": 0.3
+      },
+      "sourceAdministrativeLocation": {
+        "url": "https://geo.api.gouv.fr/communes?lon=-1.345013&lat=49.217438&fields=nom%2Ccode%2CcodeDepartement%2CcodesPostaux&format=json",
+        "sha256": "4377105cf151ffceb6bda77d9d7663a95872ba8d9e8414661bc2a0380045ddb0",
+        "method": "Premier point du GPX géolocalisé par l’API officielle des communes ; ce point n’est pas un parking vérifié.",
+        "coordinate": [
+          -1.345013,
+          49.217438
+        ],
+        "commune": {
+          "nom": "Raids",
+          "code": "50422",
+          "codeDepartement": "50",
+          "codesPostaux": [
+            "50500"
+          ]
+        }
+      },
+      "sourcePdfStatus": "pdf-recupere",
+      "sourcePdfSha256": "198cfdbb0c2fa807d0b56af4c4ef5f4673ec841e03d70f67f784e797492078c4",
+      "sourcePdfBytes": 1187797,
+      "geometryReconciliation": {
+        "comparedSnapshotRecords": 1382,
+        "equivalentSourceIds": [
+          "ITINOR050V5262TL"
+        ],
+        "method": "Comparaison bidirectionnelle à pas de 4 m, écart maximal 2 m et longueur compatible à 1 %. Indice préalable ; déduplication finale par le pipeline."
+      }
+    },
+    {
+      "sourceId": "MARAIS-CD-40",
+      "sourceFeatureId": 40,
+      "sourceObjectIdField": "FID",
+      "sourceCircuitCode": "pied24",
+      "sourceArboCode": "pied24_rem_au_fil",
+      "name": "Au fil des marais",
+      "town": "Rémilly-sur-Lozon",
+      "department": "50",
+      "km": 9.0,
+      "official": "https://parc-cotentin-bessin.fr/desmarais-du-parc-toutes-les-balades-pres-de-chez-vous",
+      "gpxSource": "https://parc-cotentin-bessin.fr/pnrmcb_data/arcgisonline/AGO_RANDO/AGO_PJ/pied24_rem_au_fil.gpx",
+      "pdf": "https://parc-cotentin-bessin.fr/pnrmcb_data/arcgisonline/AGO_RANDO/AGO_PJ/pied24_rem_au_fil.pdf",
+      "sourcePdf": "https://parc-cotentin-bessin.fr/pnrmcb_data/arcgisonline/AGO_RANDO/AGO_PJ/pied24_rem_au_fil.pdf",
+      "sourcePractice": "A pied",
+      "sourcePublished": "OUI",
+      "sourceOrigin": "PNRMCB, GA",
+      "sourceUpdatedAt": "2019-12-17",
+      "sourceEdition": "PNR Marais du Cotentin et du Bessin · mise à jour source 2019-12-17",
+      "sourceDatasetUrl": "https://services5.arcgis.com/2wtm4KHYRBa9T8Yt/arcgis/rest/services/APIRANDO_CIRCUITS/FeatureServer/0/query?where=1%3D1&outFields=FID%2CID%2CNOMCIRCUIT%2CID_CIRCUIT%2CID_ARBO%2CTYPE%2CCOM_DEPART%2CC_DEP%2CAGO_APPLI%2CAGO_PDF%2CAGO_GPX%2CAGO_COORD%2CPARKING%2CDIFFICULTE%2CBALISAGE%2CMAJ%2CSOURCE%2CDIST_KM%2CDUREE_H%2CXW84%2CYW84&returnGeometry=false&f=json",
+      "sourceDatasetSha256": "0af5542416019614ed4c7cb5e0824707e00ccc43957bfe6fbddffa8f389c2559",
+      "sourceApi": "https://services5.arcgis.com/2wtm4KHYRBa9T8Yt/arcgis/rest/services/APIRANDO_CIRCUITS/FeatureServer/0/query?where=FID%3D40&outFields=FID%2CID%2CNOMCIRCUIT%2CID_CIRCUIT%2CID_ARBO%2CTYPE%2CCOM_DEPART%2CC_DEP%2CAGO_APPLI%2CAGO_PDF%2CAGO_GPX%2CAGO_COORD%2CPARKING%2CDIFFICULTE%2CBALISAGE%2CMAJ%2CSOURCE%2CDIST_KM%2CDUREE_H%2CXW84%2CYW84&returnGeometry=false&f=json",
+      "sourceApplication": "http://pnrmcb.maps.arcgis.com/apps/webappviewer/index.html?id=3b8cef41bbb840eab30ded104d0188f6",
+      "sourceParkingDescription": "Parking de l'Oseraie",
+      "sourceDifficulty": "Facile",
+      "sourceMarking": "Jaune",
+      "sourceDurationMinutes": 180,
+      "sourceGoogleMaps": "https://www.google.com/maps/dir/?api=1&destination=49.18106,-1.25127",
+      "sourceXYLocation": [
+        -1.25353,
+        49.18065
+      ],
+      "sourceLocationNote": "Coordonnées XW84/YW84 et destination Google Maps conservées séparément. Aucune n’est déclarée parking vérifié.",
+      "gpxSha256": "9558cd45d98250f6d3b7562375df8a14791e349b1b209c108374293be6109a36",
+      "geometryKm": 8.382,
+      "pointCount": 146,
+      "status": "trace-verifiee",
+      "sourceOriginalGpx": "catalogue/sources/marais/pied24-40.gpx",
+      "sourceGpxTrackCount": 1,
+      "officialLocation": [
+        -1.251266,
+        49.181062
+      ],
+      "officialLocationPrecision": "gpx",
+      "sourceCoordinateOffsetsMetres": {
+        "XW84/YW84": 170.8,
+        "AGO_COORD": 0.4
+      },
+      "sourceAdministrativeLocation": {
+        "url": "https://geo.api.gouv.fr/communes?lon=-1.251266&lat=49.181062&fields=nom%2Ccode%2CcodeDepartement%2CcodesPostaux&format=json",
+        "sha256": "6e1d5f797a34040a4319ed22de7ccae9b3700f5665a1f3b75fb64390c17f99f0",
+        "method": "Premier point du GPX géolocalisé par l’API officielle des communes ; ce point n’est pas un parking vérifié.",
+        "coordinate": [
+          -1.251266,
+          49.181062
+        ],
+        "commune": {
+          "nom": "Remilly Les Marais",
+          "code": "50431",
+          "codeDepartement": "50",
+          "codesPostaux": [
+            "50570",
+            "50620"
+          ]
+        }
+      },
+      "sourcePdfStatus": "pdf-recupere",
+      "sourcePdfSha256": "5d9eedfd384c86593f797ab5ffc9f950dd9d401b2bfa52f2a95173c543aa9b97",
+      "sourcePdfBytes": 1020941,
+      "geometryReconciliation": {
+        "comparedSnapshotRecords": 1382,
+        "equivalentSourceIds": [],
+        "method": "Comparaison bidirectionnelle à pas de 4 m, écart maximal 2 m et longueur compatible à 1 %. Indice préalable ; déduplication finale par le pipeline."
+      }
+    },
+    {
+      "sourceId": "MARAIS-CD-44",
+      "sourceFeatureId": 44,
+      "sourceObjectIdField": "FID",
+      "sourceCircuitCode": "pied25",
+      "sourceArboCode": "pied25_sab_butte",
+      "name": "La Butte de l'Isle-Main",
+      "town": "Saint-André-de-Bohon",
+      "department": "50",
+      "km": 10.5,
+      "official": "https://parc-cotentin-bessin.fr/desmarais-du-parc-toutes-les-balades-pres-de-chez-vous",
+      "gpxSource": "https://parc-cotentin-bessin.fr/pnrmcb_data/arcgisonline/AGO_RANDO/AGO_PJ/pied25_sab_butte.gpx",
+      "pdf": "https://parc-cotentin-bessin.fr/pnrmcb_data/arcgisonline/AGO_RANDO/AGO_PJ/pied25_sab_butte.pdf",
+      "sourcePdf": "https://parc-cotentin-bessin.fr/pnrmcb_data/arcgisonline/AGO_RANDO/AGO_PJ/pied25_sab_butte.pdf",
+      "sourcePractice": "A pied",
+      "sourcePublished": "OUI",
+      "sourceOrigin": "PNRMCB, GA",
+      "sourceUpdatedAt": "2019-12-17",
+      "sourceEdition": "PNR Marais du Cotentin et du Bessin · mise à jour source 2019-12-17",
+      "sourceDatasetUrl": "https://services5.arcgis.com/2wtm4KHYRBa9T8Yt/arcgis/rest/services/APIRANDO_CIRCUITS/FeatureServer/0/query?where=1%3D1&outFields=FID%2CID%2CNOMCIRCUIT%2CID_CIRCUIT%2CID_ARBO%2CTYPE%2CCOM_DEPART%2CC_DEP%2CAGO_APPLI%2CAGO_PDF%2CAGO_GPX%2CAGO_COORD%2CPARKING%2CDIFFICULTE%2CBALISAGE%2CMAJ%2CSOURCE%2CDIST_KM%2CDUREE_H%2CXW84%2CYW84&returnGeometry=false&f=json",
+      "sourceDatasetSha256": "0af5542416019614ed4c7cb5e0824707e00ccc43957bfe6fbddffa8f389c2559",
+      "sourceApi": "https://services5.arcgis.com/2wtm4KHYRBa9T8Yt/arcgis/rest/services/APIRANDO_CIRCUITS/FeatureServer/0/query?where=FID%3D44&outFields=FID%2CID%2CNOMCIRCUIT%2CID_CIRCUIT%2CID_ARBO%2CTYPE%2CCOM_DEPART%2CC_DEP%2CAGO_APPLI%2CAGO_PDF%2CAGO_GPX%2CAGO_COORD%2CPARKING%2CDIFFICULTE%2CBALISAGE%2CMAJ%2CSOURCE%2CDIST_KM%2CDUREE_H%2CXW84%2CYW84&returnGeometry=false&f=json",
+      "sourceApplication": "http://pnrmcb.maps.arcgis.com/apps/webappviewer/index.html?id=3b8cef41bbb840eab30ded104d0188f6",
+      "sourceParkingDescription": "Place de l'Eglise",
+      "sourceDifficulty": "Moyen",
+      "sourceMarking": "Jaune",
+      "sourceDurationMinutes": 180,
+      "sourceGoogleMaps": "https://www.google.com/maps/dir/?api=1&destination=49.23494,-1.25032",
+      "sourceXYLocation": [
+        -1.24775,
+        49.23669
+      ],
+      "sourceLocationNote": "Coordonnées XW84/YW84 et destination Google Maps conservées séparément. Aucune n’est déclarée parking vérifié.",
+      "gpxSha256": "9b53b2a94b5b767abc40ca4cf5af6a07d0226d83315a968daf6c12ef5dd02f7d",
+      "geometryKm": 10.014,
+      "pointCount": 114,
+      "status": "trace-verifiee",
+      "sourceOriginalGpx": "catalogue/sources/marais/pied25-44.gpx",
+      "sourceGpxTrackCount": 1,
+      "officialLocation": [
+        -1.25032,
+        49.234944
+      ],
+      "officialLocationPrecision": "gpx",
+      "sourceCoordinateOffsetsMetres": {
+        "XW84/YW84": 269.3,
+        "AGO_COORD": 0.4
+      },
+      "sourceAdministrativeLocation": {
+        "url": "https://geo.api.gouv.fr/communes?lon=-1.25032&lat=49.234944&fields=nom%2Ccode%2CcodeDepartement%2CcodesPostaux&format=json",
+        "sha256": "e2455c3bc98496ccb9d948993d9212688965faadc335fd321597e147f2073916",
+        "method": "Premier point du GPX géolocalisé par l’API officielle des communes ; ce point n’est pas un parking vérifié.",
+        "coordinate": [
+          -1.25032,
+          49.234944
+        ],
+        "commune": {
+          "nom": "Saint-André-de-Bohon",
+          "code": "50445",
+          "codeDepartement": "50",
+          "codesPostaux": [
+            "50500"
+          ]
+        }
+      },
+      "sourcePdfStatus": "pdf-recupere",
+      "sourcePdfSha256": "5cfbf9864f203590a16f8f3a38e20a4cd3080db9c158b7f8f4d56f195ce380a2",
+      "sourcePdfBytes": 865445,
+      "geometryReconciliation": {
+        "comparedSnapshotRecords": 1382,
+        "equivalentSourceIds": [],
+        "method": "Comparaison bidirectionnelle à pas de 4 m, écart maximal 2 m et longueur compatible à 1 %. Indice préalable ; déduplication finale par le pipeline."
+      }
+    },
+    {
+      "sourceId": "MARAIS-CD-45",
+      "sourceFeatureId": 45,
+      "sourceObjectIdField": "FID",
+      "sourceCircuitCode": "pied26",
+      "sourceArboCode": "pied26_gra_grands_pres",
+      "name": "Grands prés et petits clos",
+      "town": "Graignes-Mesnil Angot",
+      "department": "50",
+      "km": 22.0,
+      "official": "https://parc-cotentin-bessin.fr/desmarais-du-parc-toutes-les-balades-pres-de-chez-vous",
+      "gpxSource": "https://parc-cotentin-bessin.fr/pnrmcb_data/arcgisonline/AGO_RANDO/AGO_PJ/pied26_gra_grands_pres.gpx",
+      "pdf": "https://parc-cotentin-bessin.fr/pnrmcb_data/arcgisonline/AGO_RANDO/AGO_PJ/pied26_gra_grands_pres.pdf",
+      "sourcePdf": "https://parc-cotentin-bessin.fr/pnrmcb_data/arcgisonline/AGO_RANDO/AGO_PJ/pied26_gra_grands_pres.pdf",
+      "sourcePractice": "A pied",
+      "sourcePublished": "OUI",
+      "sourceOrigin": "PNRMCB, GA",
+      "sourceUpdatedAt": "2019-12-18",
+      "sourceEdition": "PNR Marais du Cotentin et du Bessin · mise à jour source 2019-12-18",
+      "sourceDatasetUrl": "https://services5.arcgis.com/2wtm4KHYRBa9T8Yt/arcgis/rest/services/APIRANDO_CIRCUITS/FeatureServer/0/query?where=1%3D1&outFields=FID%2CID%2CNOMCIRCUIT%2CID_CIRCUIT%2CID_ARBO%2CTYPE%2CCOM_DEPART%2CC_DEP%2CAGO_APPLI%2CAGO_PDF%2CAGO_GPX%2CAGO_COORD%2CPARKING%2CDIFFICULTE%2CBALISAGE%2CMAJ%2CSOURCE%2CDIST_KM%2CDUREE_H%2CXW84%2CYW84&returnGeometry=false&f=json",
+      "sourceDatasetSha256": "0af5542416019614ed4c7cb5e0824707e00ccc43957bfe6fbddffa8f389c2559",
+      "sourceApi": "https://services5.arcgis.com/2wtm4KHYRBa9T8Yt/arcgis/rest/services/APIRANDO_CIRCUITS/FeatureServer/0/query?where=FID%3D45&outFields=FID%2CID%2CNOMCIRCUIT%2CID_CIRCUIT%2CID_ARBO%2CTYPE%2CCOM_DEPART%2CC_DEP%2CAGO_APPLI%2CAGO_PDF%2CAGO_GPX%2CAGO_COORD%2CPARKING%2CDIFFICULTE%2CBALISAGE%2CMAJ%2CSOURCE%2CDIST_KM%2CDUREE_H%2CXW84%2CYW84&returnGeometry=false&f=json",
+      "sourceApplication": "http://pnrmcb.maps.arcgis.com/apps/webappviewer/index.html?id=3b8cef41bbb840eab30ded104d0188f6",
+      "sourceParkingDescription": "Place de l'Eglise",
+      "sourceDifficulty": "Difficile",
+      "sourceMarking": "Jaune",
+      "sourceDurationMinutes": 330,
+      "sourceGoogleMaps": "https://www.google.com/maps/dir/?api=1&destination=49.23765,-1.2017",
+      "sourceXYLocation": [
+        -1.18115,
+        49.23606
+      ],
+      "sourceLocationNote": "Coordonnées XW84/YW84 et destination Google Maps conservées séparément. Aucune n’est déclarée parking vérifié.",
+      "gpxSha256": "5ded071eb1a66b4bc4d4296bb5fefa6f204c56f262659b56dbd6870b1c2abfa1",
+      "geometryKm": 59.311,
+      "pointCount": 886,
+      "status": "distance-a-verifier",
+      "issue": "Fiche 22.0 km ; GPX 59.3 km",
+      "sourceOriginalGpx": "catalogue/sources/marais/pied26-45.gpx",
+      "sourceGpxTrackCount": 4,
+      "sourceGpxIssue": "Le GPX publié contient plusieurs traces ; elles sont conservées sans sélection arbitraire.",
+      "officialLocation": [
+        -1.539765,
+        49.332001
+      ],
+      "officialLocationPrecision": "gpx",
+      "sourceCoordinateOffsetsMetres": {
+        "XW84/YW84": 28114.3,
+        "AGO_COORD": 26670.8
+      },
+      "sourceAdministrativeLocation": {
+        "url": "https://geo.api.gouv.fr/communes?lon=-1.539765&lat=49.332001&fields=nom%2Ccode%2CcodeDepartement%2CcodesPostaux&format=json",
+        "sha256": "ef65b0bd8c654cff56c330b836ea1141e39bb3536cb532372a1055d80e3ba817",
+        "method": "Premier point du GPX géolocalisé par l’API officielle des communes ; ce point n’est pas un parking vérifié.",
+        "coordinate": [
+          -1.539765,
+          49.332001
+        ],
+        "commune": {
+          "nom": "Doville",
+          "code": "50166",
+          "codeDepartement": "50",
+          "codesPostaux": [
+            "50250"
+          ]
+        }
+      },
+      "sourcePdfStatus": "pdf-recupere",
+      "sourcePdfSha256": "48c1dfdcac2a2eec4ea45b4744008e457e14a8e82a3a94dc47e7645780c4140b",
+      "sourcePdfBytes": 545500
+    },
+    {
+      "sourceId": "MARAIS-CD-48",
+      "sourceFeatureId": 48,
+      "sourceObjectIdField": "FID",
+      "sourceCircuitCode": "pied27",
+      "sourceArboCode": "pied27_mef_halage",
+      "name": "Halage et bocage",
+      "town": "La Meauffe",
+      "department": "50",
+      "km": 16.0,
+      "official": "https://parc-cotentin-bessin.fr/desmarais-du-parc-toutes-les-balades-pres-de-chez-vous",
+      "gpxSource": "https://parc-cotentin-bessin.fr/pnrmcb_data/arcgisonline/AGO_RANDO/AGO_PJ/pied27_mef_halage.gpx",
+      "pdf": "https://parc-cotentin-bessin.fr/pnrmcb_data/arcgisonline/AGO_RANDO/AGO_PJ/pied27_mef_halage.pdf",
+      "sourcePdf": "https://parc-cotentin-bessin.fr/pnrmcb_data/arcgisonline/AGO_RANDO/AGO_PJ/pied27_mef_halage.pdf",
+      "sourcePractice": "A pied",
+      "sourcePublished": "OUI",
+      "sourceOrigin": "PNRMCB, GA",
+      "sourceUpdatedAt": "2019-12-18",
+      "sourceEdition": "PNR Marais du Cotentin et du Bessin · mise à jour source 2019-12-18",
+      "sourceDatasetUrl": "https://services5.arcgis.com/2wtm4KHYRBa9T8Yt/arcgis/rest/services/APIRANDO_CIRCUITS/FeatureServer/0/query?where=1%3D1&outFields=FID%2CID%2CNOMCIRCUIT%2CID_CIRCUIT%2CID_ARBO%2CTYPE%2CCOM_DEPART%2CC_DEP%2CAGO_APPLI%2CAGO_PDF%2CAGO_GPX%2CAGO_COORD%2CPARKING%2CDIFFICULTE%2CBALISAGE%2CMAJ%2CSOURCE%2CDIST_KM%2CDUREE_H%2CXW84%2CYW84&returnGeometry=false&f=json",
+      "sourceDatasetSha256": "0af5542416019614ed4c7cb5e0824707e00ccc43957bfe6fbddffa8f389c2559",
+      "sourceApi": "https://services5.arcgis.com/2wtm4KHYRBa9T8Yt/arcgis/rest/services/APIRANDO_CIRCUITS/FeatureServer/0/query?where=FID%3D48&outFields=FID%2CID%2CNOMCIRCUIT%2CID_CIRCUIT%2CID_ARBO%2CTYPE%2CCOM_DEPART%2CC_DEP%2CAGO_APPLI%2CAGO_PDF%2CAGO_GPX%2CAGO_COORD%2CPARKING%2CDIFFICULTE%2CBALISAGE%2CMAJ%2CSOURCE%2CDIST_KM%2CDUREE_H%2CXW84%2CYW84&returnGeometry=false&f=json",
+      "sourceApplication": "http://pnrmcb.maps.arcgis.com/apps/webappviewer/index.html?id=3b8cef41bbb840eab30ded104d0188f6",
+      "sourceParkingDescription": "Aux Claies de Vire",
+      "sourceDifficulty": "Moyen",
+      "sourceMarking": "Jaune",
+      "sourceDurationMinutes": 240,
+      "sourceGoogleMaps": "https://www.google.com/maps/dir/?api=1&destination=49.17827,-1.11484",
+      "sourceXYLocation": [
+        -1.12695,
+        49.16398
+      ],
+      "sourceLocationNote": "Coordonnées XW84/YW84 et destination Google Maps conservées séparément. Aucune n’est déclarée parking vérifié.",
+      "gpxSha256": "17870ab6e57a122d6a626134d29846dd24e2e9cf9602b840e92ab520f741d282",
+      "geometryKm": 17.018,
+      "pointCount": 300,
+      "status": "trace-verifiee",
+      "sourceOriginalGpx": "catalogue/sources/marais/pied27-48.gpx",
+      "sourceGpxTrackCount": 1,
+      "officialLocation": [
+        -1.114845,
+        49.178267
+      ],
+      "officialLocationPrecision": "gpx",
+      "sourceCoordinateOffsetsMetres": {
+        "XW84/YW84": 1816.1,
+        "AGO_COORD": 0.5
+      },
+      "sourceAdministrativeLocation": {
+        "url": "https://geo.api.gouv.fr/communes?lon=-1.114845&lat=49.178267&fields=nom%2Ccode%2CcodeDepartement%2CcodesPostaux&format=json",
+        "sha256": "b9e6f50ab69c5387ad7a41b37543cbd7a8879bee76004504c0b56dbcf3ec3455",
+        "method": "Premier point du GPX géolocalisé par l’API officielle des communes ; ce point n’est pas un parking vérifié.",
+        "coordinate": [
+          -1.114845,
+          49.178267
+        ],
+        "commune": {
+          "nom": "La Meauffe",
+          "code": "50297",
+          "codeDepartement": "50",
+          "codesPostaux": [
+            "50880"
+          ]
+        }
+      },
+      "sourcePdfStatus": "pdf-recupere",
+      "sourcePdfSha256": "8ee6e41b2b7552ca90841f9d1ac69e0ea6767ba599467d31764a48d024168b72",
+      "sourcePdfBytes": 1241990,
+      "geometryReconciliation": {
+        "comparedSnapshotRecords": 1382,
+        "equivalentSourceIds": [],
+        "method": "Comparaison bidirectionnelle à pas de 4 m, écart maximal 2 m et longueur compatible à 1 %. Indice préalable ; déduplication finale par le pipeline."
+      }
+    },
+    {
+      "sourceId": "MARAIS-CD-49",
+      "sourceFeatureId": 49,
+      "sourceObjectIdField": "FID",
+      "sourceCircuitCode": "pied28",
+      "sourceArboCode": "pied28_sfr_haut_pays",
+      "name": "Entre haut et bas-pays",
+      "town": "Saint-Fromond",
+      "department": "50",
+      "km": 11.0,
+      "official": "https://parc-cotentin-bessin.fr/desmarais-du-parc-toutes-les-balades-pres-de-chez-vous",
+      "gpxSource": "https://parc-cotentin-bessin.fr/pnrmcb_data/arcgisonline/AGO_RANDO/AGO_PJ/pied28_sfr_haut_pays.gpx",
+      "pdf": "https://parc-cotentin-bessin.fr/pnrmcb_data/arcgisonline/AGO_RANDO/AGO_PJ/pied28_sfr_haut_pays.pdf",
+      "sourcePdf": "https://parc-cotentin-bessin.fr/pnrmcb_data/arcgisonline/AGO_RANDO/AGO_PJ/pied28_sfr_haut_pays.pdf",
+      "sourcePractice": "A pied",
+      "sourcePublished": "OUI",
+      "sourceOrigin": "PNRMCB, GA",
+      "sourceUpdatedAt": "2019-12-18",
+      "sourceEdition": "PNR Marais du Cotentin et du Bessin · mise à jour source 2019-12-18",
+      "sourceDatasetUrl": "https://services5.arcgis.com/2wtm4KHYRBa9T8Yt/arcgis/rest/services/APIRANDO_CIRCUITS/FeatureServer/0/query?where=1%3D1&outFields=FID%2CID%2CNOMCIRCUIT%2CID_CIRCUIT%2CID_ARBO%2CTYPE%2CCOM_DEPART%2CC_DEP%2CAGO_APPLI%2CAGO_PDF%2CAGO_GPX%2CAGO_COORD%2CPARKING%2CDIFFICULTE%2CBALISAGE%2CMAJ%2CSOURCE%2CDIST_KM%2CDUREE_H%2CXW84%2CYW84&returnGeometry=false&f=json",
+      "sourceDatasetSha256": "0af5542416019614ed4c7cb5e0824707e00ccc43957bfe6fbddffa8f389c2559",
+      "sourceApi": "https://services5.arcgis.com/2wtm4KHYRBa9T8Yt/arcgis/rest/services/APIRANDO_CIRCUITS/FeatureServer/0/query?where=FID%3D49&outFields=FID%2CID%2CNOMCIRCUIT%2CID_CIRCUIT%2CID_ARBO%2CTYPE%2CCOM_DEPART%2CC_DEP%2CAGO_APPLI%2CAGO_PDF%2CAGO_GPX%2CAGO_COORD%2CPARKING%2CDIFFICULTE%2CBALISAGE%2CMAJ%2CSOURCE%2CDIST_KM%2CDUREE_H%2CXW84%2CYW84&returnGeometry=false&f=json",
+      "sourceApplication": "http://pnrmcb.maps.arcgis.com/apps/webappviewer/index.html?id=3b8cef41bbb840eab30ded104d0188f6",
+      "sourceParkingDescription": "Place du bourg, au bord de la Vire",
+      "sourceDifficulty": "Moyen",
+      "sourceMarking": "Jaune",
+      "sourceDurationMinutes": 180,
+      "sourceGoogleMaps": "https://www.google.com/maps/dir/?api=1&destination=49.22088,-1.08941",
+      "sourceXYLocation": [
+        -1.11025,
+        49.21189
+      ],
+      "sourceLocationNote": "Coordonnées XW84/YW84 et destination Google Maps conservées séparément. Aucune n’est déclarée parking vérifié.",
+      "gpxSha256": "e9aa18a7742827532121bd2e9784f2042dddca91769baaf0940de4f8191c4553",
+      "geometryKm": 10.706,
+      "pointCount": 145,
+      "status": "trace-verifiee",
+      "sourceOriginalGpx": "catalogue/sources/marais/pied28-49.gpx",
+      "sourceGpxTrackCount": 1,
+      "officialLocation": [
+        -1.089415,
+        49.220884
+      ],
+      "officialLocationPrecision": "gpx",
+      "sourceCoordinateOffsetsMetres": {
+        "XW84/YW84": 1813.9,
+        "AGO_COORD": 0.6
+      },
+      "sourceAdministrativeLocation": {
+        "url": "https://geo.api.gouv.fr/communes?lon=-1.089415&lat=49.220884&fields=nom%2Ccode%2CcodeDepartement%2CcodesPostaux&format=json",
+        "sha256": "869d07f5d603948e24725bb3741db69b03fbc0710b840eb65bbabb23f9b3d189",
+        "method": "Premier point du GPX géolocalisé par l’API officielle des communes ; ce point n’est pas un parking vérifié.",
+        "coordinate": [
+          -1.089415,
+          49.220884
+        ],
+        "commune": {
+          "nom": "Saint-Fromond",
+          "code": "50468",
+          "codeDepartement": "50",
+          "codesPostaux": [
+            "50620"
+          ]
+        }
+      },
+      "sourcePdfStatus": "pdf-recupere",
+      "sourcePdfSha256": "24f28eabe0f497e663f19f1f3fa705aaf87e2f02b1920ad9383ecaa87bd72490",
+      "sourcePdfBytes": 1130808,
+      "geometryReconciliation": {
+        "comparedSnapshotRecords": 1382,
+        "equivalentSourceIds": [],
+        "method": "Comparaison bidirectionnelle à pas de 4 m, écart maximal 2 m et longueur compatible à 1 %. Indice préalable ; déduplication finale par le pipeline."
+      }
+    },
+    {
+      "sourceId": "MARAIS-CD-51",
+      "sourceFeatureId": 51,
+      "sourceObjectIdField": "FID",
+      "sourceCircuitCode": "pied29",
+      "sourceArboCode": "pied29_nef_marais",
+      "name": "Les marais de Neuilly",
+      "town": "Neuilly-la-Forêt",
+      "department": "14",
+      "km": 7.0,
+      "official": "https://parc-cotentin-bessin.fr/desmarais-du-parc-toutes-les-balades-pres-de-chez-vous",
+      "gpxSource": "https://parc-cotentin-bessin.fr/pnrmcb_data/arcgisonline/AGO_RANDO/AGO_PJ/pied29_nef_marais.gpx",
+      "pdf": "https://parc-cotentin-bessin.fr/pnrmcb_data/arcgisonline/AGO_RANDO/AGO_PJ/pied29_nef_marais.pdf",
+      "sourcePdf": "https://parc-cotentin-bessin.fr/pnrmcb_data/arcgisonline/AGO_RANDO/AGO_PJ/pied29_nef_marais.pdf",
+      "sourcePractice": "A pied",
+      "sourcePublished": "OUI",
+      "sourceOrigin": "PNRMCB, GA",
+      "sourceUpdatedAt": "2019-12-18",
+      "sourceEdition": "PNR Marais du Cotentin et du Bessin · mise à jour source 2019-12-18",
+      "sourceDatasetUrl": "https://services5.arcgis.com/2wtm4KHYRBa9T8Yt/arcgis/rest/services/APIRANDO_CIRCUITS/FeatureServer/0/query?where=1%3D1&outFields=FID%2CID%2CNOMCIRCUIT%2CID_CIRCUIT%2CID_ARBO%2CTYPE%2CCOM_DEPART%2CC_DEP%2CAGO_APPLI%2CAGO_PDF%2CAGO_GPX%2CAGO_COORD%2CPARKING%2CDIFFICULTE%2CBALISAGE%2CMAJ%2CSOURCE%2CDIST_KM%2CDUREE_H%2CXW84%2CYW84&returnGeometry=false&f=json",
+      "sourceDatasetSha256": "0af5542416019614ed4c7cb5e0824707e00ccc43957bfe6fbddffa8f389c2559",
+      "sourceApi": "https://services5.arcgis.com/2wtm4KHYRBa9T8Yt/arcgis/rest/services/APIRANDO_CIRCUITS/FeatureServer/0/query?where=FID%3D51&outFields=FID%2CID%2CNOMCIRCUIT%2CID_CIRCUIT%2CID_ARBO%2CTYPE%2CCOM_DEPART%2CC_DEP%2CAGO_APPLI%2CAGO_PDF%2CAGO_GPX%2CAGO_COORD%2CPARKING%2CDIFFICULTE%2CBALISAGE%2CMAJ%2CSOURCE%2CDIST_KM%2CDUREE_H%2CXW84%2CYW84&returnGeometry=false&f=json",
+      "sourceApplication": "http://pnrmcb.maps.arcgis.com/apps/webappviewer/index.html?id=3b8cef41bbb840eab30ded104d0188f6",
+      "sourceParkingDescription": "A côté de la mairie",
+      "sourceDifficulty": "Facile",
+      "sourceMarking": "Jaune",
+      "sourceDurationMinutes": 140,
+      "sourceGoogleMaps": "https://www.google.com/maps/dir/?api=1&destination=49.2719,-1.09997",
+      "sourceXYLocation": [
+        -1.10012,
+        49.27281
+      ],
+      "sourceLocationNote": "Coordonnées XW84/YW84 et destination Google Maps conservées séparément. Aucune n’est déclarée parking vérifié.",
+      "gpxSha256": "e799b32eaf67205894d9a52419be496cab69539da35ab4318d38a087035eb512",
+      "geometryKm": 6.643,
+      "pointCount": 76,
+      "status": "trace-verifiee",
+      "sourceOriginalGpx": "catalogue/sources/marais/pied29-51.gpx",
+      "sourceGpxTrackCount": 1,
+      "officialLocation": [
+        -1.099965,
+        49.2719
+      ],
+      "officialLocationPrecision": "gpx",
+      "sourceCoordinateOffsetsMetres": {
+        "XW84/YW84": 101.8,
+        "AGO_COORD": 0.4
+      },
+      "sourceAdministrativeLocation": {
+        "url": "https://geo.api.gouv.fr/communes?lon=-1.099965&lat=49.2719&fields=nom%2Ccode%2CcodeDepartement%2CcodesPostaux&format=json",
+        "sha256": "3ce6e9177182578aa591317fd19491b6abe1c61861e4bac63ebfcae467e1e335",
+        "method": "Premier point du GPX géolocalisé par l’API officielle des communes ; ce point n’est pas un parking vérifié.",
+        "coordinate": [
+          -1.099965,
+          49.2719
+        ],
+        "commune": {
+          "nom": "Isigny-sur-Mer",
+          "code": "14342",
+          "codeDepartement": "14",
+          "codesPostaux": [
+            "14230",
+            "14330"
+          ]
+        }
+      },
+      "sourcePdfStatus": "pdf-recupere",
+      "sourcePdfSha256": "cd8f6053cd342ce3ea111a7d26ea7eadb8d61b424cd3f584da7a9b81d1102d9f",
+      "sourcePdfBytes": 3721857,
+      "geometryReconciliation": {
+        "comparedSnapshotRecords": 1382,
+        "equivalentSourceIds": [],
+        "method": "Comparaison bidirectionnelle à pas de 4 m, écart maximal 2 m et longueur compatible à 1 %. Indice préalable ; déduplication finale par le pipeline."
+      }
+    },
+    {
+      "sourceId": "MARAIS-CD-53",
+      "sourceFeatureId": 53,
+      "sourceObjectIdField": "FID",
+      "sourceCircuitCode": "pied30",
+      "sourceArboCode": "pied30_grm_sur_les_bords",
+      "name": "Sur les bords des Veys",
+      "town": "Grandcamp-Maisy",
+      "department": "14",
+      "km": 16.5,
+      "official": "https://parc-cotentin-bessin.fr/desmarais-du-parc-toutes-les-balades-pres-de-chez-vous",
+      "gpxSource": "https://parc-cotentin-bessin.fr/pnrmcb_data/arcgisonline/AGO_RANDO/AGO_PJ/pied30_grm_sur_les_bords.gpx",
+      "pdf": "https://parc-cotentin-bessin.fr/pnrmcb_data/arcgisonline/AGO_RANDO/AGO_PJ/pied30_grm_sur_les_bords.pdf",
+      "sourcePdf": "https://parc-cotentin-bessin.fr/pnrmcb_data/arcgisonline/AGO_RANDO/AGO_PJ/pied30_grm_sur_les_bords.pdf",
+      "sourcePractice": "A pied",
+      "sourcePublished": "OUI",
+      "sourceOrigin": "PNRMCB, GA",
+      "sourceUpdatedAt": "2019-12-18",
+      "sourceEdition": "PNR Marais du Cotentin et du Bessin · mise à jour source 2019-12-18",
+      "sourceDatasetUrl": "https://services5.arcgis.com/2wtm4KHYRBa9T8Yt/arcgis/rest/services/APIRANDO_CIRCUITS/FeatureServer/0/query?where=1%3D1&outFields=FID%2CID%2CNOMCIRCUIT%2CID_CIRCUIT%2CID_ARBO%2CTYPE%2CCOM_DEPART%2CC_DEP%2CAGO_APPLI%2CAGO_PDF%2CAGO_GPX%2CAGO_COORD%2CPARKING%2CDIFFICULTE%2CBALISAGE%2CMAJ%2CSOURCE%2CDIST_KM%2CDUREE_H%2CXW84%2CYW84&returnGeometry=false&f=json",
+      "sourceDatasetSha256": "0af5542416019614ed4c7cb5e0824707e00ccc43957bfe6fbddffa8f389c2559",
+      "sourceApi": "https://services5.arcgis.com/2wtm4KHYRBa9T8Yt/arcgis/rest/services/APIRANDO_CIRCUITS/FeatureServer/0/query?where=FID%3D53&outFields=FID%2CID%2CNOMCIRCUIT%2CID_CIRCUIT%2CID_ARBO%2CTYPE%2CCOM_DEPART%2CC_DEP%2CAGO_APPLI%2CAGO_PDF%2CAGO_GPX%2CAGO_COORD%2CPARKING%2CDIFFICULTE%2CBALISAGE%2CMAJ%2CSOURCE%2CDIST_KM%2CDUREE_H%2CXW84%2CYW84&returnGeometry=false&f=json",
+      "sourceApplication": "http://pnrmcb.maps.arcgis.com/apps/webappviewer/index.html?id=3b8cef41bbb840eab30ded104d0188f6",
+      "sourceParkingDescription": "Port de plaisance",
+      "sourceDifficulty": "Moyen",
+      "sourceMarking": "Jaune",
+      "sourceDurationMinutes": 255,
+      "sourceGoogleMaps": "https://www.google.com/maps/dir/?api=1&destination=49.38926,-1.05078",
+      "sourceXYLocation": [
+        -1.06327,
+        49.35369
+      ],
+      "sourceLocationNote": "Coordonnées XW84/YW84 et destination Google Maps conservées séparément. Aucune n’est déclarée parking vérifié.",
+      "gpxSha256": "38ee0e4437875a63bf9f5c904f9b0123362a242023c19285c966e2d6d2082147",
+      "geometryKm": 17.24,
+      "pointCount": 235,
+      "status": "trace-verifiee",
+      "sourceOriginalGpx": "catalogue/sources/marais/pied30-53.gpx",
+      "sourceGpxTrackCount": 1,
+      "officialLocation": [
+        -1.050784,
+        49.38926
+      ],
+      "officialLocationPrecision": "gpx",
+      "sourceCoordinateOffsetsMetres": {
+        "XW84/YW84": 4057.2,
+        "AGO_COORD": 0.3
+      },
+      "sourceAdministrativeLocation": {
+        "url": "https://geo.api.gouv.fr/communes?lon=-1.050784&lat=49.38926&fields=nom%2Ccode%2CcodeDepartement%2CcodesPostaux&format=json",
+        "sha256": "d9bb92a9f38bcb668f6996be0220e73e40659f0f10946e428bb6df6201707baf",
+        "method": "Premier point du GPX géolocalisé par l’API officielle des communes ; ce point n’est pas un parking vérifié.",
+        "coordinate": [
+          -1.050784,
+          49.38926
+        ],
+        "commune": {
+          "nom": "Grandcamp-Maisy",
+          "code": "14312",
+          "codeDepartement": "14",
+          "codesPostaux": [
+            "14450"
+          ]
+        }
+      },
+      "sourcePdfStatus": "pdf-recupere",
+      "sourcePdfSha256": "6cda7a9b645ad02d2a0d45d1d533d05bab33dc9713261d4e840782f9459e20ac",
+      "sourcePdfBytes": 775128,
+      "geometryReconciliation": {
+        "comparedSnapshotRecords": 1382,
+        "equivalentSourceIds": [],
+        "method": "Comparaison bidirectionnelle à pas de 4 m, écart maximal 2 m et longueur compatible à 1 %. Indice préalable ; déduplication finale par le pipeline."
+      }
+    },
+    {
+      "sourceId": "MARAIS-CD-54",
+      "sourceFeatureId": 54,
+      "sourceObjectIdField": "FID",
+      "sourceCircuitCode": "pied34",
+      "sourceArboCode": "pied34_grm_le_port",
+      "name": "Le port de la coquille Saint-Jacques",
+      "town": "Grandcamp-Maisy",
+      "department": "14",
+      "km": 10.0,
+      "official": "https://parc-cotentin-bessin.fr/desmarais-du-parc-toutes-les-balades-pres-de-chez-vous",
+      "gpxSource": "https://parc-cotentin-bessin.fr/pnrmcb_data/arcgisonline/AGO_RANDO/AGO_PJ/pied34_grm_le_port.gpx",
+      "pdf": "https://parc-cotentin-bessin.fr/pnrmcb_data/arcgisonline/AGO_RANDO/AGO_PJ/pied34_grm_le_port.pdf",
+      "sourcePdf": "https://parc-cotentin-bessin.fr/pnrmcb_data/arcgisonline/AGO_RANDO/AGO_PJ/pied34_grm_le_port.pdf",
+      "sourcePractice": "A pied",
+      "sourcePublished": "OUI",
+      "sourceOrigin": "PNRMCB, GA",
+      "sourceUpdatedAt": "2019-12-18",
+      "sourceEdition": "PNR Marais du Cotentin et du Bessin · mise à jour source 2019-12-18",
+      "sourceDatasetUrl": "https://services5.arcgis.com/2wtm4KHYRBa9T8Yt/arcgis/rest/services/APIRANDO_CIRCUITS/FeatureServer/0/query?where=1%3D1&outFields=FID%2CID%2CNOMCIRCUIT%2CID_CIRCUIT%2CID_ARBO%2CTYPE%2CCOM_DEPART%2CC_DEP%2CAGO_APPLI%2CAGO_PDF%2CAGO_GPX%2CAGO_COORD%2CPARKING%2CDIFFICULTE%2CBALISAGE%2CMAJ%2CSOURCE%2CDIST_KM%2CDUREE_H%2CXW84%2CYW84&returnGeometry=false&f=json",
+      "sourceDatasetSha256": "0af5542416019614ed4c7cb5e0824707e00ccc43957bfe6fbddffa8f389c2559",
+      "sourceApi": "https://services5.arcgis.com/2wtm4KHYRBa9T8Yt/arcgis/rest/services/APIRANDO_CIRCUITS/FeatureServer/0/query?where=FID%3D54&outFields=FID%2CID%2CNOMCIRCUIT%2CID_CIRCUIT%2CID_ARBO%2CTYPE%2CCOM_DEPART%2CC_DEP%2CAGO_APPLI%2CAGO_PDF%2CAGO_GPX%2CAGO_COORD%2CPARKING%2CDIFFICULTE%2CBALISAGE%2CMAJ%2CSOURCE%2CDIST_KM%2CDUREE_H%2CXW84%2CYW84&returnGeometry=false&f=json",
+      "sourceApplication": "http://pnrmcb.maps.arcgis.com/apps/webappviewer/index.html?id=3b8cef41bbb840eab30ded104d0188f6",
+      "sourceParkingDescription": "Port de plaisance",
+      "sourceDifficulty": "Facile",
+      "sourceMarking": "Jaune",
+      "sourceDurationMinutes": 180,
+      "sourceGoogleMaps": "https://www.google.com/maps/dir/?api=1&destination=49.38926,-1.05078",
+      "sourceXYLocation": [
+        -1.04267,
+        49.38254
+      ],
+      "sourceLocationNote": "Coordonnées XW84/YW84 et destination Google Maps conservées séparément. Aucune n’est déclarée parking vérifié.",
+      "gpxSha256": "0a39015cee5f8401b34bc8c932acdd0e647dddcb47612c7714d1e62c8610139e",
+      "geometryKm": 9.805,
+      "pointCount": 133,
+      "status": "trace-verifiee",
+      "sourceOriginalGpx": "catalogue/sources/marais/pied34-54.gpx",
+      "sourceGpxTrackCount": 1,
+      "officialLocation": [
+        -1.050784,
+        49.38926
+      ],
+      "officialLocationPrecision": "gpx",
+      "sourceCoordinateOffsetsMetres": {
+        "XW84/YW84": 950.4,
+        "AGO_COORD": 0.3
+      },
+      "sourceAdministrativeLocation": {
+        "url": "https://geo.api.gouv.fr/communes?lon=-1.050784&lat=49.38926&fields=nom%2Ccode%2CcodeDepartement%2CcodesPostaux&format=json",
+        "sha256": "d9bb92a9f38bcb668f6996be0220e73e40659f0f10946e428bb6df6201707baf",
+        "method": "Premier point du GPX géolocalisé par l’API officielle des communes ; ce point n’est pas un parking vérifié.",
+        "coordinate": [
+          -1.050784,
+          49.38926
+        ],
+        "commune": {
+          "nom": "Grandcamp-Maisy",
+          "code": "14312",
+          "codeDepartement": "14",
+          "codesPostaux": [
+            "14450"
+          ]
+        }
+      },
+      "sourcePdfStatus": "pdf-recupere",
+      "sourcePdfSha256": "d4772bfffe8e4e2df03f9d94e0c7ec39a7b98b59770a10a4a89aa1a8f4d65dc1",
+      "sourcePdfBytes": 5847260,
+      "geometryReconciliation": {
+        "comparedSnapshotRecords": 1382,
+        "equivalentSourceIds": [],
+        "method": "Comparaison bidirectionnelle à pas de 4 m, écart maximal 2 m et longueur compatible à 1 %. Indice préalable ; déduplication finale par le pipeline."
+      }
+    },
+    {
+      "sourceId": "MARAIS-CD-55",
+      "sourceFeatureId": 55,
+      "sourceObjectIdField": "FID",
+      "sourceCircuitCode": "pied31",
+      "sourceArboCode": "pied31_can_cigognes",
+      "name": "Les cigognes des marais de l'Aure",
+      "town": "Canchy",
+      "department": "14",
+      "km": 11.0,
+      "official": "https://parc-cotentin-bessin.fr/desmarais-du-parc-toutes-les-balades-pres-de-chez-vous",
+      "gpxSource": "https://parc-cotentin-bessin.fr/pnrmcb_data/arcgisonline/AGO_RANDO/AGO_PJ/pied31_can_cigognes.gpx",
+      "pdf": "https://parc-cotentin-bessin.fr/pnrmcb_data/arcgisonline/AGO_RANDO/AGO_PJ/pied31_can_cigognes.pdf",
+      "sourcePdf": "https://parc-cotentin-bessin.fr/pnrmcb_data/arcgisonline/AGO_RANDO/AGO_PJ/pied31_can_cigognes.pdf",
+      "sourcePractice": "A pied",
+      "sourcePublished": "OUI",
+      "sourceOrigin": "PNRMCB, GA",
+      "sourceUpdatedAt": "2019-12-18",
+      "sourceEdition": "PNR Marais du Cotentin et du Bessin · mise à jour source 2019-12-18",
+      "sourceDatasetUrl": "https://services5.arcgis.com/2wtm4KHYRBa9T8Yt/arcgis/rest/services/APIRANDO_CIRCUITS/FeatureServer/0/query?where=1%3D1&outFields=FID%2CID%2CNOMCIRCUIT%2CID_CIRCUIT%2CID_ARBO%2CTYPE%2CCOM_DEPART%2CC_DEP%2CAGO_APPLI%2CAGO_PDF%2CAGO_GPX%2CAGO_COORD%2CPARKING%2CDIFFICULTE%2CBALISAGE%2CMAJ%2CSOURCE%2CDIST_KM%2CDUREE_H%2CXW84%2CYW84&returnGeometry=false&f=json",
+      "sourceDatasetSha256": "0af5542416019614ed4c7cb5e0824707e00ccc43957bfe6fbddffa8f389c2559",
+      "sourceApi": "https://services5.arcgis.com/2wtm4KHYRBa9T8Yt/arcgis/rest/services/APIRANDO_CIRCUITS/FeatureServer/0/query?where=FID%3D55&outFields=FID%2CID%2CNOMCIRCUIT%2CID_CIRCUIT%2CID_ARBO%2CTYPE%2CCOM_DEPART%2CC_DEP%2CAGO_APPLI%2CAGO_PDF%2CAGO_GPX%2CAGO_COORD%2CPARKING%2CDIFFICULTE%2CBALISAGE%2CMAJ%2CSOURCE%2CDIST_KM%2CDUREE_H%2CXW84%2CYW84&returnGeometry=false&f=json",
+      "sourceApplication": "http://pnrmcb.maps.arcgis.com/apps/webappviewer/index.html?id=3b8cef41bbb840eab30ded104d0188f6",
+      "sourceParkingDescription": "Eglise de Canchy",
+      "sourceDifficulty": "Moyen",
+      "sourceMarking": "Jaune",
+      "sourceDurationMinutes": 180,
+      "sourceGoogleMaps": "https://www.google.com/maps/dir/?api=1&destination=49.33,-0.98388",
+      "sourceXYLocation": [
+        -0.99753,
+        49.31535
+      ],
+      "sourceLocationNote": "Coordonnées XW84/YW84 et destination Google Maps conservées séparément. Aucune n’est déclarée parking vérifié.",
+      "gpxSha256": "587c7869c93a5c243d083e0418b079b75adc92427ea88b444f3b91cf22981d44",
+      "geometryKm": 10.974,
+      "pointCount": 126,
+      "status": "trace-verifiee",
+      "sourceOriginalGpx": "catalogue/sources/marais/pied31-55.gpx",
+      "sourceGpxTrackCount": 1,
+      "officialLocation": [
+        -0.983876,
+        49.330004
+      ],
+      "officialLocationPrecision": "gpx",
+      "sourceCoordinateOffsetsMetres": {
+        "XW84/YW84": 1906.4,
+        "AGO_COORD": 0.5
+      },
+      "sourceAdministrativeLocation": {
+        "url": "https://geo.api.gouv.fr/communes?lon=-0.983876&lat=49.330004&fields=nom%2Ccode%2CcodeDepartement%2CcodesPostaux&format=json",
+        "sha256": "7f6c620a52f22eb77ae7fb9733f7072df16d4f687e6f5454053b672948ec3e47",
+        "method": "Premier point du GPX géolocalisé par l’API officielle des communes ; ce point n’est pas un parking vérifié.",
+        "coordinate": [
+          -0.983876,
+          49.330004
+        ],
+        "commune": {
+          "nom": "Canchy",
+          "code": "14132",
+          "codeDepartement": "14",
+          "codesPostaux": [
+            "14230"
+          ]
+        }
+      },
+      "sourcePdfStatus": "pdf-recupere",
+      "sourcePdfSha256": "d0095f472f7d837041a6be560e31134339ae2e6bc60055b2ac8f8ef1756f1a1d",
+      "sourcePdfBytes": 3818482,
+      "geometryReconciliation": {
+        "comparedSnapshotRecords": 1382,
+        "equivalentSourceIds": [],
+        "method": "Comparaison bidirectionnelle à pas de 4 m, écart maximal 2 m et longueur compatible à 1 %. Indice préalable ; déduplication finale par le pipeline."
+      }
+    },
+    {
+      "sourceId": "MARAIS-CD-56",
+      "sourceFeatureId": 56,
+      "sourceObjectIdField": "FID",
+      "sourceCircuitCode": "pied32",
+      "sourceArboCode": "pied32_lon_ponts",
+      "name": "De ponts en passerelles",
+      "town": "Longueville",
+      "department": "14",
+      "km": 13.0,
+      "official": "https://parc-cotentin-bessin.fr/desmarais-du-parc-toutes-les-balades-pres-de-chez-vous",
+      "gpxSource": "https://parc-cotentin-bessin.fr/pnrmcb_data/arcgisonline/AGO_RANDO/AGO_PJ/pied32_lon_ponts.gpx",
+      "pdf": "https://parc-cotentin-bessin.fr/pnrmcb_data/arcgisonline/AGO_RANDO/AGO_PJ/pied32_lon_ponts.pdf",
+      "sourcePdf": "https://parc-cotentin-bessin.fr/pnrmcb_data/arcgisonline/AGO_RANDO/AGO_PJ/pied32_lon_ponts.pdf",
+      "sourcePractice": "A pied",
+      "sourcePublished": "OUI",
+      "sourceOrigin": "PNRMCB, GA",
+      "sourceUpdatedAt": "2019-12-18",
+      "sourceEdition": "PNR Marais du Cotentin et du Bessin · mise à jour source 2019-12-18",
+      "sourceDatasetUrl": "https://services5.arcgis.com/2wtm4KHYRBa9T8Yt/arcgis/rest/services/APIRANDO_CIRCUITS/FeatureServer/0/query?where=1%3D1&outFields=FID%2CID%2CNOMCIRCUIT%2CID_CIRCUIT%2CID_ARBO%2CTYPE%2CCOM_DEPART%2CC_DEP%2CAGO_APPLI%2CAGO_PDF%2CAGO_GPX%2CAGO_COORD%2CPARKING%2CDIFFICULTE%2CBALISAGE%2CMAJ%2CSOURCE%2CDIST_KM%2CDUREE_H%2CXW84%2CYW84&returnGeometry=false&f=json",
+      "sourceDatasetSha256": "0af5542416019614ed4c7cb5e0824707e00ccc43957bfe6fbddffa8f389c2559",
+      "sourceApi": "https://services5.arcgis.com/2wtm4KHYRBa9T8Yt/arcgis/rest/services/APIRANDO_CIRCUITS/FeatureServer/0/query?where=FID%3D56&outFields=FID%2CID%2CNOMCIRCUIT%2CID_CIRCUIT%2CID_ARBO%2CTYPE%2CCOM_DEPART%2CC_DEP%2CAGO_APPLI%2CAGO_PDF%2CAGO_GPX%2CAGO_COORD%2CPARKING%2CDIFFICULTE%2CBALISAGE%2CMAJ%2CSOURCE%2CDIST_KM%2CDUREE_H%2CXW84%2CYW84&returnGeometry=false&f=json",
+      "sourceApplication": "http://pnrmcb.maps.arcgis.com/apps/webappviewer/index.html?id=3b8cef41bbb840eab30ded104d0188f6",
+      "sourceParkingDescription": "Place de la mairie, le long de la D 204a",
+      "sourceDifficulty": "Moyen",
+      "sourceMarking": "Jaune",
+      "sourceDurationMinutes": 210,
+      "sourceGoogleMaps": "https://www.google.com/maps/dir/?api=1&destination=49.34078,-0.95882",
+      "sourceXYLocation": [
+        -0.95882,
+        49.34078
+      ],
+      "sourceLocationNote": "Coordonnées XW84/YW84 et destination Google Maps conservées séparément. Aucune n’est déclarée parking vérifié.",
+      "gpxSha256": "9a7a7ff58b28d914a896bdf1f60d54afef325549f055e8a387d2c58ec78113ab",
+      "geometryKm": 12.848,
+      "pointCount": 158,
+      "status": "trace-verifiee",
+      "sourceOriginalGpx": "catalogue/sources/marais/pied32-56.gpx",
+      "sourceGpxTrackCount": 1,
+      "officialLocation": [
+        -0.959061,
+        49.339535
+      ],
+      "officialLocationPrecision": "gpx",
+      "sourceCoordinateOffsetsMetres": {
+        "XW84/YW84": 139.5,
+        "AGO_COORD": 139.5
+      },
+      "sourceAdministrativeLocation": {
+        "url": "https://geo.api.gouv.fr/communes?lon=-0.959061&lat=49.339535&fields=nom%2Ccode%2CcodeDepartement%2CcodesPostaux&format=json",
+        "sha256": "2d1ca357eafafe6de32dde7a64b9351c7d0767dfbb77f73d99c1b237e667f6cc",
+        "method": "Premier point du GPX géolocalisé par l’API officielle des communes ; ce point n’est pas un parking vérifié.",
+        "coordinate": [
+          -0.959061,
+          49.339535
+        ],
+        "commune": {
+          "nom": "Longueville",
+          "code": "14378",
+          "codeDepartement": "14",
+          "codesPostaux": [
+            "14230"
+          ]
+        }
+      },
+      "sourcePdfStatus": "pdf-recupere",
+      "sourcePdfSha256": "5347bce89c53a2475542805a7e2b107ce37d8263faa704d72bd63664f1406668",
+      "sourcePdfBytes": 4048824,
+      "geometryReconciliation": {
+        "comparedSnapshotRecords": 1382,
+        "equivalentSourceIds": [],
+        "method": "Comparaison bidirectionnelle à pas de 4 m, écart maximal 2 m et longueur compatible à 1 %. Indice préalable ; déduplication finale par le pipeline."
+      }
+    },
+    {
+      "sourceId": "MARAIS-CD-58",
+      "sourceFeatureId": 58,
+      "sourceObjectIdField": "FID",
+      "sourceCircuitCode": "pied33",
+      "sourceArboCode": "pied33_tre_coeur",
+      "name": "Au coeur des marais",
+      "town": "Trévières",
+      "department": "14",
+      "km": 9.0,
+      "official": "https://parc-cotentin-bessin.fr/desmarais-du-parc-toutes-les-balades-pres-de-chez-vous",
+      "gpxSource": "https://parc-cotentin-bessin.fr/pnrmcb_data/arcgisonline/AGO_RANDO/AGO_PJ/pied33_tre_coeur.gpx",
+      "pdf": "https://parc-cotentin-bessin.fr/pnrmcb_data/arcgisonline/AGO_RANDO/AGO_PJ/pied33_tre_coeur.pdf",
+      "sourcePdf": "https://parc-cotentin-bessin.fr/pnrmcb_data/arcgisonline/AGO_RANDO/AGO_PJ/pied33_tre_coeur.pdf",
+      "sourcePractice": "A pied",
+      "sourcePublished": "OUI",
+      "sourceOrigin": "PNRMCB, GA",
+      "sourceUpdatedAt": "2019-12-18",
+      "sourceEdition": "PNR Marais du Cotentin et du Bessin · mise à jour source 2019-12-18",
+      "sourceDatasetUrl": "https://services5.arcgis.com/2wtm4KHYRBa9T8Yt/arcgis/rest/services/APIRANDO_CIRCUITS/FeatureServer/0/query?where=1%3D1&outFields=FID%2CID%2CNOMCIRCUIT%2CID_CIRCUIT%2CID_ARBO%2CTYPE%2CCOM_DEPART%2CC_DEP%2CAGO_APPLI%2CAGO_PDF%2CAGO_GPX%2CAGO_COORD%2CPARKING%2CDIFFICULTE%2CBALISAGE%2CMAJ%2CSOURCE%2CDIST_KM%2CDUREE_H%2CXW84%2CYW84&returnGeometry=false&f=json",
+      "sourceDatasetSha256": "0af5542416019614ed4c7cb5e0824707e00ccc43957bfe6fbddffa8f389c2559",
+      "sourceApi": "https://services5.arcgis.com/2wtm4KHYRBa9T8Yt/arcgis/rest/services/APIRANDO_CIRCUITS/FeatureServer/0/query?where=FID%3D58&outFields=FID%2CID%2CNOMCIRCUIT%2CID_CIRCUIT%2CID_ARBO%2CTYPE%2CCOM_DEPART%2CC_DEP%2CAGO_APPLI%2CAGO_PDF%2CAGO_GPX%2CAGO_COORD%2CPARKING%2CDIFFICULTE%2CBALISAGE%2CMAJ%2CSOURCE%2CDIST_KM%2CDUREE_H%2CXW84%2CYW84&returnGeometry=false&f=json",
+      "sourceApplication": "http://pnrmcb.maps.arcgis.com/apps/webappviewer/index.html?id=3b8cef41bbb840eab30ded104d0188f6",
+      "sourceParkingDescription": "Place du Marche",
+      "sourceDifficulty": "Facile",
+      "sourceMarking": "Jaune",
+      "sourceDurationMinutes": 180,
+      "sourceGoogleMaps": "https://www.google.com/maps/dir/?api=1&destination=49.30895,-0.90525",
+      "sourceXYLocation": [
+        -0.90538,
+        49.30858
+      ],
+      "sourceLocationNote": "Coordonnées XW84/YW84 et destination Google Maps conservées séparément. Aucune n’est déclarée parking vérifié.",
+      "gpxSha256": "cb13b889d9b0b04fe785790aac2fca22c16455082b877b4d4dbe26335005d142",
+      "geometryKm": 9.092,
+      "pointCount": 132,
+      "status": "trace-verifiee",
+      "sourceOriginalGpx": "catalogue/sources/marais/pied33-58.gpx",
+      "sourceGpxTrackCount": 1,
+      "officialLocation": [
+        -0.904853,
+        49.309159
+      ],
+      "officialLocationPrecision": "gpx",
+      "sourceCoordinateOffsetsMetres": {
+        "XW84/YW84": 74.9,
+        "AGO_COORD": 37.0
+      },
+      "sourceAdministrativeLocation": {
+        "url": "https://geo.api.gouv.fr/communes?lon=-0.904853&lat=49.309159&fields=nom%2Ccode%2CcodeDepartement%2CcodesPostaux&format=json",
+        "sha256": "850c9cb6e870b9a45c5898aefdbc08bd00fe4e9d1b7eab826396c0b5ca61825c",
+        "method": "Premier point du GPX géolocalisé par l’API officielle des communes ; ce point n’est pas un parking vérifié.",
+        "coordinate": [
+          -0.904853,
+          49.309159
+        ],
+        "commune": {
+          "nom": "Trévières",
+          "code": "14711",
+          "codeDepartement": "14",
+          "codesPostaux": [
+            "14710"
+          ]
+        }
+      },
+      "sourcePdfStatus": "pdf-recupere",
+      "sourcePdfSha256": "3c78ef436a376e9afe28a340f14870e7dd4e1c5ce4eb7b9cb0d1b4102f37ee34",
+      "sourcePdfBytes": 1005965,
+      "geometryReconciliation": {
+        "comparedSnapshotRecords": 1382,
+        "equivalentSourceIds": [],
+        "method": "Comparaison bidirectionnelle à pas de 4 m, écart maximal 2 m et longueur compatible à 1 %. Indice préalable ; déduplication finale par le pipeline."
+      }
+    },
+    {
+      "sourceId": "MARAIS-CD-114",
+      "sourceFeatureId": 114,
+      "sourceObjectIdField": "FID",
+      "sourceCircuitCode": "pied08",
+      "sourceArboCode": "pied08_fre_carriere",
+      "name": "Carrière, manoirs et marais de Fresville",
+      "town": "Fresville",
+      "department": "50",
+      "km": 12.0,
+      "official": "https://parc-cotentin-bessin.fr/desmarais-du-parc-toutes-les-balades-pres-de-chez-vous",
+      "gpxSource": "https://parc-cotentin-bessin.fr/pnrmcb_data/arcgisonline/AGO_RANDO/AGO_PJ/pied08_fre_carriere.gpx",
+      "pdf": "https://parc-cotentin-bessin.fr/pnrmcb_data/arcgisonline/AGO_RANDO/AGO_PJ/pied08_fre_carriere.pdf",
+      "sourcePdf": "https://parc-cotentin-bessin.fr/pnrmcb_data/arcgisonline/AGO_RANDO/AGO_PJ/pied08_fre_carriere.pdf",
+      "sourcePractice": "A pied",
+      "sourcePublished": "OUI",
+      "sourceOrigin": "PNRMCB, GA",
+      "sourceUpdatedAt": "2019-12-13",
+      "sourceEdition": "PNR Marais du Cotentin et du Bessin · mise à jour source 2019-12-13",
+      "sourceDatasetUrl": "https://services5.arcgis.com/2wtm4KHYRBa9T8Yt/arcgis/rest/services/APIRANDO_CIRCUITS/FeatureServer/0/query?where=1%3D1&outFields=FID%2CID%2CNOMCIRCUIT%2CID_CIRCUIT%2CID_ARBO%2CTYPE%2CCOM_DEPART%2CC_DEP%2CAGO_APPLI%2CAGO_PDF%2CAGO_GPX%2CAGO_COORD%2CPARKING%2CDIFFICULTE%2CBALISAGE%2CMAJ%2CSOURCE%2CDIST_KM%2CDUREE_H%2CXW84%2CYW84&returnGeometry=false&f=json",
+      "sourceDatasetSha256": "0af5542416019614ed4c7cb5e0824707e00ccc43957bfe6fbddffa8f389c2559",
+      "sourceApi": "https://services5.arcgis.com/2wtm4KHYRBa9T8Yt/arcgis/rest/services/APIRANDO_CIRCUITS/FeatureServer/0/query?where=FID%3D114&outFields=FID%2CID%2CNOMCIRCUIT%2CID_CIRCUIT%2CID_ARBO%2CTYPE%2CCOM_DEPART%2CC_DEP%2CAGO_APPLI%2CAGO_PDF%2CAGO_GPX%2CAGO_COORD%2CPARKING%2CDIFFICULTE%2CBALISAGE%2CMAJ%2CSOURCE%2CDIST_KM%2CDUREE_H%2CXW84%2CYW84&returnGeometry=false&f=json",
+      "sourceApplication": "http://pnrmcb.maps.arcgis.com/apps/webappviewer/index.html?id=3b8cef41bbb840eab30ded104d0188f6",
+      "sourceParkingDescription": "Place de la mairie",
+      "sourceDifficulty": "Moyen",
+      "sourceMarking": "Jaune",
+      "sourceDurationMinutes": 180,
+      "sourceGoogleMaps": "https://www.google.com/maps/dir/?api=1&destination=49.43958,-1.356",
+      "sourceXYLocation": [
+        -1.38487,
+        49.44278
+      ],
+      "sourceLocationNote": "Coordonnées XW84/YW84 et destination Google Maps conservées séparément. Aucune n’est déclarée parking vérifié.",
+      "gpxSha256": "1028efa27fbe6e7d21fdcea4ed4685480f3cf6f37a8c470f9a428784a848ffe6",
+      "geometryKm": 12.768,
+      "pointCount": 241,
+      "status": "trace-verifiee",
+      "sourceOriginalGpx": "catalogue/sources/marais/pied08-114.gpx",
+      "sourceGpxTrackCount": 1,
+      "officialLocation": [
+        -1.355845,
+        49.439741
+      ],
+      "officialLocationPrecision": "gpx",
+      "sourceCoordinateOffsetsMetres": {
+        "XW84/YW84": 2125.6,
+        "AGO_COORD": 21.1
+      },
+      "sourceAdministrativeLocation": {
+        "url": "https://geo.api.gouv.fr/communes?lon=-1.355845&lat=49.439741&fields=nom%2Ccode%2CcodeDepartement%2CcodesPostaux&format=json",
+        "sha256": "66f8b99af75d572666ffcd4fea5ef8ecde9ba75aa55c0a8d1e19169a04febc0b",
+        "method": "Premier point du GPX géolocalisé par l’API officielle des communes ; ce point n’est pas un parking vérifié.",
+        "coordinate": [
+          -1.355845,
+          49.439741
+        ],
+        "commune": {
+          "nom": "Fresville",
+          "code": "50194",
+          "codeDepartement": "50",
+          "codesPostaux": [
+            "50310"
+          ]
+        }
+      },
+      "sourcePdfStatus": "pdf-recupere",
+      "sourcePdfSha256": "ed3414c5b8c86c9cb540fcb84a520206340e65ff5517d08b7f0b998de7cd2e1a",
+      "sourcePdfBytes": 1440577,
+      "geometryReconciliation": {
+        "comparedSnapshotRecords": 1382,
+        "equivalentSourceIds": [],
+        "method": "Comparaison bidirectionnelle à pas de 4 m, écart maximal 2 m et longueur compatible à 1 %. Indice préalable ; déduplication finale par le pipeline."
+      }
+    },
+    {
+      "sourceId": "MARAIS-CD-128",
+      "sourceFeatureId": 128,
+      "sourceObjectIdField": "FID",
+      "sourceCircuitCode": "pied09",
+      "sourceArboCode": "pied09_hem_gues",
+      "name": "Gués et chemins muletiers",
+      "town": "Hémevez",
+      "department": "50",
+      "km": 13.5,
+      "official": "https://parc-cotentin-bessin.fr/desmarais-du-parc-toutes-les-balades-pres-de-chez-vous",
+      "gpxSource": "https://parc-cotentin-bessin.fr/pnrmcb_data/arcgisonline/AGO_RANDO/AGO_PJ/pied09_hem_gues.gpx",
+      "pdf": "https://parc-cotentin-bessin.fr/pnrmcb_data/arcgisonline/AGO_RANDO/AGO_PJ/pied09_hem_gues.pdf",
+      "sourcePdf": "https://parc-cotentin-bessin.fr/pnrmcb_data/arcgisonline/AGO_RANDO/AGO_PJ/pied09_hem_gues.pdf",
+      "sourcePractice": "A pied",
+      "sourcePublished": "OUI",
+      "sourceOrigin": "PNRMCB, GA",
+      "sourceUpdatedAt": "2019-12-13",
+      "sourceEdition": "PNR Marais du Cotentin et du Bessin · mise à jour source 2019-12-13",
+      "sourceDatasetUrl": "https://services5.arcgis.com/2wtm4KHYRBa9T8Yt/arcgis/rest/services/APIRANDO_CIRCUITS/FeatureServer/0/query?where=1%3D1&outFields=FID%2CID%2CNOMCIRCUIT%2CID_CIRCUIT%2CID_ARBO%2CTYPE%2CCOM_DEPART%2CC_DEP%2CAGO_APPLI%2CAGO_PDF%2CAGO_GPX%2CAGO_COORD%2CPARKING%2CDIFFICULTE%2CBALISAGE%2CMAJ%2CSOURCE%2CDIST_KM%2CDUREE_H%2CXW84%2CYW84&returnGeometry=false&f=json",
+      "sourceDatasetSha256": "0af5542416019614ed4c7cb5e0824707e00ccc43957bfe6fbddffa8f389c2559",
+      "sourceApi": "https://services5.arcgis.com/2wtm4KHYRBa9T8Yt/arcgis/rest/services/APIRANDO_CIRCUITS/FeatureServer/0/query?where=FID%3D128&outFields=FID%2CID%2CNOMCIRCUIT%2CID_CIRCUIT%2CID_ARBO%2CTYPE%2CCOM_DEPART%2CC_DEP%2CAGO_APPLI%2CAGO_PDF%2CAGO_GPX%2CAGO_COORD%2CPARKING%2CDIFFICULTE%2CBALISAGE%2CMAJ%2CSOURCE%2CDIST_KM%2CDUREE_H%2CXW84%2CYW84&returnGeometry=false&f=json",
+      "sourceApplication": "http://pnrmcb.maps.arcgis.com/apps/webappviewer/index.html?id=3b8cef41bbb840eab30ded104d0188f6",
+      "sourceParkingDescription": "Gite communal",
+      "sourceDifficulty": "Moyen",
+      "sourceMarking": "Jaune",
+      "sourceDurationMinutes": 210,
+      "sourceGoogleMaps": "https://www.google.com/maps/dir/?api=1&destination=49.45695,-1.43791",
+      "sourceXYLocation": [
+        -1.46541,
+        49.4616
+      ],
+      "sourceLocationNote": "Coordonnées XW84/YW84 et destination Google Maps conservées séparément. Aucune n’est déclarée parking vérifié.",
+      "gpxSha256": "25a66a46371fd707cd89873f9d640800c51ed2476a7091f4e02c716c6b2cf96f",
+      "geometryKm": 13.217,
+      "pointCount": 165,
+      "status": "trace-verifiee",
+      "sourceOriginalGpx": "catalogue/sources/marais/pied09-128.gpx",
+      "sourceGpxTrackCount": 1,
+      "officialLocation": [
+        -1.438136,
+        49.457113
+      ],
+      "officialLocationPrecision": "gpx",
+      "sourceCoordinateOffsetsMetres": {
+        "XW84/YW84": 2033.4,
+        "AGO_COORD": 24.4
+      },
+      "sourceAdministrativeLocation": {
+        "url": "https://geo.api.gouv.fr/communes?lon=-1.438136&lat=49.457113&fields=nom%2Ccode%2CcodeDepartement%2CcodesPostaux&format=json",
+        "sha256": "b253ac53bbe2241252ee326f009859d103b2c35f034b8ab5a2e2f7658d194dbc",
+        "method": "Premier point du GPX géolocalisé par l’API officielle des communes ; ce point n’est pas un parking vérifié.",
+        "coordinate": [
+          -1.438136,
+          49.457113
+        ],
+        "commune": {
+          "nom": "Hémevez",
+          "code": "50241",
+          "codeDepartement": "50",
+          "codesPostaux": [
+            "50700"
+          ]
+        }
+      },
+      "sourcePdfStatus": "pdf-recupere",
+      "sourcePdfSha256": "2ad37beb401279e651da6dd404b0b94ed2396c4e0dfd78814c87493d0db039b8",
+      "sourcePdfBytes": 559777,
+      "geometryReconciliation": {
+        "comparedSnapshotRecords": 1382,
+        "equivalentSourceIds": [],
+        "method": "Comparaison bidirectionnelle à pas de 4 m, écart maximal 2 m et longueur compatible à 1 %. Indice préalable ; déduplication finale par le pipeline."
+      }
+    },
+    {
+      "sourceId": "MARAIS-CD-129",
+      "sourceFeatureId": 129,
+      "sourceObjectIdField": "FID",
+      "sourceCircuitCode": "pied04",
+      "sourceArboCode": "pied04_smm_entour",
+      "name": "A l'entour de Sainte-Marie-du-Mont",
+      "town": "Sainte-Marie-du-Mont",
+      "department": "50",
+      "km": 30.0,
+      "official": "https://parc-cotentin-bessin.fr/desmarais-du-parc-toutes-les-balades-pres-de-chez-vous",
+      "gpxSource": "https://parc-cotentin-bessin.fr/pnrmcb_data/arcgisonline/AGO_RANDO/AGO_PJ/pied04_smm_entour.gpx",
+      "pdf": "https://parc-cotentin-bessin.fr/pnrmcb_data/arcgisonline/AGO_RANDO/AGO_PJ/pied04_smm_entour.pdf",
+      "sourcePdf": "https://parc-cotentin-bessin.fr/pnrmcb_data/arcgisonline/AGO_RANDO/AGO_PJ/pied04_smm_entour.pdf",
+      "sourcePractice": "A pied",
+      "sourcePublished": "OUI",
+      "sourceOrigin": "PNRMCB, GA",
+      "sourceUpdatedAt": "2019-12-13",
+      "sourceEdition": "PNR Marais du Cotentin et du Bessin · mise à jour source 2019-12-13",
+      "sourceDatasetUrl": "https://services5.arcgis.com/2wtm4KHYRBa9T8Yt/arcgis/rest/services/APIRANDO_CIRCUITS/FeatureServer/0/query?where=1%3D1&outFields=FID%2CID%2CNOMCIRCUIT%2CID_CIRCUIT%2CID_ARBO%2CTYPE%2CCOM_DEPART%2CC_DEP%2CAGO_APPLI%2CAGO_PDF%2CAGO_GPX%2CAGO_COORD%2CPARKING%2CDIFFICULTE%2CBALISAGE%2CMAJ%2CSOURCE%2CDIST_KM%2CDUREE_H%2CXW84%2CYW84&returnGeometry=false&f=json",
+      "sourceDatasetSha256": "0af5542416019614ed4c7cb5e0824707e00ccc43957bfe6fbddffa8f389c2559",
+      "sourceApi": "https://services5.arcgis.com/2wtm4KHYRBa9T8Yt/arcgis/rest/services/APIRANDO_CIRCUITS/FeatureServer/0/query?where=FID%3D129&outFields=FID%2CID%2CNOMCIRCUIT%2CID_CIRCUIT%2CID_ARBO%2CTYPE%2CCOM_DEPART%2CC_DEP%2CAGO_APPLI%2CAGO_PDF%2CAGO_GPX%2CAGO_COORD%2CPARKING%2CDIFFICULTE%2CBALISAGE%2CMAJ%2CSOURCE%2CDIST_KM%2CDUREE_H%2CXW84%2CYW84&returnGeometry=false&f=json",
+      "sourceApplication": "http://pnrmcb.maps.arcgis.com/apps/webappviewer/index.html?id=3b8cef41bbb840eab30ded104d0188f6",
+      "sourceParkingDescription": "Eglise",
+      "sourceDifficulty": "Difficile",
+      "sourceMarking": "Jaune",
+      "sourceDurationMinutes": 480,
+      "sourceGoogleMaps": "https://www.google.com/maps/dir/?api=1&destination=49.37898,-1.22497",
+      "sourceXYLocation": [
+        -1.21681,
+        49.37942
+      ],
+      "sourceLocationNote": "Coordonnées XW84/YW84 et destination Google Maps conservées séparément. Aucune n’est déclarée parking vérifié.",
+      "gpxSha256": "15e2ec90da63bbde6081d884abad10e90726904c77007682eb96bc83f21aa910",
+      "geometryKm": 29.172,
+      "pointCount": 326,
+      "status": "trace-verifiee",
+      "sourceOriginalGpx": "catalogue/sources/marais/pied04-129.gpx",
+      "sourceGpxTrackCount": 1,
+      "officialLocation": [
+        -1.225015,
+        49.378929
+      ],
+      "officialLocationPrecision": "gpx",
+      "sourceCoordinateOffsetsMetres": {
+        "XW84/YW84": 596.5,
+        "AGO_COORD": 6.5
+      },
+      "sourceAdministrativeLocation": {
+        "url": "https://geo.api.gouv.fr/communes?lon=-1.225015&lat=49.378929&fields=nom%2Ccode%2CcodeDepartement%2CcodesPostaux&format=json",
+        "sha256": "82c662538ba63fd549f8d46778099453d4067a11bbbbe4a961d57e27e0737ee6",
+        "method": "Premier point du GPX géolocalisé par l’API officielle des communes ; ce point n’est pas un parking vérifié.",
+        "coordinate": [
+          -1.225015,
+          49.378929
+        ],
+        "commune": {
+          "nom": "Sainte-Marie-du-Mont",
+          "code": "50509",
+          "codeDepartement": "50",
+          "codesPostaux": [
+            "50480"
+          ]
+        }
+      },
+      "sourcePdfStatus": "pdf-recupere",
+      "sourcePdfSha256": "52591ee23173749329cb4c9a290649f2731f3679ff6be1bc7c7f39da32410189",
+      "sourcePdfBytes": 603574,
+      "geometryReconciliation": {
+        "comparedSnapshotRecords": 1382,
+        "equivalentSourceIds": [],
+        "method": "Comparaison bidirectionnelle à pas de 4 m, écart maximal 2 m et longueur compatible à 1 %. Indice préalable ; déduplication finale par le pipeline."
+      }
+    },
+    {
+      "sourceId": "MARAIS-CD-130",
+      "sourceFeatureId": 130,
+      "sourceObjectIdField": "FID",
+      "sourceCircuitCode": "pied11",
+      "sourceArboCode": "pied11_ssv_foret",
+      "name": "De la forêt Saint-Sauveur au mont de Besneville",
+      "town": "Saint-Sauveur-le-Vicomte",
+      "department": "50",
+      "km": 14.0,
+      "official": "https://parc-cotentin-bessin.fr/desmarais-du-parc-toutes-les-balades-pres-de-chez-vous",
+      "gpxSource": "https://parc-cotentin-bessin.fr/pnrmcb_data/arcgisonline/AGO_RANDO/AGO_PJ/pied11_ssv_foret.gpx",
+      "pdf": "https://parc-cotentin-bessin.fr/pnrmcb_data/arcgisonline/AGO_RANDO/AGO_PJ/pied11_ssv_foret.pdf",
+      "sourcePdf": "https://parc-cotentin-bessin.fr/pnrmcb_data/arcgisonline/AGO_RANDO/AGO_PJ/pied11_ssv_foret.pdf",
+      "sourcePractice": "A pied",
+      "sourcePublished": "OUI",
+      "sourceOrigin": "PNRMCB, GA",
+      "sourceUpdatedAt": "2019-12-13",
+      "sourceEdition": "PNR Marais du Cotentin et du Bessin · mise à jour source 2019-12-13",
+      "sourceDatasetUrl": "https://services5.arcgis.com/2wtm4KHYRBa9T8Yt/arcgis/rest/services/APIRANDO_CIRCUITS/FeatureServer/0/query?where=1%3D1&outFields=FID%2CID%2CNOMCIRCUIT%2CID_CIRCUIT%2CID_ARBO%2CTYPE%2CCOM_DEPART%2CC_DEP%2CAGO_APPLI%2CAGO_PDF%2CAGO_GPX%2CAGO_COORD%2CPARKING%2CDIFFICULTE%2CBALISAGE%2CMAJ%2CSOURCE%2CDIST_KM%2CDUREE_H%2CXW84%2CYW84&returnGeometry=false&f=json",
+      "sourceDatasetSha256": "0af5542416019614ed4c7cb5e0824707e00ccc43957bfe6fbddffa8f389c2559",
+      "sourceApi": "https://services5.arcgis.com/2wtm4KHYRBa9T8Yt/arcgis/rest/services/APIRANDO_CIRCUITS/FeatureServer/0/query?where=FID%3D130&outFields=FID%2CID%2CNOMCIRCUIT%2CID_CIRCUIT%2CID_ARBO%2CTYPE%2CCOM_DEPART%2CC_DEP%2CAGO_APPLI%2CAGO_PDF%2CAGO_GPX%2CAGO_COORD%2CPARKING%2CDIFFICULTE%2CBALISAGE%2CMAJ%2CSOURCE%2CDIST_KM%2CDUREE_H%2CXW84%2CYW84&returnGeometry=false&f=json",
+      "sourceApplication": "http://pnrmcb.maps.arcgis.com/apps/webappviewer/index.html?id=3b8cef41bbb840eab30ded104d0188f6",
+      "sourceParkingDescription": "Du sentier de découverte (D15)",
+      "sourceDifficulty": "Moyen",
+      "sourceMarking": "Jaune",
+      "sourceDurationMinutes": 225,
+      "sourceGoogleMaps": "https://www.google.com/maps/dir/?api=1&destination=49.37605,-1.59371",
+      "sourceXYLocation": [
+        -1.59351,
+        49.37592
+      ],
+      "sourceLocationNote": "Coordonnées XW84/YW84 et destination Google Maps conservées séparément. Aucune n’est déclarée parking vérifié.",
+      "gpxSha256": "68559e171055262919f9bac9a794c6780535e164ace75f9d26f114d76cbb540f",
+      "geometryKm": 12.579,
+      "pointCount": 202,
+      "status": "trace-verifiee",
+      "sourceOriginalGpx": "catalogue/sources/marais/pied11-130.gpx",
+      "sourceGpxTrackCount": 1,
+      "officialLocation": [
+        -1.593488,
+        49.375925
+      ],
+      "officialLocationPrecision": "gpx",
+      "sourceCoordinateOffsetsMetres": {
+        "XW84/YW84": 1.7,
+        "AGO_COORD": 21.2
+      },
+      "sourceAdministrativeLocation": {
+        "url": "https://geo.api.gouv.fr/communes?lon=-1.593488&lat=49.375925&fields=nom%2Ccode%2CcodeDepartement%2CcodesPostaux&format=json",
+        "sha256": "eabbe5a5b89f4ec5d8dc1fe157e5b0cca5d7509bdab88f25aacd5e44ffb86a56",
+        "method": "Premier point du GPX géolocalisé par l’API officielle des communes ; ce point n’est pas un parking vérifié.",
+        "coordinate": [
+          -1.593488,
+          49.375925
+        ],
+        "commune": {
+          "nom": "Saint-Sauveur-le-Vicomte",
+          "code": "50551",
+          "codeDepartement": "50",
+          "codesPostaux": [
+            "50390"
+          ]
+        }
+      },
+      "sourcePdfStatus": "pdf-recupere",
+      "sourcePdfSha256": "6bf1a84c6e668705f3c1ce74a408a9676974c45ea9a4cb66b56089145d8eead0",
+      "sourcePdfBytes": 1547727,
+      "geometryReconciliation": {
+        "comparedSnapshotRecords": 1382,
+        "equivalentSourceIds": [],
+        "method": "Comparaison bidirectionnelle à pas de 4 m, écart maximal 2 m et longueur compatible à 1 %. Indice préalable ; déduplication finale par le pipeline."
+      }
+    },
+    {
+      "sourceId": "MARAIS-CD-131",
+      "sourceFeatureId": 131,
+      "sourceObjectIdField": "FID",
+      "sourceCircuitCode": "pied12",
+      "sourceArboCode": "pied12_cav_pendu",
+      "name": "Le pendu dépendu et les caches du Diable",
+      "town": "Canville-la-Rocque",
+      "department": "50",
+      "km": 9.0,
+      "official": "https://parc-cotentin-bessin.fr/desmarais-du-parc-toutes-les-balades-pres-de-chez-vous",
+      "gpxSource": "https://parc-cotentin-bessin.fr/pnrmcb_data/arcgisonline/AGO_RANDO/AGO_PJ/pied12_cav_pendu.gpx",
+      "pdf": "https://parc-cotentin-bessin.fr/pnrmcb_data/arcgisonline/AGO_RANDO/AGO_PJ/pied12_cav_pendu.pdf",
+      "sourcePdf": "https://parc-cotentin-bessin.fr/pnrmcb_data/arcgisonline/AGO_RANDO/AGO_PJ/pied12_cav_pendu.pdf",
+      "sourcePractice": "A pied",
+      "sourcePublished": "OUI",
+      "sourceOrigin": "PNRMCB, GA",
+      "sourceUpdatedAt": "2019-12-13",
+      "sourceEdition": "PNR Marais du Cotentin et du Bessin · mise à jour source 2019-12-13",
+      "sourceDatasetUrl": "https://services5.arcgis.com/2wtm4KHYRBa9T8Yt/arcgis/rest/services/APIRANDO_CIRCUITS/FeatureServer/0/query?where=1%3D1&outFields=FID%2CID%2CNOMCIRCUIT%2CID_CIRCUIT%2CID_ARBO%2CTYPE%2CCOM_DEPART%2CC_DEP%2CAGO_APPLI%2CAGO_PDF%2CAGO_GPX%2CAGO_COORD%2CPARKING%2CDIFFICULTE%2CBALISAGE%2CMAJ%2CSOURCE%2CDIST_KM%2CDUREE_H%2CXW84%2CYW84&returnGeometry=false&f=json",
+      "sourceDatasetSha256": "0af5542416019614ed4c7cb5e0824707e00ccc43957bfe6fbddffa8f389c2559",
+      "sourceApi": "https://services5.arcgis.com/2wtm4KHYRBa9T8Yt/arcgis/rest/services/APIRANDO_CIRCUITS/FeatureServer/0/query?where=FID%3D131&outFields=FID%2CID%2CNOMCIRCUIT%2CID_CIRCUIT%2CID_ARBO%2CTYPE%2CCOM_DEPART%2CC_DEP%2CAGO_APPLI%2CAGO_PDF%2CAGO_GPX%2CAGO_COORD%2CPARKING%2CDIFFICULTE%2CBALISAGE%2CMAJ%2CSOURCE%2CDIST_KM%2CDUREE_H%2CXW84%2CYW84&returnGeometry=false&f=json",
+      "sourceApplication": "http://pnrmcb.maps.arcgis.com/apps/webappviewer/index.html?id=3b8cef41bbb840eab30ded104d0188f6",
+      "sourceParkingDescription": "Place communale",
+      "sourceDifficulty": "Facile",
+      "sourceMarking": "Bleu",
+      "sourceDurationMinutes": 180,
+      "sourceGoogleMaps": "https://www.google.com/maps/dir/?api=1&destination=49.34402,-1.63615",
+      "sourceXYLocation": [
+        -1.64183,
+        49.3391
+      ],
+      "sourceLocationNote": "Coordonnées XW84/YW84 et destination Google Maps conservées séparément. Aucune n’est déclarée parking vérifié.",
+      "gpxSha256": "4a945870d78cff98ad33ebd8842bbd914914f5abdfe8dbe825ab50bc0f822e35",
+      "geometryKm": 8.77,
+      "pointCount": 193,
+      "status": "trace-verifiee",
+      "sourceOriginalGpx": "catalogue/sources/marais/pied12-131.gpx",
+      "sourceGpxTrackCount": 1,
+      "officialLocation": [
+        -1.636154,
+        49.343865
+      ],
+      "officialLocationPrecision": "gpx",
+      "sourceCoordinateOffsetsMetres": {
+        "XW84/YW84": 670.7,
+        "AGO_COORD": 17.2
+      },
+      "sourceAdministrativeLocation": {
+        "url": "https://geo.api.gouv.fr/communes?lon=-1.636154&lat=49.343865&fields=nom%2Ccode%2CcodeDepartement%2CcodesPostaux&format=json",
+        "sha256": "2c853ba9e1bc26ee71cd8afc37adc66b7bc4c67ab00a40176e9c8406879dc6a3",
+        "method": "Premier point du GPX géolocalisé par l’API officielle des communes ; ce point n’est pas un parking vérifié.",
+        "coordinate": [
+          -1.636154,
+          49.343865
+        ],
+        "commune": {
+          "nom": "Canville-la-Rocque",
+          "code": "50097",
+          "codeDepartement": "50",
+          "codesPostaux": [
+            "50580"
+          ]
+        }
+      },
+      "sourcePdfStatus": "pdf-recupere",
+      "sourcePdfSha256": "4ba8b54eb814e026dfa3ef20271e235043c21c6cdab899e62eefc8de6309ce88",
+      "sourcePdfBytes": 532440,
+      "geometryReconciliation": {
+        "comparedSnapshotRecords": 1382,
+        "equivalentSourceIds": [],
+        "method": "Comparaison bidirectionnelle à pas de 4 m, écart maximal 2 m et longueur compatible à 1 %. Indice préalable ; déduplication finale par le pipeline."
+      }
+    },
+    {
+      "sourceId": "MARAIS-CD-132",
+      "sourceFeatureId": 132,
+      "sourceObjectIdField": "FID",
+      "sourceCircuitCode": "pied23",
+      "sourceArboCode": "pied23_meb_bonnes_gens",
+      "name": "Les bonnes gens",
+      "town": "Le Mesnilbus",
+      "department": "50",
+      "km": 11.5,
+      "official": "https://parc-cotentin-bessin.fr/desmarais-du-parc-toutes-les-balades-pres-de-chez-vous",
+      "gpxSource": "https://parc-cotentin-bessin.fr/pnrmcb_data/arcgisonline/AGO_RANDO/AGO_PJ/pied23_meb_bonnes_gens.gpx",
+      "pdf": "https://parc-cotentin-bessin.fr/pnrmcb_data/arcgisonline/AGO_RANDO/AGO_PJ/pied23_meb_bonnes_gens.pdf",
+      "sourcePdf": "https://parc-cotentin-bessin.fr/pnrmcb_data/arcgisonline/AGO_RANDO/AGO_PJ/pied23_meb_bonnes_gens.pdf",
+      "sourcePractice": "A pied",
+      "sourcePublished": "OUI",
+      "sourceOrigin": "PNRMCB, GA",
+      "sourceUpdatedAt": "2019-12-17",
+      "sourceEdition": "PNR Marais du Cotentin et du Bessin · mise à jour source 2019-12-17",
+      "sourceDatasetUrl": "https://services5.arcgis.com/2wtm4KHYRBa9T8Yt/arcgis/rest/services/APIRANDO_CIRCUITS/FeatureServer/0/query?where=1%3D1&outFields=FID%2CID%2CNOMCIRCUIT%2CID_CIRCUIT%2CID_ARBO%2CTYPE%2CCOM_DEPART%2CC_DEP%2CAGO_APPLI%2CAGO_PDF%2CAGO_GPX%2CAGO_COORD%2CPARKING%2CDIFFICULTE%2CBALISAGE%2CMAJ%2CSOURCE%2CDIST_KM%2CDUREE_H%2CXW84%2CYW84&returnGeometry=false&f=json",
+      "sourceDatasetSha256": "0af5542416019614ed4c7cb5e0824707e00ccc43957bfe6fbddffa8f389c2559",
+      "sourceApi": "https://services5.arcgis.com/2wtm4KHYRBa9T8Yt/arcgis/rest/services/APIRANDO_CIRCUITS/FeatureServer/0/query?where=FID%3D132&outFields=FID%2CID%2CNOMCIRCUIT%2CID_CIRCUIT%2CID_ARBO%2CTYPE%2CCOM_DEPART%2CC_DEP%2CAGO_APPLI%2CAGO_PDF%2CAGO_GPX%2CAGO_COORD%2CPARKING%2CDIFFICULTE%2CBALISAGE%2CMAJ%2CSOURCE%2CDIST_KM%2CDUREE_H%2CXW84%2CYW84&returnGeometry=false&f=json",
+      "sourceApplication": "http://pnrmcb.maps.arcgis.com/apps/webappviewer/index.html?id=3b8cef41bbb840eab30ded104d0188f6",
+      "sourceParkingDescription": "Face à l'église",
+      "sourceDifficulty": "Moyen",
+      "sourceMarking": "Bleu",
+      "sourceDurationMinutes": 180,
+      "sourceGoogleMaps": "https://www.google.com/maps/dir/?api=1&destination=49.13248,-1.34929",
+      "sourceXYLocation": [
+        -1.35446,
+        49.13683
+      ],
+      "sourceLocationNote": "Coordonnées XW84/YW84 et destination Google Maps conservées séparément. Aucune n’est déclarée parking vérifié.",
+      "gpxSha256": "ed452419af36cc669b2cb4107ce82d11f2a3bc21982d8746a4d420d71d9335c1",
+      "geometryKm": 37.332,
+      "pointCount": 634,
+      "status": "distance-a-verifier",
+      "issue": "Fiche 11.5 km ; GPX 37.3 km",
+      "sourceOriginalGpx": "catalogue/sources/marais/pied23-132.gpx",
+      "sourceGpxTrackCount": 3,
+      "sourceGpxIssue": "Le GPX publié contient plusieurs traces ; elles sont conservées sans sélection arbitraire.",
+      "officialLocation": [
+        -1.539765,
+        49.332001
+      ],
+      "officialLocationPrecision": "gpx",
+      "sourceCoordinateOffsetsMetres": {
+        "XW84/YW84": 25534.2,
+        "AGO_COORD": 26143.5
+      },
+      "sourceAdministrativeLocation": {
+        "url": "https://geo.api.gouv.fr/communes?lon=-1.539765&lat=49.332001&fields=nom%2Ccode%2CcodeDepartement%2CcodesPostaux&format=json",
+        "sha256": "ef65b0bd8c654cff56c330b836ea1141e39bb3536cb532372a1055d80e3ba817",
+        "method": "Premier point du GPX géolocalisé par l’API officielle des communes ; ce point n’est pas un parking vérifié.",
+        "coordinate": [
+          -1.539765,
+          49.332001
+        ],
+        "commune": {
+          "nom": "Doville",
+          "code": "50166",
+          "codeDepartement": "50",
+          "codesPostaux": [
+            "50250"
+          ]
+        }
+      },
+      "sourcePdfStatus": "pdf-recupere",
+      "sourcePdfSha256": "e5214cc7441fb4256bfaad0826908e2970b99e9146fc914662d8120c37af8339",
+      "sourcePdfBytes": 515240
+    },
+    {
+      "sourceId": "MARAIS-CD-136",
+      "sourceFeatureId": 136,
+      "sourceObjectIdField": "FID",
+      "sourceCircuitCode": "pied35",
+      "sourceArboCode": "pied35_pic_ages",
+      "name": "Paysages à travers les âges",
+      "town": "Picauville",
+      "department": "50",
+      "km": 7.0,
+      "official": "https://parc-cotentin-bessin.fr/desmarais-du-parc-toutes-les-balades-pres-de-chez-vous",
+      "gpxSource": "https://parc-cotentin-bessin.fr/pnrmcb_data/arcgisonline/AGO_RANDO/AGO_PJ/pied35_pic_ages.gpx",
+      "pdf": "https://parc-cotentin-bessin.fr/pnrmcb_data/arcgisonline/AGO_RANDO/AGO_PJ/pied35_pic_ages.pdf",
+      "sourcePdf": "https://parc-cotentin-bessin.fr/pnrmcb_data/arcgisonline/AGO_RANDO/AGO_PJ/pied35_pic_ages.pdf",
+      "sourcePractice": "A pied",
+      "sourcePublished": "OUI",
+      "sourceOrigin": "PNRMCB, GA",
+      "sourceUpdatedAt": "2024-05-21",
+      "sourceEdition": "PNR Marais du Cotentin et du Bessin · mise à jour source 2024-05-21",
+      "sourceDatasetUrl": "https://services5.arcgis.com/2wtm4KHYRBa9T8Yt/arcgis/rest/services/APIRANDO_CIRCUITS/FeatureServer/0/query?where=1%3D1&outFields=FID%2CID%2CNOMCIRCUIT%2CID_CIRCUIT%2CID_ARBO%2CTYPE%2CCOM_DEPART%2CC_DEP%2CAGO_APPLI%2CAGO_PDF%2CAGO_GPX%2CAGO_COORD%2CPARKING%2CDIFFICULTE%2CBALISAGE%2CMAJ%2CSOURCE%2CDIST_KM%2CDUREE_H%2CXW84%2CYW84&returnGeometry=false&f=json",
+      "sourceDatasetSha256": "0af5542416019614ed4c7cb5e0824707e00ccc43957bfe6fbddffa8f389c2559",
+      "sourceApi": "https://services5.arcgis.com/2wtm4KHYRBa9T8Yt/arcgis/rest/services/APIRANDO_CIRCUITS/FeatureServer/0/query?where=FID%3D136&outFields=FID%2CID%2CNOMCIRCUIT%2CID_CIRCUIT%2CID_ARBO%2CTYPE%2CCOM_DEPART%2CC_DEP%2CAGO_APPLI%2CAGO_PDF%2CAGO_GPX%2CAGO_COORD%2CPARKING%2CDIFFICULTE%2CBALISAGE%2CMAJ%2CSOURCE%2CDIST_KM%2CDUREE_H%2CXW84%2CYW84&returnGeometry=false&f=json",
+      "sourceApplication": "http://pnrmcb.maps.arcgis.com/apps/webappviewer/index.html?id=3b8cef41bbb840eab30ded104d0188f6",
+      "sourceParkingDescription": "Place du Général-de-Gaule",
+      "sourceDifficulty": "Facile",
+      "sourceMarking": "Jaune",
+      "sourceDurationMinutes": 140,
+      "sourceGoogleMaps": "https://www.google.com/maps/dir/?api=1&destination=49.3787,-1.42081",
+      "sourceXYLocation": [
+        -1.39828,
+        49.36178
+      ],
+      "sourceLocationNote": "Coordonnées XW84/YW84 et destination Google Maps conservées séparément. Aucune n’est déclarée parking vérifié.",
+      "status": "gpx-inexploitable",
+      "issue": "HTTP Error 404: Not Found",
+      "sourceAdministrativeLocation": {
+        "url": "https://geo.api.gouv.fr/communes?nom=Picauville&fields=nom%2Ccode%2CcodeDepartement&limit=10",
+        "sha256": "14227c0f6cc4c7bf14a4fbe70e75801ffc3f864d49ba8589f3fbcd7b199e698f",
+        "method": "Nom de commune publié rapproché exactement de l’API officielle des communes.",
+        "coordinate": null,
+        "commune": {
+          "nom": "Picauville",
+          "code": "50400",
+          "codeDepartement": "50",
+          "_score": 1
+        }
+      },
+      "sourcePdfStatus": "pdf-recupere",
+      "sourcePdfSha256": "61e87d3419038af18d5e05fb1c55af20bfa5e11e1b37f82068e258e76da7d1d2",
+      "sourcePdfBytes": 726827
+    },
+    {
+      "sourceId": "MARAIS-CD-143",
+      "sourceFeatureId": 143,
+      "sourceObjectIdField": "FID",
+      "sourceCircuitCode": "pied13",
+      "sourceArboCode": "pied13_dov_le_mont",
+      "name": "Le mont de Doville",
+      "town": "Doville",
+      "department": "50",
+      "km": 12.0,
+      "official": "https://parc-cotentin-bessin.fr/desmarais-du-parc-toutes-les-balades-pres-de-chez-vous",
+      "gpxSource": "https://parc-cotentin-bessin.fr/pnrmcb_data/arcgisonline/AGO_RANDO/AGO_PJ/pied13_dov_le_mont.gpx",
+      "pdf": "https://parc-cotentin-bessin.fr/pnrmcb_data/arcgisonline/AGO_RANDO/AGO_PJ/pied13_dov_le_mont.pdf",
+      "sourcePdf": "https://parc-cotentin-bessin.fr/pnrmcb_data/arcgisonline/AGO_RANDO/AGO_PJ/pied13_dov_le_mont.pdf",
+      "sourcePractice": "A pied",
+      "sourcePublished": "OUI",
+      "sourceOrigin": "PNRMCB, GA",
+      "sourceUpdatedAt": "2019-12-13",
+      "sourceEdition": "PNR Marais du Cotentin et du Bessin · mise à jour source 2019-12-13",
+      "sourceDatasetUrl": "https://services5.arcgis.com/2wtm4KHYRBa9T8Yt/arcgis/rest/services/APIRANDO_CIRCUITS/FeatureServer/0/query?where=1%3D1&outFields=FID%2CID%2CNOMCIRCUIT%2CID_CIRCUIT%2CID_ARBO%2CTYPE%2CCOM_DEPART%2CC_DEP%2CAGO_APPLI%2CAGO_PDF%2CAGO_GPX%2CAGO_COORD%2CPARKING%2CDIFFICULTE%2CBALISAGE%2CMAJ%2CSOURCE%2CDIST_KM%2CDUREE_H%2CXW84%2CYW84&returnGeometry=false&f=json",
+      "sourceDatasetSha256": "0af5542416019614ed4c7cb5e0824707e00ccc43957bfe6fbddffa8f389c2559",
+      "sourceApi": "https://services5.arcgis.com/2wtm4KHYRBa9T8Yt/arcgis/rest/services/APIRANDO_CIRCUITS/FeatureServer/0/query?where=FID%3D143&outFields=FID%2CID%2CNOMCIRCUIT%2CID_CIRCUIT%2CID_ARBO%2CTYPE%2CCOM_DEPART%2CC_DEP%2CAGO_APPLI%2CAGO_PDF%2CAGO_GPX%2CAGO_COORD%2CPARKING%2CDIFFICULTE%2CBALISAGE%2CMAJ%2CSOURCE%2CDIST_KM%2CDUREE_H%2CXW84%2CYW84&returnGeometry=false&f=json",
+      "sourceApplication": "http://pnrmcb.maps.arcgis.com/apps/webappviewer/index.html?id=3b8cef41bbb840eab30ded104d0188f6",
+      "sourceParkingDescription": "Eglise de Doville",
+      "sourceDifficulty": "Moyen",
+      "sourceMarking": "Jaune",
+      "sourceDurationMinutes": 180,
+      "sourceGoogleMaps": "https://www.google.com/maps/dir/?api=1&destination=49.33191,-1.53963",
+      "sourceXYLocation": [
+        -1.56894,
+        49.322
+      ],
+      "sourceLocationNote": "Coordonnées XW84/YW84 et destination Google Maps conservées séparément. Aucune n’est déclarée parking vérifié.",
+      "gpxSha256": "20615b925ff33bf68be314f0472eef245561ff7bb0da1d177e530d399de0ad11",
+      "geometryKm": 12.059,
+      "pointCount": 215,
+      "status": "trace-verifiee",
+      "sourceOriginalGpx": "catalogue/sources/marais/pied13-143.gpx",
+      "sourceGpxTrackCount": 1,
+      "officialLocation": [
+        -1.539765,
+        49.332001
+      ],
+      "officialLocationPrecision": "gpx",
+      "sourceCoordinateOffsetsMetres": {
+        "XW84/YW84": 2388.9,
+        "AGO_COORD": 14.1
+      },
+      "sourceAdministrativeLocation": {
+        "url": "https://geo.api.gouv.fr/communes?lon=-1.539765&lat=49.332001&fields=nom%2Ccode%2CcodeDepartement%2CcodesPostaux&format=json",
+        "sha256": "ef65b0bd8c654cff56c330b836ea1141e39bb3536cb532372a1055d80e3ba817",
+        "method": "Premier point du GPX géolocalisé par l’API officielle des communes ; ce point n’est pas un parking vérifié.",
+        "coordinate": [
+          -1.539765,
+          49.332001
+        ],
+        "commune": {
+          "nom": "Doville",
+          "code": "50166",
+          "codeDepartement": "50",
+          "codesPostaux": [
+            "50250"
+          ]
+        }
+      },
+      "sourcePdfStatus": "pdf-recupere",
+      "sourcePdfSha256": "a6bdc4b7470110c62aeb875e89c50abbb3b5f1fcc2fd60546fa21c35db3569dd",
+      "sourcePdfBytes": 650687,
+      "geometryReconciliation": {
+        "comparedSnapshotRecords": 1382,
+        "equivalentSourceIds": [],
+        "method": "Comparaison bidirectionnelle à pas de 4 m, écart maximal 2 m et longueur compatible à 1 %. Indice préalable ; déduplication finale par le pipeline."
+      }
+    }
+  ],
+  "overrides": [],
+  "selection": {
+    "registerTotal": 144,
+    "publishedPedestrianTotal": 35,
+    "excluded": [
+      {
+        "sourceFeatureId": 2,
+        "name": "De Madeleine à Marguerie",
+        "practice": "A pied",
+        "published": "NON",
+        "reason": "Variante non publiée (AGO_APPLI différent de OUI)"
+      },
+      {
+        "sourceFeatureId": 3,
+        "name": "De Madeleine à Marguerie",
+        "practice": "A pied",
+        "published": "NON",
+        "reason": "Variante non publiée (AGO_APPLI différent de OUI)"
+      },
+      {
+        "sourceFeatureId": 4,
+        "name": "De Madeleine à Marguerie",
+        "practice": "A pied",
+        "published": "NON",
+        "reason": "Variante non publiée (AGO_APPLI différent de OUI)"
+      },
+      {
+        "sourceFeatureId": 5,
+        "name": "De Madeleine à Marguerie",
+        "practice": "A pied",
+        "published": "NON",
+        "reason": "Variante non publiée (AGO_APPLI différent de OUI)"
+      },
+      {
+        "sourceFeatureId": 8,
+        "name": "Les chasses des Unelles",
+        "practice": "A pied",
+        "published": "NON",
+        "reason": "Variante non publiée (AGO_APPLI différent de OUI)"
+      },
+      {
+        "sourceFeatureId": 9,
+        "name": "A l'entour de Sainte-Marie-du-Mont",
+        "practice": "A pied",
+        "published": "NON",
+        "reason": "Variante non publiée (AGO_APPLI différent de OUI)"
+      },
+      {
+        "sourceFeatureId": 10,
+        "name": "A l'entour de Sainte-Marie-du-Mont - Ouest",
+        "practice": "A pied",
+        "published": "NON",
+        "reason": "Variante non publiée (AGO_APPLI différent de OUI)"
+      },
+      {
+        "sourceFeatureId": 11,
+        "name": "A l'entour de Sainte-Marie-du-Mont - Est",
+        "practice": "A pied",
+        "published": "NON",
+        "reason": "Variante non publiée (AGO_APPLI différent de OUI)"
+      },
+      {
+        "sourceFeatureId": 14,
+        "name": "Utah Beach, entre mer et marais",
+        "practice": "A pied",
+        "published": "NON",
+        "reason": "Variante non publiée (AGO_APPLI différent de OUI)"
+      },
+      {
+        "sourceFeatureId": 15,
+        "name": "Utah Beach, entre mer et marais",
+        "practice": "A pied",
+        "published": "NON",
+        "reason": "Variante non publiée (AGO_APPLI différent de OUI)"
+      },
+      {
+        "sourceFeatureId": 18,
+        "name": "Au creux du bocage",
+        "practice": "A pied",
+        "published": "NON",
+        "reason": "Variante non publiée (AGO_APPLI différent de OUI)"
+      },
+      {
+        "sourceFeatureId": 19,
+        "name": "Le mont de Doville",
+        "practice": "A pied",
+        "published": "NON",
+        "reason": "Variante non publiée (AGO_APPLI différent de OUI)"
+      },
+      {
+        "sourceFeatureId": 20,
+        "name": "Le mont de Doville",
+        "practice": "A pied",
+        "published": "NON",
+        "reason": "Variante non publiée (AGO_APPLI différent de OUI)"
+      },
+      {
+        "sourceFeatureId": 21,
+        "name": "Le Cotentin des sortilèges",
+        "practice": "A pied",
+        "published": "NON",
+        "reason": "Variante non publiée (AGO_APPLI différent de OUI)"
+      },
+      {
+        "sourceFeatureId": 26,
+        "name": "Donjon et moulin de Pirou",
+        "practice": "A pied",
+        "published": "NON",
+        "reason": "Variante non publiée (AGO_APPLI différent de OUI)"
+      },
+      {
+        "sourceFeatureId": 27,
+        "name": "Donjon et moulin de Pirou",
+        "practice": "A pied",
+        "published": "NON",
+        "reason": "Variante non publiée (AGO_APPLI différent de OUI)"
+      },
+      {
+        "sourceFeatureId": 28,
+        "name": "Donjon et moulin de Pirou",
+        "practice": "A pied",
+        "published": "NON",
+        "reason": "Variante non publiée (AGO_APPLI différent de OUI)"
+      },
+      {
+        "sourceFeatureId": 29,
+        "name": "Des rives de l'Ay aux landes de Lessay",
+        "practice": "A pied",
+        "published": "NON",
+        "reason": "Variante non publiée (AGO_APPLI différent de OUI)"
+      },
+      {
+        "sourceFeatureId": 30,
+        "name": "Des rives de l'Ay aux landes de Lessay",
+        "practice": "A pied",
+        "published": "NON",
+        "reason": "Variante non publiée (AGO_APPLI différent de OUI)"
+      },
+      {
+        "sourceFeatureId": 34,
+        "name": "Les sept lieux de la lande et du bocage - Ouest",
+        "practice": "A pied",
+        "published": "NON",
+        "reason": "Variante non publiée (AGO_APPLI différent de OUI)"
+      },
+      {
+        "sourceFeatureId": 35,
+        "name": "Les sept lieux de la lande et du bocage - Est",
+        "practice": "A pied",
+        "published": "NON",
+        "reason": "Variante non publiée (AGO_APPLI différent de OUI)"
+      },
+      {
+        "sourceFeatureId": 37,
+        "name": "Eglises et marais de la Taute",
+        "practice": "A pied",
+        "published": "NON",
+        "reason": "Variante non publiée (AGO_APPLI différent de OUI)"
+      },
+      {
+        "sourceFeatureId": 38,
+        "name": "Eglises et marais de la Taute",
+        "practice": "A pied",
+        "published": "NON",
+        "reason": "Variante non publiée (AGO_APPLI différent de OUI)"
+      },
+      {
+        "sourceFeatureId": 41,
+        "name": "Au fil des marais",
+        "practice": "A pied",
+        "published": "NON",
+        "reason": "Variante non publiée (AGO_APPLI différent de OUI)"
+      },
+      {
+        "sourceFeatureId": 42,
+        "name": "La Butte de l'Isle-Main",
+        "practice": "A pied",
+        "published": "NON",
+        "reason": "Variante non publiée (AGO_APPLI différent de OUI)"
+      },
+      {
+        "sourceFeatureId": 43,
+        "name": "La Butte de l'Isle-Main",
+        "practice": "A pied",
+        "published": "NON",
+        "reason": "Variante non publiée (AGO_APPLI différent de OUI)"
+      },
+      {
+        "sourceFeatureId": 46,
+        "name": "Grands prés et petits clos",
+        "practice": "A pied",
+        "published": "NON",
+        "reason": "Variante non publiée (AGO_APPLI différent de OUI)"
+      },
+      {
+        "sourceFeatureId": 47,
+        "name": "Grands prés et petits clos",
+        "practice": "A pied",
+        "published": "NON",
+        "reason": "Variante non publiée (AGO_APPLI différent de OUI)"
+      },
+      {
+        "sourceFeatureId": 50,
+        "name": "Entre haut et bas-pays",
+        "practice": "A pied",
+        "published": "NON",
+        "reason": "Variante non publiée (AGO_APPLI différent de OUI)"
+      },
+      {
+        "sourceFeatureId": 52,
+        "name": "Sur les bords des Veys",
+        "practice": "A pied",
+        "published": "NON",
+        "reason": "Variante non publiée (AGO_APPLI différent de OUI)"
+      },
+      {
+        "sourceFeatureId": 57,
+        "name": "De ponts en passerelles",
+        "practice": "A pied",
+        "published": "NON",
+        "reason": "Variante non publiée (AGO_APPLI différent de OUI)"
+      },
+      {
+        "sourceFeatureId": 59,
+        "name": "Au coeur des marais",
+        "practice": "A pied",
+        "published": "NON",
+        "reason": "Variante non publiée (AGO_APPLI différent de OUI)"
+      },
+      {
+        "sourceFeatureId": 60,
+        "name": "Au coeur des marais",
+        "practice": "A pied",
+        "published": "NON",
+        "reason": "Variante non publiée (AGO_APPLI différent de OUI)"
+      },
+      {
+        "sourceFeatureId": 61,
+        "name": "La Sèves et l'Holerotte",
+        "practice": "A vélo",
+        "published": "OUI",
+        "reason": "Autre pratique"
+      },
+      {
+        "sourceFeatureId": 62,
+        "name": "Les vents de Huppelande",
+        "practice": "A vélo",
+        "published": "OUI",
+        "reason": "Autre pratique"
+      },
+      {
+        "sourceFeatureId": 63,
+        "name": "Les promontoires du Bauptois",
+        "practice": "A vélo",
+        "published": "OUI",
+        "reason": "Autre pratique"
+      },
+      {
+        "sourceFeatureId": 64,
+        "name": "Circuit vélo des traditions",
+        "practice": "A vélo",
+        "published": "OUI",
+        "reason": "Autre pratique"
+      },
+      {
+        "sourceFeatureId": 65,
+        "name": "Circuit vélo des marais",
+        "practice": "A vélo",
+        "published": "OUI",
+        "reason": "Autre pratique"
+      },
+      {
+        "sourceFeatureId": 66,
+        "name": "Les fonds du Cotentin",
+        "practice": "A vélo",
+        "published": "OUI",
+        "reason": "Autre pratique"
+      },
+      {
+        "sourceFeatureId": 67,
+        "name": "Le Moulinet",
+        "practice": "A vélo",
+        "published": "OUI",
+        "reason": "Autre pratique"
+      },
+      {
+        "sourceFeatureId": 68,
+        "name": "Le Plain Norois",
+        "practice": "A vélo",
+        "published": "OUI",
+        "reason": "Autre pratique"
+      },
+      {
+        "sourceFeatureId": 69,
+        "name": "Les gués entre Plain et bocage",
+        "practice": "A vélo",
+        "published": "OUI",
+        "reason": "Autre pratique"
+      },
+      {
+        "sourceFeatureId": 70,
+        "name": "La vallée de l'Aure - 52 km",
+        "practice": "A vélo",
+        "published": "NON",
+        "reason": "Autre pratique"
+      },
+      {
+        "sourceFeatureId": 71,
+        "name": "Les Marais de l'Aure - 30 km",
+        "practice": "A vélo",
+        "published": "NON",
+        "reason": "Autre pratique"
+      },
+      {
+        "sourceFeatureId": 72,
+        "name": "De la Maison du Parc au port de Carentan",
+        "practice": "A vélo",
+        "published": "OUI",
+        "reason": "Autre pratique"
+      },
+      {
+        "sourceFeatureId": 73,
+        "name": "De la Maison du Parc à la Pointe de Brévands",
+        "practice": "A vélo",
+        "published": "OUI",
+        "reason": "Autre pratique"
+      },
+      {
+        "sourceFeatureId": 74,
+        "name": "La Baie des Veys",
+        "practice": "A vélo",
+        "published": "OUI",
+        "reason": "Autre pratique"
+      },
+      {
+        "sourceFeatureId": 75,
+        "name": "De la Maison du Parc à la Pointe de Brévands puis Saint-Hilaire",
+        "practice": "A vélo",
+        "published": "OUI",
+        "reason": "Autre pratique"
+      },
+      {
+        "sourceFeatureId": 76,
+        "name": "La Baie des Veys",
+        "practice": "A vélo",
+        "published": "NON",
+        "reason": "Autre pratique"
+      },
+      {
+        "sourceFeatureId": 77,
+        "name": "Les rives des marais de Graignes",
+        "practice": "A vélo",
+        "published": "OUI",
+        "reason": "Autre pratique"
+      },
+      {
+        "sourceFeatureId": 78,
+        "name": "De la Maison du Parc au Grand Vey",
+        "practice": "A vélo",
+        "published": "OUI",
+        "reason": "Autre pratique"
+      },
+      {
+        "sourceFeatureId": 79,
+        "name": "De la Maison du Parc à Utah Beach",
+        "practice": "A vélo",
+        "published": "OUI",
+        "reason": "Autre pratique"
+      },
+      {
+        "sourceFeatureId": 80,
+        "name": "De la Maison du Parc au Grand Vey - retour par Brucheville",
+        "practice": "A vélo",
+        "published": "OUI",
+        "reason": "Autre pratique"
+      },
+      {
+        "sourceFeatureId": 81,
+        "name": "De la Maison du Parc au Grand Vey - retour par les villages",
+        "practice": "A vélo",
+        "published": "OUI",
+        "reason": "Autre pratique"
+      },
+      {
+        "sourceFeatureId": 82,
+        "name": "Les balcons du Val de Saire",
+        "practice": "A VTT",
+        "published": "OUI",
+        "reason": "Autre pratique"
+      },
+      {
+        "sourceFeatureId": 83,
+        "name": "Sur les chemins de l'histoire",
+        "practice": "A VTT",
+        "published": "OUI",
+        "reason": "Autre pratique"
+      },
+      {
+        "sourceFeatureId": 84,
+        "name": "Autour de Sainte-Mère-Eglise",
+        "practice": "A VTT",
+        "published": "OUI",
+        "reason": "Autre pratique"
+      },
+      {
+        "sourceFeatureId": 85,
+        "name": "La Baie des Veys",
+        "practice": "A VTT",
+        "published": "OUI",
+        "reason": "Autre pratique"
+      },
+      {
+        "sourceFeatureId": 86,
+        "name": "De la Madeleine à la Marguerie",
+        "practice": "A VTT",
+        "published": "OUI",
+        "reason": "Autre pratique"
+      },
+      {
+        "sourceFeatureId": 87,
+        "name": "Landes et marais",
+        "practice": "A VTT",
+        "published": "OUI",
+        "reason": "Autre pratique"
+      },
+      {
+        "sourceFeatureId": 88,
+        "name": "La lande de Lessay",
+        "practice": "A VTT",
+        "published": "OUI",
+        "reason": "Autre pratique"
+      },
+      {
+        "sourceFeatureId": 89,
+        "name": "Le circuit des hôtels",
+        "practice": "A VTT",
+        "published": "OUI",
+        "reason": "Autre pratique"
+      },
+      {
+        "sourceFeatureId": 90,
+        "name": "Le circuit des Sarcelles",
+        "practice": "A VTT",
+        "published": "OUI",
+        "reason": "Autre pratique"
+      },
+      {
+        "sourceFeatureId": 91,
+        "name": "Le mont Castre",
+        "practice": "A VTT",
+        "published": "OUI",
+        "reason": "Autre pratique"
+      },
+      {
+        "sourceFeatureId": 92,
+        "name": "Le mont de Doville",
+        "practice": "A VTT",
+        "published": "OUI",
+        "reason": "Autre pratique"
+      },
+      {
+        "sourceFeatureId": 93,
+        "name": "Dans les pas de Barbey d'Aurevilly",
+        "practice": "A VTT",
+        "published": "OUI",
+        "reason": "Autre pratique"
+      },
+      {
+        "sourceFeatureId": 94,
+        "name": "Du pied des moulins jusqu'au littoral",
+        "practice": "A VTT",
+        "published": "NON",
+        "reason": "Autre pratique"
+      },
+      {
+        "sourceFeatureId": 95,
+        "name": "La vallée de l'Elle",
+        "practice": "A VTT",
+        "published": "OUI",
+        "reason": "Autre pratique"
+      },
+      {
+        "sourceFeatureId": 96,
+        "name": "Les dunes de Créances",
+        "practice": "Sentier de découverte",
+        "published": "OUI",
+        "reason": "Autre pratique"
+      },
+      {
+        "sourceFeatureId": 97,
+        "name": "Le mont Castre",
+        "practice": "Sentier de découverte",
+        "published": "OUI",
+        "reason": "Autre pratique"
+      },
+      {
+        "sourceFeatureId": 98,
+        "name": "Le mont de Doville",
+        "practice": "Sentier de découverte",
+        "published": "OUI",
+        "reason": "Autre pratique"
+      },
+      {
+        "sourceFeatureId": 99,
+        "name": "Le Marais Saint-Clair",
+        "practice": "Sentier de découverte",
+        "published": "OUI",
+        "reason": "Autre pratique"
+      },
+      {
+        "sourceFeatureId": 100,
+        "name": "Le sentier du bocage",
+        "practice": "Sentier de découverte",
+        "published": "OUI",
+        "reason": "Autre pratique"
+      },
+      {
+        "sourceFeatureId": 101,
+        "name": "La forêt de Saint-Sauveur",
+        "practice": "Sentier de découverte",
+        "published": "OUI",
+        "reason": "Autre pratique"
+      },
+      {
+        "sourceFeatureId": 102,
+        "name": "Les marais de l'Aure",
+        "practice": "Sentier de découverte",
+        "published": "OUI",
+        "reason": "Autre pratique"
+      },
+      {
+        "sourceFeatureId": 103,
+        "name": "Le Buisson",
+        "practice": "Sentier de découverte",
+        "published": "OUI",
+        "reason": "Autre pratique"
+      },
+      {
+        "sourceFeatureId": 104,
+        "name": "La Montagne",
+        "practice": "Sentier de découverte",
+        "published": "OUI",
+        "reason": "Autre pratique"
+      },
+      {
+        "sourceFeatureId": 105,
+        "name": "La rivière de l'Ay",
+        "practice": "Sentier de découverte",
+        "published": "OUI",
+        "reason": "Autre pratique"
+      },
+      {
+        "sourceFeatureId": 106,
+        "name": "L'oseraie",
+        "practice": "Sentier de découverte",
+        "published": "OUI",
+        "reason": "Autre pratique"
+      },
+      {
+        "sourceFeatureId": 107,
+        "name": "Les marais de l'Elle",
+        "practice": "Sentier de découverte",
+        "published": "OUI",
+        "reason": "Autre pratique"
+      },
+      {
+        "sourceFeatureId": 108,
+        "name": "La roselière des Rouges-Pièces",
+        "practice": "Sentier de découverte",
+        "published": "NON",
+        "reason": "Autre pratique"
+      },
+      {
+        "sourceFeatureId": 109,
+        "name": "La Maison des Ormes",
+        "practice": "Sentier de découverte",
+        "published": "NON",
+        "reason": "Autre pratique"
+      },
+      {
+        "sourceFeatureId": 110,
+        "name": "L'étang de la tuilerie",
+        "practice": "Sentier de découverte",
+        "published": "NON",
+        "reason": "Autre pratique"
+      },
+      {
+        "sourceFeatureId": 111,
+        "name": "Paysages à travers les âges",
+        "practice": "Sentier de découverte",
+        "published": "OUI",
+        "reason": "Autre pratique"
+      },
+      {
+        "sourceFeatureId": 112,
+        "name": "Sentier de découverte d'Aumeville-Lestre",
+        "practice": "Sentier de découverte",
+        "published": "OUI",
+        "reason": "Autre pratique"
+      },
+      {
+        "sourceFeatureId": 113,
+        "name": "Cap sur Morsalines",
+        "practice": "Sentier de découverte",
+        "published": "OUI",
+        "reason": "Autre pratique"
+      },
+      {
+        "sourceFeatureId": 115,
+        "name": "Le Géosite",
+        "practice": "Sentier de découverte",
+        "published": "OUI",
+        "reason": "Autre pratique"
+      },
+      {
+        "sourceFeatureId": 116,
+        "name": "Le lac des bruyères",
+        "practice": "Sentier de découverte",
+        "published": "OUI",
+        "reason": "Autre pratique"
+      },
+      {
+        "sourceFeatureId": 117,
+        "name": "Le long de la Douve",
+        "practice": "Sentier de découverte",
+        "published": "NON",
+        "reason": "Autre pratique"
+      },
+      {
+        "sourceFeatureId": 118,
+        "name": "Le lac des bruyères",
+        "practice": "PMR",
+        "published": "OUI",
+        "reason": "Autre pratique"
+      },
+      {
+        "sourceFeatureId": 119,
+        "name": "Espace naturel sensible des marais des Ponts d'Ouve",
+        "practice": "Sentier de découverte",
+        "published": "OUI",
+        "reason": "Autre pratique"
+      },
+      {
+        "sourceFeatureId": 120,
+        "name": "Espace naturel sensible des marais des Ponts d'Ouve",
+        "practice": "PMR",
+        "published": "OUI",
+        "reason": "Autre pratique"
+      },
+      {
+        "sourceFeatureId": 121,
+        "name": "Les landes de Saint-Patrice",
+        "practice": "Sentier de découverte",
+        "published": "OUI",
+        "reason": "Autre pratique"
+      },
+      {
+        "sourceFeatureId": 122,
+        "name": "Au coeur des marais",
+        "practice": "A pied",
+        "published": "NON",
+        "reason": "Variante non publiée (AGO_APPLI différent de OUI)"
+      },
+      {
+        "sourceFeatureId": 123,
+        "name": "Carrière, manoirs et marais de Fresville",
+        "practice": "A pied",
+        "published": "NON",
+        "reason": "Variante non publiée (AGO_APPLI différent de OUI)"
+      },
+      {
+        "sourceFeatureId": 124,
+        "name": "Les vieilles pierres du mont Castre",
+        "practice": "A pied",
+        "published": "NON",
+        "reason": "Variante non publiée (AGO_APPLI différent de OUI)"
+      },
+      {
+        "sourceFeatureId": 125,
+        "name": "Les vieilles pierres du mont Castre",
+        "practice": "A pied",
+        "published": "NON",
+        "reason": "Variante non publiée (AGO_APPLI différent de OUI)"
+      },
+      {
+        "sourceFeatureId": 126,
+        "name": "De la Sinope à la mer",
+        "practice": "A pied",
+        "published": "NON",
+        "reason": "Variante non publiée (AGO_APPLI différent de OUI)"
+      },
+      {
+        "sourceFeatureId": 127,
+        "name": " ",
+        "practice": "A pied",
+        "published": " ",
+        "reason": "Variante non publiée (AGO_APPLI différent de OUI)"
+      },
+      {
+        "sourceFeatureId": 133,
+        "name": "Les Marais de l'Aure - 44 km",
+        "practice": "A vélo",
+        "published": "OUI",
+        "reason": "Autre pratique"
+      },
+      {
+        "sourceFeatureId": 134,
+        "name": "Les Marais de l'Aure - 30 km",
+        "practice": "A vélo",
+        "published": "OUI",
+        "reason": "Autre pratique"
+      },
+      {
+        "sourceFeatureId": 135,
+        "name": " ",
+        "practice": " ",
+        "published": " ",
+        "reason": "Autre pratique"
+      },
+      {
+        "sourceFeatureId": 137,
+        "name": "A l'entour de Sainte-Marie-du-Mont",
+        "practice": "A pied",
+        "published": "NON",
+        "reason": "Variante non publiée (AGO_APPLI différent de OUI)"
+      },
+      {
+        "sourceFeatureId": 138,
+        "name": " ",
+        "practice": " ",
+        "published": " ",
+        "reason": "Autre pratique"
+      },
+      {
+        "sourceFeatureId": 139,
+        "name": "A l'entour de Sainte-Marie-du-Mont",
+        "practice": "A pied",
+        "published": "NON",
+        "reason": "Variante non publiée (AGO_APPLI différent de OUI)"
+      },
+      {
+        "sourceFeatureId": 140,
+        "name": "La réserve naturelle nationale du domaine de Beauguillot",
+        "practice": "Sentier de découverte",
+        "published": "OUI",
+        "reason": "Autre pratique"
+      },
+      {
+        "sourceFeatureId": 141,
+        "name": "Le mont de Doville",
+        "practice": "A VTT",
+        "published": "OUI",
+        "reason": "Autre pratique"
+      },
+      {
+        "sourceFeatureId": 142,
+        "name": "Le mont de Doville",
+        "practice": "A VTT",
+        "published": "OUI",
+        "reason": "Autre pratique"
+      },
+      {
+        "sourceFeatureId": 144,
+        "name": "Boucle Neptune",
+        "practice": "A vélo",
+        "published": "OUI",
+        "reason": "Autre pratique"
+      }
+    ]
+  },
+  "geometryComparison": {
+    "snapshotRecords": 1382,
+    "validatedWithEquivalentExistingGeometry": 2,
+    "note": "Ce bilan ne mesure pas des ajouts nets : la construction applique encore ses contrôles et rapproche les 48 fiches historiques."
+  }
+}

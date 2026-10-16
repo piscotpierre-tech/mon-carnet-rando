@@ -1,6 +1,6 @@
 # Mon carnet rando - Pierre
 
-Application personnelle de randonnée, autonome et compatible GitHub Pages. Le catalogue est désormais construit à partir de 1 431 références pédestres officielles recensées le 16 octobre 2026. Son état exact est visible dans « Couverture par département » et dans `assets/catalogue.json`. Les références sans GPX, les incohérences de distance et les doublons restent identifiés. La couverture exhaustive de toute la Normandie n’est pas établie.
+Application personnelle de randonnée, autonome et compatible GitHub Pages. Le catalogue est construit à partir du catalogue régional, des cinq catalogues départementaux repérés et de registres officiels complémentaires. Son état exact est visible dans « Couverture par département » et dans `assets/catalogue.json` : ces compteurs décrivent la version réellement construite. Les références sans GPX, les incohérences de distance et les doublons restent identifiés. La couverture exhaustive de toute la Normandie n’est pas établie.
 
 Les 48 circuits précédents sont conservés : 28 cartes viennent du fichier fourni **Plan Balisage GTM.PDF**, document de travail de la FFRandonnée Manche du 10 février 2022, complétés par 20 circuits et GPX officiels consultés le 15 octobre 2026.
 
@@ -75,7 +75,7 @@ Les tests du service worker utilisent une simulation Node ; ils ne remplacent pa
 
 Leaflet 1.9.4 est embarqué dans assets/vendor/leaflet avec sa licence. Le fond © OpenStreetMap contributors est demandé seulement pendant la consultation interactive, avec attribution visible. Les tuiles externes sont exclues du service worker et du téléchargement hors ligne ; seul le cache HTTP normal du navigateur s’applique. Les cartes IGN complètes, profils du relief, GPX et GeoJSON locaux peuvent être gardés hors ligne. Sans réseau, la carte agrandissable conserve son fond IGN ; la carte interactive utilise aussi cette image géoréférencée autour du parcours. Seule l’exploration au-delà de cette emprise nécessite le fond en ligne.
 
-La clé de stockage et les identifiants des 28 anciens circuits sont conservés. Les exports JSON de l’ancienne version restent compatibles.
+La clé de stockage `pierre-rando:v1` et les identifiants des 48 circuits historiques sont conservés. Les exports JSON de l’ancienne version restent compatibles.
 
 ## Reconstruire les cartes IGN
 
@@ -114,3 +114,9 @@ Les identifiants SIT communs sont rapprochés avant import. Les sources à ident
 `catalogue/inventaire-complementaire.json` contient 446 références supplémentaires et les GPX récupérés pour neuf fiches régionales auparavant incomplètes. Les 1 431 références ne sont pas autant de circuits distincts. Les circuits du PDESI sont datés de janvier 2025 et leur distance est calculée sur la géométrie publiée. Leur GPX est un export du carnet ; le GeoJSON original est lié séparément. Les fiches Orne utilisent, lorsqu’ils sont fournis, le départ, le stationnement, la durée et les dénivelés annoncés par Orne Tourisme.
 
 La couverture exhaustive de tous les chemins normands reste non démontrée. Les fichiers manquants, variantes incohérentes, itinéraires interdépartementaux à vérifier et registres non accessibles restent visibles ou documentés. Un registre qualité Calvados ne répondait pas (HTTP 502) lors de cette collecte.
+
+### Compléments PNR et vérification en navigateur
+
+Le constructeur charge tous les fichiers `catalogue/inventaire-*.json` ; les identifiants source doivent être uniques et chaque nouvel identifiant de circuit est réservé dans `catalogue/route-ids.json`. Les registres Perche (131 références pédestres normandes) et Marais Cotentin-Bessin (35 références pédestres publiées) portent le suivi à **1 597 références** avant déduplication. Les 22 réparations de format GPX n’ajoutent pas de références. Les 48 fiches historiques ne sont pas remplacées. Voir SOURCES.md pour les méthodes, éditions anciennes et fichiers refusés.
+
+La publication exécute désormais un vrai Chromium : 360, 390 et 430 px, une carte par département, profils, destinations Maps, téléchargements GPX, export/import via l’interface, état synthétique au format historique et coupure réseau après téléchargement. Un cas GeoJSON vérifie le libellé d’export GPX. Les captures et `report.json` sont conservés dans l’artifact Actions « essais-navigateur-mobile ». Une étape ajoutée au workflow n’est pas un résultat de test : consulter son succès et le rapport de la construction concernée. Le téléphone Android réel et l’installation PWA restent des contrôles distincts.

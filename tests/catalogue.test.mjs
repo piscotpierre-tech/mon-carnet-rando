@@ -13,8 +13,9 @@ test('le catalogue conserve les circuits originaux et les identifiants des sorti
 test('aucune fiche officielle ne disparaît du suivi, même sans fichier exploitable',()=>{
   const source=JSON.parse(fs.readFileSync(new URL('../catalogue/inventaire-regional.json',import.meta.url)));
   const report=JSON.parse(fs.readFileSync(new URL('../assets/catalogue.json',import.meta.url)));
-  const extraPath=new URL('../catalogue/inventaire-complementaire.json',import.meta.url);
-  const extra=fs.existsSync(extraPath)?JSON.parse(fs.readFileSync(extraPath)).records:[];
+  const folder=new URL('../catalogue/',import.meta.url);
+  const extra=fs.readdirSync(folder).filter(p=>/^inventaire-.*\.json$/.test(p)&&p!=='inventaire-regional.json')
+    .flatMap(p=>JSON.parse(fs.readFileSync(new URL(p,folder))).records||[]);
   const expected=[...source.records,...extra];
   assert.equal(source.collectedTotal,source.records.length);
   assert.equal(expected.length,report.records.length);

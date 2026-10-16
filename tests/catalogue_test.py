@@ -1,7 +1,11 @@
 import importlib
+import copy
+import json
 from pathlib import Path
 import sys
+import tempfile
 import unittest
+from unittest.mock import patch
 
 sys.path.insert(0,str(Path(__file__).resolve().parent.parent/'scripts'))
 prepare=importlib.import_module('prepare-catalogue')
@@ -49,6 +53,105 @@ class CatalogueTests(unittest.TestCase):
         a=[[[0,49],[.01,49],[.01,49.01]]]
         for b in [[[[0,49.0001],[.01,49.0001],[.01,49.0101]]],[[[0,49],[.01,49.01]]]]:
             self.assertFalse(comparison.equivalent(comparison.describe(a),comparison.describe(b)))
+
+    def test_nominal_historical_match_does_not_discard_a_different_trace(self):
+        original={'id':40,'name':'Cap de Carteret','town':'Carteret','km':9.8}
+        record={'name':'Cap de Carteret','town':'Carteret','km':10,
+                'segments':[[[0,49],[.01,49],[.01,49.01]]]}
+        names={(prepare.normal(original['name']),prepare.normal(original['town'])):original}
+        shape=comparison.describe([[[0,49.0001],[.01,49.0001],[.01,49.0101]]])
+        existing,hints=build.historical_match(record,{},names,{40:shape})
+        self.assertIsNone(existing)
+        self.assertEqual(hints['historicalNameMatch']['routeId'],40)
+        self.assertEqual(hints['historicalNameMatch']['status'],'a-verifier')
+
+    def test_nominal_historical_match_without_geometry_remains_unconfirmed(self):
+        original={'id':1,'name':'Les quatre chemins','town':'Commune','km':4}
+        record={'name':'Les quatre chemins','town':'Commune','km':3.8,
+                'segments':[[[0,49],[.01,49],[.01,49.01]]]}
+        names={(prepare.normal(original['name']),prepare.normal(original['town'])):original}
+        existing,hints=build.historical_match(record,{},names,{})
+        self.assertIsNone(existing)
+        self.assertEqual(hints['historicalNameMatch']['status'],'a-verifier')
+
+    def test_same_gpx_url_with_changed_geometry_is_retained_and_documented(self):
+        original={'id':40,'name':'Un parcours','town':'Commune','km':10}
+        record={'name':'Autre libellé','town':'Commune','km':10,'gpxSource':'https://example.org/current.gpx',
+                'segments':[[[0,49],[.01,49],[.01,49.01]]]}
+        original_shape=comparison.describe([[[0,49.0001],[.01,49.0001],[.01,49.0101]]])
+        existing,hints=build.historical_match(record,{record['gpxSource']:original},{},{40:original_shape})
+        self.assertIsNone(existing)
+        self.assertEqual(hints['historicalSourceMatch']['geometryComparison'],'differente')
+        existing,hints=build.historical_match(record,{record['gpxSource']:original},{},
+                                             {40:comparison.describe(record['segments'])})
+        self.assertEqual(existing['id'],40)
+        self.assertEqual(hints['historicalSourceMatch']['geometryComparison'],'equivalente')
+
+    def test_cached_missing_relief_retries_without_rebuilding_its_map(self):
+        record={'sourceId':'retry-test','segments':[[[.001*i,49] for i in range(6)]],
+                'route':{'id':1001,'sourceId':'retry-test','name':'Parcours test','gpxSource':'https://example.org/test.gpx',
+                         'gpx':'assets/traces/1001.gpx','trace':'assets/traces/1001.geojson','tracePointCount':6}}
+        signature=build.rendering_version()
+        with tempfile.TemporaryDirectory() as directory:
+            root=Path(directory)
+            for folder in ['records','assets/traces','assets/profiles']:(root/folder).mkdir(parents=True)
+            attempts=[]
+            summary={'ascent':10,'descent':15,'profile':'assets/profiles/1001.json'}
+            def elevation(route):
+                attempts.append(route.get('elevationMethod'))
+                if len(attempts)==1:raise TimeoutError('Temporary IGN failure')
+                (root/summary['profile']).write_text(json.dumps({'summary':summary}))
+            with patch.object(build,'GENERATED',root),patch.object(build,'rendering_version',return_value=signature),\
+                 patch.object(build,'build_map') as map_builder,patch.object(build.elevations,'build',side_effect=elevation):
+                first=build.build(copy.deepcopy(record))
+                self.assertIn('elevationIssue',first)
+                second=build.build(copy.deepcopy(record))
+                self.assertEqual(len(attempts),2)
+                self.assertEqual(map_builder.call_count,1)
+                self.assertEqual(second['route']['elevation'],summary)
+                self.assertNotIn('elevationIssue',second)
+                self.assertNotIn('elevationIssue',second['route'])
+                saved=json.loads((root/'records/1001.json').read_text())
+                self.assertEqual(saved,second)
+
+    def test_cached_relief_retry_requires_both_local_trace_files(self):
+        route={'id':1001,'trace':'assets/traces/1001.geojson','gpx':'assets/traces/1001.gpx'}
+        cached={'route':route,'elevationIssue':'Previous failure'}
+        with tempfile.TemporaryDirectory() as directory:
+            root=Path(directory);(root/'assets/traces').mkdir(parents=True)
+            (root/route['trace']).write_text('{}')
+            with patch.object(build,'GENERATED',root),patch.object(build.elevations,'build') as elevation:
+                result=build.retry_cached_elevation(cached,{},root/'unused.json')
+                elevation.assert_not_called()
+                self.assertEqual(result,cached)
+                self.assertFalse((root/'unused.json').exists())
+
+    def test_cached_relief_uses_gpx_fallback_only_for_complete_plausible_altitudes(self):
+        for heights,expected_attempts in [([10,11,12,13,14,15],2),
+                                          ([10,11,None,13,14,15],1),
+                                          ([10,11,1501,13,14,15],1)]:
+            with self.subTest(heights=heights),tempfile.TemporaryDirectory() as directory:
+                root=Path(directory)
+                for folder in ['records','assets/traces','assets/profiles']:(root/folder).mkdir(parents=True)
+                route={'id':1001,'trace':'assets/traces/1001.geojson','gpx':'assets/traces/1001.gpx',
+                       'tracePointCount':6,'elevationIssue':'Previous failure'}
+                for field in ['trace','gpx']:(root/route[field]).write_text('source exists')
+                cached={'route':route,'elevationIssue':'Previous failure'}
+                segments=[[[.001*i,49]+([z] if z is not None else []) for i,z in enumerate(heights)]]
+                methods=[]
+                def elevation(r):
+                    methods.append(r.get('elevationMethod'))
+                    if r.get('elevationMethod')!='gpx':raise TimeoutError('IGN unavailable')
+                    (root/'assets/profiles/1001.json').write_text(json.dumps({'summary':{'ascent':5,'descent':0}}))
+                with patch.object(build,'GENERATED',root),patch.object(build.elevations,'build',side_effect=elevation):
+                    result=build.retry_cached_elevation(cached,{'segments':segments},root/'records/1001.json')
+                self.assertEqual(len(methods),expected_attempts)
+                if expected_attempts==2:
+                    self.assertEqual(methods,[None,'gpx'])
+                    self.assertNotIn('elevationIssue',result)
+                else:
+                    self.assertIn('elevationIssue',result)
+                    self.assertNotIn('elevationMethod',result['route'])
 
     def test_relief_rounding_uses_the_same_precision_as_its_provenance(self):
         for raw,expected in [(87.49999999999997,90),(87.50000000000003,90),(87.499,85),(87.501,90),(0,0)]:

@@ -65,6 +65,30 @@ def canonical(segments):
     return hashlib.sha256(repr(sorted(parts)).encode()).hexdigest()
 
 
+def historical_match(record, by_url, by_name, original_shapes):
+    """A similar label is an audit hint, never proof that a trace is redundant."""
+    hints = {}
+    existing = by_url.get(record.get('gpxSource')) if record.get('gpxSource') else None
+    if existing and record.get('segments') and existing['id'] in original_shapes:
+        equivalent = comparison.equivalent(comparison.describe(record['segments']), original_shapes[existing['id']])
+        hints['historicalSourceMatch'] = {
+            'routeId': existing['id'],
+            'geometryComparison': 'equivalente' if equivalent else 'differente',
+            'reason': 'Même URL GPX ; comparaison avec la trace historique conservée.',
+        }
+        # An official URL can be updated in place. Keep a divergent trace rather
+        # than silently discarding it because its download address is unchanged.
+        if not equivalent:
+            existing = None
+    name_match = by_name.get((prepare.normal(record['name']), prepare.normal(record['town'])))
+    if name_match and record.get('km') and abs(record['km'] - name_match['km']) <= max(.4, name_match['km'] * .08):
+        hints['historicalNameMatch'] = {
+            'routeId': name_match['id'], 'status': 'a-verifier',
+            'reason': 'Même nom, commune et distance compatible ; rapprochement nominal non confirmé.',
+        }
+    return existing, hints
+
+
 def build_map(route):
     """One WMS request per circuit; thumbnail is resized from the same full map."""
     raw_geo = (GENERATED / route['trace']).read_bytes()
@@ -108,6 +132,34 @@ def write_geometry(route, segments):
     ET.ElementTree(root).write(GENERATED / route['gpx'],encoding='utf-8',xml_declaration=True)
 
 
+def retry_cached_elevation(cached, record, checkpoint):
+    """Retry only missing relief; retain the already built map and geometry."""
+    r = cached['route']
+    if not all((GENERATED / r[field]).is_file() for field in ['trace', 'gpx']):
+        # A profile must never be built against an absent cached source. The
+        # final file checks will identify this incomplete cache separately.
+        return cached
+    try:
+        heights = [p[2] for s in record['segments'] for p in s if len(p) > 2]
+        all_heights = len(heights) == r['tracePointCount'] and all(-25 <= h <= 1500 for h in heights)
+        try:
+            elevations.build(r)
+        except Exception:
+            if not (all_heights and max(heights) - min(heights) > .5):
+                raise
+            r['elevationMethod'] = 'gpx'
+            elevations.build(r)
+        r['elevation'] = json.loads((GENERATED / f"assets/profiles/{r['id']}.json").read_text())['summary']
+        r.pop('elevationIssue', None)
+        cached.pop('elevationIssue', None)
+    except Exception as error:
+        r.pop('elevationMethod', None)
+        r['elevationIssue'] = 'Relief non calculable avec les données disponibles.'
+        cached['elevationIssue'] = str(error)
+    checkpoint.write_text(json.dumps(cached, ensure_ascii=False, separators=(',', ':')) + '\n')
+    return cached
+
+
 def build(record):
     r=record['route']
     checkpoint=GENERATED / f"records/{r['id']}.json"
@@ -115,7 +167,7 @@ def build(record):
     if checkpoint.exists():
         old=json.loads(checkpoint.read_text())
         if old.get('sourceHash')==source_hash:
-            return old
+            return retry_cached_elevation(old, record, checkpoint) if old.get('elevationIssue') else old
     result={'sourceId':record['sourceId'],'routeId':r['id'],'sourceHash':source_hash}
     try:
         write_geometry(r,record['segments'])
@@ -146,10 +198,16 @@ def build(record):
 def main():
     inventory=json.loads((ROOT / 'catalogue/inventaire-regional.json').read_text())
     regional_total=inventory['collectedTotal']
-    extra_path=ROOT/'catalogue/inventaire-complementaire.json'
-    extra=json.loads(extra_path.read_text()) if extra_path.exists() else {'records':[],'overrides':[],'sources':[]}
+    extra={'records':[],'overrides':[],'sources':[]}
+    for path in sorted((ROOT/'catalogue').glob('inventaire-*.json')):
+        if path.name=='inventaire-regional.json':continue
+        additional=json.loads(path.read_text())
+        for field in extra:extra[field].extend(additional.get(field,[]))
     overrides={r['sourceId']:r for r in extra['overrides']}
     inventory['records']=[overrides.get(r['sourceId'],r) for r in inventory['records']]+extra['records']
+    source_ids=[r['sourceId'] for r in inventory['records']]
+    if len(source_ids)!=len(set(source_ids)):
+        raise ValueError('Un identifiant source est présent dans plusieurs inventaires : rapprochement requis avant publication.')
     originals=json.loads(subprocess.check_output(['node','--input-type=module','-e',
         "import{ORIGINAL_ROUTES}from'./data.js';console.log(JSON.stringify(ORIGINAL_ROUTES))"],cwd=ROOT))
     ids_path=ROOT / 'catalogue/route-ids.json'
@@ -167,26 +225,26 @@ def main():
             if i%50==0:print(f"Sources {i}/{len(inventory['records'])}",flush=True)
     by_url={r.get('gpxSource') or r.get('elevationTraceSource'):r for r in originals if r.get('gpxSource') or r.get('elevationTraceSource')}
     by_name={(prepare.normal(r['name']),prepare.normal(r['town'])):r for r in originals}
-    geometry_keys={};geometry_shapes=[]
+    geometry_keys={};geometry_shapes=[];original_shapes={}
     for r in originals:
         if r.get('trace'):
             geo=json.loads((ROOT/r['trace']).read_text())['geometry']
             segs=[geo['coordinates']] if geo['type']=='LineString' else geo['coordinates']
             geometry_keys[canonical(segs)]=r['id']
-            geometry_shapes.append((r['id'],comparison.describe(segs)))
+            original_shapes[r['id']]=comparison.describe(segs)
+            geometry_shapes.append((r['id'],original_shapes[r['id']]))
         elif r.get('elevationTrace'):
             segs=prepare.parse((ROOT/r['elevationTrace']).read_bytes())
             geometry_keys[canonical(segs)]=r['id']
-            geometry_shapes.append((r['id'],comparison.describe(segs)))
+            original_shapes[r['id']]=comparison.describe(segs)
+            geometry_shapes.append((r['id'],original_shapes[r['id']]))
     candidates=[];report=[]
     for record in records:
         item={k:v for k,v in record.items() if k!='segments'}
-        existing=by_url.get(record.get('gpxSource')) if record.get('gpxSource') else None
-        name_match=by_name.get((prepare.normal(record['name']),prepare.normal(record['town'])))
-        if not existing and name_match and record.get('km') and abs(record['km']-name_match['km'])<=max(.4,name_match['km']*.08):
-            existing=name_match
+        existing,hints=historical_match(record,by_url,by_name,original_shapes)
+        item.update(hints)
         if existing:
-            item.update(status='deja-present',routeId=existing['id'],duplicateReason='Même GPX publié ou même nom, commune et distance compatible')
+            item.update(status='deja-present',routeId=existing['id'],duplicateReason='Même source GPX publiée, sans divergence géométrique constatée.')
         elif record['status']=='trace-verifiee' and record.get('department'):
             key=canonical(record['segments'])
             shape=None;near_match=None
@@ -215,6 +273,11 @@ def main():
                    'tracePointCount':record['pointCount'],'geometryKm':record['geometryKm'],
                    'map':f'assets/maps/{route_id}-ign.webp','thumb':f'assets/thumbs/{route_id}-ign.webp','basemap':'IGN Plan IGN'}
                 if record.get('gpxSha256'):r['gpxSourceSha256']=record['gpxSha256']
+                if record.get('pdf') or record.get('sourcePdf'):r['pdf']=record.get('pdf') or record['sourcePdf']
+                if record.get('sourceMarking'):r['marking']=record['sourceMarking']
+                if record.get('sourceDifficulty'):r['difficulty']=record['sourceDifficulty']
+                for field in ['sourceEdition','sourceApi','sourceApiSha256','sourceApiPages','sourceAdvisedParking','sourceDatasetSha256','sourceFeatureId','sourceUpdatedAt','sourceCityCodes','sourceDepartureCityCode','scopeEvidence','gpxRepairs','validatedGpxSha256']:
+                    if record.get(field) is not None:r[field]=record[field]
                 if record.get('sourceFormat')=='GeoJSON':
                     r.update(originalFormat='GeoJSON',sourceEdition=record['sourceEdition'],
                              sourceDatasetSha256=record['sourceDatasetSha256'],sourceFeatureId=record['sourceFeatureId'],
@@ -226,10 +289,24 @@ def main():
                     r['startCoordinate']=record['sourceParking']
                     r['departurePrecision']='source'
                     r['note']='Le stationnement et le départ sont indiqués par l’organisme. Vérifie les conditions actuelles sur sa fiche.'
+                if record.get('scopeEvidence',{}).get('departureInNormandy') is False:
+                    r['note']+=' Parcours interdépartemental : le départ publié est hors de Normandie ; des communes normandes traversées sont explicitement indiquées par le portail.'
+                if record.get('sourceEdition') and record.get('sourceFormat')!='GeoJSON':
+                    r['note']+=' Source : '+str(record['sourceEdition'])+'.'
+                parking_text=record.get('sourceParkingDescription') or record.get('sourceAdvisedParking')
+                if parking_text:
+                    r['note']+=' Stationnement indiqué par l’organisme : '+str(parking_text)+'.'
+                if record.get('gpxRepairs'):
+                    r['note']+=' Un défaut de format du fichier officiel a été corrigé sans modifier ses coordonnées ; le fichier original reste accessible.'
                 for field,target in [('sourceDurationMinutes','durationMinutes'),('sourceAscent','elevationGain'),('sourceDescent','elevationLoss')]:
                     if record.get(field) is not None:r[target]=record[field]
+                if hints:
+                    r.update(hints)
+                    r['note']+=' Une fiche historique ressemble à ce parcours ; leur correspondance reste à vérifier, les traces sont conservées séparément.'
                 candidates.append({**record,'route':r})
                 item.update(status='a-construire',routeId=route_id)
+        elif record['status']=='trace-verifiee':
+            item.update(status='departement-a-verifier',issue='Répartition départementale du parcours à confirmer avant intégration.')
         report.append(item)
     print(f"Construction de {len(candidates)} circuits supplémentaires",flush=True)
     if '--only' in sys.argv:
@@ -257,7 +334,7 @@ def main():
     output={k:v for k,v in inventory.items() if k not in ['records','pages']}
     output.update(records=report,collectedTotal=len(report),regionalTotal=regional_total,sourceCatalogues=extra['sources'],integratedNew=len(routes),usableTotal=len(originals)+len(routes),
                   withProfiles=sum(bool(r.get('elevation')) for r in originals+routes),
-                  exhaustiveNormandy=False,departmentReconciliation='À poursuivre : catalogues départementaux, offices locaux et itinéraires non publiés dans ce catalogue régional.')
+                  exhaustiveNormandy=False,departmentReconciliation='À poursuivre : autres registres officiels, offices locaux, GR et variantes ; les références sans trace exploitable restent identifiées.')
     (ROOT / 'assets/catalogue.json').write_text(json.dumps(output,ensure_ascii=False,separators=(',',':'))+'\n')
     print(f"Publié : {len(originals)+len(routes)} circuits utilisables ; {len(report)} références inventoriées",flush=True)
 

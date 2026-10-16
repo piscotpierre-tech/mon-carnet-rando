@@ -1,0 +1,2518 @@
+{
+  "checkedAt": "2026-10-16T14:45:34.514191+00:00",
+  "knownSnapshotReferences": 1431,
+  "knownSnapshots": [
+    {
+      "path": "catalogue/snapshots/14.json.gz",
+      "sha256": "da34afeb56217187787e1d80ea9ec392e5f34ed50d6bd2631822474ef5f63ad3",
+      "rows": 265
+    },
+    {
+      "path": "catalogue/snapshots/27.json.gz",
+      "sha256": "94325b7d9735b443a3d37c9b3920c6f2732e3289bf062e999fadcd485fb40d7c",
+      "rows": 107
+    },
+    {
+      "path": "catalogue/snapshots/50.json.gz",
+      "sha256": "275a53488268f6d4a09399c7672f076282311a738f476a7cd960e2bb0cb19b32",
+      "rows": 168
+    },
+    {
+      "path": "catalogue/snapshots/61.json.gz",
+      "sha256": "34df92eb31a4c3e898683eb8653af4cdb2b07335dc2aa327425294fb094cbc2e",
+      "rows": 118
+    },
+    {
+      "path": "catalogue/snapshots/76.json.gz",
+      "sha256": "30f4fbd860a6dda1e35e0a7f63b982b32b8926c4296a1c764ac323269286f781",
+      "rows": 325
+    },
+    {
+      "path": "catalogue/snapshots/cd76.json.gz",
+      "sha256": "b870eecfea4828f8d66dbcdaeecb3dda9e694039e91cb4d557e4aef11b7bfd3e",
+      "rows": 267
+    },
+    {
+      "path": "catalogue/snapshots/complements.json.gz",
+      "sha256": "db31fd82ecd574d149c08357b3177d46ef02055a045e5ad500295c0a8020773f",
+      "rows": 188
+    },
+    {
+      "path": "catalogue/snapshots/multi.json.gz",
+      "sha256": "55fa3e5d121b3e8d36888949d8b7151c22e4bae272050c93df030108e75ca94f",
+      "rows": 2
+    },
+    {
+      "path": "catalogue/snapshots/zz-recovered-gpx.json.gz",
+      "sha256": "d8e3f98d6310eb655f6017955107c2612cd1d28fee6a1ef5ae9ade0d3d458be3",
+      "rows": 22
+    }
+  ],
+  "allPracticePortalCount": 298,
+  "publishedWalkingPortalCount": 200,
+  "normandyPublishedWalkingReferences": 131,
+  "excludedNonNormandyCount": 69,
+  "validatedGpx": 131,
+  "referencesMatchingGeometry": 2,
+  "referencesMatchingEarlierPercheGeometry": 0,
+  "newGeometryCandidates": 129,
+  "records": [
+    {
+      "sourceId": "PERCHE-GEOTREK-29502",
+      "name": "Au fil de la Rosière (depuis l'Écomusée du Perche)",
+      "status": "trace-verifiee",
+      "geometryMatches": [],
+      "internalGeometryMatches": [],
+      "nominalHints": [],
+      "sameGpxUrl": [],
+      "sameGpxSha256": [],
+      "newGeometryCandidate": true
+    },
+    {
+      "sourceId": "PERCHE-GEOTREK-225",
+      "name": "Au fil du temps",
+      "status": "trace-verifiee",
+      "geometryMatches": [],
+      "internalGeometryMatches": [],
+      "nominalHints": [
+        {
+          "sourceId": "ITINOR061V508QYQ",
+          "name": "Randonnée à pied dans le Perche Au fil du temps",
+          "km": 7.5
+        },
+        {
+          "sourceId": "ORNE-GEOTREK-27",
+          "name": "Au fil du temps, Mortagne-au-Perche - Randonnée à pied",
+          "km": 7.3
+        }
+      ],
+      "sameGpxUrl": [],
+      "sameGpxSha256": [],
+      "newGeometryCandidate": true
+    },
+    {
+      "sourceId": "PERCHE-GEOTREK-4656",
+      "name": "Au temps des remparts",
+      "status": "trace-verifiee",
+      "geometryMatches": [],
+      "internalGeometryMatches": [],
+      "nominalHints": [
+        {
+          "sourceId": "ORNE-GEOTREK-32627",
+          "name": "Au temps des remparts - Randonnée à pied dans le Perche",
+          "km": 3.1
+        }
+      ],
+      "sameGpxUrl": [],
+      "sameGpxSha256": [],
+      "newGeometryCandidate": true
+    },
+    {
+      "sourceId": "PERCHE-GEOTREK-29397",
+      "name": "Autour du Bois de Saint-Georges",
+      "status": "trace-verifiee",
+      "geometryMatches": [],
+      "internalGeometryMatches": [],
+      "nominalHints": [
+        {
+          "sourceId": "ORNE-GEOTREK-32906",
+          "name": "Autour du bois de Saint Georges - Randonnée à pied dans le Perche",
+          "km": 9.1
+        }
+      ],
+      "sameGpxUrl": [],
+      "sameGpxSha256": [],
+      "newGeometryCandidate": true
+    },
+    {
+      "sourceId": "PERCHE-GEOTREK-28672",
+      "name": "Autour du bourg",
+      "status": "trace-verifiee",
+      "geometryMatches": [],
+      "internalGeometryMatches": [],
+      "nominalHints": [],
+      "sameGpxUrl": [],
+      "sameGpxSha256": [],
+      "newGeometryCandidate": true
+    },
+    {
+      "sourceId": "PERCHE-GEOTREK-423",
+      "name": "Brochard - Le Val-Dieu",
+      "status": "trace-verifiee",
+      "geometryMatches": [],
+      "internalGeometryMatches": [],
+      "nominalHints": [
+        {
+          "sourceId": "ITINOR050V52XR4A",
+          "name": "Le Val",
+          "km": 4.0
+        },
+        {
+          "sourceId": "ORNE-GEOTREK-32628",
+          "name": "Brochard - Le Val Dieu - Randonnée à pied dans le Perche",
+          "km": 7.4
+        }
+      ],
+      "sameGpxUrl": [],
+      "sameGpxSha256": [],
+      "newGeometryCandidate": true
+    },
+    {
+      "sourceId": "PERCHE-GEOTREK-17029",
+      "name": "Charabaux",
+      "status": "trace-verifiee",
+      "geometryMatches": [],
+      "internalGeometryMatches": [],
+      "nominalHints": [],
+      "sameGpxUrl": [],
+      "sameGpxSha256": [],
+      "newGeometryCandidate": true
+    },
+    {
+      "sourceId": "PERCHE-GEOTREK-10634",
+      "name": "Circuit de découverte du patrimoine de Longny-au-Perche",
+      "status": "trace-verifiee",
+      "geometryMatches": [],
+      "internalGeometryMatches": [],
+      "nominalHints": [
+        {
+          "sourceId": "ORNE-GEOTREK-32629",
+          "name": "Circuit de découverte du patrimoine de Longny-au-Perche",
+          "km": 1.7
+        }
+      ],
+      "sameGpxUrl": [],
+      "sameGpxSha256": [],
+      "newGeometryCandidate": true
+    },
+    {
+      "sourceId": "PERCHE-GEOTREK-29691",
+      "name": "Circuit du Patrimoine de Bellême",
+      "status": "trace-verifiee",
+      "geometryMatches": [],
+      "internalGeometryMatches": [],
+      "nominalHints": [],
+      "sameGpxUrl": [],
+      "sameGpxSha256": [],
+      "newGeometryCandidate": true
+    },
+    {
+      "sourceId": "PERCHE-GEOTREK-29690",
+      "name": "Circuit du patrimoine de Mortagne-au-Perche",
+      "status": "trace-verifiee",
+      "geometryMatches": [],
+      "internalGeometryMatches": [],
+      "nominalHints": [],
+      "sameGpxUrl": [],
+      "sameGpxSha256": [],
+      "newGeometryCandidate": true
+    },
+    {
+      "sourceId": "PERCHE-GEOTREK-18925",
+      "name": "Circuit \"Nature et Découverte\"",
+      "status": "trace-verifiee",
+      "geometryMatches": [],
+      "internalGeometryMatches": [],
+      "nominalHints": [],
+      "sameGpxUrl": [],
+      "sameGpxSha256": [],
+      "newGeometryCandidate": true
+    },
+    {
+      "sourceId": "PERCHE-GEOTREK-29336",
+      "name": "Clinchamps",
+      "status": "trace-verifiee",
+      "geometryMatches": [],
+      "internalGeometryMatches": [],
+      "nominalHints": [],
+      "sameGpxUrl": [],
+      "sameGpxSha256": [],
+      "newGeometryCandidate": true
+    },
+    {
+      "sourceId": "PERCHE-GEOTREK-29680",
+      "name": "Découvrir le domaine de Courboyer à son rythme",
+      "status": "trace-verifiee",
+      "geometryMatches": [],
+      "internalGeometryMatches": [],
+      "nominalHints": [],
+      "sameGpxUrl": [],
+      "sameGpxSha256": [],
+      "newGeometryCandidate": true
+    },
+    {
+      "sourceId": "PERCHE-GEOTREK-28665",
+      "name": "D'un calvaire à l'autre",
+      "status": "trace-verifiee",
+      "geometryMatches": [],
+      "internalGeometryMatches": [],
+      "nominalHints": [],
+      "sameGpxUrl": [],
+      "sameGpxSha256": [],
+      "newGeometryCandidate": true
+    },
+    {
+      "sourceId": "PERCHE-GEOTREK-29500",
+      "name": "In Memoriam",
+      "status": "trace-verifiee",
+      "geometryMatches": [],
+      "internalGeometryMatches": [],
+      "nominalHints": [],
+      "sameGpxUrl": [],
+      "sameGpxSha256": [],
+      "newGeometryCandidate": true
+    },
+    {
+      "sourceId": "PERCHE-GEOTREK-16061",
+      "name": "La boucle des Sorciers",
+      "status": "trace-verifiee",
+      "geometryMatches": [],
+      "internalGeometryMatches": [],
+      "nominalHints": [
+        {
+          "sourceId": "ORNE-GEOTREK-32633",
+          "name": "La boucle des Sorciers - Randonnée à pied dans le Perche",
+          "km": 17.5
+        }
+      ],
+      "sameGpxUrl": [],
+      "sameGpxSha256": [],
+      "newGeometryCandidate": true
+    },
+    {
+      "sourceId": "PERCHE-GEOTREK-15892",
+      "name": "La boucle des Trois Moulins",
+      "status": "trace-verifiee",
+      "geometryMatches": [],
+      "internalGeometryMatches": [],
+      "nominalHints": [
+        {
+          "sourceId": "ORNE-GEOTREK-32635",
+          "name": "La boucle des Trois Moulins - Randonnée à pied dans le Perche",
+          "km": 26.2
+        }
+      ],
+      "sameGpxUrl": [],
+      "sameGpxSha256": [],
+      "newGeometryCandidate": true
+    },
+    {
+      "sourceId": "PERCHE-GEOTREK-295",
+      "name": "La Brisardière",
+      "status": "trace-verifiee",
+      "geometryMatches": [],
+      "internalGeometryMatches": [],
+      "nominalHints": [
+        {
+          "sourceId": "ORNE-GEOTREK-32637",
+          "name": "La Brisardière - Randonnée à pied à Longny-au-Perche",
+          "km": 3.6
+        }
+      ],
+      "sameGpxUrl": [],
+      "sameGpxSha256": [],
+      "newGeometryCandidate": true
+    },
+    {
+      "sourceId": "PERCHE-GEOTREK-15761",
+      "name": "La butte du château",
+      "status": "trace-verifiee",
+      "geometryMatches": [],
+      "internalGeometryMatches": [],
+      "nominalHints": [
+        {
+          "sourceId": "ORNE-GEOTREK-32638",
+          "name": "La Butte du Château - Randonnée à pied dans le Perche",
+          "km": 15.9
+        }
+      ],
+      "sameGpxUrl": [],
+      "sameGpxSha256": [],
+      "newGeometryCandidate": true
+    },
+    {
+      "sourceId": "PERCHE-GEOTREK-29404",
+      "name": "La carrière de la gaité",
+      "status": "trace-verifiee",
+      "geometryMatches": [],
+      "internalGeometryMatches": [],
+      "nominalHints": [],
+      "sameGpxUrl": [],
+      "sameGpxSha256": [],
+      "newGeometryCandidate": true
+    },
+    {
+      "sourceId": "PERCHE-GEOTREK-4409",
+      "name": "La chute de Beillard - Départ de La Chapelle",
+      "status": "trace-verifiee",
+      "geometryMatches": [],
+      "internalGeometryMatches": [],
+      "nominalHints": [],
+      "sameGpxUrl": [],
+      "sameGpxSha256": [],
+      "newGeometryCandidate": true
+    },
+    {
+      "sourceId": "PERCHE-GEOTREK-7888",
+      "name": "La chute de Beillard - Départ de Saint-Mard",
+      "status": "trace-verifiee",
+      "geometryMatches": [],
+      "internalGeometryMatches": [],
+      "nominalHints": [],
+      "sameGpxUrl": [],
+      "sameGpxSha256": [],
+      "newGeometryCandidate": true
+    },
+    {
+      "sourceId": "PERCHE-GEOTREK-29493",
+      "name": "La clairière de Saint-Laurent",
+      "status": "trace-verifiee",
+      "geometryMatches": [],
+      "internalGeometryMatches": [],
+      "nominalHints": [],
+      "sameGpxUrl": [],
+      "sameGpxSha256": [],
+      "newGeometryCandidate": true
+    },
+    {
+      "sourceId": "PERCHE-GEOTREK-16339",
+      "name": "La Corbonasière",
+      "status": "trace-verifiee",
+      "geometryMatches": [],
+      "internalGeometryMatches": [],
+      "nominalHints": [
+        {
+          "sourceId": "ITINOR061V50CN3I",
+          "name": "La Corbonasière – Randonnée à pied dans le Perche Ornais",
+          "km": 17.3
+        },
+        {
+          "sourceId": "ORNE-GEOTREK-32761",
+          "name": "La Corbonasière - Randonnée à pied dans le Perche Ornais",
+          "km": 17.3
+        }
+      ],
+      "sameGpxUrl": [],
+      "sameGpxSha256": [],
+      "newGeometryCandidate": true
+    },
+    {
+      "sourceId": "PERCHE-GEOTREK-29501",
+      "name": "La Croix de Lognonet",
+      "status": "trace-verifiee",
+      "geometryMatches": [],
+      "internalGeometryMatches": [],
+      "nominalHints": [],
+      "sameGpxUrl": [],
+      "sameGpxSha256": [],
+      "newGeometryCandidate": true
+    },
+    {
+      "sourceId": "PERCHE-GEOTREK-29719",
+      "name": "La fontaine de la Mélarbière",
+      "status": "trace-verifiee",
+      "geometryMatches": [],
+      "internalGeometryMatches": [],
+      "nominalHints": [],
+      "sameGpxUrl": [],
+      "sameGpxSha256": [],
+      "newGeometryCandidate": true
+    },
+    {
+      "sourceId": "PERCHE-GEOTREK-14557",
+      "name": "La fontaine de Montperthuis",
+      "status": "trace-verifiee",
+      "geometryMatches": [],
+      "internalGeometryMatches": [],
+      "nominalHints": [
+        {
+          "sourceId": "ITINOR061V50ETRD",
+          "name": "Randonnée à pied au coeur du Perche – La fontaine de Montperthuis",
+          "km": 5.1
+        },
+        {
+          "sourceId": "ORNE-GEOTREK-32640",
+          "name": "La fontaine de Montperthuis - Randonnée à pied dans le Perche",
+          "km": 5.1
+        }
+      ],
+      "sameGpxUrl": [],
+      "sameGpxSha256": [],
+      "newGeometryCandidate": true
+    },
+    {
+      "sourceId": "PERCHE-GEOTREK-15591",
+      "name": "La Fontaine Froide",
+      "status": "trace-verifiee",
+      "geometryMatches": [],
+      "internalGeometryMatches": [],
+      "nominalHints": [
+        {
+          "sourceId": "ORNE-GEOTREK-32641",
+          "name": "La Fontaine froide - Randonnée à pied dans le Perche",
+          "km": 9.9
+        }
+      ],
+      "sameGpxUrl": [],
+      "sameGpxSha256": [],
+      "newGeometryCandidate": true
+    },
+    {
+      "sourceId": "PERCHE-GEOTREK-29167",
+      "name": "La Fonte",
+      "status": "trace-verifiee",
+      "geometryMatches": [],
+      "internalGeometryMatches": [],
+      "nominalHints": [],
+      "sameGpxUrl": [],
+      "sameGpxSha256": [],
+      "newGeometryCandidate": true
+    },
+    {
+      "sourceId": "PERCHE-GEOTREK-13551",
+      "name": "La forêt de Hallais",
+      "status": "trace-verifiee",
+      "geometryMatches": [],
+      "internalGeometryMatches": [],
+      "nominalHints": [],
+      "sameGpxUrl": [],
+      "sameGpxSha256": [],
+      "newGeometryCandidate": true
+    },
+    {
+      "sourceId": "PERCHE-GEOTREK-148",
+      "name": "La forêt de Trahant",
+      "status": "trace-verifiee",
+      "geometryMatches": [],
+      "internalGeometryMatches": [],
+      "nominalHints": [
+        {
+          "sourceId": "ITINOR061V507G69",
+          "name": "Randonnée à pied dans le Perche La Forêt de Trahant",
+          "km": 12.5
+        },
+        {
+          "sourceId": "ORNE-GEOTREK-21",
+          "name": "La Forêt de Trahant, Le Perche - Randonnée à pied",
+          "km": 14.0
+        }
+      ],
+      "sameGpxUrl": [],
+      "sameGpxSha256": [],
+      "newGeometryCandidate": true
+    },
+    {
+      "sourceId": "PERCHE-GEOTREK-29169",
+      "name": "La forêt du Perche",
+      "status": "trace-verifiee",
+      "geometryMatches": [],
+      "internalGeometryMatches": [],
+      "nominalHints": [],
+      "sameGpxUrl": [],
+      "sameGpxSha256": [],
+      "newGeometryCandidate": true
+    },
+    {
+      "sourceId": "PERCHE-GEOTREK-18464",
+      "name": "La Grande Brumardière",
+      "status": "trace-verifiee",
+      "geometryMatches": [],
+      "internalGeometryMatches": [],
+      "nominalHints": [
+        {
+          "sourceId": "ORNE-GEOTREK-32645",
+          "name": "La Grande Brumardière - Randonnée à pied dans le Perche",
+          "km": 5.8
+        }
+      ],
+      "sameGpxUrl": [],
+      "sameGpxSha256": [],
+      "newGeometryCandidate": true
+    },
+    {
+      "sourceId": "PERCHE-GEOTREK-527",
+      "name": "La Herse",
+      "status": "trace-verifiee",
+      "geometryMatches": [],
+      "internalGeometryMatches": [],
+      "nominalHints": [],
+      "sameGpxUrl": [],
+      "sameGpxSha256": [],
+      "newGeometryCandidate": true
+    },
+    {
+      "sourceId": "PERCHE-GEOTREK-4456",
+      "name": "La ligne du Tram",
+      "status": "trace-verifiee",
+      "geometryMatches": [],
+      "internalGeometryMatches": [],
+      "nominalHints": [
+        {
+          "sourceId": "ORNE-GEOTREK-32646",
+          "name": "La ligne du Tram - Randonnée à pied dans le Perche",
+          "km": 9.1
+        }
+      ],
+      "sameGpxUrl": [],
+      "sameGpxSha256": [],
+      "newGeometryCandidate": true
+    },
+    {
+      "sourceId": "PERCHE-GEOTREK-11105",
+      "name": "La Maison de Maugis",
+      "status": "trace-verifiee",
+      "geometryMatches": [],
+      "internalGeometryMatches": [],
+      "nominalHints": [
+        {
+          "sourceId": "ORNE-GEOTREK-32648",
+          "name": "La Maison de Maugis - Randonnée à pied dans le Perche",
+          "km": 8.1
+        }
+      ],
+      "sameGpxUrl": [],
+      "sameGpxSha256": [],
+      "newGeometryCandidate": true
+    },
+    {
+      "sourceId": "PERCHE-GEOTREK-16000",
+      "name": "La Maison du Bois",
+      "status": "trace-verifiee",
+      "geometryMatches": [],
+      "internalGeometryMatches": [],
+      "nominalHints": [
+        {
+          "sourceId": "ORNE-GEOTREK-32649",
+          "name": "La Maison du Bois - Randonnée à pied dans le Perche",
+          "km": 9.3
+        }
+      ],
+      "sameGpxUrl": [],
+      "sameGpxSha256": [],
+      "newGeometryCandidate": true
+    },
+    {
+      "sourceId": "PERCHE-GEOTREK-11401",
+      "name": "La marche de l'Ecrevisse",
+      "status": "trace-verifiee",
+      "geometryMatches": [],
+      "internalGeometryMatches": [],
+      "nominalHints": [
+        {
+          "sourceId": "ORNE-GEOTREK-32650",
+          "name": "La marche de l'écrevisse - Randonnée à pied dans le Perche",
+          "km": 10.2
+        }
+      ],
+      "sameGpxUrl": [],
+      "sameGpxSha256": [],
+      "newGeometryCandidate": true
+    },
+    {
+      "sourceId": "PERCHE-GEOTREK-28871",
+      "name": "La Mariette",
+      "status": "trace-verifiee",
+      "geometryMatches": [
+        {
+          "sourceId": "ITINOR061V50CN34",
+          "method": "bidirectional-2m-length-1pct"
+        }
+      ],
+      "internalGeometryMatches": [],
+      "nominalHints": [],
+      "sameGpxUrl": [],
+      "sameGpxSha256": [],
+      "newGeometryCandidate": false
+    },
+    {
+      "sourceId": "PERCHE-GEOTREK-29166",
+      "name": "La Maurie",
+      "status": "trace-verifiee",
+      "geometryMatches": [],
+      "internalGeometryMatches": [],
+      "nominalHints": [],
+      "sameGpxUrl": [],
+      "sameGpxSha256": [],
+      "newGeometryCandidate": true
+    },
+    {
+      "sourceId": "PERCHE-GEOTREK-29494",
+      "name": "La Nymphe du Perche",
+      "status": "trace-verifiee",
+      "geometryMatches": [],
+      "internalGeometryMatches": [],
+      "nominalHints": [],
+      "sameGpxUrl": [],
+      "sameGpxSha256": [],
+      "newGeometryCandidate": true
+    },
+    {
+      "sourceId": "PERCHE-GEOTREK-16261",
+      "name": "La petite forêt",
+      "status": "trace-verifiee",
+      "geometryMatches": [],
+      "internalGeometryMatches": [],
+      "nominalHints": [
+        {
+          "sourceId": "ORNE-GEOTREK-32651",
+          "name": "La petite forêt - Randonnée à pied dans le Perche",
+          "km": 7.1
+        }
+      ],
+      "sameGpxUrl": [],
+      "sameGpxSha256": [],
+      "newGeometryCandidate": true
+    },
+    {
+      "sourceId": "PERCHE-GEOTREK-31786",
+      "name": "La Pierre des Druides, circuit de découverte",
+      "status": "trace-verifiee",
+      "geometryMatches": [],
+      "internalGeometryMatches": [],
+      "nominalHints": [],
+      "sameGpxUrl": [],
+      "sameGpxSha256": [],
+      "newGeometryCandidate": true
+    },
+    {
+      "sourceId": "PERCHE-GEOTREK-216",
+      "name": "La Pierre Procureuse",
+      "status": "trace-verifiee",
+      "geometryMatches": [],
+      "internalGeometryMatches": [],
+      "nominalHints": [
+        {
+          "sourceId": "ITINOR061FS0000W",
+          "name": "Randonnée à pied dans le Perche circuit La Pierre Procureuse",
+          "km": 13.0
+        },
+        {
+          "sourceId": "ORNE-GEOTREK-11",
+          "name": "La Pierre Procureuse, Le Perche - Randonnée à pied",
+          "km": 13.2
+        }
+      ],
+      "sameGpxUrl": [],
+      "sameGpxSha256": [],
+      "newGeometryCandidate": true
+    },
+    {
+      "sourceId": "PERCHE-GEOTREK-29170",
+      "name": "La plaine des normands",
+      "status": "trace-verifiee",
+      "geometryMatches": [],
+      "internalGeometryMatches": [],
+      "nominalHints": [],
+      "sameGpxUrl": [],
+      "sameGpxSha256": [],
+      "newGeometryCandidate": true
+    },
+    {
+      "sourceId": "PERCHE-GEOTREK-29516",
+      "name": "La Rosière",
+      "status": "trace-verifiee",
+      "geometryMatches": [],
+      "internalGeometryMatches": [],
+      "nominalHints": [],
+      "sameGpxUrl": [],
+      "sameGpxSha256": [],
+      "newGeometryCandidate": true
+    },
+    {
+      "sourceId": "PERCHE-GEOTREK-29496",
+      "name": "La route du Libérot",
+      "status": "trace-verifiee",
+      "geometryMatches": [],
+      "internalGeometryMatches": [],
+      "nominalHints": [],
+      "sameGpxUrl": [],
+      "sameGpxSha256": [],
+      "newGeometryCandidate": true
+    },
+    {
+      "sourceId": "PERCHE-GEOTREK-29492",
+      "name": "La sentinelle de la Commeauche",
+      "status": "trace-verifiee",
+      "geometryMatches": [],
+      "internalGeometryMatches": [],
+      "nominalHints": [],
+      "sameGpxUrl": [],
+      "sameGpxSha256": [],
+      "newGeometryCandidate": true
+    },
+    {
+      "sourceId": "PERCHE-GEOTREK-29411",
+      "name": "La tuilerie des Saules",
+      "status": "trace-verifiee",
+      "geometryMatches": [],
+      "internalGeometryMatches": [],
+      "nominalHints": [],
+      "sameGpxUrl": [],
+      "sameGpxSha256": [],
+      "newGeometryCandidate": true
+    },
+    {
+      "sourceId": "PERCHE-GEOTREK-6388",
+      "name": "La vallée de la Jambette",
+      "status": "trace-verifiee",
+      "geometryMatches": [],
+      "internalGeometryMatches": [],
+      "nominalHints": [],
+      "sameGpxUrl": [],
+      "sameGpxSha256": [],
+      "newGeometryCandidate": true
+    },
+    {
+      "sourceId": "PERCHE-GEOTREK-14389",
+      "name": "La vallée de l'Huisne",
+      "status": "trace-verifiee",
+      "geometryMatches": [],
+      "internalGeometryMatches": [],
+      "nominalHints": [],
+      "sameGpxUrl": [],
+      "sameGpxSha256": [],
+      "newGeometryCandidate": true
+    },
+    {
+      "sourceId": "PERCHE-GEOTREK-16272",
+      "name": "Le bois de Beauvais",
+      "status": "trace-verifiee",
+      "geometryMatches": [],
+      "internalGeometryMatches": [],
+      "nominalHints": [
+        {
+          "sourceId": "ORNE-GEOTREK-32652",
+          "name": "Le bois de Beauvais - Randonnée à pied dans le Perche",
+          "km": 16.5
+        }
+      ],
+      "sameGpxUrl": [],
+      "sameGpxSha256": [],
+      "newGeometryCandidate": true
+    },
+    {
+      "sourceId": "PERCHE-GEOTREK-29276",
+      "name": "Le Bois de Condeau",
+      "status": "trace-verifiee",
+      "geometryMatches": [],
+      "internalGeometryMatches": [],
+      "nominalHints": [
+        {
+          "sourceId": "ORNE-GEOTREK-32654",
+          "name": "Le Bois de Condeau - Randonnée à pied dans le Perche",
+          "km": 9.4
+        }
+      ],
+      "sameGpxUrl": [],
+      "sameGpxSha256": [],
+      "newGeometryCandidate": true
+    },
+    {
+      "sourceId": "PERCHE-GEOTREK-17658",
+      "name": "Le Bois des Sicots",
+      "status": "trace-verifiee",
+      "geometryMatches": [],
+      "internalGeometryMatches": [],
+      "nominalHints": [
+        {
+          "sourceId": "ITINOR061V508OCR",
+          "name": "Randonnée à pied dans le Perche Le bois des Sicots",
+          "km": 10.5
+        },
+        {
+          "sourceId": "ORNE-GEOTREK-24",
+          "name": "Le bois des Sicots, Le Perche - Randonnée à pied",
+          "km": 10.5
+        }
+      ],
+      "sameGpxUrl": [],
+      "sameGpxSha256": [],
+      "newGeometryCandidate": true
+    },
+    {
+      "sourceId": "PERCHE-GEOTREK-16391",
+      "name": "Le Bois de Sublaine",
+      "status": "trace-verifiee",
+      "geometryMatches": [],
+      "internalGeometryMatches": [],
+      "nominalHints": [],
+      "sameGpxUrl": [],
+      "sameGpxSha256": [],
+      "newGeometryCandidate": true
+    },
+    {
+      "sourceId": "PERCHE-GEOTREK-28789",
+      "name": "Le bras du loup",
+      "status": "trace-verifiee",
+      "geometryMatches": [],
+      "internalGeometryMatches": [],
+      "nominalHints": [],
+      "sameGpxUrl": [],
+      "sameGpxSha256": [],
+      "newGeometryCandidate": true
+    },
+    {
+      "sourceId": "PERCHE-GEOTREK-29488",
+      "name": "Le Buisson",
+      "status": "trace-verifiee",
+      "geometryMatches": [],
+      "internalGeometryMatches": [],
+      "nominalHints": [],
+      "sameGpxUrl": [],
+      "sameGpxSha256": [],
+      "newGeometryCandidate": true
+    },
+    {
+      "sourceId": "PERCHE-GEOTREK-12757",
+      "name": "Le camp de Saint Gilles",
+      "status": "trace-verifiee",
+      "geometryMatches": [],
+      "internalGeometryMatches": [],
+      "nominalHints": [],
+      "sameGpxUrl": [],
+      "sameGpxSha256": [],
+      "newGeometryCandidate": true
+    },
+    {
+      "sourceId": "PERCHE-GEOTREK-29718",
+      "name": "Le camp du châtelier",
+      "status": "trace-verifiee",
+      "geometryMatches": [],
+      "internalGeometryMatches": [],
+      "nominalHints": [],
+      "sameGpxUrl": [],
+      "sameGpxSha256": [],
+      "newGeometryCandidate": true
+    },
+    {
+      "sourceId": "PERCHE-GEOTREK-13884",
+      "name": "Le camp romain",
+      "status": "trace-verifiee",
+      "geometryMatches": [],
+      "internalGeometryMatches": [],
+      "nominalHints": [],
+      "sameGpxUrl": [],
+      "sameGpxSha256": [],
+      "newGeometryCandidate": true
+    },
+    {
+      "sourceId": "PERCHE-GEOTREK-27903",
+      "name": "Le chemin des trognes",
+      "status": "trace-verifiee",
+      "geometryMatches": [],
+      "internalGeometryMatches": [],
+      "nominalHints": [],
+      "sameGpxUrl": [],
+      "sameGpxSha256": [],
+      "newGeometryCandidate": true
+    },
+    {
+      "sourceId": "PERCHE-GEOTREK-319",
+      "name": "Le chêne de La Lambonnière",
+      "status": "trace-verifiee",
+      "geometryMatches": [],
+      "internalGeometryMatches": [],
+      "nominalHints": [
+        {
+          "sourceId": "ORNE-GEOTREK-32656",
+          "name": "Le Chêne de la Lambonnière - Randonnée à pied dans le Perche",
+          "km": 8.8
+        }
+      ],
+      "sameGpxUrl": [],
+      "sameGpxSha256": [],
+      "newGeometryCandidate": true
+    },
+    {
+      "sourceId": "PERCHE-GEOTREK-6204",
+      "name": "Le Chêne de l'école",
+      "status": "trace-verifiee",
+      "geometryMatches": [],
+      "internalGeometryMatches": [],
+      "nominalHints": [
+        {
+          "sourceId": "ITINOR061FS0000R",
+          "name": "Randonnée à pied à La Perrière – Circuit Le Chêne de l’Ecole",
+          "km": 11.0
+        },
+        {
+          "sourceId": "ORNE-GEOTREK-15",
+          "name": "Le chêne de l'Ecole, Le Perche - Randonnée à pied",
+          "km": 11.3
+        }
+      ],
+      "sameGpxUrl": [],
+      "sameGpxSha256": [],
+      "newGeometryCandidate": true
+    },
+    {
+      "sourceId": "PERCHE-GEOTREK-4211",
+      "name": "Le coteau de la Bandonnière",
+      "status": "trace-verifiee",
+      "geometryMatches": [],
+      "internalGeometryMatches": [],
+      "nominalHints": [],
+      "sameGpxUrl": [],
+      "sameGpxSha256": [],
+      "newGeometryCandidate": true
+    },
+    {
+      "sourceId": "PERCHE-GEOTREK-29555",
+      "name": "Le domaine de Courboyer",
+      "status": "trace-verifiee",
+      "geometryMatches": [],
+      "internalGeometryMatches": [],
+      "nominalHints": [],
+      "sameGpxUrl": [],
+      "sameGpxSha256": [],
+      "newGeometryCandidate": true
+    },
+    {
+      "sourceId": "PERCHE-GEOTREK-4440",
+      "name": "Le Gîte Les Bruyères",
+      "status": "trace-verifiee",
+      "geometryMatches": [],
+      "internalGeometryMatches": [],
+      "nominalHints": [
+        {
+          "sourceId": "ITINOR076V50U2ST",
+          "name": "Les Bruyères",
+          "km": 5.4
+        },
+        {
+          "sourceId": "CD76-PDESI-2025-10818",
+          "name": "Les Bruyeres",
+          "km": null
+        },
+        {
+          "sourceId": "ORNE-GEOTREK-32657",
+          "name": "Le Gîte les Bruyères, la Chapelle Montligeon - Randonnée à pied dans le Perche",
+          "km": 3.1
+        }
+      ],
+      "sameGpxUrl": [],
+      "sameGpxSha256": [],
+      "newGeometryCandidate": true
+    },
+    {
+      "sourceId": "PERCHE-GEOTREK-29168",
+      "name": "Le gouffre",
+      "status": "trace-verifiee",
+      "geometryMatches": [],
+      "internalGeometryMatches": [],
+      "nominalHints": [],
+      "sameGpxUrl": [],
+      "sameGpxSha256": [],
+      "newGeometryCandidate": true
+    },
+    {
+      "sourceId": "PERCHE-GEOTREK-4520",
+      "name": "Le Grand tour de Réno-Valdieu",
+      "status": "trace-verifiee",
+      "geometryMatches": [],
+      "internalGeometryMatches": [],
+      "nominalHints": [
+        {
+          "sourceId": "ITINOR061V508QY5",
+          "name": "Randonnée à pied dans le Perche Le Grand tour de Réno-Valdieu",
+          "km": 22.0
+        },
+        {
+          "sourceId": "ORNE-GEOTREK-25",
+          "name": "Le grand tour de Réno-Valdieu, Le Perche - Randonnée à pied",
+          "km": 22.2
+        }
+      ],
+      "sameGpxUrl": [],
+      "sameGpxSha256": [],
+      "newGeometryCandidate": true
+    },
+    {
+      "sourceId": "PERCHE-GEOTREK-292",
+      "name": "Le Gué de Culoiseau",
+      "status": "trace-verifiee",
+      "geometryMatches": [],
+      "internalGeometryMatches": [],
+      "nominalHints": [
+        {
+          "sourceId": "ITINOR061FS0000F",
+          "name": "Randonnée à pied dans le Perche authentique – Circuit Le gué de Culoiseau",
+          "km": 7.0
+        },
+        {
+          "sourceId": "ORNE-GEOTREK-23",
+          "name": "Le Gué de Culoiseau - Randonnée à pied dans Le Perche",
+          "km": 6.8
+        }
+      ],
+      "sameGpxUrl": [],
+      "sameGpxSha256": [],
+      "newGeometryCandidate": true
+    },
+    {
+      "sourceId": "PERCHE-GEOTREK-29274",
+      "name": "Le hameau de la Chaussée",
+      "status": "trace-verifiee",
+      "geometryMatches": [],
+      "internalGeometryMatches": [],
+      "nominalHints": [
+        {
+          "sourceId": "ORNE-GEOTREK-32658",
+          "name": "Le Hameau de la Chaussée - Randonnée à pied dans le Perche",
+          "km": 8.6
+        }
+      ],
+      "sameGpxUrl": [],
+      "sameGpxSha256": [],
+      "newGeometryCandidate": true
+    },
+    {
+      "sourceId": "PERCHE-GEOTREK-29716",
+      "name": "Le Houx de la Pinardière",
+      "status": "trace-verifiee",
+      "geometryMatches": [],
+      "internalGeometryMatches": [],
+      "nominalHints": [],
+      "sameGpxUrl": [],
+      "sameGpxSha256": [],
+      "newGeometryCandidate": true
+    },
+    {
+      "sourceId": "PERCHE-GEOTREK-13340",
+      "name": "Le Moncel et Bellegarde",
+      "status": "trace-verifiee",
+      "geometryMatches": [],
+      "internalGeometryMatches": [],
+      "nominalHints": [
+        {
+          "sourceId": "ITINOR061V508QZB",
+          "name": "Randonnée à pied dans le Perche Le Moncel et Bellegarde",
+          "km": 9.0
+        },
+        {
+          "sourceId": "ORNE-GEOTREK-29",
+          "name": "Le Moncel et Bellegarde, Le Perche - Randonnée à pied",
+          "km": 8.8
+        }
+      ],
+      "sameGpxUrl": [],
+      "sameGpxSha256": [],
+      "newGeometryCandidate": true
+    },
+    {
+      "sourceId": "PERCHE-GEOTREK-29410",
+      "name": "Le Mont Cendrou",
+      "status": "trace-verifiee",
+      "geometryMatches": [],
+      "internalGeometryMatches": [],
+      "nominalHints": [],
+      "sameGpxUrl": [],
+      "sameGpxSha256": [],
+      "newGeometryCandidate": true
+    },
+    {
+      "sourceId": "PERCHE-GEOTREK-29495",
+      "name": "Le Mont Harou",
+      "status": "trace-verifiee",
+      "geometryMatches": [],
+      "internalGeometryMatches": [],
+      "nominalHints": [],
+      "sameGpxUrl": [],
+      "sameGpxSha256": [],
+      "newGeometryCandidate": true
+    },
+    {
+      "sourceId": "PERCHE-GEOTREK-4548",
+      "name": "Le Mont Ligeon",
+      "status": "trace-verifiee",
+      "geometryMatches": [],
+      "internalGeometryMatches": [],
+      "nominalHints": [
+        {
+          "sourceId": "ORNE-GEOTREK-32657",
+          "name": "Le Gîte les Bruyères, la Chapelle Montligeon - Randonnée à pied dans le Perche",
+          "km": 3.1
+        },
+        {
+          "sourceId": "ORNE-GEOTREK-32659",
+          "name": "Le Mont Ligeon - Randonnée à pied dans le Perche",
+          "km": 5.1
+        }
+      ],
+      "sameGpxUrl": [],
+      "sameGpxSha256": [],
+      "newGeometryCandidate": true
+    },
+    {
+      "sourceId": "PERCHE-GEOTREK-16242",
+      "name": "Le moulin aux Moines",
+      "status": "trace-verifiee",
+      "geometryMatches": [],
+      "internalGeometryMatches": [],
+      "nominalHints": [
+        {
+          "sourceId": "ORNE-GEOTREK-32661",
+          "name": "Le moulin aux Moines - Randonnée à pied dans le Perche",
+          "km": 4.8
+        }
+      ],
+      "sameGpxUrl": [],
+      "sameGpxSha256": [],
+      "newGeometryCandidate": true
+    },
+    {
+      "sourceId": "PERCHE-GEOTREK-29175",
+      "name": "Le moulin de Brotz",
+      "status": "trace-verifiee",
+      "geometryMatches": [],
+      "internalGeometryMatches": [],
+      "nominalHints": [],
+      "sameGpxUrl": [],
+      "sameGpxSha256": [],
+      "newGeometryCandidate": true
+    },
+    {
+      "sourceId": "PERCHE-GEOTREK-32190",
+      "name": "Le Moulin du Buat",
+      "status": "trace-verifiee",
+      "geometryMatches": [],
+      "internalGeometryMatches": [],
+      "nominalHints": [],
+      "sameGpxUrl": [],
+      "sameGpxSha256": [],
+      "newGeometryCandidate": true
+    },
+    {
+      "sourceId": "PERCHE-GEOTREK-13518",
+      "name": "L'Éperon",
+      "status": "trace-verifiee",
+      "geometryMatches": [],
+      "internalGeometryMatches": [],
+      "nominalHints": [],
+      "sameGpxUrl": [],
+      "sameGpxSha256": [],
+      "newGeometryCandidate": true
+    },
+    {
+      "sourceId": "PERCHE-GEOTREK-29257",
+      "name": "Le petit houx du Parc",
+      "status": "trace-verifiee",
+      "geometryMatches": [],
+      "internalGeometryMatches": [],
+      "nominalHints": [],
+      "sameGpxUrl": [],
+      "sameGpxSha256": [],
+      "newGeometryCandidate": true
+    },
+    {
+      "sourceId": "PERCHE-GEOTREK-4666",
+      "name": "Le Pissot, par monts et par vaux",
+      "status": "trace-verifiee",
+      "geometryMatches": [],
+      "internalGeometryMatches": [],
+      "nominalHints": [
+        {
+          "sourceId": "ITINOR050V52HXSQ",
+          "name": "Par monts et par vaux",
+          "km": 17.0
+        }
+      ],
+      "sameGpxUrl": [],
+      "sameGpxSha256": [],
+      "newGeometryCandidate": true
+    },
+    {
+      "sourceId": "PERCHE-GEOTREK-29497",
+      "name": "Le Pont Chartrain",
+      "status": "trace-verifiee",
+      "geometryMatches": [],
+      "internalGeometryMatches": [],
+      "nominalHints": [],
+      "sameGpxUrl": [],
+      "sameGpxSha256": [],
+      "newGeometryCandidate": true
+    },
+    {
+      "sourceId": "PERCHE-GEOTREK-29417",
+      "name": "Le pont Riboult",
+      "status": "trace-verifiee",
+      "geometryMatches": [],
+      "internalGeometryMatches": [],
+      "nominalHints": [],
+      "sameGpxUrl": [],
+      "sameGpxSha256": [],
+      "newGeometryCandidate": true
+    },
+    {
+      "sourceId": "PERCHE-GEOTREK-9851",
+      "name": "Le prieuré St-Pierre-ès-Liens",
+      "status": "trace-verifiee",
+      "geometryMatches": [],
+      "internalGeometryMatches": [],
+      "nominalHints": [],
+      "sameGpxUrl": [],
+      "sameGpxSha256": [],
+      "newGeometryCandidate": true
+    },
+    {
+      "sourceId": "PERCHE-GEOTREK-15574",
+      "name": "Le ruisseau de Pontillon",
+      "status": "trace-verifiee",
+      "geometryMatches": [],
+      "internalGeometryMatches": [],
+      "nominalHints": [],
+      "sameGpxUrl": [],
+      "sameGpxSha256": [],
+      "newGeometryCandidate": true
+    },
+    {
+      "sourceId": "PERCHE-GEOTREK-16405",
+      "name": "Le ruisseau du Merdereau",
+      "status": "trace-verifiee",
+      "geometryMatches": [],
+      "internalGeometryMatches": [],
+      "nominalHints": [],
+      "sameGpxUrl": [],
+      "sameGpxSha256": [],
+      "newGeometryCandidate": true
+    },
+    {
+      "sourceId": "PERCHE-GEOTREK-11238",
+      "name": "Les belles vues de St-Laumer et de La Madeleine",
+      "status": "trace-verifiee",
+      "geometryMatches": [],
+      "internalGeometryMatches": [],
+      "nominalHints": [],
+      "sameGpxUrl": [],
+      "sameGpxSha256": [],
+      "newGeometryCandidate": true
+    },
+    {
+      "sourceId": "PERCHE-GEOTREK-29675",
+      "name": "Les Bruyères de Saint-Pierre",
+      "status": "trace-verifiee",
+      "geometryMatches": [],
+      "internalGeometryMatches": [],
+      "nominalHints": [
+        {
+          "sourceId": "ITINOR076V50U2ST",
+          "name": "Les Bruyères",
+          "km": 5.4
+        },
+        {
+          "sourceId": "CD76-PDESI-2025-10818",
+          "name": "Les Bruyeres",
+          "km": null
+        }
+      ],
+      "sameGpxUrl": [],
+      "sameGpxSha256": [],
+      "newGeometryCandidate": true
+    },
+    {
+      "sourceId": "PERCHE-GEOTREK-830",
+      "name": "Les Bruyères du Noyer",
+      "status": "trace-verifiee",
+      "geometryMatches": [],
+      "internalGeometryMatches": [],
+      "nominalHints": [
+        {
+          "sourceId": "ITINOR076V50U2ST",
+          "name": "Les Bruyères",
+          "km": 5.4
+        },
+        {
+          "sourceId": "CD76-PDESI-2025-10818",
+          "name": "Les Bruyeres",
+          "km": null
+        }
+      ],
+      "sameGpxUrl": [],
+      "sameGpxSha256": [],
+      "newGeometryCandidate": true
+    },
+    {
+      "sourceId": "PERCHE-GEOTREK-15693",
+      "name": "Les chaudrons de la Dourdannerie",
+      "status": "trace-verifiee",
+      "geometryMatches": [],
+      "internalGeometryMatches": [],
+      "nominalHints": [],
+      "sameGpxUrl": [],
+      "sameGpxSha256": [],
+      "newGeometryCandidate": true
+    },
+    {
+      "sourceId": "PERCHE-GEOTREK-29275",
+      "name": "Les chemins de l'histoire",
+      "status": "trace-verifiee",
+      "geometryMatches": [],
+      "internalGeometryMatches": [],
+      "nominalHints": [],
+      "sameGpxUrl": [],
+      "sameGpxSha256": [],
+      "newGeometryCandidate": true
+    },
+    {
+      "sourceId": "PERCHE-GEOTREK-4801",
+      "name": "Les contreforts de Réno-Valdieu",
+      "status": "trace-verifiee",
+      "geometryMatches": [],
+      "internalGeometryMatches": [],
+      "nominalHints": [],
+      "sameGpxUrl": [],
+      "sameGpxSha256": [],
+      "newGeometryCandidate": true
+    },
+    {
+      "sourceId": "PERCHE-GEOTREK-29422",
+      "name": "Les Coudrais",
+      "status": "trace-verifiee",
+      "geometryMatches": [],
+      "internalGeometryMatches": [],
+      "nominalHints": [],
+      "sameGpxUrl": [],
+      "sameGpxSha256": [],
+      "newGeometryCandidate": true
+    },
+    {
+      "sourceId": "PERCHE-GEOTREK-15848",
+      "name": "Les douves du Grand Cumont",
+      "status": "trace-verifiee",
+      "geometryMatches": [],
+      "internalGeometryMatches": [],
+      "nominalHints": [],
+      "sameGpxUrl": [],
+      "sameGpxSha256": [],
+      "newGeometryCandidate": true
+    },
+    {
+      "sourceId": "PERCHE-GEOTREK-29304",
+      "name": "Le sentier des Vallées et Marais de Bretoncelles",
+      "status": "trace-verifiee",
+      "geometryMatches": [],
+      "internalGeometryMatches": [],
+      "nominalHints": [
+        {
+          "sourceId": "ITINOR061V502X1J",
+          "name": "Sentier des Vallées et marais de Bretoncelles",
+          "km": 1.9
+        },
+        {
+          "sourceId": "ORNE-GEOTREK-6252",
+          "name": "Sentier des Vallées et marais de Bretoncelles",
+          "km": 1.2
+        }
+      ],
+      "sameGpxUrl": [],
+      "sameGpxSha256": [],
+      "newGeometryCandidate": true
+    },
+    {
+      "sourceId": "PERCHE-GEOTREK-17591",
+      "name": "Les fossés du Roy",
+      "status": "trace-verifiee",
+      "geometryMatches": [],
+      "internalGeometryMatches": [],
+      "nominalHints": [],
+      "sameGpxUrl": [],
+      "sameGpxSha256": [],
+      "newGeometryCandidate": true
+    },
+    {
+      "sourceId": "PERCHE-GEOTREK-29273",
+      "name": "Les fours à chanvre",
+      "status": "trace-verifiee",
+      "geometryMatches": [],
+      "internalGeometryMatches": [],
+      "nominalHints": [],
+      "sameGpxUrl": [],
+      "sameGpxSha256": [],
+      "newGeometryCandidate": true
+    },
+    {
+      "sourceId": "PERCHE-GEOTREK-13363",
+      "name": "Les hauts d'Autheuil",
+      "status": "trace-verifiee",
+      "geometryMatches": [],
+      "internalGeometryMatches": [],
+      "nominalHints": [],
+      "sameGpxUrl": [],
+      "sameGpxSha256": [],
+      "newGeometryCandidate": true
+    },
+    {
+      "sourceId": "PERCHE-GEOTREK-13480",
+      "name": "Les Houles blanches",
+      "status": "trace-verifiee",
+      "geometryMatches": [],
+      "internalGeometryMatches": [],
+      "nominalHints": [
+        {
+          "sourceId": "ORNE-GEOTREK-32634",
+          "name": "Les Houles blanches - Randonnée à pied dans le Perche",
+          "km": 6.2
+        }
+      ],
+      "sameGpxUrl": [],
+      "sameGpxSha256": [],
+      "newGeometryCandidate": true
+    },
+    {
+      "sourceId": "PERCHE-GEOTREK-28898",
+      "name": "Les manoirs",
+      "status": "trace-verifiee",
+      "geometryMatches": [],
+      "internalGeometryMatches": [],
+      "nominalHints": [],
+      "sameGpxUrl": [],
+      "sameGpxSha256": [],
+      "newGeometryCandidate": true
+    },
+    {
+      "sourceId": "PERCHE-GEOTREK-29586",
+      "name": "Les Marnaux",
+      "status": "trace-verifiee",
+      "geometryMatches": [],
+      "internalGeometryMatches": [],
+      "nominalHints": [],
+      "sameGpxUrl": [],
+      "sameGpxSha256": [],
+      "newGeometryCandidate": true
+    },
+    {
+      "sourceId": "PERCHE-GEOTREK-489",
+      "name": "Les panoramas",
+      "status": "trace-verifiee",
+      "geometryMatches": [],
+      "internalGeometryMatches": [],
+      "nominalHints": [],
+      "sameGpxUrl": [],
+      "sameGpxSha256": [],
+      "newGeometryCandidate": true
+    },
+    {
+      "sourceId": "PERCHE-GEOTREK-29499",
+      "name": "Les Rotrières",
+      "status": "trace-verifiee",
+      "geometryMatches": [],
+      "internalGeometryMatches": [],
+      "nominalHints": [],
+      "sameGpxUrl": [],
+      "sameGpxSha256": [],
+      "newGeometryCandidate": true
+    },
+    {
+      "sourceId": "PERCHE-GEOTREK-29174",
+      "name": "Les ruines du château de Gannes",
+      "status": "trace-verifiee",
+      "geometryMatches": [],
+      "internalGeometryMatches": [],
+      "nominalHints": [],
+      "sameGpxUrl": [],
+      "sameGpxSha256": [],
+      "newGeometryCandidate": true
+    },
+    {
+      "sourceId": "PERCHE-GEOTREK-29163",
+      "name": "Les sables du Perche",
+      "status": "trace-verifiee",
+      "geometryMatches": [],
+      "internalGeometryMatches": [],
+      "nominalHints": [],
+      "sameGpxUrl": [],
+      "sameGpxSha256": [],
+      "newGeometryCandidate": true
+    },
+    {
+      "sourceId": "PERCHE-GEOTREK-259",
+      "name": "Les trois clochers",
+      "status": "trace-verifiee",
+      "geometryMatches": [],
+      "internalGeometryMatches": [],
+      "nominalHints": [
+        {
+          "sourceId": "ITINOR014V52NGFF",
+          "name": "LE-MESNIL-MAUGER : Les Trois clochers – 7,8KM",
+          "km": 7.8
+        },
+        {
+          "sourceId": "ITINOR061V508KXW",
+          "name": "Randonnée à pied dans le Perche Les trois clochers",
+          "km": 12.0
+        },
+        {
+          "sourceId": "ORNE-GEOTREK-22",
+          "name": "Les trois Clochers, Le Perche - Randonnée à pied",
+          "km": 12.2
+        }
+      ],
+      "sameGpxUrl": [],
+      "sameGpxSha256": [],
+      "newGeometryCandidate": true
+    },
+    {
+      "sourceId": "PERCHE-GEOTREK-11495",
+      "name": "Les vieilles trognes",
+      "status": "trace-verifiee",
+      "geometryMatches": [],
+      "internalGeometryMatches": [],
+      "nominalHints": [],
+      "sameGpxUrl": [],
+      "sameGpxSha256": [],
+      "newGeometryCandidate": true
+    },
+    {
+      "sourceId": "PERCHE-GEOTREK-12485",
+      "name": "Les vieux arbres",
+      "status": "trace-verifiee",
+      "geometryMatches": [],
+      "internalGeometryMatches": [],
+      "nominalHints": [],
+      "sameGpxUrl": [],
+      "sameGpxSha256": [],
+      "newGeometryCandidate": true
+    },
+    {
+      "sourceId": "PERCHE-GEOTREK-13432",
+      "name": "Les Yvieux",
+      "status": "trace-verifiee",
+      "geometryMatches": [],
+      "internalGeometryMatches": [],
+      "nominalHints": [],
+      "sameGpxUrl": [],
+      "sameGpxSha256": [],
+      "newGeometryCandidate": true
+    },
+    {
+      "sourceId": "PERCHE-GEOTREK-29418",
+      "name": "L'étang Chiot",
+      "status": "trace-verifiee",
+      "geometryMatches": [],
+      "internalGeometryMatches": [],
+      "nominalHints": [
+        {
+          "sourceId": "ITINOR014V50FE6O",
+          "name": "L’étang",
+          "km": 11.0
+        }
+      ],
+      "sameGpxUrl": [],
+      "sameGpxSha256": [],
+      "newGeometryCandidate": true
+    },
+    {
+      "sourceId": "PERCHE-GEOTREK-299",
+      "name": "L'étang du Cachot",
+      "status": "trace-verifiee",
+      "geometryMatches": [],
+      "internalGeometryMatches": [],
+      "nominalHints": [
+        {
+          "sourceId": "ITINOR014V50FE6O",
+          "name": "L’étang",
+          "km": 11.0
+        },
+        {
+          "sourceId": "ORNE-GEOTREK-32636",
+          "name": "L'étang du Cachot - Randonnée à pied dans le Perche",
+          "km": 6.0
+        }
+      ],
+      "sameGpxUrl": [],
+      "sameGpxSha256": [],
+      "newGeometryCandidate": true
+    },
+    {
+      "sourceId": "PERCHE-GEOTREK-10350",
+      "name": "Le Tour des Collines du Perche (TCP)",
+      "status": "trace-verifiee",
+      "geometryMatches": [],
+      "internalGeometryMatches": [],
+      "nominalHints": [],
+      "sameGpxUrl": [],
+      "sameGpxSha256": [],
+      "newGeometryCandidate": true
+    },
+    {
+      "sourceId": "PERCHE-GEOTREK-29413",
+      "name": "Le Val d'Enfer",
+      "status": "trace-verifiee",
+      "geometryMatches": [],
+      "internalGeometryMatches": [],
+      "nominalHints": [
+        {
+          "sourceId": "ITINOR050V52XR4A",
+          "name": "Le Val",
+          "km": 4.0
+        }
+      ],
+      "sameGpxUrl": [],
+      "sameGpxSha256": [],
+      "newGeometryCandidate": true
+    },
+    {
+      "sourceId": "PERCHE-GEOTREK-16403",
+      "name": "Le vieux bourg",
+      "status": "trace-verifiee",
+      "geometryMatches": [],
+      "internalGeometryMatches": [],
+      "nominalHints": [],
+      "sameGpxUrl": [],
+      "sameGpxSha256": [],
+      "newGeometryCandidate": true
+    },
+    {
+      "sourceId": "PERCHE-GEOTREK-70",
+      "name": "Mortous : autour des méandres de l'Huisne",
+      "status": "trace-verifiee",
+      "geometryMatches": [],
+      "internalGeometryMatches": [],
+      "nominalHints": [],
+      "sameGpxUrl": [],
+      "sameGpxSha256": [],
+      "newGeometryCandidate": true
+    },
+    {
+      "sourceId": "PERCHE-GEOTREK-29403",
+      "name": "Nobles Logis (Dancé)",
+      "status": "trace-verifiee",
+      "geometryMatches": [],
+      "internalGeometryMatches": [],
+      "nominalHints": [],
+      "sameGpxUrl": [],
+      "sameGpxSha256": [],
+      "newGeometryCandidate": true
+    },
+    {
+      "sourceId": "PERCHE-GEOTREK-29550",
+      "name": "Nobles logis (Préaux-du-Perche)",
+      "status": "trace-verifiee",
+      "geometryMatches": [],
+      "internalGeometryMatches": [],
+      "nominalHints": [],
+      "sameGpxUrl": [],
+      "sameGpxSha256": [],
+      "newGeometryCandidate": true
+    },
+    {
+      "sourceId": "PERCHE-GEOTREK-15571",
+      "name": "Nobles logis (Rémalard - circuit court)",
+      "status": "trace-verifiee",
+      "geometryMatches": [],
+      "internalGeometryMatches": [],
+      "nominalHints": [],
+      "sameGpxUrl": [],
+      "sameGpxSha256": [],
+      "newGeometryCandidate": true
+    },
+    {
+      "sourceId": "PERCHE-GEOTREK-10923",
+      "name": "Nobles logis (Rémalard - circuit long)",
+      "status": "trace-verifiee",
+      "geometryMatches": [],
+      "internalGeometryMatches": [],
+      "nominalHints": [],
+      "sameGpxUrl": [],
+      "sameGpxSha256": [],
+      "newGeometryCandidate": true
+    },
+    {
+      "sourceId": "PERCHE-GEOTREK-4394",
+      "name": "Parcours de découverte de la Réserve de Bresolettes",
+      "status": "trace-verifiee",
+      "geometryMatches": [
+        {
+          "sourceId": "ITINOR061V50C6OU",
+          "method": "bidirectional-2m-length-1pct"
+        }
+      ],
+      "internalGeometryMatches": [],
+      "nominalHints": [
+        {
+          "sourceId": "ITINOR061V50C6OU",
+          "name": "Parcours de découverte de la Réserve de Bresolettes",
+          "km": 4.2
+        },
+        {
+          "sourceId": "ORNE-GEOTREK-32825",
+          "name": "Parcours de découverte de la Réserve de Bresolettes",
+          "km": 4.2
+        }
+      ],
+      "sameGpxUrl": [],
+      "sameGpxSha256": [],
+      "newGeometryCandidate": false
+    },
+    {
+      "sourceId": "PERCHE-GEOTREK-31771",
+      "name": "Promenade panoramique de Bellême",
+      "status": "trace-verifiee",
+      "geometryMatches": [],
+      "internalGeometryMatches": [],
+      "nominalHints": [],
+      "sameGpxUrl": [],
+      "sameGpxSha256": [],
+      "newGeometryCandidate": true
+    },
+    {
+      "sourceId": "PERCHE-GEOTREK-13410",
+      "name": "Rainville",
+      "status": "trace-verifiee",
+      "geometryMatches": [],
+      "internalGeometryMatches": [],
+      "nominalHints": [],
+      "sameGpxUrl": [],
+      "sameGpxSha256": [],
+      "newGeometryCandidate": true
+    },
+    {
+      "sourceId": "PERCHE-GEOTREK-29750",
+      "name": "Sentier nature de Ceton",
+      "status": "trace-verifiee",
+      "geometryMatches": [],
+      "internalGeometryMatches": [],
+      "nominalHints": [],
+      "sameGpxUrl": [],
+      "sameGpxSha256": [],
+      "newGeometryCandidate": true
+    },
+    {
+      "sourceId": "PERCHE-GEOTREK-29438",
+      "name": "Souasé",
+      "status": "trace-verifiee",
+      "geometryMatches": [],
+      "internalGeometryMatches": [],
+      "nominalHints": [],
+      "sameGpxUrl": [],
+      "sameGpxSha256": [],
+      "newGeometryCandidate": true
+    },
+    {
+      "sourceId": "PERCHE-GEOTREK-29259",
+      "name": "Sur les pas du Conquérant",
+      "status": "trace-verifiee",
+      "geometryMatches": [],
+      "internalGeometryMatches": [],
+      "nominalHints": [],
+      "sameGpxUrl": [],
+      "sameGpxSha256": [],
+      "newGeometryCandidate": true
+    },
+    {
+      "sourceId": "PERCHE-GEOTREK-29688",
+      "name": "Sur les pas du Conquérant - Variante courte",
+      "status": "trace-verifiee",
+      "geometryMatches": [],
+      "internalGeometryMatches": [],
+      "nominalHints": [],
+      "sameGpxUrl": [],
+      "sameGpxSha256": [],
+      "newGeometryCandidate": true
+    },
+    {
+      "sourceId": "PERCHE-GEOTREK-15846",
+      "name": "Sur les ponts de la Corbionne",
+      "status": "trace-verifiee",
+      "geometryMatches": [],
+      "internalGeometryMatches": [],
+      "nominalHints": [],
+      "sameGpxUrl": [],
+      "sameGpxSha256": [],
+      "newGeometryCandidate": true
+    },
+    {
+      "sourceId": "PERCHE-GEOTREK-29684",
+      "name": "Sur les traces de Monseigneur BUGUET",
+      "status": "trace-verifiee",
+      "geometryMatches": [],
+      "internalGeometryMatches": [],
+      "nominalHints": [],
+      "sameGpxUrl": [],
+      "sameGpxSha256": [],
+      "newGeometryCandidate": true
+    },
+    {
+      "sourceId": "PERCHE-GEOTREK-32053",
+      "name": "Tour du bois de Dambrai",
+      "status": "trace-verifiee",
+      "geometryMatches": [],
+      "internalGeometryMatches": [],
+      "nominalHints": [],
+      "sameGpxUrl": [],
+      "sameGpxSha256": [],
+      "newGeometryCandidate": true
+    },
+    {
+      "sourceId": "PERCHE-GEOTREK-29317",
+      "name": "Ville-Perdue",
+      "status": "trace-verifiee",
+      "geometryMatches": [],
+      "internalGeometryMatches": [],
+      "nominalHints": [],
+      "sameGpxUrl": [],
+      "sameGpxSha256": [],
+      "newGeometryCandidate": true
+    },
+    {
+      "sourceId": "PERCHE-GEOTREK-290",
+      "name": "Villeray, au fil de l'Huisne",
+      "status": "trace-verifiee",
+      "geometryMatches": [],
+      "internalGeometryMatches": [],
+      "nominalHints": [],
+      "sameGpxUrl": [],
+      "sameGpxSha256": [],
+      "newGeometryCandidate": true
+    }
+  ],
+  "excluded": [
+    {
+      "id": 31834,
+      "name": "Accès au château depuis la place du 11 août",
+      "cityCodes": [
+        "28280"
+      ],
+      "reason": "Aucune commune normande explicitement publiée."
+    },
+    {
+      "id": 17979,
+      "name": "Au fil de l'eau et des moulins",
+      "cityCodes": [
+        "28063"
+      ],
+      "reason": "Aucune commune normande explicitement publiée."
+    },
+    {
+      "id": 29692,
+      "name": "Authon-du-Perche au fil des siècles",
+      "cityCodes": [
+        "28018"
+      ],
+      "reason": "Aucune commune normande explicitement publiée."
+    },
+    {
+      "id": 29511,
+      "name": "Autour de la Haute Forêt",
+      "cityCodes": [
+        "28149",
+        "28202",
+        "28232",
+        "28310",
+        "28314",
+        "28373"
+      ],
+      "reason": "Aucune commune normande explicitement publiée."
+    },
+    {
+      "id": 29589,
+      "name": "Autour de Vichères",
+      "cityCodes": [
+        "28010",
+        "28031",
+        "28407"
+      ],
+      "reason": "Aucune commune normande explicitement publiée."
+    },
+    {
+      "id": 29683,
+      "name": "Autour du maquis de Plainville",
+      "cityCodes": [
+        "28112",
+        "28237",
+        "28331"
+      ],
+      "reason": "Aucune commune normande explicitement publiée."
+    },
+    {
+      "id": 3150,
+      "name": "Autour du verger conservatoire de Miermaigne",
+      "cityCodes": [
+        "28252"
+      ],
+      "reason": "Aucune commune normande explicitement publiée."
+    },
+    {
+      "id": 29599,
+      "name": "Balade autour de la Berthe",
+      "cityCodes": [
+        "28280",
+        "28342",
+        "28395"
+      ],
+      "reason": "Aucune commune normande explicitement publiée."
+    },
+    {
+      "id": 29285,
+      "name": "Bois Landry",
+      "cityCodes": [
+        "28071",
+        "28165",
+        "28265"
+      ],
+      "reason": "Aucune commune normande explicitement publiée."
+    },
+    {
+      "id": 29510,
+      "name": "Des paysages changeants",
+      "cityCodes": [
+        "28373"
+      ],
+      "reason": "Aucune commune normande explicitement publiée."
+    },
+    {
+      "id": 29706,
+      "name": "Eau, bois, champs",
+      "cityCodes": [
+        "28214",
+        "28264",
+        "28335",
+        "28362"
+      ],
+      "reason": "Aucune commune normande explicitement publiée."
+    },
+    {
+      "id": 29583,
+      "name": "En longeant la Cloche",
+      "cityCodes": [
+        "28236"
+      ],
+      "reason": "Aucune commune normande explicitement publiée."
+    },
+    {
+      "id": 3117,
+      "name": "En passant par la Benette",
+      "cityCodes": [
+        "28159",
+        "28373"
+      ],
+      "reason": "Aucune commune normande explicitement publiée."
+    },
+    {
+      "id": 29243,
+      "name": "En passant par les bois de Perchet",
+      "cityCodes": [
+        "28063",
+        "28072"
+      ],
+      "reason": "Aucune commune normande explicitement publiée."
+    },
+    {
+      "id": 29399,
+      "name": "En passant par Ozée",
+      "cityCodes": [
+        "28063",
+        "28072",
+        "28112",
+        "28236"
+      ],
+      "reason": "Aucune commune normande explicitement publiée."
+    },
+    {
+      "id": 3007,
+      "name": "En pays senonchois",
+      "cityCodes": [
+        "28373"
+      ],
+      "reason": "Aucune commune normande explicitement publiée."
+    },
+    {
+      "id": 29398,
+      "name": "Entre Brunelles et La Gaudaine",
+      "cityCodes": [
+        "28063",
+        "28072",
+        "28175"
+      ],
+      "reason": "Aucune commune normande explicitement publiée."
+    },
+    {
+      "id": 31990,
+      "name": "Forêt et vallée de l'Eure",
+      "cityCodes": [
+        "28033",
+        "28156",
+        "28373"
+      ],
+      "reason": "Aucune commune normande explicitement publiée."
+    },
+    {
+      "id": 29739,
+      "name": "La Bazoche-Gouet, une baronnie du Perche",
+      "cityCodes": [
+        "28027"
+      ],
+      "reason": "Aucune commune normande explicitement publiée."
+    },
+    {
+      "id": 5057,
+      "name": "L'abbaye de Thiron-Gardais",
+      "cityCodes": [
+        "28112",
+        "28331",
+        "28387"
+      ],
+      "reason": "Aucune commune normande explicitement publiée."
+    },
+    {
+      "id": 2982,
+      "name": "La chapelle de Réveillon",
+      "cityCodes": [
+        "28149",
+        "28202"
+      ],
+      "reason": "Aucune commune normande explicitement publiée."
+    },
+    {
+      "id": 3042,
+      "name": "La colline de Rougemont",
+      "cityCodes": [
+        "28010",
+        "28407"
+      ],
+      "reason": "Aucune commune normande explicitement publiée."
+    },
+    {
+      "id": 29681,
+      "name": "La Côtière",
+      "cityCodes": [
+        "28237"
+      ],
+      "reason": "Aucune commune normande explicitement publiée."
+    },
+    {
+      "id": 29508,
+      "name": "La forêt domaniale de Senonches",
+      "cityCodes": [
+        "28033",
+        "28156",
+        "28373"
+      ],
+      "reason": "Aucune commune normande explicitement publiée."
+    },
+    {
+      "id": 16026,
+      "name": "La Tourbière des Froux et son sentier de découverte : fermeture temporaire entre août et oct 2026",
+      "cityCodes": [
+        "28232",
+        "28373"
+      ],
+      "reason": "Aucune commune normande explicitement publiée."
+    },
+    {
+      "id": 248,
+      "name": "La Trinité des Bois",
+      "cityCodes": [
+        "28214",
+        "28335"
+      ],
+      "reason": "Aucune commune normande explicitement publiée."
+    },
+    {
+      "id": 29588,
+      "name": "La vallée de la Berthe",
+      "cityCodes": [
+        "28010",
+        "28175",
+        "28395",
+        "28407"
+      ],
+      "reason": "Aucune commune normande explicitement publiée."
+    },
+    {
+      "id": 29596,
+      "name": "La vallée de la Cloche",
+      "cityCodes": [
+        "28063",
+        "28112",
+        "28236"
+      ],
+      "reason": "Aucune commune normande explicitement publiée."
+    },
+    {
+      "id": 32086,
+      "name": "La vallée de la Foussarde",
+      "cityCodes": [
+        "28010",
+        "28119",
+        "28252"
+      ],
+      "reason": "Aucune commune normande explicitement publiée."
+    },
+    {
+      "id": 29682,
+      "name": "La vallée de la Vinette",
+      "cityCodes": [
+        "28112",
+        "28237"
+      ],
+      "reason": "Aucune commune normande explicitement publiée."
+    },
+    {
+      "id": 29509,
+      "name": "Le bois de la Saucelle",
+      "cityCodes": [
+        "28310"
+      ],
+      "reason": "Aucune commune normande explicitement publiée."
+    },
+    {
+      "id": 29594,
+      "name": "Le canal d'Arcisses",
+      "cityCodes": [
+        "28236"
+      ],
+      "reason": "Aucune commune normande explicitement publiée."
+    },
+    {
+      "id": 4958,
+      "name": "Le château de Frazé",
+      "cityCodes": [
+        "28161",
+        "28261"
+      ],
+      "reason": "Aucune commune normande explicitement publiée."
+    },
+    {
+      "id": 5061,
+      "name": "Le chemin des demoiselles",
+      "cityCodes": [
+        "28362"
+      ],
+      "reason": "Aucune commune normande explicitement publiée."
+    },
+    {
+      "id": 29512,
+      "name": "Le circuit de l'eau",
+      "cityCodes": [
+        "28373"
+      ],
+      "reason": "Aucune commune normande explicitement publiée."
+    },
+    {
+      "id": 29513,
+      "name": "Le fief du duc de Saint-Simon",
+      "cityCodes": [
+        "28077",
+        "28149",
+        "28202"
+      ],
+      "reason": "Aucune commune normande explicitement publiée."
+    },
+    {
+      "id": 29597,
+      "name": "L'église Notre-Dame de Villevillon",
+      "cityCodes": [
+        "28016",
+        "28027",
+        "28398"
+      ],
+      "reason": "Aucune commune normande explicitement publiée."
+    },
+    {
+      "id": 3063,
+      "name": "Le hameau de la Cloche",
+      "cityCodes": [
+        "28237",
+        "28362"
+      ],
+      "reason": "Aucune commune normande explicitement publiée."
+    },
+    {
+      "id": 29709,
+      "name": "Les abbayes du Loir",
+      "cityCodes": [
+        "28071",
+        "28109"
+      ],
+      "reason": "Aucune commune normande explicitement publiée."
+    },
+    {
+      "id": 29598,
+      "name": "Les collines",
+      "cityCodes": [
+        "28018",
+        "28080",
+        "28376"
+      ],
+      "reason": "Aucune commune normande explicitement publiée."
+    },
+    {
+      "id": 29693,
+      "name": "Les collines du Perche",
+      "cityCodes": [
+        "28018",
+        "28376"
+      ],
+      "reason": "Aucune commune normande explicitement publiée."
+    },
+    {
+      "id": 31988,
+      "name": "Le sentier de la Vinette",
+      "cityCodes": [
+        "28112",
+        "28331"
+      ],
+      "reason": "Aucune commune normande explicitement publiée."
+    },
+    {
+      "id": 29858,
+      "name": "Le sentier de l'Orée du bois",
+      "cityCodes": [
+        "28373"
+      ],
+      "reason": "Aucune commune normande explicitement publiée."
+    },
+    {
+      "id": 29587,
+      "name": "Les horizons de la vallée de l'Eure",
+      "cityCodes": [
+        "28033",
+        "28130",
+        "28373"
+      ],
+      "reason": "Aucune commune normande explicitement publiée."
+    },
+    {
+      "id": 29281,
+      "name": "Les manoirs",
+      "cityCodes": [
+        "28119",
+        "28161",
+        "28219",
+        "28398"
+      ],
+      "reason": "Aucune commune normande explicitement publiée."
+    },
+    {
+      "id": 3105,
+      "name": "L'étang des Panses",
+      "cityCodes": [
+        "28010",
+        "28031",
+        "28252"
+      ],
+      "reason": "Aucune commune normande explicitement publiée."
+    },
+    {
+      "id": 29507,
+      "name": "Le tour de Tardais",
+      "cityCodes": [
+        "28159",
+        "28373"
+      ],
+      "reason": "Aucune commune normande explicitement publiée."
+    },
+    {
+      "id": 29557,
+      "name": "Le val d'Ozée",
+      "cityCodes": [
+        "28063",
+        "28072",
+        "28236",
+        "28280"
+      ],
+      "reason": "Aucune commune normande explicitement publiée."
+    },
+    {
+      "id": 29590,
+      "name": "Le Val Roquet",
+      "cityCodes": [
+        "28072",
+        "28236",
+        "28280"
+      ],
+      "reason": "Aucune commune normande explicitement publiée."
+    },
+    {
+      "id": 32056,
+      "name": "Le Vaufermé",
+      "cityCodes": [
+        "28214",
+        "28335"
+      ],
+      "reason": "Aucune commune normande explicitement publiée."
+    },
+    {
+      "id": 29591,
+      "name": "Nogent, capitale du Perche",
+      "cityCodes": [
+        "28063",
+        "28072",
+        "28280",
+        "28342",
+        "28395"
+      ],
+      "reason": "Aucune commune normande explicitement publiée."
+    },
+    {
+      "id": 2930,
+      "name": "Nogent, cité des comtes de Rotrou",
+      "cityCodes": [
+        "28236",
+        "28280"
+      ],
+      "reason": "Aucune commune normande explicitement publiée."
+    },
+    {
+      "id": 29184,
+      "name": "Panoramas",
+      "cityCodes": [
+        "28010",
+        "28063",
+        "28072",
+        "28175",
+        "28395"
+      ],
+      "reason": "Aucune commune normande explicitement publiée."
+    },
+    {
+      "id": 29558,
+      "name": "Parcours \"bleu clair\" de marche nordique de Frétigny",
+      "cityCodes": [
+        "28165"
+      ],
+      "reason": "Aucune commune normande explicitement publiée."
+    },
+    {
+      "id": 8948,
+      "name": "Parcours \"bleu-clair\" de marche nordique de St-Denis-d'Authou",
+      "cityCodes": [
+        "28112",
+        "28331"
+      ],
+      "reason": "Aucune commune normande explicitement publiée."
+    },
+    {
+      "id": 29559,
+      "name": "Parcours \"bleu foncé\" de marche nordique de Frétigny",
+      "cityCodes": [
+        "28165",
+        "28237"
+      ],
+      "reason": "Aucune commune normande explicitement publiée."
+    },
+    {
+      "id": 9008,
+      "name": "Parcours \"bleu foncé\" de marche nordique de St-Denis-d'Authou",
+      "cityCodes": [
+        "28112",
+        "28331"
+      ],
+      "reason": "Aucune commune normande explicitement publiée."
+    },
+    {
+      "id": 29560,
+      "name": "Parcours \"rouge\" de marche nordique de Frétigny",
+      "cityCodes": [
+        "28165",
+        "28237"
+      ],
+      "reason": "Aucune commune normande explicitement publiée."
+    },
+    {
+      "id": 8997,
+      "name": "Parcours \"rouge\" de marche nordique de St-Denis-d'Authou",
+      "cityCodes": [
+        "28112",
+        "28331"
+      ],
+      "reason": "Aucune commune normande explicitement publiée."
+    },
+    {
+      "id": 29561,
+      "name": "Parcours \"vert\" de marche nordique de Frétigny",
+      "cityCodes": [
+        "28165"
+      ],
+      "reason": "Aucune commune normande explicitement publiée."
+    },
+    {
+      "id": 4244,
+      "name": "Parcours \"vert\" de marche nordique de St-Denis-d'Authou",
+      "cityCodes": [
+        "28331"
+      ],
+      "reason": "Aucune commune normande explicitement publiée."
+    },
+    {
+      "id": 29708,
+      "name": "Par les chemins creux",
+      "cityCodes": [
+        "28010",
+        "28119",
+        "28175",
+        "28331",
+        "28387"
+      ],
+      "reason": "Aucune commune normande explicitement publiée."
+    },
+    {
+      "id": 29738,
+      "name": "Promenade le long de l'Yerre",
+      "cityCodes": [
+        "28027"
+      ],
+      "reason": "Aucune commune normande explicitement publiée."
+    },
+    {
+      "id": 29549,
+      "name": "Rendez-vous au rond de Condé",
+      "cityCodes": [
+        "28232",
+        "28373"
+      ],
+      "reason": "Aucune commune normande explicitement publiée."
+    },
+    {
+      "id": 17257,
+      "name": "Saint-Lubin-des-Cinq-Fonts",
+      "cityCodes": [
+        "28018",
+        "28111",
+        "28327"
+      ],
+      "reason": "Aucune commune normande explicitement publiée."
+    },
+    {
+      "id": 29593,
+      "name": "Sites et panoramas",
+      "cityCodes": [
+        "28010",
+        "28031",
+        "28038",
+        "28407"
+      ],
+      "reason": "Aucune commune normande explicitement publiée."
+    },
+    {
+      "id": 28069,
+      "name": "Souancé au fil des siècles",
+      "cityCodes": [
+        "28378"
+      ],
+      "reason": "Aucune commune normande explicitement publiée."
+    },
+    {
+      "id": 29592,
+      "name": "Sur les bords de la Ronne",
+      "cityCodes": [
+        "28280",
+        "28342"
+      ],
+      "reason": "Aucune commune normande explicitement publiée."
+    },
+    {
+      "id": 29400,
+      "name": "Vers le bout du Bois",
+      "cityCodes": [
+        "28063",
+        "28072",
+        "28236",
+        "28280",
+        "28395"
+      ],
+      "reason": "Aucune commune normande explicitement publiée."
+    }
+  ]
+}

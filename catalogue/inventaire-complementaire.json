@@ -206,8 +206,18 @@
         -0.941546,
         48.649222
       ],
-      "status": "gpx-inexploitable",
-      "issue": "not well-formed (invalid token): line 282, column 0"
+      "status": "trace-verifiee",
+      "gpxSha256": "c354173f8da8a62dfd9aebee4552c51fd7bca7461d98dce9ddcbee14ae45974f",
+      "geometryKm": 10.959,
+      "pointCount": 86,
+      "gpxRepairs": [
+        {
+          "type": "trailing-nul-padding",
+          "removedBytes": 5926,
+          "description": "Octets NUL de remplissage retirés après la fermeture complète du GPX ; coordonnées inchangées."
+        }
+      ],
+      "validatedGpxSha256": "4722b1d86989b153b1d9a56fba9dbe06fdc245cc471f4bfad79f10d20beb07ca"
     },
     {
       "sourceId": "ITINOR050V502NOB",
@@ -221,8 +231,18 @@
         -1.13804,
         49.228274
       ],
-      "status": "gpx-inexploitable",
-      "issue": "not well-formed (invalid token): line 808, column 0"
+      "status": "trace-verifiee",
+      "gpxSha256": "a26803b6b9314c6036715a11cb3a0d9085ee92e74652f480ec14c97f980d8573",
+      "geometryKm": 23.045,
+      "pointCount": 783,
+      "gpxRepairs": [
+        {
+          "type": "trailing-nul-padding",
+          "removedBytes": 4862,
+          "description": "Octets NUL de remplissage retirés après la fermeture complète du GPX ; coordonnées inchangées."
+        }
+      ],
+      "validatedGpxSha256": "3f023eb1aff453cc7424beabda1bb194b3c172c721c2f3a88559a8ebcab3e503"
     },
     {
       "sourceId": "ITINOR050V502NPS",
@@ -236,8 +256,18 @@
         -1.0379849,
         49.05205
       ],
-      "status": "gpx-inexploitable",
-      "issue": "not well-formed (invalid token): line 535, column 0"
+      "status": "trace-verifiee",
+      "gpxSha256": "f2f1aa5b1b6111b5718b72cdbc7d30ac7fbd49c7554073ab3abc76f6d928d5b8",
+      "geometryKm": 19.473,
+      "pointCount": 504,
+      "gpxRepairs": [
+        {
+          "type": "trailing-nul-padding",
+          "removedBytes": 6648,
+          "description": "Octets NUL de remplissage retirés après la fermeture complète du GPX ; coordonnées inchangées."
+        }
+      ],
+      "validatedGpxSha256": "25a0336c6d4904a8b3aa97b63f3c8f1fd0cd61c91865d2b38c510b31ca6b860b"
     },
     {
       "sourceId": "ITINOR050V502NLL",
@@ -251,8 +281,18 @@
         -1.3623509,
         49.308268
       ],
-      "status": "gpx-inexploitable",
-      "issue": "not well-formed (invalid token): line 176, column 0"
+      "status": "trace-verifiee",
+      "gpxSha256": "4edae922934648853cda586ce2feb18c33cdd99744a5b058e804c6f1f0f369dc",
+      "geometryKm": 8.598,
+      "pointCount": 151,
+      "gpxRepairs": [
+        {
+          "type": "trailing-nul-padding",
+          "removedBytes": 5497,
+          "description": "Octets NUL de remplissage retirés après la fermeture complète du GPX ; coordonnées inchangées."
+        }
+      ],
+      "validatedGpxSha256": "035c9d84166f6657bd159d9cd1d173c038c9fa40da03e6e7fe530f2928c6b88d"
     },
     {
       "sourceId": "ITINOR050V5029BM",
@@ -334,8 +374,18 @@
         -1.092034,
         48.577086
       ],
-      "status": "gpx-inexploitable",
-      "issue": "not well-formed (invalid token): line 426, column 0"
+      "status": "trace-verifiee",
+      "gpxSha256": "c4149dc5840be80fb6194e7d1dfe3542841ad964391d1f42a6679624a58547f5",
+      "geometryKm": 18.884,
+      "pointCount": 134,
+      "gpxRepairs": [
+        {
+          "type": "trailing-nul-padding",
+          "removedBytes": 136,
+          "description": "Octets NUL de remplissage retirés après la fermeture complète du GPX ; coordonnées inchangées."
+        }
+      ],
+      "validatedGpxSha256": "35440f7672c7fa32966d2b6a6878ef8c846a75cae5e144ed1fed26df3b95b85b"
     },
     {
       "sourceId": "ITINOR050V508E7T",
@@ -417,8 +467,18 @@
         -1.545299,
         49.290954
       ],
-      "status": "gpx-inexploitable",
-      "issue": "not well-formed (invalid token): line 210, column 0"
+      "status": "trace-verifiee",
+      "gpxSha256": "59519d7ceb0e0c83e45af35f390adb612fd6b47036ec62d1736f0e28c63de997",
+      "geometryKm": 12.92,
+      "pointCount": 186,
+      "gpxRepairs": [
+        {
+          "type": "trailing-nul-padding",
+          "removedBytes": 3239,
+          "description": "Octets NUL de remplissage retirés après la fermeture complète du GPX ; coordonnées inchangées."
+        }
+      ],
+      "validatedGpxSha256": "c7c223b8a38c0b1d8bd026744179e30947d5211d8910ab8021e559176efaac09"
     },
     {
       "sourceId": "ITINOR050V502NAR",
@@ -432,8 +492,18 @@
         -1.6339829,
         49.470529
       ],
-      "status": "gpx-inexploitable",
-      "issue": "not well-formed (invalid token): line 304, column 0"
+      "status": "trace-verifiee",
+      "gpxSha256": "6a70458e2556501140040e37f1cc5e8d26cf210f0688b2fa4761ff1cb115141c",
+      "geometryKm": 13.591,
+      "pointCount": 280,
+      "gpxRepairs": [
+        {
+          "type": "trailing-nul-padding",
+          "removedBytes": 5245,
+          "description": "Octets NUL de remplissage retirés après la fermeture complète du GPX ; coordonnées inchangées."
+        }
+      ],
+      "validatedGpxSha256": "0ed91585af43f33c2e934127e7636833ef59573d67afcb751862a1af66c8a82e"
     },
     {
       "sourceId": "ITINOR050V52XFYI",
@@ -464,8 +534,18 @@
         -1.5299579,
         49.386916
       ],
-      "status": "gpx-inexploitable",
-      "issue": "not well-formed (invalid token): line 334, column 0"
+      "status": "trace-verifiee",
+      "gpxSha256": "0711b811152884f3c03775dca5f46c5259710bf7a9e223f48e7fc9cac4e6eb7d",
+      "geometryKm": 16.05,
+      "pointCount": 310,
+      "gpxRepairs": [
+        {
+          "type": "trailing-nul-padding",
+          "removedBytes": 3256,
+          "description": "Octets NUL de remplissage retirés après la fermeture complète du GPX ; coordonnées inchangées."
+        }
+      ],
+      "validatedGpxSha256": "669a64e0552239ad1e14f8427e7063c3dc49b63bab293706bad833d690e463f2"
     },
     {
       "sourceId": "ITINOR050V52XFYO",

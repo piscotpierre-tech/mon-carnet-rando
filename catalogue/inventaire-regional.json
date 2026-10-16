@@ -1080,7 +1080,19 @@
       "officialLocation": [
         0.84653735,
         48.4788246
-      ]
+      ],
+      "status": "trace-verifiee",
+      "gpxSha256": "339b4d0a02ae3a458b137b2d3a12264ed529e1a6e3ed7d9130304d12265e3762",
+      "geometryKm": 6.817,
+      "pointCount": 100,
+      "gpxRepairs": [
+        {
+          "type": "description-html-breaks",
+          "closedTags": 2,
+          "description": "Balises HTML br autofermées dans les descriptions du GPX ; coordonnées inchangées."
+        }
+      ],
+      "validatedGpxSha256": "82aae1ceaacd1dff26a60b0dd23d5518f4dd6dcfa7e0e124ba079435afe3518c"
     },
     {
       "sourceId": "ITINOR061FS0000I",
@@ -1136,7 +1148,19 @@
       "officialLocation": [
         -0.3979057,
         48.8116539
-      ]
+      ],
+      "status": "trace-verifiee",
+      "gpxSha256": "a9c2b6e2d4703111de0ff99a2ce97d1065f3a71ee7241797c32110288657c620",
+      "geometryKm": 10.629,
+      "pointCount": 146,
+      "gpxRepairs": [
+        {
+          "type": "description-html-breaks",
+          "closedTags": 5,
+          "description": "Balises HTML br autofermées dans les descriptions du GPX ; coordonnées inchangées."
+        }
+      ],
+      "validatedGpxSha256": "4236e62c90f0bfcfaa1a80d1049cd3c405f3c4017b6b1b3938549b571474c0bb"
     },
     {
       "sourceId": "ITINOR061FS0000M",
@@ -1234,7 +1258,19 @@
       "officialLocation": [
         0.6548506,
         48.3246244
-      ]
+      ],
+      "status": "trace-verifiee",
+      "gpxSha256": "d3481a0fc1b9781bd3a6b477e3cdb1609b6c23c57fc0dc786a550ff0e821772d",
+      "geometryKm": 13.842,
+      "pointCount": 479,
+      "gpxRepairs": [
+        {
+          "type": "description-html-breaks",
+          "closedTags": 1,
+          "description": "Balises HTML br autofermées dans les descriptions du GPX ; coordonnées inchangées."
+        }
+      ],
+      "validatedGpxSha256": "f11943b6b25d4bd86cd95c8aed80c777f35016ec66c2fbfc7509f22c024994d9"
     },
     {
       "sourceId": "ITINOR061FS00010",
@@ -1668,7 +1704,19 @@
       "officialLocation": [
         0.89295,
         48.611248
-      ]
+      ],
+      "status": "trace-verifiee",
+      "gpxSha256": "bedf670e5d2a3d88e281a5935c13bae8dbafe50f4fa8b6411ca4228e9b2afc6f",
+      "geometryKm": 28.926,
+      "pointCount": 1388,
+      "gpxRepairs": [
+        {
+          "type": "description-html-breaks",
+          "closedTags": 48,
+          "description": "Balises HTML br autofermées dans les descriptions du GPX ; coordonnées inchangées."
+        }
+      ],
+      "validatedGpxSha256": "679e9d38d6e16c893e482c2b04dbb6a235f622de8a7b61d624557da3f60b0d14"
     },
     {
       "sourceId": "ITINOR061V502ZKD",
@@ -1682,7 +1730,19 @@
       "officialLocation": [
         0.651397,
         48.590491
-      ]
+      ],
+      "status": "trace-verifiee",
+      "gpxSha256": "f204055f89966f0ab45f1ee5e1fa400c94edcdade34f02da68a9215940e3a71d",
+      "geometryKm": 26.073,
+      "pointCount": 1258,
+      "gpxRepairs": [
+        {
+          "type": "description-html-breaks",
+          "closedTags": 23,
+          "description": "Balises HTML br autofermées dans les descriptions du GPX ; coordonnées inchangées."
+        }
+      ],
+      "validatedGpxSha256": "71a5822dbd0414ebeec2b3dfbc7f6253e520ec967a5698decd6f608b5f7d4037"
     },
     {
       "sourceId": "ITINOR061V502ZKE",
@@ -1990,7 +2050,19 @@
       "officialLocation": [
         0.7521851,
         48.5307831
-      ]
+      ],
+      "status": "trace-verifiee",
+      "gpxSha256": "162ca2428025c99dfb3a084aefa947d701ff0f7495be505f9433abc544892a88",
+      "geometryKm": 10.446,
+      "pointCount": 512,
+      "gpxRepairs": [
+        {
+          "type": "description-html-breaks",
+          "closedTags": 2,
+          "description": "Balises HTML br autofermées dans les descriptions du GPX ; coordonnées inchangées."
+        }
+      ],
+      "validatedGpxSha256": "8115700fb0e27c1a749a32833d77943fa600061f5bdf457f72c8622a85776385"
     },
     {
       "sourceId": "ITINOR061V508QY5",
@@ -2032,7 +2104,19 @@
       "officialLocation": [
         0.6497593,
         48.5869597
-      ]
+      ],
+      "status": "trace-verifiee",
+      "gpxSha256": "dd5198e2be06040507982c06270731a83e3fb5d4c790baa7f5dfb6b1fb2f35b1",
+      "geometryKm": 8.827,
+      "pointCount": 451,
+      "gpxRepairs": [
+        {
+          "type": "description-html-breaks",
+          "closedTags": 2,
+          "description": "Balises HTML br autofermées dans les descriptions du GPX ; coordonnées inchangées."
+        }
+      ],
+      "validatedGpxSha256": "e3304d11143bf4872299a754ea383a9b53576754d443ab408aeb401316fc0368"
     },
     {
       "sourceId": "ITINOR061V508R71",
@@ -2046,7 +2130,19 @@
       "officialLocation": [
         0.400216,
         48.531878
-      ]
+      ],
+      "status": "trace-verifiee",
+      "gpxSha256": "6cab836eb386e6dbc7c116914717590601c9eb30957d2b4bf9d2086f017e06ae",
+      "geometryKm": 5.888,
+      "pointCount": 292,
+      "gpxRepairs": [
+        {
+          "type": "description-html-breaks",
+          "closedTags": 2,
+          "description": "Balises HTML br autofermées dans les descriptions du GPX ; coordonnées inchangées."
+        }
+      ],
+      "validatedGpxSha256": "2fe1b222166eb8d65f31c76f7d0d16e2a8fd667d19f26f9b8ce0c6d956d64f18"
     },
     {
       "sourceId": "ITINOR061V508R88",
@@ -2172,7 +2268,19 @@
       "officialLocation": [
         -0.35836,
         48.58953
-      ]
+      ],
+      "status": "trace-verifiee",
+      "gpxSha256": "1bcc1e7c2440b06e6e763d6e03a473a82aba785d9a5fef26261133157ef1a88d",
+      "geometryKm": 9.006,
+      "pointCount": 478,
+      "gpxRepairs": [
+        {
+          "type": "description-html-breaks",
+          "closedTags": 2,
+          "description": "Balises HTML br autofermées dans les descriptions du GPX ; coordonnées inchangées."
+        }
+      ],
+      "validatedGpxSha256": "d55a16aab4b20a4a3561c36c17bcf8d6088ea60220f33d70c863cbe93939389f"
     },
     {
       "sourceId": "ITINOR061V509N48",
@@ -2200,7 +2308,19 @@
       "officialLocation": [
         -0.41314,
         48.853339
-      ]
+      ],
+      "status": "trace-verifiee",
+      "gpxSha256": "aff68b513b849eacd60684f457ad662cb51eb0577a99c4452d882ef55bd35a8d",
+      "geometryKm": 8.393,
+      "pointCount": 415,
+      "gpxRepairs": [
+        {
+          "type": "description-html-breaks",
+          "closedTags": 1,
+          "description": "Balises HTML br autofermées dans les descriptions du GPX ; coordonnées inchangées."
+        }
+      ],
+      "validatedGpxSha256": "686400f875a6b29e4e0f0e3ad6ab9402852e01f5d502d0c8799e6c8b3b24552a"
     },
     {
       "sourceId": "ITINOR061V50A5I2",
@@ -9984,7 +10104,19 @@
       "officialLocation": [
         -1.4926789,
         49.455172
-      ]
+      ],
+      "status": "trace-verifiee",
+      "gpxSha256": "f29f4d4f3e9c36b29523563dbb69ea95f9305275c766f6d52d3550ac8c83a3d0",
+      "geometryKm": 10.981,
+      "pointCount": 499,
+      "gpxRepairs": [
+        {
+          "type": "trailing-nul-padding",
+          "removedBytes": 4804,
+          "description": "Octets NUL de remplissage retirés après la fermeture complète du GPX ; coordonnées inchangées."
+        }
+      ],
+      "validatedGpxSha256": "d1fe609f7bb08bc3762f5c56acd9ec46a23502938018ab0bb1d8fa278c8e41dc"
     },
     {
       "sourceId": "ITINOR050V502EY7",
@@ -13638,7 +13770,18 @@
       "officialLocation": [
         0.76618924,
         49.0882731
-      ]
+      ],
+      "status": "trace-verifiee",
+      "gpxSha256": "4818f5a5c1a89422450cd76f4e529ec15699b8c60d6708f60ba30ee32a66d16a",
+      "geometryKm": 9.787,
+      "pointCount": 356,
+      "gpxRepairs": [
+        {
+          "type": "undeclared-latin1",
+          "description": "Texte Latin-1 sans encodage déclaré transcodé en UTF-8 ; coordonnées inchangées."
+        }
+      ],
+      "validatedGpxSha256": "967f56b27d27bef9b9f5a1e41bfbcf701c3dd00e21c3ca55d695b9eadf3728cf"
     },
     {
       "sourceId": "ITINOR027V50J440",
@@ -13736,7 +13879,18 @@
       "officialLocation": [
         0.48013,
         48.93808
-      ]
+      ],
+      "status": "trace-verifiee",
+      "gpxSha256": "75df6846f863aa1b6e2c46dc574907e2549655ab72bc158bd39b3f5ada700fa8",
+      "geometryKm": 10.811,
+      "pointCount": 640,
+      "gpxRepairs": [
+        {
+          "type": "undeclared-latin1",
+          "description": "Texte Latin-1 sans encodage déclaré transcodé en UTF-8 ; coordonnées inchangées."
+        }
+      ],
+      "validatedGpxSha256": "9103b3b482751d8b8f7b2a161e5227250cdf35082a7c14142fca3d1dcd26b1a3"
     },
     {
       "sourceId": "ITINOR027V50S27N",
@@ -13750,7 +13904,18 @@
       "officialLocation": [
         0.7733536,
         48.9737623
-      ]
+      ],
+      "status": "trace-verifiee",
+      "gpxSha256": "8d2995c2ba2e5ef681df57172336684de30b36cbd0025f0c902e683c183a8fc4",
+      "geometryKm": 12.729,
+      "pointCount": 379,
+      "gpxRepairs": [
+        {
+          "type": "undeclared-latin1",
+          "description": "Texte Latin-1 sans encodage déclaré transcodé en UTF-8 ; coordonnées inchangées."
+        }
+      ],
+      "validatedGpxSha256": "a4013d26b0fc92869de0d2f52a4fab0333e186606b631593c8e0be6464fab8ab"
     },
     {
       "sourceId": "ITINOR027V50S2AN",

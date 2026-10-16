@@ -1,4 +1,4 @@
-# Sources des 48 circuits de Normandie
+# Sources du carnet et de l’inventaire officiel
 
 ## Document fourni
 
@@ -304,3 +304,34 @@ Les GPX Orne proviennent des liens publiés par https://randonnee-normandie.com/
 Le PDESI de Seine-Maritime fournit une géométrie GeoJSON par itinéraire. Le GPX téléchargeable dans le carnet est un export de cette géométrie officielle ; le lien d’origine est présenté comme GeoJSON. Les empreintes de l’ensemble source, les identifiants d’entité et l’édition de janvier 2025 sont conservés. Les distances affichées sont calculées sur le tracé et signalées comme telles. Les tracés de pratiques équestres ou trail non marquées pédestres ne sont pas transformés en randonnées pédestres.
 
 Les tracés identiques après rééchantillonnage sont rapprochés par une comparaison dans les deux sens à pas de 4 mètres, écart observé maximal 2 mètres et longueurs compatibles à 1 %. Les méthodes exactes et approchées gardent des motifs distincts dans le suivi. Les variantes qui sortent de ces critères restent distinctes. Les dénivelés sont arrondis à partir des cumuls documentés à trois décimales, ce qui évite une différence de 5 mètres au seuil d’arrondi entre Python et JavaScript.
+
+
+## Contrôle complémentaire du 16 octobre 2026
+
+### Fichiers GPX récupérés sans correction géographique
+
+Vingt-deux exports officiels rejetés à tort sont maintenant lisibles : neuf GPX Manche contenaient des octets NUL après la fermeture complète du document, dix GPX Orne des balises HTML `br` non fermées dans les descriptions, et trois GPX Eure du texte Latin-1 sans encodage déclaré. Aucun nombre, point ou segment n’a été corrigé. Le XML entier doit être strictement valide après ces opérations ; les documents tronqués, pages HTML et coordonnées projetées non déclarées restent refusés.
+
+`gpxSha256` conserve l’empreinte des octets originaux ; `validatedGpxSha256` et `gpxRepairs` décrivent la version validée et chaque opération. L’overlay `catalogue/snapshots/zz-recovered-gpx.json.gz` conserve les 22 résultats sans remplacer les instantanés initiaux. `python scripts/recover-sources.py` permet de reproduire cette vérification ; une seconde exécution sur le même cache ne change aucun fichier.
+
+Les deux KML Calvados restent en attente d’une conversion explicite. Le fichier des Marais de l’Aure contient des coordonnées projetées dans les attributs longitude/latitude sans système déclaré : aucun CRS n’a été supposé.
+
+### Parc naturel régional du Perche
+
+Portail officiel : https://rando-perche.fr/ ; API publique factuelle : https://geotrek-perche.makina-corpus.net/api/v2/ . Sur 298 objets toutes pratiques, 200 fiches sont pédestres et publiées en français ; 131 traversent au moins une commune normande explicitement identifiée par son code INSEE. Les 69 pédestres sans commune normande publiée sont exclus et documentés. Un itinéraire retenu part de Nogent-le-Rotrou et traverse l’Orne : il reste entier et son départ hors Normandie est signalé.
+
+Les 131 GPX ont été réellement validés. Le rapprochement initial avec les 1 431 références précédentes prouve deux équivalences géométriques et laisse 129 géométries candidates ; 41 de ces candidates ont des noms proches à vérifier. Ces nombres ne sont pas un décompte de circuits distincts ou effectivement publiés. La construction finale recroise toutes les sources ensemble. API, communes, URL, empreintes et exclusions sont conservées dans `catalogue/inventaire-perche.json`, `catalogue/audit-perche.json` et `catalogue/snapshots/perche.json.gz`. `scripts/collect-perche.py` reproduit la collecte sans recopier descriptions touristiques ni photographies.
+
+### Parc naturel régional des Marais du Cotentin et du Bessin
+
+Source officielle : https://parc-cotentin-bessin.fr/desmarais-du-parc-toutes-les-balades-pres-de-chez-vous . Le registre ArcGIS `APIRANDO_CIRCUITS` comporte 144 objets, dont 76 de type « A pied » et 35 explicitement publiés dans l’application (`AGO_APPLI=OUI`). Seules ces 35 fiches sont retenues : 6 Calvados et 29 Manche, avec preuve communale conservée. Les autres pratiques et variantes non publiées restent documentées dans les exclusions.
+
+31 traces passent la validation ; trois GPX mêlent plusieurs parcours et donnent une distance incohérente, et un GPX renvoie HTTP 404. Aucun segment n’a été choisi arbitrairement. Les 35 PDF ont été ouverts et leurs empreintes conservées ; ils restent liés chez le producteur. Les 34 réponses GPX reçues sont archivées dans `catalogue/sources/marais/`. Les éditions sont anciennes (33 fiches de 2019, deux de 2024) et explicitement indiquées. Les destinations Maps et coordonnées XY contradictoires ne sont pas présentées comme des parkings vérifiés : le carnet utilise le début du GPX validé.
+
+`scripts/collect-marais.py`, `catalogue/inventaire-marais.json` et `catalogue/snapshots/marais.json.gz` conservent les faits, la sélection, les identifiants FID et codes de circuit, les sources, les empreintes et les défauts. Deux équivalences géométriques ont été trouvées avant la construction ; ce bilan ne donne pas un nombre d’ajouts nets.
+
+### Limites restant ouvertes
+
+Les ressources GeoJSON et GPKG du registre officiel « circuits qualité » Calvados renvoyaient toujours HTTP 502 lors du nouveau contrôle : https://www.data.gouv.fr/datasets/itineraires-de-randonnee-circuits-qualite-departement-du-calvados . La licence annoncée est Licence Ouverte 2.0 et les ressources sont datées du 13 octobre 2026. Les autres offices, GR, variantes, références sans trace et répartitions interdépartementales restent à croiser ; aucune exhaustivité de toute la Normandie n’est affirmée.
+
+Les rapprochements seulement nominaux ne suppriment plus un parcours exploitable : les historiques sans trace comparable et les variantes géométriques restent distincts avec une mention à vérifier. Les profils manquants sur erreur temporaire sont retentés au prochain passage, sans redemander les cartes déjà construites.

@@ -49,6 +49,20 @@ jobs:
           python -m unittest discover -s tests -p '*_test.py'
           npm test
           npm run check
+      - name: Installer Chromium pour les essais mobiles et hors ligne
+        run: |
+          npm install --no-save --package-lock=false --ignore-scripts playwright@1.62.1
+          npx playwright install --with-deps --only-shell chromium
+      - name: Vérifier le carnet dans un vrai navigateur mobile
+        run: node tests/browser-smoke.mjs
+      - name: Conserver les captures et le rapport du navigateur
+        if: ${{ always() }}
+        uses: actions/upload-artifact@v4
+        with:
+          name: essais-navigateur-mobile
+          path: artifacts/browser/
+          if-no-files-found: ignore
+          retention-days: 7
       - name: Préparer les seuls fichiers publics
         run: |
           mkdir _site

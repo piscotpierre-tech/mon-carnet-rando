@@ -8,6 +8,7 @@ import hashlib
 import json
 import math
 from pathlib import Path
+import re
 import subprocess
 import sys
 import unicodedata
@@ -32,8 +33,64 @@ def distance(a, b):
     return 12742000 * math.asin(min(1, math.sqrt(h)))
 
 
+def normalize_gpx(raw):
+    """Repair known non-geometric export defects, with explicit provenance.
+
+    Never remove an interior byte, infer coordinates or repair truncated XML.
+    Only trailing NUL padding, unclosed HTML breaks within GPX descriptions,
+    and undeclared Latin-1 text are supported. A strict XML parse of the whole
+    repaired GPX must succeed before any geometry is read.
+    """
+    try:
+        ET.fromstring(raw)
+        return raw, []
+    except ET.ParseError:
+        pass
+    candidate = raw
+    repairs = []
+    unpadded = candidate.rstrip(b'\x00')
+    if unpadded != candidate and unpadded.rstrip().endswith(b'</gpx>'):
+        repairs.append({
+            'type': 'trailing-nul-padding', 'removedBytes': len(candidate) - len(unpadded),
+            'description': 'Octets NUL de remplissage retirés après la fermeture complète du GPX ; coordonnées inchangées.',
+        })
+        candidate = unpadded
+    try:
+        candidate.decode('utf-8')
+    except UnicodeDecodeError:
+        # A declared encoding is authoritative, even if it appears erroneous.
+        # The three verified Eure exports omit it and contain Latin-1 accents.
+        if not re.search(br'<\?xml\b[^>]*\bencoding\s*=', candidate, re.I):
+            candidate = candidate.decode('latin-1').encode('utf-8')
+            repairs.append({
+                'type': 'undeclared-latin1',
+                'description': 'Texte Latin-1 sans encodage déclaré transcodé en UTF-8 ; coordonnées inchangées.',
+            })
+    breaks = 0
+    def close_description_breaks(match):
+        nonlocal breaks
+        # Do not reinterpret text explicitly protected as CDATA.
+        if b'<![CDATA[' in match[0]:
+            return match[0]
+        result, count = re.subn(br'<br\s*>', b'<br/>', match[0], flags=re.I)
+        breaks += count
+        return result
+    candidate = re.sub(br'<desc\b[^>]*>.*?</desc\s*>', close_description_breaks, candidate, flags=re.I | re.S)
+    if breaks:
+        repairs.append({
+            'type': 'description-html-breaks', 'closedTags': breaks,
+            'description': 'Balises HTML br autofermées dans les descriptions du GPX ; coordonnées inchangées.',
+        })
+    if not repairs:
+        return raw, []
+    xml = ET.fromstring(candidate)
+    assert xml.tag.split('}')[-1] == 'gpx', 'Not a GPX document'
+    return candidate, repairs
+
+
 def parse(raw):
     xml = ET.fromstring(raw)
+    assert xml.tag.split('}')[-1] == 'gpx', 'Not a GPX document'
     segments = []
     for parent in xml.iter():
         if parent.tag.split('}')[-1] not in ['trkseg', 'rte']:
@@ -77,11 +134,15 @@ def validate(record):
             with urllib.request.urlopen(req, timeout=40) as response:
                 raw = response.read()
             target.write_bytes(raw)
-        segments = parse(raw)
+        validated_raw, repairs = normalize_gpx(raw)
+        segments = parse(validated_raw)
         length = sum(distance(a, b) for segment in segments for a, b in zip(segment, segment[1:])) / 1000
         assert .1 <= length <= 1200, 'Implausible GPX length'
         target.write_bytes(raw)
         result.update(gpxSha256=hashlib.sha256(raw).hexdigest(), geometryKm=round(length, 3), pointCount=sum(map(len, segments)))
+        result.pop('issue', None)
+        if repairs:
+            result.update(gpxRepairs=repairs, validatedGpxSha256=hashlib.sha256(validated_raw).hexdigest())
         km = record.get('km')
         if km and abs(length-km) > max(1, km*.25):
             result.update(status='distance-a-verifier', issue=f"Fiche {km} km ; GPX {length:.1f} km")
