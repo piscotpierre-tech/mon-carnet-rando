@@ -2,6 +2,8 @@ name: Publier le carnet sur GitHub Pages
 on:
   push:
     branches: [main]
+    paths-ignore:
+      - '**/*.md'
   workflow_dispatch:
 permissions:
   contents: read
