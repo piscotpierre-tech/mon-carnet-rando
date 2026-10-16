@@ -4,7 +4,7 @@ import vm from 'node:vm';
 import fs from 'node:fs';
 
 function harness(){
-  const events={},stores=new Map();let offline=false;
+  const events={},stores=new Map();let offline=false,httpStale=false;
   const address=x=>typeof x==='string'?x:x.url;
   const caches={
     async open(name){if(!stores.has(name))stores.set(name,new Map());const store=stores.get(name);return {
@@ -15,9 +15,9 @@ function harness(){
     async keys(){return [...stores.keys()];},async delete(name){return stores.delete(name);},
   };
   const self={location:{href:'https://exemple.github.io/mon-carnet-rando/sw.js'},addEventListener:(name,fn)=>events[name]=fn,skipWaiting:()=>Promise.resolve(),clients:{claim:()=>Promise.resolve()}};
-  const fetch=async request=>{if(offline)throw new Error('Offline');const r=new Response('network:'+address(request));Object.defineProperty(r,'type',{value:'basic'});return r;};
-  vm.runInNewContext(fs.readFileSync(new URL('../sw.js',import.meta.url),'utf8'),{self,caches,URL,fetch,Response});
-  return {stores,caches,offline(value){offline=value;},async lifecycle(name){let promise;events[name]({waitUntil:p=>promise=p});await promise;},async request(url,{mode='cors',method='GET'}={}){let promise;events.fetch({request:{url,mode,method},respondWith:p=>promise=p});return promise;}};
+  const fetch=async (request,options)=>{if(offline)throw new Error('Offline');const r=new Response((httpStale&&options?.cache!=='no-cache'?'http-cache:':'network:')+address(request));Object.defineProperty(r,'type',{value:'basic'});return r;};
+  vm.runInNewContext(fs.readFileSync(new URL('../sw.js',import.meta.url),'utf8'),{self,caches,URL,fetch,Response,Request});
+  return {stores,caches,offline(value){offline=value;},staleHttpCache(value){httpStale=value;},async lifecycle(name){let promise;events[name]({waitUntil:p=>promise=p});await promise;},async request(url,{mode='cors',method='GET'}={}){let promise;events.fetch({request:{url,mode,method},respondWith:p=>promise=p});return promise;}};
 }
 
 test('le cache de l’application fonctionne dans un sous-dossier GitHub Pages',async()=>{
@@ -38,8 +38,9 @@ test('une carte d’origine ou une nouvelle carte IGN garde son fond après la p
     h.offline(true);const second=await h.request(url);assert.equal(await second.text(),'network:'+url);
   }
 });
-test('le code de l’application se rafraîchit en ligne et retombe sur sa copie sans réseau',async()=>{
+test('le code se rafraîchit malgré un cache HTTP ancien et retombe sur sa copie sans réseau',async()=>{
   const h=harness();await h.lifecycle('install');
+  h.staleHttpCache(true);
   const url='https://exemple.github.io/mon-carnet-rando/app.js';
   const live=await h.request(url);assert.equal(await live.text(),'network:'+url);
   h.offline(true);
