@@ -1,5 +1,5 @@
-import {ROUTES,SOURCE_DATE} from './data.js?v=ign-20261016';
-import {APP_ID,STORAGE_KEY,CACHE_NAME,emptyState,filterRoutes,validateState,validateTrip,mergeBackup,stats,timerElapsed,pauseTimer,resumeTimer,localDate} from './core.js';
+import {ROUTES,SOURCE_DATE} from './data.js?v=relief-20261016';
+import {APP_ID,STORAGE_KEY,CACHE_NAME,emptyState,filterRoutes,validateState,validateTrip,mergeBackup,stats,timerElapsed,pauseTimer,resumeTimer,localDate,routeElevation,routeMapsUrl} from './core.js?v=relief-20261016';
 
 const $=s=>document.querySelector(s);
 const icon=name=>`<svg class="icon" aria-hidden="true"><use href="#i-${name}"/></svg>`;
@@ -8,13 +8,12 @@ const fmt=n=>new Intl.NumberFormat('fr-FR',{maximumFractionDigits:1}).format(n);
 const routeById=id=>ROUTES.find(r=>r.id===Number(id));
 const asset=p=>new URL(p,document.baseURI).href;
 const external=(href,label,cls='text-button')=>`<a href="${esc(href)}" class="${cls}" target="_blank" rel="noopener noreferrer">${label}</a>`;
-const mapSearch=r=>'https://www.google.com/maps/search/?api=1&query='+encodeURIComponent(`${r.start} ${r.town} ${r.departmentName}`);
 const dateLabel=date=>new Intl.DateTimeFormat('fr-FR',{day:'numeric',month:'short',year:'numeric'}).format(new Date(`${date}T12:00:00`));
 const timeLabel=ms=>{const sec=Math.floor(ms/1000);return [Math.floor(sec/3600),Math.floor(sec/60)%60,sec%60].map(n=>String(n).padStart(2,'0')).join(':');};
 
 let state=emptyState(),view='explorer',currentRoute=null,zoom=100,pendingImport=null,installPrompt=null,finishingTimer=false;
 let previousRaw=null,storageBlocked=false;
-let filters={search:'',band:'all',sort:'featured',onlyFavorites:false,onlyDone:false,department:'all'};
+let filters={search:'',band:'all',sort:'featured',onlyFavorites:false,onlyDone:false,department:'all',ascent:'all'};
 let toastTimeout;
 
 function warning(message) {$('#storage-warning').textContent=message;$('#storage-warning').hidden=false;}
@@ -51,7 +50,9 @@ function renderCards() {
   $('#result-count').textContent=`${routes.length} circuit${routes.length>1?'s':''}`;
   $('#route-grid').innerHTML=routes.map(r=>{
     const favorite=state.favorites.includes(r.id),done=state.trips.some(t=>t.routeId===r.id);
-    return `<article class="route-card"><button class="favorite-button icon-button" data-action="favorite" data-id="${r.id}" aria-pressed="${favorite}" aria-label="${favorite?'Retirer des favoris':'Ajouter aux favoris'} : ${esc(r.name)}">${icon('heart')}</button><button class="card-open" data-action="open" data-id="${r.id}" aria-label="Ouvrir ${esc(r.name)}, ${fmt(r.km)} kilomètres"><div class="card-map${r.basemap?' has-basemap':''}"><img src="./${r.thumb}" loading="lazy" decoding="async" alt="${r.basemap?'Carte IGN avec le tracé du circuit ':'Aperçu de la carte du circuit '}${r.id}" width="560" height="400"><span class="distance-badge">${fmt(r.km)} km</span></div><div class="card-body"><span class="card-department">${esc(r.departmentName)}${r.isNew?' · NOUVEAU':''}</span><span class="card-town">${esc(r.town)}</span><h3>${esc(r.name)}</h3><div class="card-bottom"><span>${done?`<span class="done-label">${icon('check')}Déjà parcouru</span>`:`Circuit ${String(r.id).padStart(2,'0')} · ${r.ambiguous?'Départ à confirmer':'Voir le parcours'}`}</span>${icon('arrow')}</div></div></button></article>`;
+    const elevation=routeElevation(r);
+    const relief=`<div class="card-metrics"><span>D+ ${elevationLabel(elevation.ascent,elevation.estimated)}</span><span>D− ${elevationLabel(elevation.descent,elevation.estimated)}</span>${r.durationMinutes?`<span>${durationLabel(r.durationMinutes)}</span>`:''}${r.difficulty?`<span>${esc(r.difficulty)}</span>`:''}</div><p class="card-elevation-source">${elevation.estimated?`Dénivelés estimés · ${r.elevation?.provider==='GPX officiel'?'GPX':'IGN'}`:elevation.ascent===null?'Dénivelés non renseignés':'D+ annoncé par la fiche'}</p>`;
+    return `<article class="route-card"><button class="favorite-button icon-button" data-action="favorite" data-id="${r.id}" aria-pressed="${favorite}" aria-label="${favorite?'Retirer des favoris':'Ajouter aux favoris'} : ${esc(r.name)}">${icon('heart')}</button><button class="card-open" data-action="open" data-id="${r.id}" aria-label="Ouvrir ${esc(r.name)}, ${fmt(r.km)} kilomètres"><div class="card-map${r.basemap?' has-basemap':''}"><img src="./${r.thumb}" loading="lazy" decoding="async" alt="${r.basemap?'Carte IGN avec le tracé du circuit ':'Aperçu de la carte du circuit '}${r.id}" width="560" height="400"><span class="distance-badge">${fmt(r.km)} km</span></div><div class="card-body"><span class="card-department">${esc(r.departmentName)}${r.isNew?' · NOUVEAU':''}</span><span class="card-town">${esc(r.town)}</span><h3>${esc(r.name)}</h3>${relief}<div class="card-bottom"><span>${done?`<span class="done-label">${icon('check')}Déjà parcouru</span>`:`Circuit ${String(r.id).padStart(2,'0')} · ${r.ambiguous?'Départ à confirmer':'Voir le parcours'}`}</span>${icon('arrow')}</div></div></button><div class="card-links">${external(routeMapsUrl(r),r.ambiguous?'Voir la commune dans Maps':'Aller au départ · Google Maps')}</div></article>`;
   }).join('');
   $('#empty-results').hidden=routes.length>0;
   if(!routes.length && view==='favoris') {
@@ -59,7 +60,7 @@ function renderCards() {
     $('#empty-results p').textContent=state.favorites.length?'Essaie une autre distance ou efface la recherche.':'Appuie sur le cœur d’un circuit pour le retrouver facilement.';
   } else {
     $('#empty-results h3').textContent='Aucun chemin trouvé';
-    $('#empty-results p').textContent='Essaie un autre lieu ou une autre distance.';
+    $('#empty-results p').textContent='Essaie un autre lieu, une autre distance ou un autre dénivelé.';
   }
   document.querySelectorAll('[data-band]').forEach(b=>{const active=b.dataset.band===filters.band;b.classList.toggle('active',active);b.setAttribute('aria-pressed',String(active));});
   $('#done-filter').classList.toggle('active',filters.onlyDone);$('#done-filter').setAttribute('aria-pressed',String(filters.onlyDone));
@@ -99,24 +100,55 @@ function toggleFavorite(id) {
   toast(was?'Circuit retiré des favoris.':'Une nouvelle envie dans tes favoris.');
 }
 
-const routeAssets=r=>[r.map,r.thumb,...(r.trace?[r.trace,r.gpx]:[])];
+const routeAssets=r=>[...new Set([r.map,r.thumb,r.trace,r.gpx,r.elevationTrace,r.elevation?.profile].filter(Boolean))];
 const durationLabel=minutes=>`${Math.floor(minutes/60)} h${minutes%60?' '+String(minutes%60).padStart(2,'0'):''}`;
+const elevationLabel=(metres,estimated)=>metres===null?'—':`${estimated?'≈ ':''}${fmt(metres)} m`;
+function elevationSection(r) {
+  if(!r.elevation)return '<p class="elevation-note">D+ : total des montées · D− : total des descentes. Les valeurs absentes restent non renseignées.</p>';
+  return `<section class="elevation-profile" aria-labelledby="elevation-heading"><h2 id="elevation-heading">Le relief du parcours</h2><p class="elevation-note">D+ : total des montées · D− : total des descentes.</p><div class="elevation-meta"><span>Altitude basse ≈ ${fmt(r.elevation.min)} m</span><span>Altitude haute ≈ ${fmt(r.elevation.max)} m</span></div><div id="elevation-chart" role="status">Chargement du profil…</div><p class="elevation-note">Dénivelés et profil estimés à partir ${r.elevation.provider==='GPX officiel'?'des altitudes du GPX officiel':'du relief IGN'}, arrondis à 5 m pour les montées et descentes.${r.elevationGain!=null?` La fiche de l’organisme annonce ${fmt(r.elevationGain)} m de dénivelé.`:''} ${r.elevationTrace?'Le profil suit le GPX actuel de l’office ; la carte du dossier est datée de 2022.':''}</p></section>`;
+}
+async function loadElevationProfile(r) {
+  if(!r.elevation)return;
+  try {
+    const response=await fetch(asset(r.elevation.profile));if(!response.ok)throw Error('Profil indisponible');
+    const data=await response.json();
+    if(currentRoute?.id!==r.id)return;
+    const segments=data.segments;
+    if(data.routeId!==r.id||!Array.isArray(segments)||!segments.length)throw Error('Profil invalide');
+    const points=segments.flat();
+    if(points.length<2||!points.every(p=>Array.isArray(p)&&p.length===2&&p.every(Number.isFinite)))throw Error('Altitudes invalides');
+    const length=points.at(-1)[0];if(length<=0)throw Error('Distance invalide');
+    const low=Math.floor(Math.min(...points.map(p=>p[1]))/10)*10;
+    const high=Math.max(low+20,Math.ceil(Math.max(...points.map(p=>p[1]))/10)*10);
+    const x=d=>64+d/length*558,y=z=>202-(z-low)/(high-low)*178;
+    const line=segment=>segment.map((p,i)=>`${i?'L':'M'}${x(p[0]).toFixed(1)},${y(p[1]).toFixed(1)}`).join(' ');
+    const paths=segments.map(segment=>`<path class="profile-area" d="${line(segment)} L${x(segment.at(-1)[0]).toFixed(1)},202 L${x(segment[0][0]).toFixed(1)},202 Z"/><path class="profile-line" d="${line(segment)}"/>`).join('');
+    const grid=[low,(low+high)/2,high].map(z=>`<line class="profile-grid" x1="64" x2="622" y1="${y(z)}" y2="${y(z)}"/><text x="54" y="${y(z)+7}" text-anchor="end">${fmt(z)}</text>`).join('');
+    const ticks=[0,length/2,length].map((d,i)=>`<text x="${x(d)}" y="236" text-anchor="${i===0?'start':i===2?'end':'middle'}">${fmt(d/1000)} km</text>`).join('');
+    const chart=$('#elevation-chart');if(!chart)return;
+    chart.removeAttribute('role');
+    chart.innerHTML=`<svg class="profile-svg" viewBox="0 0 640 254" role="img" aria-label="Profil du parcours : altitude en mètres selon la distance sur le GPX, de ${fmt(length/1000)} kilomètres."><title>Altitude (m) selon la distance du GPX</title>${grid}${paths}${ticks}<text x="10" y="18">m</text></svg>`;
+  } catch {
+    if(currentRoute?.id===r.id&&$('#elevation-chart'))$('#elevation-chart').textContent='Profil indisponible ici. Télécharge la carte et le profil avant de partir sans réseau.';
+  }
+}
 function openRoute(id) {
   const r=routeById(id);if(!r)return;
   currentRoute=r;
   const metric=(value,label)=>`<div><strong>${esc(value)}</strong><span>${label}</span></div>`;
-  const extra=r.isNew?`${r.durationMinutes?metric(durationLabel(r.durationMinutes),'Durée indicative'):''}${r.difficulty?metric(r.difficulty,'Niveau de la fiche'):''}${r.elevationGain!=null?metric('+'+r.elevationGain+' m','Dénivelé annoncé'):''}`:metric(r.marking,'Balisage du tableau');
+  const elevation=routeElevation(r);
+  const extra=`${r.durationMinutes?metric(durationLabel(r.durationMinutes),'Durée indicative'):''}${r.difficulty?metric(r.difficulty,'Niveau de la fiche'):''}${metric(elevationLabel(elevation.ascent,elevation.estimated),'Dénivelé positif · D+')}${metric(elevationLabel(elevation.descent,elevation.estimated),'Dénivelé négatif · D−')}${!r.isNew?metric(r.marking,'Balisage du tableau'):''}`;
   const mapLabel=r.basemap?'Agrandir la carte IGN':r.trace?'Explorer le tracé interactif':r.isNew?'Ouvrir la fiche officielle':'Agrandir la carte';
-  $('#route-content').innerHTML=`<p class="eyebrow">${esc(r.departmentName)} · CIRCUIT ${String(r.id).padStart(2,'0')}</p><h1 id="route-title">${esc(r.name)}</h1><p class="route-locality">${esc(r.town)} · ${esc(r.area||r.departmentName)}</p><div class="detail-metrics">${metric(fmt(r.km)+' km',r.isNew?'Distance officielle':'Distance du dossier')}${extra}</div>${r.description?`<p class="detail-description">${esc(r.description)}</p>`:''}<div class="detail-actions"><button class="button" data-action="new-trip" data-id="${r.id}">${icon('plus')}Enregistrer une sortie</button>${external(r.official,'Fiche officielle','button button-light')}<button class="button button-light favorite-detail" data-action="favorite" data-id="${r.id}" aria-pressed="${state.favorites.includes(r.id)}" aria-label="${state.favorites.includes(r.id)?'Retirer des favoris':'Ajouter aux favoris'}">${icon('heart')}</button></div><section class="start-block"><h2>${icon('pin')}Le départ</h2><p>${esc(r.start)}<br><strong>${esc(r.town)}</strong></p>${r.ambiguous?'<p class="notice">'+esc(r.note)+'</p>':external(mapSearch(r),'Rechercher ce lieu dans Google Maps')}${!r.ambiguous?'<small class="muted">Recherche du lieu de départ ; vérifier le stationnement sur place.</small>':''}${r.isNew&&r.marking?`<p class="marking-note">Balisage : ${esc(r.marking)}</p>`:''}</section>${r.note&&!r.ambiguous?`<p class="notice">${esc(r.note)}</p>`:''}${r.fieldNote?`<p class="notice">${esc(r.fieldNote)}</p>`:''}<button class="map-preview" data-action="map" data-id="${r.id}" aria-label="${mapLabel} : ${esc(r.name)}"><img src="./${r.map}" alt="${r.basemap?'Carte IGN avec le tracé GPX officiel':r.trace?'Aperçu du tracé GPX, sans fond topographique':r.isNew?'Fiche du circuit':'Carte du circuit '+r.id}" width="1600" height="1120"><span>${mapLabel} ${icon('plus')}</span></button><p class="map-caption">${r.basemap?'Fond © IGN – Plan IGN · Licence Ouverte 2.0 · 16 octobre 2026. Tracé GPX officiel en rouge ; point vert : premier point du GPX.':r.isNew?(r.trace?'Aperçu du GPX officiel · tracé sans fond topographique. Le fond de la carte interactive demande Internet.':'Consulter le plan dans la fiche officielle. Aucun tracé local disponible.'):`Plan GTM du ${SOURCE_DATE} · page ${r.sourcePage} du document d’origine.`}</p>${r.isNew?`<div class="source-links">${r.basemap?`<button class="text-button" data-action="interactive-map" data-id="${r.id}">Explorer la carte interactive</button>`:''}${r.pdf?external(r.pdf,'Plan et descriptif PDF'):''}${r.gpx?`<a class="text-button" href="./${esc(r.gpx)}" download>Télécharger le GPX</a>`:''}${r.erratum?external(r.erratum,'Lire l’erratum officiel'):''}</div><p class="map-caption">Sources consultées le 15 octobre 2026. Durées et niveaux indiqués par l’organisme ; conditions à vérifier avant le départ.</p>`:''}<div class="cache-row"><button class="button button-light" data-action="download-route" data-id="${r.id}">${icon('download')}${r.basemap?'Garder la carte IGN et le tracé hors ligne':r.isNew?'Garder la fiche et le tracé hors ligne':'Garder cette carte hors ligne'}</button><span id="route-cache-status" class="cache-indicator"></span></div><section class="timer-block"><h2>Mode balade</h2><p>Un chrono pour ta sortie. Tu peux fermer le carnet et le retrouver ensuite.</p><output id="route-timer" class="stopwatch">00:00:00</output><div id="timer-actions" class="timer-actions"></div><p class="timer-footnote">La durée est calculée avec l’horloge du téléphone. Aucun parcours GPS n’est enregistré.</p></section>`;
+  $('#route-content').innerHTML=`<p class="eyebrow">${esc(r.departmentName)} · CIRCUIT ${String(r.id).padStart(2,'0')}</p><h1 id="route-title">${esc(r.name)}</h1><p class="route-locality">${esc(r.town)} · ${esc(r.area||r.departmentName)}</p><div class="detail-metrics">${metric(fmt(r.km)+' km',r.isNew?'Distance officielle':'Distance du dossier')}${extra}</div>${r.description?`<p class="detail-description">${esc(r.description)}</p>`:''}<div class="detail-actions"><button class="button" data-action="new-trip" data-id="${r.id}">${icon('plus')}Enregistrer une sortie</button>${external(r.official,'Fiche officielle','button button-light')}<button class="button button-light favorite-detail" data-action="favorite" data-id="${r.id}" aria-pressed="${state.favorites.includes(r.id)}" aria-label="${state.favorites.includes(r.id)?'Retirer des favoris':'Ajouter aux favoris'}">${icon('heart')}</button></div><section class="start-block"><h2>${icon('pin')}Le départ</h2><p>${esc(r.start)}<br><strong>${esc(r.town)}</strong></p>${r.ambiguous?'<p class="notice">'+esc(r.note)+'</p>':''}${external(routeMapsUrl(r),r.ambiguous?'Voir la commune dans Google Maps':'Aller au départ avec Google Maps','button button-light maps-departure')}<small class="muted">${r.ambiguous?'Départ à confirmer : Maps montre seulement la commune.':'Itinéraire en voiture vers le lieu indiqué ; vérifie le point proposé par Maps.'}</small>${r.isNew&&r.marking?`<p class="marking-note">Balisage : ${esc(r.marking)}</p>`:''}</section>${r.note&&!r.ambiguous?`<p class="notice">${esc(r.note)}</p>`:''}${r.fieldNote?`<p class="notice">${esc(r.fieldNote)}</p>`:''}${elevationSection(r)}<button class="map-preview" data-action="map" data-id="${r.id}" aria-label="${mapLabel} : ${esc(r.name)}"><img src="./${r.map}" alt="${r.basemap?'Carte IGN avec le tracé GPX officiel':r.trace?'Aperçu du tracé GPX, sans fond topographique':r.isNew?'Fiche du circuit':'Carte du circuit '+r.id}" width="1600" height="1120"><span>${mapLabel} ${icon('plus')}</span></button><p class="map-caption">${r.basemap?'Fond © IGN – Plan IGN · Licence Ouverte 2.0 · 16 octobre 2026. Tracé GPX officiel en rouge ; point vert : premier point du GPX.':r.isNew?(r.trace?'Aperçu du GPX officiel · tracé sans fond topographique. Le fond de la carte interactive demande Internet.':'Consulter le plan dans la fiche officielle. Aucun tracé local disponible.'):`Plan GTM du ${SOURCE_DATE} · page ${r.sourcePage} du document d’origine.`}</p>${r.isNew||r.elevationTrace?`<div class="source-links">${r.basemap?`<button class="text-button" data-action="interactive-map" data-id="${r.id}">Explorer la carte interactive</button>`:''}${r.pdf?external(r.pdf,'Plan et descriptif PDF'):''}${r.gpx||r.elevationTrace?`<a class="text-button" href="./${esc(r.gpx||r.elevationTrace)}" download>Télécharger le GPX</a>`:''}${r.erratum?external(r.erratum,'Lire l’erratum officiel'):''}</div><p class="map-caption">Sources consultées le ${r.isNew?'15':'16'} octobre 2026. Durées et niveaux indiqués par l’organisme ; conditions à vérifier avant le départ.</p>`:''}<div class="cache-row"><button class="button button-light" data-action="download-route" data-id="${r.id}">${icon('download')}${r.elevation?'Garder la carte et le profil hors ligne':r.basemap?'Garder la carte IGN et le tracé hors ligne':r.isNew?'Garder la fiche et le tracé hors ligne':'Garder cette carte hors ligne'}</button><span id="route-cache-status" class="cache-indicator"></span></div><section class="timer-block"><h2>Mode balade</h2><p>Un chrono pour ta sortie. Tu peux fermer le carnet et le retrouver ensuite.</p><output id="route-timer" class="stopwatch">00:00:00</output><div id="timer-actions" class="timer-actions"></div><p class="timer-footnote">La durée est calculée avec l’horloge du téléphone. Aucun parcours GPS n’est enregistré.</p></section>`;
   if(!$('#route-dialog').open)$('#route-dialog').showModal();
   $('#route-dialog').scrollTop=0;
-  updateTimerUI();checkRouteCache(r);
+  updateTimerUI();checkRouteCache(r);loadElevationProfile(r);
 }
 
 async function checkRouteCache(r) {
   const span=$('#route-cache-status');if(!span)return;
   const cached=(await Promise.all(routeAssets(r).map(isCached))).every(Boolean);
-  if(currentRoute?.id===r.id)span.textContent=cached?(r.basemap?'Carte IGN et tracé disponibles hors ligne sur cet appareil.':r.isNew?'Fiche et tracé conservés. Fond de carte en ligne uniquement.':'Carte disponible hors ligne sur cet appareil.'):'Pas encore téléchargé pour le hors-ligne.';
+  if(currentRoute?.id===r.id)span.textContent=cached?(r.elevation?'Carte, profil du relief et tracé disponibles hors ligne sur cet appareil.':r.basemap?'Carte IGN et tracé disponibles hors ligne sur cet appareil.':r.isNew?'Fiche et tracé conservés. Fond de carte en ligne uniquement.':'Carte disponible hors ligne sur cet appareil.'):'Pas encore téléchargé pour le hors-ligne.';
 }
 let interactiveMap=null,mapRequest=0;
 async function openMap(id,useInteractive=false) {
@@ -232,7 +264,7 @@ $('#import-file').addEventListener('change',async e=>{
 
 function showSources() {
   $('#info-title').textContent='Le carnet et ses sources';
-  $('#info-content').innerHTML=`<p>Un carnet personnel pour Pierre : <strong>${ROUTES.length} circuits dans les cinq départements de Normandie</strong>, dont 20 nouvelles suggestions.</p><h3>Les nouvelles randonnées</h3><p>Quatre circuits par département ont été ajoutés depuis les sites des offices de tourisme, organismes départementaux et portails publics de randonnée. Sources consultées le 15 octobre 2026. Chaque fiche donne ses liens officiels, le descriptif PDF lorsqu’il est proposé et le GPX disponible.</p><p>Les 20 nouveaux circuits affichent une vraie carte : fond © IGN – Plan IGN, sous Licence Ouverte 2.0, avec le GPX officiel en rouge. Les images sont géoréférencées, intégrées au carnet et téléchargeables hors ligne. Elles ont été préparées le 16 octobre 2026. Le point vert est le premier point du GPX, pas nécessairement le parking décrit. La carte interactive garde ce fond local autour du circuit et charge OpenStreetMap en ligne pour explorer plus loin. Les PDF cartographiques restent accessibles sur les sites de leurs éditeurs.</p><h3>Les 28 cartes d’origine</h3><p>Les cartes autour de Granville viennent du <strong>Plan Balisage GTM du 10 février 2022</strong>, document de travail du Comité Départemental de la Randonnée Pédestre de la Manche. Le document liste 30 circuits mais fournit 28 cartes : les n° 3 et 11 sont absents. Les anciennes fiches et leurs identifiants sont conservés.</p><ul><li>N° 9 : départ différent entre tableau et fiche (casino / nouvel office).</li><li>N° 13 et 14 : mairie dans le tableau, église sur la fiche.</li><li>N° 25 : sigles de départ différents (CSNRG / CNSRG).</li><li>N° 27 : carte à 12 km ; tableau et office à 12,5 km, valeur retenue.</li></ul><p>Ces départs restent signalés. Les informations absentes des sources ne sont pas inventées. Vérifie les accès, la météo, les marées sur le littoral et les déviations locales avant chaque sortie.</p><h3>Tes données</h3><p>Favoris, chrono et sorties restent dans ce navigateur. Aucun compte ni synchronisation de tes notes. Exporte régulièrement une sauvegarde JSON ; les sauvegardes de l’ancienne version restent compatibles.</p><h3>Sans réseau</h3><p>Le téléchargement conserve les cartes d’origine, les 20 cartes IGN avec leur fond et les traces GPX. La carte agrandissable reste lisible sans réseau. Le fond OpenStreetMap au-delà des environs du circuit, les PDF externes et les liens de départ demandent Internet. Aucune tuile OpenStreetMap n’est téléchargée par le bouton hors ligne. Le navigateur peut libérer le stockage : vérifie la disponibilité avant de partir. Aucun suivi GPS ni guidage en direct.</p><h3>Installer le carnet</h3><p>Utilise le bouton d’installation s’il apparaît, ou le menu du navigateur puis « Ajouter à l’écran d’accueil ».</p><p>${external('https://github.com/piscotpierre-tech/mon-carnet-rando/blob/main/SOURCES.md','Toutes les sources, circuit par circuit')}</p>`;
+  $('#info-content').innerHTML=`<p>Un carnet personnel pour Pierre : <strong>${ROUTES.length} circuits dans les cinq départements de Normandie</strong>, dont 20 nouvelles suggestions.</p><h3>Les nouvelles randonnées</h3><p>Quatre circuits par département ont été ajoutés depuis les sites des offices de tourisme, organismes départementaux et portails publics de randonnée. Sources consultées le 15 octobre 2026. Chaque fiche donne ses liens officiels, le descriptif PDF lorsqu’il est proposé et le GPX disponible.</p><p>Les 20 nouveaux circuits affichent une vraie carte : fond © IGN – Plan IGN, sous Licence Ouverte 2.0, avec le GPX officiel en rouge. Les images sont géoréférencées, intégrées au carnet et téléchargeables hors ligne. Elles ont été préparées le 16 octobre 2026. Le point vert est le premier point du GPX, pas nécessairement le parking décrit. La carte interactive garde ce fond local autour du circuit et charge OpenStreetMap en ligne pour explorer plus loin. Les PDF cartographiques restent accessibles sur les sites de leurs éditeurs.</p><h3>Montées et descentes</h3><p>${ROUTES.filter(r=>r.elevation).length} circuits disposent de D+, D− et d’un profil estimés à partir du relief IGN ou des altitudes du GPX officiel, consultés le 16 octobre 2026. Ces estimations sont arrondies à 5 m. Les chiffres annoncés par les organismes restent indiqués dans les fiches. Les valeurs absentes ne sont pas remplacées par zéro. Le filtre de montée trie selon les dénivelés connus, sans prétendre donner un niveau de difficulté.</p><h3>Les 28 cartes d’origine</h3><p>Les cartes autour de Granville viennent du <strong>Plan Balisage GTM du 10 février 2022</strong>, document de travail du Comité Départemental de la Randonnée Pédestre de la Manche. Le document liste 30 circuits mais fournit 28 cartes : les n° 3 et 11 sont absents. Les anciennes fiches et leurs identifiants sont conservés.</p><ul><li>N° 9 : départ différent entre tableau et fiche (casino / nouvel office).</li><li>N° 13 et 14 : mairie dans le tableau, église sur la fiche.</li><li>N° 25 : sigles de départ différents (CSNRG / CNSRG).</li><li>N° 27 : carte à 12 km ; tableau et office à 12,5 km, valeur retenue.</li></ul><p>Ces départs restent signalés. Les informations absentes des sources ne sont pas inventées. Vérifie les accès, la météo, les marées sur le littoral et les déviations locales avant chaque sortie.</p><h3>Tes données</h3><p>Favoris, chrono et sorties restent dans ce navigateur. Aucun compte ni synchronisation de tes notes. Exporte régulièrement une sauvegarde JSON ; les sauvegardes de l’ancienne version restent compatibles.</p><h3>Sans réseau</h3><p>Le téléchargement conserve les cartes d’origine, les 20 cartes IGN avec leur fond et les traces GPX. La carte agrandissable reste lisible sans réseau. Le fond OpenStreetMap au-delà des environs du circuit, les PDF externes et les liens de départ demandent Internet. Aucune tuile OpenStreetMap n’est téléchargée par le bouton hors ligne. Le navigateur peut libérer le stockage : vérifie la disponibilité avant de partir. Aucun suivi GPS ni guidage en direct.</p><h3>Installer le carnet</h3><p>Utilise le bouton d’installation s’il apparaît, ou le menu du navigateur puis « Ajouter à l’écran d’accueil ».</p><p>${external('https://github.com/piscotpierre-tech/mon-carnet-rando/blob/main/SOURCES.md','Toutes les sources, circuit par circuit')}</p>`;
   $('#info-dialog').showModal();
 }
 
@@ -253,7 +285,7 @@ async function downloadRoute(id,button) {
   try {
     const cache=await caches.open(CACHE_NAME);
     for(const path of routeAssets(r))await cacheAsset(cache,path);
-    toast(r.basemap?'Carte IGN et tracé téléchargés sur cet appareil.':r.isNew?'Fiche et tracé conservés sur cet appareil.':'Carte téléchargée sur cet appareil.');checkRouteCache(r);refreshOfflineStatus();
+    toast(r.elevation?'Carte, profil du relief et tracé téléchargés sur cet appareil.':r.basemap?'Carte IGN et tracé téléchargés sur cet appareil.':r.isNew?'Fiche et tracé conservés sur cet appareil.':'Carte téléchargée sur cet appareil.');checkRouteCache(r);refreshOfflineStatus();
   }catch(error){toast(error.message||'Téléchargement impossible.');}
   finally{if(button)button.disabled=false;}
 }
@@ -267,7 +299,7 @@ async function downloadAll() {
   try {
     const cache=await caches.open(CACHE_NAME);
     for(const r of ROUTES){for(const path of routeAssets(r))await cacheAsset(cache,path);button.textContent=`Cartes téléchargées : ${++n} / ${ROUTES.length}`;}
-    toast(`Les ${ROUTES.length} cartes et leurs tracés sont conservés, avec les fonds IGN des nouveaux circuits.`);
+    toast(`Les ${ROUTES.length} cartes, leurs tracés et les profils disponibles sont conservés sur cet appareil.`);
   }catch(error){toast(`Téléchargement arrêté après ${n} cartes. Les cartes déjà conservées restent disponibles.`);}
   finally{button.disabled=false;button.innerHTML=`${icon('download')}Garder les cartes hors ligne`;refreshOfflineStatus();}
 }
@@ -292,7 +324,7 @@ document.addEventListener('click',async e=>{
     case 'close-info':$('#info-dialog').close();pendingImport=null;break;
     case 'edit-trip':{const trip=state.trips.find(t=>t.id===b.dataset.trip);if(trip)showTrip({trip});break;}
     case 'delete-trip':if(confirm('Supprimer cette sortie du carnet ?')){if(persist({...state,trips:state.trips.filter(t=>t.id!==b.dataset.trip)})){renderJournal();renderCards();toast('Sortie supprimée.');}}break;
-    case 'reset-filters':filters={...filters,search:'',band:'all',sort:'featured',onlyDone:false,department:'all'};$('#department').value='all';$('#search').value='';$('#sort').value='featured';renderCards();break;
+    case 'reset-filters':filters={...filters,search:'',band:'all',sort:'featured',onlyDone:false,department:'all',ascent:'all'};$('#department').value='all';$('#ascent').value='all';$('#search').value='';$('#sort').value='featured';renderCards();break;
     case 'timer-start':startTimer(id);break;
     case 'timer-pause':if(state.timer && persist({...state,timer:pauseTimer(state.timer)}))updateTimerUI();break;
     case 'timer-resume':if(state.timer && persist({...state,timer:resumeTimer(state.timer)}))updateTimerUI();break;
@@ -309,6 +341,7 @@ document.addEventListener('click',async e=>{
 $('#search').addEventListener('input',e=>{filters.search=e.target.value;renderCards();});
 $('#department').addEventListener('change',e=>{filters.department=e.target.value;renderCards();});
 $('#sort').addEventListener('change',e=>{filters.sort=e.target.value;renderCards();});
+$('#ascent').addEventListener('change',e=>{filters.ascent=e.target.value;renderCards();});
 document.querySelectorAll('[data-band]').forEach(b=>b.addEventListener('click',()=>{filters.band=b.dataset.band;renderCards();}));
 $('#done-filter').addEventListener('click',()=>{filters.onlyDone=!filters.onlyDone;renderCards();});
 window.addEventListener('hashchange',setView);
@@ -318,7 +351,7 @@ window.addEventListener('beforeinstallprompt',e=>{e.preventDefault();installProm
 window.addEventListener('appinstalled',()=>{$('#install-button').hidden=true;installPrompt=null;});
 window.addEventListener('storage',e=>{if(e.key!==STORAGE_KEY)return;try{state=e.newValue?validateState(JSON.parse(e.newValue),ROUTES):emptyState();renderCards();renderJournal();updateTimerUI();}catch{warning('Une autre fenêtre a enregistré des données illisibles. Ferme-la puis recharge le carnet.');}});
 for(const dialog of document.querySelectorAll('dialog'))dialog.addEventListener('click',e=>{if(e.target!==dialog)return;const r=dialog.getBoundingClientRect();if(e.clientX<r.left||e.clientX>r.right||e.clientY<r.top||e.clientY>r.bottom)dialog.close();});
-if('serviceWorker' in navigator && isSecureContext){navigator.serviceWorker.register('./sw.js?v=ign-20261016',{updateViaCache:'none'}).catch(()=>toast('Le mode hors ligne n’a pas pu être activé. Le carnet reste utilisable en ligne.'));}
+if('serviceWorker' in navigator && isSecureContext){navigator.serviceWorker.register('./sw.js?v=relief-20261016',{updateViaCache:'none'}).catch(()=>toast('Le mode hors ligne n’a pas pu être activé. Le carnet reste utilisable en ligne.'));}
 setInterval(updateTimerUI,1000);
 $('#total-routes').textContent=ROUTES.length;
 $('#distance-range').textContent=`${fmt(Math.min(...ROUTES.map(r=>r.km)))} à ${fmt(Math.max(...ROUTES.map(r=>r.km)))}`;

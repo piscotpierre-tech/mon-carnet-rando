@@ -238,3 +238,29 @@ Leaflet 1.9.4 est embarqué localement sous licence BSD-2-Clause (`assets/vendor
 - Chaque carte et miniature porte `© IGN – Plan IGN · Licence Ouverte 2.0 · 2026-10-16`. Les JSON `assets/maps/{id}-ign.json` conservent l’emprise, les URL WMS exactes, les dimensions et les empreintes SHA-256 du fond reçu, de l’image produite et du GeoJSON.
 - Le point vert désigne le premier point du GPX officiel ; il ne constitue pas une vérification du parking. Le départ textuel de la fiche garde sa provenance initiale.
 - Les images des 20 circuits font partie du téléchargement hors ligne. La carte interactive peut les afficher dans leur emprise géographique sans réseau. Les tuiles OpenStreetMap restent en ligne et ne sont pas préchargées.
+
+## D+/D− et profils — 16 octobre 2026
+
+31 profils sont fournis, et 17 circuits restent explicitement non renseignés. Le D+ cumule les montées et le D− cumule les descentes. Aucune valeur inconnue n’est remplacée par zéro, et le D− n’est pas recopié du D+ au seul motif que le circuit forme une boucle.
+
+- [Documentation du calcul altimétrique IGN](https://cartes.gouv.fr/aide/fr/guides-utilisateur/utiliser-les-services-de-la-geoplateforme/calcul-altimetrique/) : méthode POST `elevationLine.json`, ressource `ign_rge_alti_wld`, mode simple, nombre de points visé pour un pas de 25 m. Les réponses réelles peuvent inclure le point final en supplément du nombre demandé ; les extrémités sont contrôlées.
+- API appelée : `https://data.geopf.fr/altimetrie/1.0/calcul/alti/rest/elevationLine.json`. La date, la méthode, les paramètres, la source du GPX et son empreinte sont conservés dans chaque JSON de profil. Les cumuls positifs et négatifs viennent de la même série d’altitudes. L’affichage des cumuls est arrondi à 5 m.
+- Le circuit 41 utilise exclusivement les altitudes complètes de son GPX officiel, car des points du tracé littoral n’ont pas de valeur exploitable dans le modèle IGN. Il est identifié « GPX officiel », sans interpolation ni substitution de zéros.
+- Les valeurs des fiches officielles restent affichées séparément dans les fiches ; les estimations peuvent varier selon la source, la résolution et l’échantillonnage.
+- [Documentation des URL Google Maps](https://developers.google.com/maps/documentation/urls/get-started) : `api=1`, action `dir`, destination textuelle et mode voiture. Les départs ambigus donnent seulement une recherche de la commune. Aucun point initial de GPX n’est déclaré parking sans vérification.
+
+### GPX complémentaires des cartes GTM de 2022
+
+Les pages et téléchargements ci-dessous ont été consultés le 16 octobre 2026. Ils ont été rapprochés des circuits du dossier par leur nom, leur commune, leur distance publiée et la longueur de la géométrie. Leurs profils suivent les GPX actuels ; les images du dossier de 2022 restent inchangées.
+
+- **7 · La vallée de la Doucoeur** · 5 km sur la fiche : [page officielle](https://www.tourisme-granville-terre-mer.com/offres/la-vallee-du-doucoeur-la-meurdraquiere-fr-5172219/) · [GPX officiel](https://cdt61.media.tourinsoft.eu/upload/bf-vallee-doucoeur-meurdraquiere.gpx).
+- **12 · Balade Château Bonheur** · 4 km sur la fiche : [page officielle](https://www.tourisme-granville-terre-mer.com/offres/balade-chateau-bonheur-granville-fr-5172238/) · [GPX officiel](https://cdt61.media.tourinsoft.eu/upload/bf-chateau-bonheur-Granville.gpx).
+- **16 · L’Abbaye de La Lucerne d’Outremer** · 7.5 km sur la fiche : [page officielle](https://www.tourisme-granville-terre-mer.com/offres/labbaye-de-la-lucerne-doutremer-la-lucerne-doutremer-fr-5172245/) · [GPX officiel](https://cdt61.media.tourinsoft.eu/upload/bf-abbaye-Lucerne-2.gpx).
+- **17 · Les hauts de Bouillon** · 5 km sur la fiche : [page officielle](https://www.tourisme-granville-terre-mer.com/offres/les-hauts-de-bouillon-jullouville-fr-5172266/) · [GPX officiel](https://cdt61.media.tourinsoft.eu/upload/BF-hauts-de-bouillon-jullou.gpx).
+- **18 · Les sous-bois de Vaumoisson** · 5.5 km sur la fiche : [page officielle](https://www.tourisme-granville-terre-mer.com/offres/les-sous-bois-de-vaumoisson-jullouville-fr-5172246/) · [GPX officiel](https://cdt61.media.tourinsoft.eu/upload/Cirkwi-A-pied---Les-sous-bois-de-Vaumoisson.gpx).
+- **19 · La Vallée du Lude** · 6 km sur la fiche : [page officielle](https://www.tourisme-granville-terre-mer.com/offres/la-vallee-du-lude-carolles-fr-5172220/) · [GPX officiel](https://cdt61.media.tourinsoft.eu/upload/Cirkwi-A-pied---La-Vallee-du-Lude.gpx).
+- **20 · Le havre de la Vanlée** · 10 km sur la fiche : [page officielle](https://www.tourisme-granville-terre-mer.com/offres/le-havre-de-la-vanlee-bricqueville-sur-mer-fr-5172261/) · [GPX officiel](https://cdt61.media.tourinsoft.eu/upload/Cirkwi-A-pied---Le-Havre-de-la-Vanlee.gpx).
+- **21 · Pierres à ciel ouvert** · 10 km sur la fiche : [page officielle](https://www.tourisme-granville-terre-mer.com/offres/pierres-a-ciel-ouvert-brehal-fr-5172222/) · [GPX officiel](https://cdt61.media.tourinsoft.eu/upload/pr2-pierres-a-ciel-ouvert.gpx).
+- **22 · Par monts et par vaux** · 17 km sur la fiche : [page officielle](https://www.tourisme-granville-terre-mer.com/offres/par-monts-et-par-vaux-coudeville-sur-mer-fr-5172262/) · [GPX officiel](https://cdt61.media.tourinsoft.eu/upload/Cirkwi-A-pied---Par-monts-et-par-vaux.gpx).
+- **24 · Les vallons de Cérences** · 20 km sur la fiche : [page officielle](https://www.tourisme-granville-terre-mer.com/offres/les-vallons-de-cerences-cerences-fr-5172252/) · [GPX officiel](https://cdt61.media.tourinsoft.eu/upload/pr5-les-vallons-de-cerences.gpx).
+- **27 · Les 3 cabanes Vauban** · 12.5 km sur la fiche : [page officielle](https://www.tourisme-granville-terre-mer.com/offres/les-3-cabanes-vauban-carolles-fr-5172233/) · [GPX officiel](https://cdt61.media.tourinsoft.eu/upload/PR8-3cabanesVauban.gpx).

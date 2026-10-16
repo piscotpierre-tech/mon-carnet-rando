@@ -107,11 +107,26 @@ export const ROUTES = [
     "ambiguous": false,
     "note": "",
     "description": "",
-    "official": "https://www.tourisme-granville-terre-mer.com/sejourner/a-faire-sur-place/bouger/balades-randos/",
+    "official": "https://www.tourisme-granville-terre-mer.com/offres/la-vallee-du-doucoeur-la-meurdraquiere-fr-5172219/",
     "featured": false,
     "department": "50",
     "departmentName": "Manche",
-    "area": "Granville Terre & Mer"
+    "area": "Granville Terre & Mer",
+    "elevationTrace": "assets/profiles/7-source.gpx",
+    "elevationTraceSource": "https://cdt61.media.tourinsoft.eu/upload/bf-vallee-doucoeur-meurdraquiere.gpx",
+    "elevationOfficial": "https://www.tourisme-granville-terre-mer.com/offres/la-vallee-du-doucoeur-la-meurdraquiere-fr-5172219/",
+    "elevationOfficialKm": 5,
+    "elevation": {
+      "ascent": 130,
+      "descent": 140,
+      "min": 53,
+      "max": 114,
+      "distanceKm": 4.714,
+      "estimated": true,
+      "provider": "IGN RGE ALTI",
+      "checkedAt": "2026-10-16",
+      "profile": "assets/profiles/7.json"
+    }
   },
   {
     "id": 8,
@@ -183,11 +198,26 @@ export const ROUTES = [
     "ambiguous": false,
     "note": "",
     "description": "",
-    "official": "https://www.tourisme-granville-terre-mer.com/sejourner/a-faire-sur-place/bouger/balades-randos/",
+    "official": "https://www.tourisme-granville-terre-mer.com/offres/balade-chateau-bonheur-granville-fr-5172238/",
     "featured": false,
     "department": "50",
     "departmentName": "Manche",
-    "area": "Granville Terre & Mer"
+    "area": "Granville Terre & Mer",
+    "elevationTrace": "assets/profiles/12-source.gpx",
+    "elevationTraceSource": "https://cdt61.media.tourinsoft.eu/upload/bf-chateau-bonheur-Granville.gpx",
+    "elevationOfficial": "https://www.tourisme-granville-terre-mer.com/offres/balade-chateau-bonheur-granville-fr-5172238/",
+    "elevationOfficialKm": 4,
+    "elevation": {
+      "ascent": 45,
+      "descent": 50,
+      "min": 27,
+      "max": 64,
+      "distanceKm": 3.809,
+      "estimated": true,
+      "provider": "IGN RGE ALTI",
+      "checkedAt": "2026-10-16",
+      "profile": "assets/profiles/12.json"
+    }
   },
   {
     "id": 13,
@@ -259,11 +289,26 @@ export const ROUTES = [
     "ambiguous": false,
     "note": "",
     "description": "",
-    "official": "https://www.tourisme-granville-terre-mer.com/sejourner/a-faire-sur-place/bouger/balades-randos/",
+    "official": "https://www.tourisme-granville-terre-mer.com/offres/labbaye-de-la-lucerne-doutremer-la-lucerne-doutremer-fr-5172245/",
     "featured": false,
     "department": "50",
     "departmentName": "Manche",
-    "area": "Granville Terre & Mer"
+    "area": "Granville Terre & Mer",
+    "elevationTrace": "assets/profiles/16-source.gpx",
+    "elevationTraceSource": "https://cdt61.media.tourinsoft.eu/upload/bf-abbaye-Lucerne-2.gpx",
+    "elevationOfficial": "https://www.tourisme-granville-terre-mer.com/offres/labbaye-de-la-lucerne-doutremer-la-lucerne-doutremer-fr-5172245/",
+    "elevationOfficialKm": 7.5,
+    "elevation": {
+      "ascent": 160,
+      "descent": 160,
+      "min": 33,
+      "max": 109,
+      "distanceKm": 7.347,
+      "estimated": true,
+      "provider": "IGN RGE ALTI",
+      "checkedAt": "2026-10-16",
+      "profile": "assets/profiles/16.json"
+    }
   },
   {
     "id": 17,
@@ -278,11 +323,26 @@ export const ROUTES = [
     "ambiguous": false,
     "note": "",
     "description": "",
-    "official": "https://www.tourisme-granville-terre-mer.com/sejourner/a-faire-sur-place/bouger/balades-randos/",
+    "official": "https://www.tourisme-granville-terre-mer.com/offres/les-hauts-de-bouillon-jullouville-fr-5172266/",
     "featured": false,
     "department": "50",
     "departmentName": "Manche",
-    "area": "Granville Terre & Mer"
+    "area": "Granville Terre & Mer",
+    "elevationTrace": "assets/profiles/17-source.gpx",
+    "elevationTraceSource": "https://cdt61.media.tourinsoft.eu/upload/BF-hauts-de-bouillon-jullou.gpx",
+    "elevationOfficial": "https://www.tourisme-granville-terre-mer.com/offres/les-hauts-de-bouillon-jullouville-fr-5172266/",
+    "elevationOfficialKm": 5,
+    "elevation": {
+      "ascent": 85,
+      "descent": 85,
+      "min": 8,
+      "max": 79,
+      "distanceKm": 4.935,
+      "estimated": true,
+      "provider": "IGN RGE ALTI",
+      "checkedAt": "2026-10-16",
+      "profile": "assets/profiles/17.json"
+    }
   },
   {
     "id": 18,
@@ -297,11 +357,26 @@ export const ROUTES = [
     "ambiguous": false,
     "note": "",
     "description": "",
-    "official": "https://www.tourisme-granville-terre-mer.com/sejourner/a-faire-sur-place/bouger/balades-randos/",
+    "official": "https://www.tourisme-granville-terre-mer.com/offres/les-sous-bois-de-vaumoisson-jullouville-fr-5172246/",
     "featured": false,
     "department": "50",
     "departmentName": "Manche",
-    "area": "Granville Terre & Mer"
+    "area": "Granville Terre & Mer",
+    "elevationTrace": "assets/profiles/18-source.gpx",
+    "elevationTraceSource": "https://cdt61.media.tourinsoft.eu/upload/Cirkwi-A-pied---Les-sous-bois-de-Vaumoisson.gpx",
+    "elevationOfficial": "https://www.tourisme-granville-terre-mer.com/offres/les-sous-bois-de-vaumoisson-jullouville-fr-5172246/",
+    "elevationOfficialKm": 5.5,
+    "elevation": {
+      "ascent": 100,
+      "descent": 100,
+      "min": 50,
+      "max": 91,
+      "distanceKm": 5.49,
+      "estimated": true,
+      "provider": "IGN RGE ALTI",
+      "checkedAt": "2026-10-16",
+      "profile": "assets/profiles/18.json"
+    }
   },
   {
     "id": 19,
@@ -316,11 +391,26 @@ export const ROUTES = [
     "ambiguous": false,
     "note": "",
     "description": "Une boucle dans le secteur de Carolles, entre vallée et littoral, avec les points de vue de la côte et la cabane Vauban.",
-    "official": "https://www.normandie-tourisme.fr/itineraire/la-vallee-du-lude/",
+    "official": "https://www.tourisme-granville-terre-mer.com/offres/la-vallee-du-lude-carolles-fr-5172220/",
     "featured": true,
     "department": "50",
     "departmentName": "Manche",
-    "area": "Granville Terre & Mer"
+    "area": "Granville Terre & Mer",
+    "elevationTrace": "assets/profiles/19-source.gpx",
+    "elevationTraceSource": "https://cdt61.media.tourinsoft.eu/upload/Cirkwi-A-pied---La-Vallee-du-Lude.gpx",
+    "elevationOfficial": "https://www.tourisme-granville-terre-mer.com/offres/la-vallee-du-lude-carolles-fr-5172220/",
+    "elevationOfficialKm": 6,
+    "elevation": {
+      "ascent": 190,
+      "descent": 190,
+      "min": 13,
+      "max": 69,
+      "distanceKm": 5.942,
+      "estimated": true,
+      "provider": "IGN RGE ALTI",
+      "checkedAt": "2026-10-16",
+      "profile": "assets/profiles/19.json"
+    }
   },
   {
     "id": 20,
@@ -340,7 +430,22 @@ export const ROUTES = [
     "fieldNote": "L’office de tourisme demande de consulter les horaires et coefficients de marée et d’éviter le parcours pendant les grandes marées.",
     "department": "50",
     "departmentName": "Manche",
-    "area": "Granville Terre & Mer"
+    "area": "Granville Terre & Mer",
+    "elevationTrace": "assets/profiles/20-source.gpx",
+    "elevationTraceSource": "https://cdt61.media.tourinsoft.eu/upload/Cirkwi-A-pied---Le-Havre-de-la-Vanlee.gpx",
+    "elevationOfficial": "https://www.tourisme-granville-terre-mer.com/offres/le-havre-de-la-vanlee-bricqueville-sur-mer-fr-5172261/",
+    "elevationOfficialKm": 10,
+    "elevation": {
+      "ascent": 40,
+      "descent": 40,
+      "min": 4,
+      "max": 11,
+      "distanceKm": 9.512,
+      "estimated": true,
+      "provider": "IGN RGE ALTI",
+      "checkedAt": "2026-10-16",
+      "profile": "assets/profiles/20.json"
+    }
   },
   {
     "id": 21,
@@ -355,11 +460,26 @@ export const ROUTES = [
     "ambiguous": false,
     "note": "",
     "description": "",
-    "official": "https://www.tourisme-granville-terre-mer.com/sejourner/a-faire-sur-place/bouger/balades-randos/",
+    "official": "https://www.tourisme-granville-terre-mer.com/offres/pierres-a-ciel-ouvert-brehal-fr-5172222/",
     "featured": false,
     "department": "50",
     "departmentName": "Manche",
-    "area": "Granville Terre & Mer"
+    "area": "Granville Terre & Mer",
+    "elevationTrace": "assets/profiles/21-source.gpx",
+    "elevationTraceSource": "https://cdt61.media.tourinsoft.eu/upload/pr2-pierres-a-ciel-ouvert.gpx",
+    "elevationOfficial": "https://www.tourisme-granville-terre-mer.com/offres/pierres-a-ciel-ouvert-brehal-fr-5172222/",
+    "elevationOfficialKm": 10,
+    "elevation": {
+      "ascent": 140,
+      "descent": 140,
+      "min": 5,
+      "max": 56,
+      "distanceKm": 9.855,
+      "estimated": true,
+      "provider": "IGN RGE ALTI",
+      "checkedAt": "2026-10-16",
+      "profile": "assets/profiles/21.json"
+    }
   },
   {
     "id": 22,
@@ -374,11 +494,26 @@ export const ROUTES = [
     "ambiguous": false,
     "note": "",
     "description": "",
-    "official": "https://www.tourisme-granville-terre-mer.com/sejourner/a-faire-sur-place/bouger/balades-randos/",
+    "official": "https://www.tourisme-granville-terre-mer.com/offres/par-monts-et-par-vaux-coudeville-sur-mer-fr-5172262/",
     "featured": false,
     "department": "50",
     "departmentName": "Manche",
-    "area": "Granville Terre & Mer"
+    "area": "Granville Terre & Mer",
+    "elevationTrace": "assets/profiles/22-source.gpx",
+    "elevationTraceSource": "https://cdt61.media.tourinsoft.eu/upload/Cirkwi-A-pied---Par-monts-et-par-vaux.gpx",
+    "elevationOfficial": "https://www.tourisme-granville-terre-mer.com/offres/par-monts-et-par-vaux-coudeville-sur-mer-fr-5172262/",
+    "elevationOfficialKm": 17,
+    "elevation": {
+      "ascent": 180,
+      "descent": 180,
+      "min": 6,
+      "max": 69,
+      "distanceKm": 17.17,
+      "estimated": true,
+      "provider": "IGN RGE ALTI",
+      "checkedAt": "2026-10-16",
+      "profile": "assets/profiles/22.json"
+    }
   },
   {
     "id": 23,
@@ -412,11 +547,26 @@ export const ROUTES = [
     "ambiguous": false,
     "note": "",
     "description": "La plus longue boucle cartographiée du dossier, au départ de Cérences : 20 km annoncés pour une grande sortie à pied.",
-    "official": "https://www.tourisme-granville-terre-mer.com/sejourner/a-faire-sur-place/bouger/balades-randos/",
+    "official": "https://www.tourisme-granville-terre-mer.com/offres/les-vallons-de-cerences-cerences-fr-5172252/",
     "featured": true,
     "department": "50",
     "departmentName": "Manche",
-    "area": "Granville Terre & Mer"
+    "area": "Granville Terre & Mer",
+    "elevationTrace": "assets/profiles/24-source.gpx",
+    "elevationTraceSource": "https://cdt61.media.tourinsoft.eu/upload/pr5-les-vallons-de-cerences.gpx",
+    "elevationOfficial": "https://www.tourisme-granville-terre-mer.com/offres/les-vallons-de-cerences-cerences-fr-5172252/",
+    "elevationOfficialKm": 20,
+    "elevation": {
+      "ascent": 380,
+      "descent": 380,
+      "min": 19,
+      "max": 107,
+      "distanceKm": 20.292,
+      "estimated": true,
+      "provider": "IGN RGE ALTI",
+      "checkedAt": "2026-10-16",
+      "profile": "assets/profiles/24.json"
+    }
   },
   {
     "id": 25,
@@ -474,7 +624,22 @@ export const ROUTES = [
     "fieldNote": "L’office de tourisme signale des passages escarpés et vertigineux le long des falaises.",
     "department": "50",
     "departmentName": "Manche",
-    "area": "Granville Terre & Mer"
+    "area": "Granville Terre & Mer",
+    "elevationTrace": "assets/profiles/27-source.gpx",
+    "elevationTraceSource": "https://cdt61.media.tourinsoft.eu/upload/PR8-3cabanesVauban.gpx",
+    "elevationOfficial": "https://www.tourisme-granville-terre-mer.com/offres/les-3-cabanes-vauban-carolles-fr-5172233/",
+    "elevationOfficialKm": 12.5,
+    "elevation": {
+      "ascent": 315,
+      "descent": 315,
+      "min": 8,
+      "max": 94,
+      "distanceKm": 12.165,
+      "estimated": true,
+      "provider": "IGN RGE ALTI",
+      "checkedAt": "2026-10-16",
+      "profile": "assets/profiles/27.json"
+    }
   },
   {
     "id": 28,
@@ -571,7 +736,18 @@ export const ROUTES = [
         48.93537564847125,
         -0.4314477834203427
       ]
-    ]
+    ],
+    "elevation": {
+      "ascent": 355,
+      "descent": 355,
+      "min": 39,
+      "max": 249,
+      "distanceKm": 8.441,
+      "estimated": true,
+      "provider": "IGN RGE ALTI",
+      "checkedAt": "2026-10-16",
+      "profile": "assets/profiles/31.json"
+    }
   },
   {
     "name": "La vallée de la Souleuvre",
@@ -611,7 +787,18 @@ export const ROUTES = [
         48.95973036290163,
         -0.8133114808236517
       ]
-    ]
+    ],
+    "elevation": {
+      "ascent": 255,
+      "descent": 255,
+      "min": 95,
+      "max": 192,
+      "distanceKm": 7.059,
+      "estimated": true,
+      "provider": "IGN RGE ALTI",
+      "checkedAt": "2026-10-16",
+      "profile": "assets/profiles/32.json"
+    }
   },
   {
     "name": "Le lac de la Dathée",
@@ -651,7 +838,18 @@ export const ROUTES = [
         48.81732166345354,
         -0.93895146
       ]
-    ]
+    ],
+    "elevation": {
+      "ascent": 70,
+      "descent": 70,
+      "min": 154,
+      "max": 172,
+      "distanceKm": 5.665,
+      "estimated": true,
+      "provider": "IGN RGE ALTI",
+      "checkedAt": "2026-10-16",
+      "profile": "assets/profiles/33.json"
+    }
   },
   {
     "name": "Omaha Beach, entre Histoire et Nature",
@@ -691,7 +889,18 @@ export const ROUTES = [
         49.368663090929985,
         -0.827364436
       ]
-    ]
+    ],
+    "elevation": {
+      "ascent": 220,
+      "descent": 225,
+      "min": 4,
+      "max": 67,
+      "distanceKm": 8.647,
+      "estimated": true,
+      "provider": "IGN RGE ALTI",
+      "checkedAt": "2026-10-16",
+      "profile": "assets/profiles/34.json"
+    }
   },
   {
     "name": "Circuit d’Hondouville",
@@ -731,7 +940,18 @@ export const ROUTES = [
         49.15559720982454,
         1.1313931217039486
       ]
-    ]
+    ],
+    "elevation": {
+      "ascent": 180,
+      "descent": 180,
+      "min": 36,
+      "max": 146,
+      "distanceKm": 7.4,
+      "estimated": true,
+      "provider": "IGN RGE ALTI",
+      "checkedAt": "2026-10-16",
+      "profile": "assets/profiles/35.json"
+    }
   },
   {
     "name": "Le Parc Parissot et les 3 rivières",
@@ -771,7 +991,18 @@ export const ROUTES = [
         49.11267666709154,
         0.8017595919300811
       ]
-    ]
+    ],
+    "elevation": {
+      "ascent": 120,
+      "descent": 120,
+      "min": 77,
+      "max": 150,
+      "distanceKm": 9.663,
+      "estimated": true,
+      "provider": "IGN RGE ALTI",
+      "checkedAt": "2026-10-16",
+      "profile": "assets/profiles/36.json"
+    }
   },
   {
     "name": "Les Bénédictins",
@@ -811,7 +1042,18 @@ export const ROUTES = [
         49.23630147414663,
         0.7543820313810502
       ]
-    ]
+    ],
+    "elevation": {
+      "ascent": 130,
+      "descent": 130,
+      "min": 50,
+      "max": 133,
+      "distanceKm": 7.627,
+      "estimated": true,
+      "provider": "IGN RGE ALTI",
+      "checkedAt": "2026-10-16",
+      "profile": "assets/profiles/37.json"
+    }
   },
   {
     "name": "Nature et Patrimoine",
@@ -851,7 +1093,18 @@ export const ROUTES = [
         49.05766450154078,
         0.751486202
       ]
-    ]
+    ],
+    "elevation": {
+      "ascent": 115,
+      "descent": 115,
+      "min": 113,
+      "max": 165,
+      "distanceKm": 12.161,
+      "estimated": true,
+      "provider": "IGN RGE ALTI",
+      "checkedAt": "2026-10-16",
+      "profile": "assets/profiles/38.json"
+    }
   },
   {
     "name": "Sentier du contrebandier · Nez de Jobourg",
@@ -891,7 +1144,18 @@ export const ROUTES = [
         49.69140717684034,
         -1.8904851999999996
       ]
-    ]
+    ],
+    "elevation": {
+      "ascent": 515,
+      "descent": 515,
+      "min": 17,
+      "max": 141,
+      "distanceKm": 10.378,
+      "estimated": true,
+      "provider": "IGN RGE ALTI",
+      "checkedAt": "2026-10-16",
+      "profile": "assets/profiles/39.json"
+    }
   },
   {
     "name": "Cap de Carteret et dunes perchées",
@@ -931,7 +1195,18 @@ export const ROUTES = [
         49.40355604529972,
         -1.7547624696261215
       ]
-    ]
+    ],
+    "elevation": {
+      "ascent": 220,
+      "descent": 220,
+      "min": 5,
+      "max": 73,
+      "distanceKm": 9.629,
+      "estimated": true,
+      "provider": "IGN RGE ALTI",
+      "checkedAt": "2026-10-16",
+      "profile": "assets/profiles/40.json"
+    }
   },
   {
     "name": "Le Cap de la Hague · Goury",
@@ -971,7 +1246,19 @@ export const ROUTES = [
         49.73304739780197,
         -1.8803349490592636
       ]
-    ]
+    ],
+    "elevationMethod": "gpx",
+    "elevation": {
+      "ascent": 245,
+      "descent": 245,
+      "min": 3,
+      "max": 133,
+      "distanceKm": 13.41,
+      "estimated": true,
+      "provider": "GPX officiel",
+      "checkedAt": "2026-10-16",
+      "profile": "assets/profiles/41.json"
+    }
   },
   {
     "name": "Les Roches de Ham",
@@ -1011,7 +1298,18 @@ export const ROUTES = [
         49.03354311617817,
         -1.01293187
       ]
-    ]
+    ],
+    "elevation": {
+      "ascent": 235,
+      "descent": 235,
+      "min": 27,
+      "max": 121,
+      "distanceKm": 8.137,
+      "estimated": true,
+      "provider": "IGN RGE ALTI",
+      "checkedAt": "2026-10-16",
+      "profile": "assets/profiles/42.json"
+    }
   },
   {
     "name": "Entre Orne et Rouvre",
@@ -1051,7 +1349,18 @@ export const ROUTES = [
         48.84528738271897,
         -0.3547907937212919
       ]
-    ]
+    ],
+    "elevation": {
+      "ascent": 235,
+      "descent": 235,
+      "min": 80,
+      "max": 188,
+      "distanceKm": 7.699,
+      "estimated": true,
+      "provider": "IGN RGE ALTI",
+      "checkedAt": "2026-10-16",
+      "profile": "assets/profiles/43.json"
+    }
   },
   {
     "name": "Le Hêtre de la Vierge — B4",
@@ -1091,7 +1400,18 @@ export const ROUTES = [
         48.571099262318896,
         -0.377016504671736
       ]
-    ]
+    ],
+    "elevation": {
+      "ascent": 105,
+      "descent": 100,
+      "min": 185,
+      "max": 219,
+      "distanceKm": 7.413,
+      "estimated": true,
+      "provider": "IGN RGE ALTI",
+      "checkedAt": "2026-10-16",
+      "profile": "assets/profiles/44.json"
+    }
   },
   {
     "name": "La Herse",
@@ -1131,7 +1451,18 @@ export const ROUTES = [
         48.40945025723518,
         0.5991153826687291
       ]
-    ]
+    ],
+    "elevation": {
+      "ascent": 230,
+      "descent": 230,
+      "min": 164,
+      "max": 245,
+      "distanceKm": 10.312,
+      "estimated": true,
+      "provider": "IGN RGE ALTI",
+      "checkedAt": "2026-10-16",
+      "profile": "assets/profiles/45.json"
+    }
   },
   {
     "name": "Le Chêne de l’École",
@@ -1171,7 +1502,18 @@ export const ROUTES = [
         48.40537650722112,
         0.498936304
       ]
-    ]
+    ],
+    "elevation": {
+      "ascent": 250,
+      "descent": 250,
+      "min": 129,
+      "max": 228,
+      "distanceKm": 11.475,
+      "estimated": true,
+      "provider": "IGN RGE ALTI",
+      "checkedAt": "2026-10-16",
+      "profile": "assets/profiles/46.json"
+    }
   },
   {
     "name": "La Valleuse d’Antifer",
@@ -1212,7 +1554,18 @@ export const ROUTES = [
         49.71288218765815,
         0.22608443791932392
       ]
-    ]
+    ],
+    "elevation": {
+      "ascent": 330,
+      "descent": 330,
+      "min": 6,
+      "max": 109,
+      "distanceKm": 12.321,
+      "estimated": true,
+      "provider": "IGN RGE ALTI",
+      "checkedAt": "2026-10-16",
+      "profile": "assets/profiles/47.json"
+    }
   },
   {
     "name": "La Coutume",
@@ -1252,7 +1605,18 @@ export const ROUTES = [
         49.53299925182535,
         0.8138637519999999
       ]
-    ]
+    ],
+    "elevation": {
+      "ascent": 155,
+      "descent": 155,
+      "min": 17,
+      "max": 121,
+      "distanceKm": 8.732,
+      "estimated": true,
+      "provider": "IGN RGE ALTI",
+      "checkedAt": "2026-10-16",
+      "profile": "assets/profiles/48.json"
+    }
   },
   {
     "name": "Entre Seine et Terre",
@@ -1292,7 +1656,18 @@ export const ROUTES = [
         49.505572147802,
         0.6963117343575891
       ]
-    ]
+    ],
+    "elevation": {
+      "ascent": 155,
+      "descent": 155,
+      "min": 2,
+      "max": 107,
+      "distanceKm": 11.172,
+      "estimated": true,
+      "provider": "IGN RGE ALTI",
+      "checkedAt": "2026-10-16",
+      "profile": "assets/profiles/49.json"
+    }
   },
   {
     "name": "La Porte verte",
@@ -1332,7 +1707,18 @@ export const ROUTES = [
         49.70234300960239,
         0.5263628
       ]
-    ]
+    ],
+    "elevation": {
+      "ascent": 150,
+      "descent": 150,
+      "min": 67,
+      "max": 130,
+      "distanceKm": 9.69,
+      "estimated": true,
+      "provider": "IGN RGE ALTI",
+      "checkedAt": "2026-10-16",
+      "profile": "assets/profiles/50.json"
+    }
   }
 ];
 export const SOURCE_DATE = "10 février 2022";

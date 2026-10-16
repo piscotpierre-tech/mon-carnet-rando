@@ -25,14 +25,14 @@ test('le cache de l’application fonctionne dans un sous-dossier GitHub Pages',
   const keys=[...h.stores.get('pierre-rando-v1-shell').keys()];
   assert(keys.includes('https://exemple.github.io/mon-carnet-rando/index.html'));
   assert(keys.every(k=>k.startsWith('https://exemple.github.io/mon-carnet-rando/')));
-  for(const name of ['app.js','styles.css','data.js'])assert(keys.includes('https://exemple.github.io/mon-carnet-rando/'+name+'?v=ign-20261016'));
+  for(const name of ['app.js','styles.css','data.js','core.js'])assert(keys.includes('https://exemple.github.io/mon-carnet-rando/'+name+'?v=relief-20261016'));
   h.offline(true);
   const r=await h.request('https://exemple.github.io/mon-carnet-rando/',{mode:'navigate'});
   assert.match(await r.text(),/index.html/);
 });
 test('une carte d’origine ou une nouvelle carte IGN garde son fond après la perte du réseau',async()=>{
   const h=harness();await h.lifecycle('install');
-  for(const path of ['maps/19.webp','maps/35-ign.webp','thumbs/35-ign.webp']) {
+  for(const path of ['maps/19.webp','maps/35-ign.webp','thumbs/35-ign.webp','profiles/35.json','profiles/19-source.gpx']) {
     h.offline(false);
     const url='https://exemple.github.io/mon-carnet-rando/assets/'+path;
     const first=await h.request(url);assert.equal(await first.text(),'network:'+url);

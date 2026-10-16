@@ -1,7 +1,7 @@
 import test from 'node:test';
 import assert from 'node:assert/strict';
 import {ROUTES} from '../data.js';
-import {APP_ID,emptyState,filterRoutes,validateState,validateTrip,mergeBackup,stats,timerElapsed,pauseTimer,resumeTimer,localDate} from '../core.js';
+import {APP_ID,emptyState,filterRoutes,validateState,validateTrip,mergeBackup,stats,timerElapsed,pauseTimer,resumeTimer,localDate,routeElevation,routeMapsUrl} from '../core.js';
 
 const ids=new Set(ROUTES.map(r=>r.id));
 const trip=(override={})=>({id:'sortie-1',routeId:19,date:'2026-10-15',distance:6.4,minutes:103,rating:5,note:'Belle lumière sur la baie.',...override});
@@ -83,4 +83,34 @@ test('les anciennes données restent identiques et les nouveaux circuits peuvent
   assert.deepEqual(validateState(previous,ROUTES),previous);
   const next={...previous,favorites:[...previous.favorites,50],trips:[...previous.trips,trip({id:'nouveau',routeId:50})]};
   assert.deepEqual(validateState(next,ROUTES),next);
+});
+
+test('un dénivelé absent reste inconnu, un vrai zéro reste valide et les deux sens sont indépendants',()=>{
+  assert.deepEqual(routeElevation({}),{ascent:null,descent:null,estimated:false});
+  assert.deepEqual(routeElevation({elevationGain:107}),{ascent:107,descent:null,estimated:false});
+  assert.deepEqual(routeElevation({elevation:{ascent:0,descent:5,estimated:true}}),{ascent:0,descent:5,estimated:true});
+  assert.equal(routeElevation({elevationGain:NaN,elevation:{ascent:-1,descent:Infinity}}).ascent,null);
+});
+
+test('les filtres de montée traitent correctement 150 m, 300 m et les valeurs inconnues',()=>{
+  const routes=[0,150,151,300,301,null].map((n,id)=>({id,km:5,elevation:n===null?undefined:{ascent:n,descent:n}}));
+  assert.deepEqual(filterRoutes(routes,{ascent:'low'},emptyState()).map(r=>r.id),[0,1]);
+  assert.deepEqual(filterRoutes(routes,{ascent:'medium'},emptyState()).map(r=>r.id),[2,3]);
+  assert.deepEqual(filterRoutes(routes,{ascent:'high'},emptyState()).map(r=>r.id),[4]);
+  assert.deepEqual(filterRoutes(routes,{ascent:'unknown'},emptyState()).map(r=>r.id),[5]);
+  for(const sort of ['ascent-asc','ascent-desc'])assert.equal(filterRoutes(routes,{sort},emptyState()).at(-1).id,5);
+  assert.equal(filterRoutes(routes,{sort:'ascent-asc'},emptyState())[0].id,0);
+  assert.equal(filterRoutes(routes,{sort:'ascent-desc'},emptyState())[0].id,4);
+});
+
+test('Maps ouvre un itinéraire vers le lieu textuel et ne transforme pas un départ ambigu en destination précise',()=>{
+  const r={start:'Parking de l’église & mairie',town:'Saint-Lô',departmentName:'Manche'};
+  const link=new URL(routeMapsUrl(r));
+  assert.equal(link.origin,'https://www.google.com');assert.equal(link.pathname,'/maps/dir/');
+  assert.equal(link.searchParams.get('destination'),'Parking de l’église & mairie, Saint-Lô, Manche, France');
+  assert.equal(link.searchParams.get('api'),'1');assert.equal(link.searchParams.get('travelmode'),'driving');
+  assert(!link.searchParams.has('origin'),'Do not encode the user’s location');
+  const unresolved=new URL(routeMapsUrl({...r,ambiguous:true}));
+  assert.equal(unresolved.pathname,'/maps/search/');assert(!unresolved.searchParams.has('destination'));
+  assert.equal(unresolved.searchParams.get('query'),'Saint-Lô, Manche, France');
 });

@@ -10,7 +10,7 @@ const app=fs.readFileSync(path.join(root,'app.js'),'utf8');
 const ids=[...html.matchAll(/\bid="([^"]+)"/g)].map(m=>m[1]);
 assert.equal(ids.length,new Set(ids).size,'Duplicate HTML id');
 const refs=[...app.matchAll(/\$\('#([\w-]+)'\)/g)].map(m=>m[1]);
-const dynamic=['route-cache-status','route-timer','timer-actions'];
+const dynamic=['route-cache-status','route-timer','timer-actions','elevation-chart'];
 for(const id of refs)assert(ids.includes(id)||dynamic.includes(id),'Missing element: '+id);
 let total=0;
 for(const r of ROUTES){for(const key of ['map','thumb']){const p=path.join(root,r[key]);assert(fs.existsSync(p),'Missing asset: '+r[key]);assert(fs.statSync(p).size>1000);total+=fs.statSync(p).size;}}
@@ -43,6 +43,35 @@ for(const r of ROUTES.filter(r=>r.isNew)) {
     assert.deepEqual(request.searchParams.get('BBOX').split(',').map(Number),metadata.bbox.map(v=>Number(v.toFixed(6))));
   }
 }
+const withProfiles=ROUTES.filter(r=>r.elevation);
+for(const r of ROUTES.filter(r=>r.isNew))assert(r.elevation,'New circuit missing paired ascent/descent: '+r.id);
+for(const r of withProfiles) {
+  const data=JSON.parse(fs.readFileSync(path.join(root,r.elevation.profile),'utf8'));
+  assert.equal(data.routeId,r.id);assert.deepEqual(data.summary,r.elevation);
+  assert.equal(data.resource,r.elevationMethod==='gpx'?'GPX altitude':'ign_rge_alti_wld');assert.equal(data.profileMode,r.elevationMethod==='gpx'?'gpx-altitude':'simple');
+  assert.equal(data.sourceTrace,r.elevationMethod==='gpx'?r.gpx:r.trace||r.elevationTrace);
+  assert.equal(data.sourceSha256,createHash('sha256').update(fs.readFileSync(path.join(root,data.sourceTrace))).digest('hex'),'Profile built from a different route');
+  assert.equal(data.sourceUrl,r.gpxSource||r.elevationTraceSource);
+  assert(data.segments.length>0);assert.equal(data.segments.length,data.requests.length);
+  let gain=0,loss=0,lastDistance=-1;
+  const altitudes=[];
+  for(const [index,segment] of data.segments.entries()) {
+    assert(segment.length>=data.requests[index].sampling&&segment.length<=data.requests[index].sampling+1);
+    assert(segment.length>1);
+    for(let i=0;i<segment.length;i++) {
+      const [distance,z]=segment[i];
+      assert(Number.isFinite(distance)&&distance>=lastDistance,'Profile distances out of order');lastDistance=distance;
+      assert(Number.isFinite(z)&&z>=-25&&z<=1500,'Missing or implausible altitude');altitudes.push(z);
+      if(i){const delta=z-segment[i-1][1];gain+=Math.max(0,delta);loss+=Math.max(0,-delta);}
+    }
+  }
+  assert(Math.abs(gain-data.heightDifferences.positive)<0.01);assert(Math.abs(loss-data.heightDifferences.negative)<0.01);
+  assert.equal(r.elevation.ascent,5*Math.round(data.heightDifferences.positive/5));
+  assert.equal(r.elevation.descent,5*Math.round(data.heightDifferences.negative/5));
+  assert.equal(r.elevation.min,Math.floor(Math.min(...altitudes)));assert.equal(r.elevation.max,Math.ceil(Math.max(...altitudes)));
+  assert(r.elevation.estimated&&r.elevation.provider===(r.elevationMethod==='gpx'?'GPX officiel':'IGN RGE ALTI'));
+  assert(Math.abs(r.elevation.distanceKm-lastDistance/1000)<0.002);
+}
 for(const match of html.matchAll(/(?:src|href)="\.\/([^"#]+)"/g))assert(fs.existsSync(path.join(root,match[1].split('?')[0])),'Missing HTML asset: '+match[1]);
 const manifest=JSON.parse(fs.readFileSync(path.join(root,'manifest.webmanifest'),'utf8'));
 assert.equal(manifest.scope,'./');assert.equal(manifest.start_url,'./#explorer');
@@ -51,4 +80,4 @@ for(const name of ['app.js','core.js','data.js','styles.css','index.html','manif
 assert(!/<script[^>]+src="https?:/i.test(html),'Unexpected external script');
 assert(!/<link[^>]+href="https?:/i.test(html),'Unexpected external stylesheet');
 assert(!/\/assets\//.test(html.replaceAll('./assets/','')),'Assets must use relative paths');
-console.log(`OK : ${ROUTES.length} circuits, ${ROUTES.length*2} images, ${ids.length} identifiants HTML uniques. Cartes et aperçus : ${(total/1e6).toFixed(2)} Mo. Chemins relatifs GitHub Pages vérifiés.`);
+console.log(`OK : ${ROUTES.length} circuits, ${ROUTES.length*2} images, ${withProfiles.length} profils et paires D+/D− vérifiés, ${ids.length} identifiants HTML uniques. Cartes et aperçus : ${(total/1e6).toFixed(2)} Mo. Chemins relatifs GitHub Pages vérifiés.`);

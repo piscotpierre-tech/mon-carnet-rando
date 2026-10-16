@@ -4,12 +4,14 @@ Application personnelle de randonnée, autonome et compatible GitHub Pages. 48 c
 
 ## Ce qui fonctionne
 
-- Filtre par département (Calvados, Eure, Manche, Orne, Seine-Maritime).
+- Filtre par département (Calvados, Eure, Manche, Orne, Seine-Maritime), par distance et par montée cumulée (D+ jusqu’à 150 m, de 150 à 300 m, au-delà et valeurs inconnues).
 - Recherche par nom, commune, département et numéro, sans tenir compte des accents.
 - Filtres jusqu’à 6 km, plus de 6 à 10 km, plus de 10 km ; plusieurs tris.
 - Favoris et repérage des circuits déjà parcourus.
 - Fiches et cartes agrandissables ; les 20 nouveaux circuits ont une vraie carte IGN avec leur tracé, visible dès la liste et téléchargeable hors ligne. Une carte Leaflet avec fond OpenStreetMap en ligne permet aussi d’explorer les alentours.
-- Départs, durées, difficultés et dénivelés lorsqu’ils sont fournis ; liens vers les PDF officiels et téléchargement GPX.
+- D+ et D− appariés et profils altimétriques pour 31 circuits, avec source et estimation indiquées ; 17 circuits restent explicitement non renseignés. Durée et niveau visibles sur les cartes lorsque fournis par les organismes.
+- Accès direct à Google Maps depuis chaque carte et chaque fiche : itinéraire en voiture vers le départ décrit, ou simple recherche de la commune si le départ est ambigu. Liens vers les PDF officiels et téléchargement GPX.
+- Tri du moins au plus de montée (ou l’inverse), avec les dénivelés inconnus toujours à la fin.
 - Recherche du lieu de départ dans Google Maps, sauf départs ambigus.
 - Chronomètre avec pause, reprise et conservation au rechargement.
 - Journal : date, kilomètres réels, durée, note et souvenir ; modification et suppression.
@@ -66,10 +68,20 @@ Les tests du service worker utilisent une simulation Node ; ils ne remplacent pa
 
 ## Fond de carte et hors ligne
 
-Leaflet 1.9.4 est embarqué dans assets/vendor/leaflet avec sa licence. Le fond © OpenStreetMap contributors est demandé seulement pendant la consultation interactive, avec attribution visible. Les tuiles externes sont exclues du service worker et du téléchargement hors ligne ; seul le cache HTTP normal du navigateur s’applique. Les cartes IGN complètes, GPX et GeoJSON locaux peuvent être gardés hors ligne. Sans réseau, la carte agrandissable conserve son fond IGN ; la carte interactive utilise aussi cette image géoréférencée autour du parcours. Seule l’exploration au-delà de cette emprise nécessite le fond en ligne.
+Leaflet 1.9.4 est embarqué dans assets/vendor/leaflet avec sa licence. Le fond © OpenStreetMap contributors est demandé seulement pendant la consultation interactive, avec attribution visible. Les tuiles externes sont exclues du service worker et du téléchargement hors ligne ; seul le cache HTTP normal du navigateur s’applique. Les cartes IGN complètes, profils du relief, GPX et GeoJSON locaux peuvent être gardés hors ligne. Sans réseau, la carte agrandissable conserve son fond IGN ; la carte interactive utilise aussi cette image géoréférencée autour du parcours. Seule l’exploration au-delà de cette emprise nécessite le fond en ligne.
 
 La clé de stockage et les identifiants des 28 anciens circuits sont conservés. Les exports JSON de l’ancienne version restent compatibles.
 
 ## Reconstruire les cartes IGN
 
 `python scripts/build-maps.py` (Python 3 + Pillow) régénère les 20 cartes depuis le WMS public Plan IGN, sans télécharger de tuiles OpenStreetMap. Des identifiants peuvent limiter la reconstruction : `python scripts/build-maps.py 35`. Le fond et le tracé utilisent la même projection, la même emprise et le même ratio dans la carte et la miniature. Chaque fichier JSON de provenance contient la date, la licence, l’URL de la requête WMS, les dimensions et les empreintes des images et du GeoJSON. Après une reconstruction avec une autre emprise, reporter les bornes `bounds` dans `mapBounds` de data.js. `npm run check` vérifie ces liens et que chaque point du parcours reste dans la carte.
+
+## Dénivelés et profils
+
+31 circuits ont une paire D+/D− et un profil. Pour 30 circuits, `python scripts/build-elevations.py` interroge le service public IGN `elevationLine.json` et la ressource `ign_rge_alti_wld` : échantillonnage visé tous les 25 mètres, mode simple. Les montées et descentes sont cumulées séparément, sans relier les segments disjoints, puis arrondies au multiple de 5 m le plus proche. Les courbes conservent les altitudes retournées et les distances calculées sur le GPX.
+
+Pour le circuit 41 (Goury), le relief IGN est incomplet sur la trace littorale : les altitudes complètes du GPX officiel sont utilisées et identifiées comme telles. La paire D+/D− vient entièrement de cette même source. Les anciens chiffres annoncés par les organismes restent stockés et visibles dans les fiches ; ils ne sont pas mélangés aux D+/D− estimés.
+
+11 GPX GTM actuels ont été rattachés aux circuits anciens après vérification du nom, de la commune, de la distance de la fiche et de la longueur du GPX. Les autres circuits anciens restent sans profil, notamment lorsque la fiche actuelle annonce une autre distance. Les 28 cartes de 2022 restent les mêmes.
+
+Les JSON `assets/profiles/{id}.json` conservent la provenance, l’empreinte SHA-256 de la géométrie, la méthode, l’échantillonnage, les cumuls bruts, la courbe et son résumé. Les données sont embarquées et ne demandent aucun appel IGN pendant l’utilisation du carnet. Le bouton hors ligne inclut désormais ces profils. Les favoris, sauvegardes, sorties et chronomètres gardent leur format précédent.

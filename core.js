@@ -4,6 +4,26 @@ export const CACHE_NAME = 'pierre-rando-v1-assets';
 export const normalise = value => String(value).normalize('NFD').replace(/\p{Diacritic}/gu, '').toLowerCase().trim();
 export const emptyState = () => ({version:1, favorites:[], trips:[], timer:null});
 
+export function routeElevation(route) {
+  const valid=n=>Number.isFinite(n)&&n>=0;
+  const profile=route.elevation;
+  return {
+    ascent:valid(profile?.ascent)?profile.ascent:valid(route.elevationGain)?route.elevationGain:null,
+    descent:valid(profile?.descent)?profile.descent:null,
+    estimated:Boolean(profile?.estimated),
+  };
+}
+
+export function routeMapsUrl(route) {
+  // An unresolved departure must never become an apparent precise destination.
+  const url=new URL(route.ambiguous?'https://www.google.com/maps/search/':'https://www.google.com/maps/dir/');
+  url.searchParams.set('api','1');
+  const place=[route.ambiguous?null:route.start,route.town,route.departmentName,'France'].filter(Boolean).join(', ');
+  url.searchParams.set(route.ambiguous?'query':'destination',place);
+  if(!route.ambiguous)url.searchParams.set('travelmode','driving');
+  return url.href;
+}
+
 export function filterRoutes(routes, filters, state) {
   const q = normalise(filters.search || '');
   const result = routes.filter(r => {
@@ -14,11 +34,28 @@ export function filterRoutes(routes, filters, state) {
     if (filters.band === 'long' && r.km <= 10) return false;
     if (filters.onlyFavorites && !state.favorites.includes(r.id)) return false;
     if (filters.onlyDone && !state.trips.some(t => t.routeId === r.id)) return false;
+    const ascent=routeElevation(r).ascent;
+    if (filters.ascent && filters.ascent !== 'all') {
+      if (filters.ascent === 'unknown') {if(ascent!==null)return false;}
+      else {
+        if(ascent===null)return false;
+        if(filters.ascent==='low'&&ascent>150)return false;
+        if(filters.ascent==='medium'&&(ascent<=150||ascent>300))return false;
+        if(filters.ascent==='high'&&ascent<=300)return false;
+      }
+    }
     return true;
   });
   const featured = [19,31,35,39,43,47,27,20,24];
   const rank = r => featured.includes(r.id) ? featured.indexOf(r.id) : 100+r.id;
-  return result.sort((a,b) => filters.sort === 'distance-asc' ? a.km-b.km || a.id-b.id : filters.sort === 'distance-desc' ? b.km-a.km || a.id-b.id : filters.sort === 'name' ? a.name.localeCompare(b.name,'fr') : rank(a)-rank(b));
+  return result.sort((a,b) => {
+    if(filters.sort==='ascent-asc'||filters.sort==='ascent-desc') {
+      const x=routeElevation(a).ascent,y=routeElevation(b).ascent;
+      if(x===null||y===null)return x===y?a.id-b.id:x===null?1:-1;
+      return (filters.sort==='ascent-asc'?x-y:y-x)||a.id-b.id;
+    }
+    return filters.sort === 'distance-asc' ? a.km-b.km || a.id-b.id : filters.sort === 'distance-desc' ? b.km-a.km || a.id-b.id : filters.sort === 'name' ? a.name.localeCompare(b.name,'fr') : rank(a)-rank(b);
+  });
 }
 
 function validDate(value) {
