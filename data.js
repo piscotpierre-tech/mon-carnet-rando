@@ -547,8 +547,8 @@ export const ROUTES = [
     "id": 31,
     "marking": null,
     "sourcePage": null,
-    "map": "assets/maps/31.svg",
-    "thumb": "assets/thumbs/31.svg",
+    "map": "assets/maps/31-ign.webp",
+    "thumb": "assets/thumbs/31-ign.webp",
     "ambiguous": false,
     "note": "La fiche décrit une courte montée abrupte au Pain de Sucre. Variante de 4,5 km disponible.",
     "official": "https://www.explore-calvados.com/itineraire/pain-de-sucre-et-rochers-des-parcs/",
@@ -560,7 +560,18 @@ export const ROUTES = [
     "gpxSource": "https://normandie.media.tourinsoft.eu/upload/Pain-sucre-3.gpx",
     "erratum": null,
     "checkedAt": "2026-10-15",
-    "tracePointCount": 139
+    "tracePointCount": 139,
+    "basemap": "IGN Plan IGN",
+    "mapBounds": [
+      [
+        48.90542028842177,
+        -0.4952692165796574
+      ],
+      [
+        48.93537564847125,
+        -0.4314477834203427
+      ]
+    ]
   },
   {
     "name": "La vallée de la Souleuvre",
@@ -576,8 +587,8 @@ export const ROUTES = [
     "id": 32,
     "marking": null,
     "sourcePage": null,
-    "map": "assets/maps/32.svg",
-    "thumb": "assets/thumbs/32.svg",
+    "map": "assets/maps/32-ign.webp",
+    "thumb": "assets/thumbs/32-ign.webp",
     "ambiguous": false,
     "note": "Descentes raides et rocheuses, gués selon la saison et chemin humide. Le détour vers le viaduc ajoute 2,5 km aller-retour. Durée : 2h45 sur la page OT, 2h15 sur Explore Calvados ; 2h45 retenu sans prétendre à une durée unique.",
     "official": "https://www.paysdevire-normandie-tourisme.fr/loisir/5-la-vallee-de-la-souleuvre/",
@@ -589,7 +600,18 @@ export const ROUTES = [
     "gpxSource": "https://cdt14.media.tourinsoft.eu/upload/La-vallee-de-la-Souleuvre-3.gpx",
     "erratum": null,
     "checkedAt": "2026-10-15",
-    "tracePointCount": 1593
+    "tracePointCount": 1593,
+    "basemap": "IGN Plan IGN",
+    "mapBounds": [
+      [
+        48.93476620287272,
+        -0.8665275191763483
+      ],
+      [
+        48.95973036290163,
+        -0.8133114808236517
+      ]
+    ]
   },
   {
     "name": "Le lac de la Dathée",
@@ -605,8 +627,8 @@ export const ROUTES = [
     "id": 33,
     "marking": null,
     "sourcePage": null,
-    "map": "assets/maps/33.svg",
-    "thumb": "assets/thumbs/33.svg",
+    "map": "assets/maps/33-ign.webp",
+    "thumb": "assets/thumbs/33-ign.webp",
     "ambiguous": false,
     "note": "La page OT indique 2h et la fiche PDF 1h30 ; 2h retenu. Le circuit n°13 ne doit pas être confondu avec le n°113 Les balcons de la Dathée, signalé non praticable par l’OT.",
     "official": "https://www.paysdevire-normandie-tourisme.fr/loisir/13-le-lac-de-la-dathee/",
@@ -618,7 +640,18 @@ export const ROUTES = [
     "gpxSource": "https://cdt61.media.tourinsoft.eu/upload/Lac-de-la-Dathee.gpx",
     "erratum": null,
     "checkedAt": "2026-10-15",
-    "tracePointCount": 1674
+    "tracePointCount": 1674,
+    "basemap": "IGN Plan IGN",
+    "mapBounds": [
+      [
+        48.80270163890027,
+        -0.9700315399999999
+      ],
+      [
+        48.81732166345354,
+        -0.93895146
+      ]
+    ]
   },
   {
     "name": "Omaha Beach, entre Histoire et Nature",
@@ -634,8 +667,8 @@ export const ROUTES = [
     "id": 34,
     "marking": null,
     "sourcePage": null,
-    "map": "assets/maps/34.svg",
-    "thumb": "assets/thumbs/34.svg",
+    "map": "assets/maps/34-ign.webp",
+    "thumb": "assets/thumbs/34-ign.webp",
     "ambiguous": false,
     "note": "La page Calvados classe le parcours Moyen ; l’ancien PDF indique Facile. Des escaliers, une pente raide et des ruisseaux sont décrits. Refermer les barrières à moutons.",
     "official": "https://www.explore-calvados.com/itineraire/randonnee-omaha-beach-entre-histoire-et-nature/",
@@ -647,7 +680,18 @@ export const ROUTES = [
     "gpxSource": "https://cdt14.media.tourinsoft.eu/upload/GPX--Circuit-Omaha.gpx",
     "erratum": null,
     "checkedAt": "2026-10-15",
-    "tracePointCount": 1445
+    "tracePointCount": 1445,
+    "basemap": "IGN Plan IGN",
+    "mapBounds": [
+      [
+        49.34728672226243,
+        -0.8733117639999999
+      ],
+      [
+        49.368663090929985,
+        -0.827364436
+      ]
+    ]
   },
   {
     "name": "Circuit d’Hondouville",
@@ -663,8 +707,8 @@ export const ROUTES = [
     "id": 35,
     "marking": "Jaune",
     "sourcePage": null,
-    "map": "assets/maps/35.svg",
-    "thumb": "assets/thumbs/35.svg",
+    "map": "assets/maps/35-ign.webp",
+    "thumb": "assets/thumbs/35-ign.webp",
     "ambiguous": false,
     "note": "Deux sentiers deviennent très humides après de fortes averses ; la fiche PDF donne 100 m de dénivelé contre 107 m sur la fiche web actuelle.",
     "official": "https://www.eureka-attractivite.fr/itineraires-touristiques/circuit-dhondouville-itinor027v506orc/",
@@ -676,7 +720,18 @@ export const ROUTES = [
     "gpxSource": "https://www.cirkwi.com/fr/exporter-gpx/482989_0?mb_use_temp=1",
     "erratum": null,
     "checkedAt": "2026-10-15",
-    "tracePointCount": 181
+    "tracePointCount": 181,
+    "basemap": "IGN Plan IGN",
+    "mapBounds": [
+      [
+        49.132275929799654,
+        1.0814821782960515
+      ],
+      [
+        49.15559720982454,
+        1.1313931217039486
+      ]
+    ]
   },
   {
     "name": "Le Parc Parissot et les 3 rivières",
@@ -692,8 +747,8 @@ export const ROUTES = [
     "id": 36,
     "marking": "Rouge",
     "sourcePage": null,
-    "map": "assets/maps/36.svg",
-    "thumb": "assets/thumbs/36.svg",
+    "map": "assets/maps/36-ign.webp",
+    "thumb": "assets/thumbs/36-ign.webp",
     "ambiguous": false,
     "note": "Après de fortes pluies, certains tronçons sont inaccessibles à partir de la Héroudière (point 6) ; traversée de la Risle exposée aux crues.",
     "official": "https://www.eureka-attractivite.fr/itineraires-touristiques/circuit-le-parc-parissot-et-les-3-rivieres-itinor027fs0000h/",
@@ -705,7 +760,18 @@ export const ROUTES = [
     "gpxSource": "https://cdt27.media.tourinsoft.eu/upload/Le-parc-parissot-et-les-3-rivieres.gpx",
     "erratum": null,
     "checkedAt": "2026-10-15",
-    "tracePointCount": 1068
+    "tracePointCount": 1068,
+    "basemap": "IGN Plan IGN",
+    "mapBounds": [
+      [
+        49.074327930982335,
+        0.7197711080699187
+      ],
+      [
+        49.11267666709154,
+        0.8017595919300811
+      ]
+    ]
   },
   {
     "name": "Les Bénédictins",
@@ -721,8 +787,8 @@ export const ROUTES = [
     "id": 37,
     "marking": "Bleu",
     "sourcePage": null,
-    "map": "assets/maps/37.svg",
-    "thumb": "assets/thumbs/37.svg",
+    "map": "assets/maps/37-ign.webp",
+    "thumb": "assets/thumbs/37-ign.webp",
     "ambiguous": false,
     "note": "",
     "official": "https://www.eureka-attractivite.fr/itineraires-touristiques/circuit-les-benedictins-itinor027v50rmss/",
@@ -734,7 +800,18 @@ export const ROUTES = [
     "gpxSource": "https://cdt27.media.tourinsoft.eu/upload/Les-Benedictins.gpx",
     "erratum": null,
     "checkedAt": "2026-10-15",
-    "tracePointCount": 504
+    "tracePointCount": 504,
+    "basemap": "IGN Plan IGN",
+    "mapBounds": [
+      [
+        49.21261612211992,
+        0.7036093686189497
+      ],
+      [
+        49.23630147414663,
+        0.7543820313810502
+      ]
+    ]
   },
   {
     "name": "Nature et Patrimoine",
@@ -750,8 +827,8 @@ export const ROUTES = [
     "id": 38,
     "marking": "Bleu",
     "sourcePage": null,
-    "map": "assets/maps/38.svg",
-    "thumb": "assets/thumbs/38.svg",
+    "map": "assets/maps/38-ign.webp",
+    "thumb": "assets/thumbs/38-ign.webp",
     "ambiguous": false,
     "note": "L’office décrit un itinéraire assez technique. La forêt de Beaumont-le-Roger est privée : suivre les seuls chemins ouverts et refermer les portillons.",
     "official": "https://www.eureka-attractivite.fr/itineraires-touristiques/circuit-nature-et-patrimoine-itinor027v50s2hu/",
@@ -763,7 +840,18 @@ export const ROUTES = [
     "gpxSource": "https://cdt27.media.tourinsoft.eu/upload/Nature-et-patrimoine.gpx",
     "erratum": null,
     "checkedAt": "2026-10-15",
-    "tracePointCount": 1449
+    "tracePointCount": 1449,
+    "basemap": "IGN Plan IGN",
+    "mapBounds": [
+      [
+        49.01962477082024,
+        0.6702480980000001
+      ],
+      [
+        49.05766450154078,
+        0.751486202
+      ]
+    ]
   },
   {
     "name": "Sentier du contrebandier · Nez de Jobourg",
@@ -779,8 +867,8 @@ export const ROUTES = [
     "id": 39,
     "marking": "Jaune ; GR 223 rouge et blanc sur le littoral, sens antihoraire",
     "sourcePage": null,
-    "map": "assets/maps/39.svg",
-    "thumb": "assets/thumbs/39.svg",
+    "map": "assets/maps/39-ign.webp",
+    "thumb": "assets/thumbs/39-ign.webp",
     "ambiguous": false,
     "note": "Près de la moitié du circuit suit des falaises. Passages escarpés : respecter les déviations et rester sur les sentiers balisés.",
     "official": "https://www.encotentin.fr/itineraire/sentier-du-contrebandier-n105/",
@@ -792,7 +880,18 @@ export const ROUTES = [
     "gpxSource": "https://un.cirkwi.com/exporter_gpx.php?compter_visites=1&extension=.gpx&id_circuit=60171&id_flux_export=54&id_outil=338898&lang=fr&w=527426450355",
     "erratum": null,
     "checkedAt": "2026-10-15",
-    "tracePointCount": 175
+    "tracePointCount": 175,
+    "basemap": "IGN Plan IGN",
+    "mapBounds": [
+      [
+        49.66195043942026,
+        -1.9542148000000004
+      ],
+      [
+        49.69140717684034,
+        -1.8904851999999996
+      ]
+    ]
   },
   {
     "name": "Cap de Carteret et dunes perchées",
@@ -808,8 +907,8 @@ export const ROUTES = [
     "id": 40,
     "marking": "Jaune et GR 223 rouge et blanc, sens antihoraire",
     "sourcePage": null,
-    "map": "assets/maps/40.svg",
-    "thumb": "assets/thumbs/40.svg",
+    "map": "assets/maps/40-ign.webp",
+    "thumb": "assets/thumbs/40-ign.webp",
     "ambiguous": false,
     "note": "Certains passages au-dessus du littoral sont techniques et exposés. Suivre le balisage et les déviations locales.",
     "official": "https://www.encotentin.fr/itineraire/cap-de-carteret-et-dunes-perchees-n200/",
@@ -821,7 +920,18 @@ export const ROUTES = [
     "gpxSource": "https://un.cirkwi.com/exporter_gpx.php?compter_visites=1&extension=.gpx&id_circuit=316019&id_flux_export=54&id_outil=338898&lang=fr&w=583786146741",
     "erratum": null,
     "checkedAt": "2026-10-15",
-    "tracePointCount": 172
+    "tracePointCount": 172,
+    "basemap": "IGN Plan IGN",
+    "mapBounds": [
+      [
+        49.36708084519792,
+        -1.833207530373878
+      ],
+      [
+        49.40355604529972,
+        -1.7547624696261215
+      ]
+    ]
   },
   {
     "name": "Le Cap de la Hague · Goury",
@@ -837,8 +947,8 @@ export const ROUTES = [
     "id": 41,
     "marking": "Jaune et GR 223 rouge et blanc, sens antihoraire",
     "sourcePage": null,
-    "map": "assets/maps/41.svg",
-    "thumb": "assets/thumbs/41.svg",
+    "map": "assets/maps/41-ign.webp",
+    "thumb": "assets/thumbs/41-ign.webp",
     "ambiguous": false,
     "note": "Côte exposée au vent ; respecter la signalisation et les accès locaux.",
     "official": "https://www.encotentin.fr/itineraire/le-cap-de-la-hague-n104/",
@@ -850,7 +960,18 @@ export const ROUTES = [
     "gpxSource": "https://un.cirkwi.com/exporter_gpx.php?compter_visites=1&extension=.gpx&id_circuit=60170&id_flux_export=54&id_outil=338898&lang=fr&w=527426310768",
     "erratum": null,
     "checkedAt": "2026-10-15",
-    "tracePointCount": 283
+    "tracePointCount": 283,
+    "basemap": "IGN Plan IGN",
+    "mapBounds": [
+      [
+        49.6861273975663,
+        -1.9819150509407362
+      ],
+      [
+        49.73304739780197,
+        -1.8803349490592636
+      ]
+    ]
   },
   {
     "name": "Les Roches de Ham",
@@ -866,8 +987,8 @@ export const ROUTES = [
     "id": 42,
     "marking": null,
     "sourcePage": null,
-    "map": "assets/maps/42.svg",
-    "thumb": "assets/thumbs/42.svg",
+    "map": "assets/maps/42-ign.webp",
+    "thumb": "assets/thumbs/42-ign.webp",
     "ambiguous": false,
     "note": "",
     "official": "https://www.attitude-manche.fr/randonnees-balades/les-roches-de-ham/",
@@ -879,7 +1000,18 @@ export const ROUTES = [
     "gpxSource": "https://cdt50.media.tourinsoft.eu/upload/CIRCUIT-16-3.gpx",
     "erratum": null,
     "checkedAt": "2026-10-15",
-    "tracePointCount": 467
+    "tracePointCount": 467,
+    "basemap": "IGN Plan IGN",
+    "mapBounds": [
+      [
+        49.01051215948843,
+        -1.06210063
+      ],
+      [
+        49.03354311617817,
+        -1.01293187
+      ]
+    ]
   },
   {
     "name": "Entre Orne et Rouvre",
@@ -895,8 +1027,8 @@ export const ROUTES = [
     "id": 43,
     "marking": "Jaune",
     "sourcePage": null,
-    "map": "assets/maps/43.svg",
-    "thumb": "assets/thumbs/43.svg",
+    "map": "assets/maps/43-ign.webp",
+    "thumb": "assets/thumbs/43-ign.webp",
     "ambiguous": false,
     "note": "Erratum officiel à partir du point 6 : bifurquer à gauche, puis poursuivre à gauche à l’intersection de circuit ; ne pas suivre le texte ancien indiquant à droite. Variante de 4,7 km. Raidillon à fort dénivelé signalé dans la fiche.",
     "official": "https://www.montagnesdenormandie.fr/a-faire-et-a-voir/sports-et-activites-nature/randonnees-pedestres/les-circuits-pedestres/entre-orne-et-rouvre/",
@@ -908,7 +1040,18 @@ export const ROUTES = [
     "gpxSource": "https://www.montagnesdenormandie.fr/wp-content/uploads/2023/12/Circuit-N%C2%B06-Entre-Orne-et-Rouvre.gpx",
     "erratum": "https://www.montagnesdenormandie.fr/wp-content/uploads/2022/04/erratum-topo-entre-orne-et-rouvre.pdf",
     "checkedAt": "2026-10-15",
-    "tracePointCount": 193
+    "tracePointCount": 193,
+    "basemap": "IGN Plan IGN",
+    "mapBounds": [
+      [
+        48.82170634269542,
+        -0.40494420627870825
+      ],
+      [
+        48.84528738271897,
+        -0.3547907937212919
+      ]
+    ]
   },
   {
     "name": "Le Hêtre de la Vierge — B4",
@@ -924,8 +1067,8 @@ export const ROUTES = [
     "id": 44,
     "marking": null,
     "sourcePage": null,
-    "map": "assets/maps/44.svg",
-    "thumb": "assets/thumbs/44.svg",
+    "map": "assets/maps/44-ign.webp",
+    "thumb": "assets/thumbs/44-ign.webp",
     "ambiguous": false,
     "note": "",
     "official": "https://www.bagnolesdelorne.com/offres/randonnee-b4-le-hetre-de-la-vierge-bagnoles-de-lorne-normandie-fr-2695734/",
@@ -937,7 +1080,18 @@ export const ROUTES = [
     "gpxSource": "https://medias.tourism-system.com/traces/2695734/GPX/randonnee_b4__le_hetre_de_la_vierge-2.gpx",
     "erratum": null,
     "checkedAt": "2026-10-15",
-    "tracePointCount": 233
+    "tracePointCount": 233,
+    "basemap": "IGN Plan IGN",
+    "mapBounds": [
+      [
+        48.54853958229995,
+        -0.424737495328264
+      ],
+      [
+        48.571099262318896,
+        -0.377016504671736
+      ]
+    ]
   },
   {
     "name": "La Herse",
@@ -953,8 +1107,8 @@ export const ROUTES = [
     "id": 45,
     "marking": "PR",
     "sourcePage": null,
-    "map": "assets/maps/45.svg",
-    "thumb": "assets/thumbs/45.svg",
+    "map": "assets/maps/45-ign.webp",
+    "thumb": "assets/thumbs/45-ign.webp",
     "ambiguous": false,
     "note": "Vigilance sur la D938, à longer et traverser. Forêt domaniale : se renseigner auprès de l’office de tourisme sur les jours de chasse. Distance actuelle Rando Perche 10,4 km, contre 10 km arrondis sur l’ancienne page générale.",
     "official": "https://rando-perche.fr/trek/527-La-Herse",
@@ -966,7 +1120,18 @@ export const ROUTES = [
     "gpxSource": "https://geotrek-perche.makina-corpus.net/api/fr/treks/527/la-herse.gpx",
     "erratum": null,
     "checkedAt": "2026-10-15",
-    "tracePointCount": 536
+    "tracePointCount": 536,
+    "basemap": "IGN Plan IGN",
+    "mapBounds": [
+      [
+        48.36965556913683,
+        0.5152188173312708
+      ],
+      [
+        48.40945025723518,
+        0.5991153826687291
+      ]
+    ]
   },
   {
     "name": "Le Chêne de l’École",
@@ -982,8 +1147,8 @@ export const ROUTES = [
     "id": 46,
     "marking": "GR et PR",
     "sourcePage": null,
-    "map": "assets/maps/46.svg",
-    "thumb": "assets/thumbs/46.svg",
+    "map": "assets/maps/46-ign.webp",
+    "thumb": "assets/thumbs/46-ign.webp",
     "ambiguous": false,
     "note": "Le chemin du Montperthuis peut être humide et glissant. Pour voir l’arbre, la fiche prévoit un aller-retour de 400 m depuis l’itinéraire principal. Distance actuelle Rando Perche 11,6 km, contre 11 km arrondis sur l’ancienne page générale.",
     "official": "https://rando-perche.fr/trek/6204-Le-Chene-de-l-ecole",
@@ -995,7 +1160,18 @@ export const ROUTES = [
     "gpxSource": "https://geotrek-perche.makina-corpus.net/api/fr/treks/6204/le-chene-de-lecole.gpx",
     "erratum": null,
     "checkedAt": "2026-10-15",
-    "tracePointCount": 581
+    "tracePointCount": 581,
+    "basemap": "IGN Plan IGN",
+    "mapBounds": [
+      [
+        48.37026129384283,
+        0.424907696
+      ],
+      [
+        48.40537650722112,
+        0.498936304
+      ]
+    ]
   },
   {
     "name": "La Valleuse d’Antifer",
@@ -1011,8 +1187,8 @@ export const ROUTES = [
     "id": 47,
     "marking": "Vert, sens horaire",
     "sourcePage": null,
-    "map": "assets/maps/47.svg",
-    "thumb": "assets/thumbs/47.svg",
+    "map": "assets/maps/47-ign.webp",
+    "thumb": "assets/thumbs/47-ign.webp",
     "ambiguous": false,
     "note": "Ne pas marcher au bord ni au pied des falaises ; respecter les arrêtés et déviations sur place. La fiche web indique 3 h 30, le PDF 3 h 20.",
     "official": "https://www.lehavreseinemetropole.fr/balades-et-randonnees/la-valleuse-dantifer",
@@ -1025,7 +1201,18 @@ export const ROUTES = [
     "erratum": null,
     "checkedAt": "2026-10-15",
     "tracePointCount": 339,
-    "fieldNote": "Le GPX provient de la publication de l’office Le Havre Étretat sur Cirkwi (environ 12,7 km). La distance de 12,4 km et le dénivelé de 320 m reprennent la fiche de la métropole ; les deux publications diffèrent."
+    "fieldNote": "Le GPX provient de la publication de l’office Le Havre Étretat sur Cirkwi (environ 12,7 km). La distance de 12,4 km et le dénivelé de 320 m reprennent la fiche de la métropole ; les deux publications diffèrent.",
+    "basemap": "IGN Plan IGN",
+    "mapBounds": [
+      [
+        49.673714187521604,
+        0.1413155620806761
+      ],
+      [
+        49.71288218765815,
+        0.22608443791932392
+      ]
+    ]
   },
   {
     "name": "La Coutume",
@@ -1041,8 +1228,8 @@ export const ROUTES = [
     "id": 48,
     "marking": null,
     "sourcePage": null,
-    "map": "assets/maps/48.svg",
-    "thumb": "assets/thumbs/48.svg",
+    "map": "assets/maps/48-ign.webp",
+    "thumb": "assets/thumbs/48-ign.webp",
     "ambiguous": false,
     "note": "Consulter la signalisation locale et le calendrier de chasse pour les passages forestiers.",
     "official": "https://www.seine-maritime-tourisme.com/offres/la-coutume-rives-en-seine-fr-5132724/",
@@ -1054,7 +1241,18 @@ export const ROUTES = [
     "gpxSource": "https://cdt76.tourinsoft.com/upload/trace/ITINOR076V5002JR.gpx",
     "erratum": null,
     "checkedAt": "2026-10-15",
-    "tracePointCount": 51
+    "tracePointCount": 51,
+    "basemap": "IGN Plan IGN",
+    "mapBounds": [
+      [
+        49.504789450860905,
+        0.753029048
+      ],
+      [
+        49.53299925182535,
+        0.8138637519999999
+      ]
+    ]
   },
   {
     "name": "Entre Seine et Terre",
@@ -1070,8 +1268,8 @@ export const ROUTES = [
     "id": 49,
     "marking": null,
     "sourcePage": null,
-    "map": "assets/maps/49.svg",
-    "thumb": "assets/thumbs/49.svg",
+    "map": "assets/maps/49-ign.webp",
+    "thumb": "assets/thumbs/49-ign.webp",
     "ambiguous": false,
     "note": "Traversées de la D81 : suivre les indications de prudence de la fiche. La trace GPX publiée mesure environ 11,3 km, pour 12,1 km annoncés sur la fiche.",
     "official": "https://www.seine-maritime-tourisme.com/offres/entre-seine-et-terre-norville-fr-5132718/",
@@ -1083,7 +1281,18 @@ export const ROUTES = [
     "gpxSource": "https://cdt76.tourinsoft.com/upload/trace/ITINOR076V5002HY.gpx",
     "erratum": null,
     "checkedAt": "2026-10-15",
-    "tracePointCount": 264
+    "tracePointCount": 264,
+    "basemap": "IGN Plan IGN",
+    "mapBounds": [
+      [
+        49.46261192363124,
+        0.6037334656424109
+      ],
+      [
+        49.505572147802,
+        0.6963117343575891
+      ]
+    ]
   },
   {
     "name": "La Porte verte",
@@ -1099,8 +1308,8 @@ export const ROUTES = [
     "id": 50,
     "marking": null,
     "sourcePage": null,
-    "map": "assets/maps/50.svg",
-    "thumb": "assets/thumbs/50.svg",
+    "map": "assets/maps/50-ign.webp",
+    "thumb": "assets/thumbs/50-ign.webp",
     "ambiguous": false,
     "note": "Quelques passages longent des routes départementales ; le château du Vaudroc est privé, rester sur le chemin. Utiliser l’édition 2023 (10 km), et non l’ancienne version 2021 (9,8 km).",
     "official": "https://www.seine-maritime-tourisme.com/offres/la-porte-verte-limpiville-fr-5135406/",
@@ -1112,8 +1321,18 @@ export const ROUTES = [
     "gpxSource": "https://cdt76.tourinsoft.com/upload/trace/ITINOR076FS0006V.gpx",
     "erratum": null,
     "checkedAt": "2026-10-15",
-    "tracePointCount": 582
+    "tracePointCount": 582,
+    "basemap": "IGN Plan IGN",
+    "mapBounds": [
+      [
+        49.67534461306306,
+        0.4679372
+      ],
+      [
+        49.70234300960239,
+        0.5263628
+      ]
+    ]
   }
 ];
 export const SOURCE_DATE = "10 février 2022";
-export const VERIFIED_DATE = "15 octobre 2026";

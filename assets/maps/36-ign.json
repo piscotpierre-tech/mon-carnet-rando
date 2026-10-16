@@ -1,0 +1,43 @@
+{
+  "routeId": 36,
+  "provider": "IGN",
+  "layer": "GEOGRAPHICALGRIDSYSTEMS.PLANIGNV2",
+  "licence": "Licence Ouverte / Open Licence 2.0",
+  "fetchedAt": "2026-10-16",
+  "crs": "EPSG:3857",
+  "bbox": [
+    80124.55323805363,
+    6287482.712268313,
+    89251.46951227944,
+    6294001.938178474
+  ],
+  "bounds": [
+    [
+      49.074327930982335,
+      0.7197711080699187
+    ],
+    [
+      49.11267666709154,
+      0.8017595919300811
+    ]
+  ],
+  "traceSha256": "4c07f2e61fa7037cb2f0ca1eb4afab4cb86f8951f4c37909e756ba959b54559b",
+  "images": {
+    "map": {
+      "path": "assets/maps/36-ign.webp",
+      "width": 1960,
+      "height": 1400,
+      "wmsUrl": "https://data.geopf.fr/wms-r/wms?SERVICE=WMS&VERSION=1.3.0&REQUEST=GetMap&LAYERS=GEOGRAPHICALGRIDSYSTEMS.PLANIGNV2&STYLES=normal&CRS=EPSG%3A3857&BBOX=80124.553238%2C6287482.712268%2C89251.469512%2C6294001.938178&WIDTH=1960&HEIGHT=1400&FORMAT=image%2Fpng&TRANSPARENT=FALSE",
+      "backgroundSha256": "46f21886e0a0f4e21191ad8026284fdeaa12ae9fe633706702fd1f4fbaac14f2",
+      "sha256": "ac6aaaf211c957741884254bedd2322d5d423ac197e61c78e7afe0069e39f7d3"
+    },
+    "thumb": {
+      "path": "assets/thumbs/36-ign.webp",
+      "width": 700,
+      "height": 500,
+      "wmsUrl": "https://data.geopf.fr/wms-r/wms?SERVICE=WMS&VERSION=1.3.0&REQUEST=GetMap&LAYERS=GEOGRAPHICALGRIDSYSTEMS.PLANIGNV2&STYLES=normal&CRS=EPSG%3A3857&BBOX=80124.553238%2C6287482.712268%2C89251.469512%2C6294001.938178&WIDTH=700&HEIGHT=500&FORMAT=image%2Fpng&TRANSPARENT=FALSE",
+      "backgroundSha256": "eb0db0b1c25400b52ef6ec767fc5ebeee911e9b5cde9246a0b46b8c2d4f18bf7",
+      "sha256": "fe3fc0a3de622ae999ff84c5cda0f1e5b8dbc3f93bf2e3d1cfd537d96606cea3"
+    }
+  }
+}

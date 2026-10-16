@@ -8,3 +8,6 @@
 .trace-toolbar{padding:12px 20px;display:flex;align-items:center;gap:18px;min-height:56px;border-bottom:1px solid var(--line)}.trace-toolbar span{font-size:12px;color:var(--muted)}
 .interactive-map{height:calc(100% - 160px);min-height:260px;background:#e5e9dd}.leaflet-container{font-family:inherit}.leaflet-control-attribution{font-size:11px}.map-dialog [hidden]{display:none!important}
 @media(max-width:700px){.department-label{flex:1;min-width:160px}.department-label select{width:100%}.search-box{flex-basis:100%}.trace-toolbar{padding:10px 14px;gap:12px}.trace-toolbar span{font-size:10px}.interactive-map{height:calc(100% - 166px)}.detail-metrics{gap:16px 22px}.detail-metrics strong,.detail-metrics div:last-child strong{font-size:23px}}
+
+/* Keep the full georeferenced route, its legend and attribution visible. */
+.card-map.has-basemap{height:auto;aspect-ratio:7/5}.card-map.has-basemap img{object-fit:contain;filter:none}.card-open:hover .has-basemap img{transform:none}

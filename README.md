@@ -8,7 +8,7 @@ Application personnelle de randonnée, autonome et compatible GitHub Pages. 48 c
 - Recherche par nom, commune, département et numéro, sans tenir compte des accents.
 - Filtres jusqu’à 6 km, plus de 6 à 10 km, plus de 10 km ; plusieurs tris.
 - Favoris et repérage des circuits déjà parcourus.
-- Fiches et cartes agrandissables ; 20 nouveaux GPX consultables sur une carte Leaflet avec fond OpenStreetMap en ligne.
+- Fiches et cartes agrandissables ; les 20 nouveaux circuits ont une vraie carte IGN avec leur tracé, visible dès la liste et téléchargeable hors ligne. Une carte Leaflet avec fond OpenStreetMap en ligne permet aussi d’explorer les alentours.
 - Départs, durées, difficultés et dénivelés lorsqu’ils sont fournis ; liens vers les PDF officiels et téléchargement GPX.
 - Recherche du lieu de départ dans Google Maps, sauf départs ambigus.
 - Chronomètre avec pause, reprise et conservation au rechargement.
@@ -54,7 +54,7 @@ Pour un développement local classique, servir le dossier avec un serveur HTTP l
 
 ## Sources et limites des cartes
 
-Voir [SOURCES.md](SOURCES.md). Les 28 cartes GTM sont des images non géoréférencées, dont les tracés n’ont pas été redessinés. Les 20 nouveaux parcours emploient les coordonnées des GPX officiels : aperçus SVG sans fond et GeoJSON interactif. Les PDF externes ne sont pas réhébergés. Les zones blanches sous les cartes ont été retirées ; la carte, sa légende, les logos et les mentions d’origine sont conservés. Cette adaptation personnelle ne prétend à aucune affiliation avec les organismes figurant sur les cartes.
+Voir [SOURCES.md](SOURCES.md). Les 28 cartes GTM sont des images non géoréférencées, dont les tracés n’ont pas été redessinés. Les 20 nouveaux parcours emploient les coordonnées des GPX officiels, superposées sans simplification au fond Plan IGN en EPSG:3857. Leurs cartes WebP et miniatures sont intégrées au dépôt ; les GeoJSON servent aussi à la carte interactive. Le fond Plan IGN est diffusé sous Licence Ouverte 2.0, avec attribution et date visibles sur chaque image. Les emprises, URL WMS et empreintes de contrôle sont documentées dans assets/maps/*-ign.json. Les PDF externes ne sont pas réhébergés. Les zones blanches sous les cartes ont été retirées ; la carte, sa légende, les logos et les mentions d’origine sont conservés. Cette adaptation personnelle ne prétend à aucune affiliation avec les organismes figurant sur les cartes.
 
 L’application ne donne pas un statut actuel d’ouverture des chemins. Les distances d’origine proviennent du document de 2022, à l’exception de la précision expliquée pour le circuit 27. Les nouvelles distances proviennent des fiches officielles citées dans SOURCES.md. Aucun dénivelé ou niveau de difficulté n’est inventé.
 
@@ -62,10 +62,14 @@ L’application ne donne pas un statut actuel d’ouverture des chemins. Les dis
 
 Les tests automatisés couvrent les filtres, les limites de distance, les données invalides, l’import avec conservation des sorties, les statistiques, le chronomètre et le service worker dans un sous-dossier GitHub Pages. Les contrôles de fichiers vérifient les 48 paires d’images et 20 traces GPX / GeoJSON, les chemins relatifs, les identifiants HTML et le manifeste.
 
-Les tests du service worker utilisent une simulation Node ; ils ne remplacent pas un test de navigateur. La vérification visuelle réelle à 360/390/430 pixels, l’installation sur Android et la disponibilité après arrêt complet du navigateur restent à exécuter sur la version publiée.
+Les tests du service worker utilisent une simulation Node ; ils ne remplacent pas un test de navigateur. L’installation sur un téléphone Android réel et la disponibilité après arrêt complet de son navigateur restent à exécuter sur la version publiée.
 
 ## Fond de carte et hors ligne
 
-Leaflet 1.9.4 est embarqué dans assets/vendor/leaflet avec sa licence. Le fond © OpenStreetMap contributors est demandé seulement pendant la consultation interactive, avec attribution visible. Les tuiles externes sont exclues du service worker et du téléchargement hors ligne ; seul le cache HTTP normal du navigateur s’applique. Les aperçus, GPX et GeoJSON locaux peuvent être gardés hors ligne. Sans réseau, la carte interactive affiche le tracé seul.
+Leaflet 1.9.4 est embarqué dans assets/vendor/leaflet avec sa licence. Le fond © OpenStreetMap contributors est demandé seulement pendant la consultation interactive, avec attribution visible. Les tuiles externes sont exclues du service worker et du téléchargement hors ligne ; seul le cache HTTP normal du navigateur s’applique. Les cartes IGN complètes, GPX et GeoJSON locaux peuvent être gardés hors ligne. Sans réseau, la carte agrandissable conserve son fond IGN ; la carte interactive utilise aussi cette image géoréférencée autour du parcours. Seule l’exploration au-delà de cette emprise nécessite le fond en ligne.
 
 La clé de stockage et les identifiants des 28 anciens circuits sont conservés. Les exports JSON de l’ancienne version restent compatibles.
+
+## Reconstruire les cartes IGN
+
+`python scripts/build-maps.py` (Python 3 + Pillow) régénère les 20 cartes depuis le WMS public Plan IGN, sans télécharger de tuiles OpenStreetMap. Des identifiants peuvent limiter la reconstruction : `python scripts/build-maps.py 35`. Le fond et le tracé utilisent la même projection, la même emprise et le même ratio dans la carte et la miniature. Chaque fichier JSON de provenance contient la date, la licence, l’URL de la requête WMS, les dimensions et les empreintes des images et du GeoJSON. Après une reconstruction avec une autre emprise, reporter les bornes `bounds` dans `mapBounds` de data.js. `npm run check` vérifie ces liens et que chaque point du parcours reste dans la carte.

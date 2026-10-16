@@ -37,7 +37,7 @@ Les cartes, leurs légendes et les mentions visibles proviennent du document fou
 
 ## 20 circuits ajoutés le 15 octobre 2026
 
-Quatre itinéraires par département. Distances, durées et difficultés sont celles des fiches citées, pas des mesures de terrain. Les PDF restent sur les sites de leurs éditeurs. Les aperçus SVG et GeoJSON sont générés à partir des GPX officiels ; aucun fond topographique IGN n’est reproduit pour ces ajouts. La géométrie GPX sert au tracé, sans suivi de position ni guidage.
+Quatre itinéraires par département. Distances, durées et difficultés sont celles des fiches citées, pas des mesures de terrain. Les PDF restent sur les sites de leurs éditeurs. Les tracés GeoJSON et les superpositions sur les cartes sont générés à partir des GPX officiels. Depuis le 16 octobre 2026, les 20 ajouts disposent de cartes et miniatures WebP sur le fond Plan IGN sous Licence Ouverte 2.0, avec attribution visible. La géométrie GPX sert au tracé, sans suivi de position ni guidage.
 
 ### 31 · Pain de Sucre et Rochers des Parcs · Calvados
 
@@ -227,3 +227,14 @@ Quatre itinéraires par département. Distances, durées et difficultés sont ce
 ## Carte interactive
 
 Leaflet 1.9.4 est embarqué localement sous licence BSD-2-Clause (`assets/vendor/leaflet/LICENSE`). Fond en ligne © OpenStreetMap contributors : https://www.openstreetmap.org/copyright. Tuiles utilisées pour la consultation interactive uniquement, sans téléchargement hors ligne ni préchargement, selon https://operations.osmfoundation.org/policies/tiles/. Les GPX et aperçus locaux peuvent être conservés hors ligne ; le fond de carte demande Internet.
+
+## Fond des 20 cartes ajouté le 16 octobre 2026
+
+- Producteur : Institut national de l’information géographique et forestière (IGN). Fond : **Plan IGN**, couche `GEOGRAPHICALGRIDSYSTEMS.PLANIGNV2`, style `normal`.
+- [Fiche du produit et licence (producteur IGN sur data.gouv.fr)](https://www.data.gouv.fr/datasets/plan-ign) : Licence Ouverte / Open Licence 2.0.
+- [Disponibilité officielle en WMS-Raster et WMTS](https://cartes.gouv.fr/aide/fr/partenaires/ign/generalites-ign/actualites/2026-10-mises-a-jour/).
+- Service WMS : `https://data.geopf.fr/wms-r/wms`, version 1.3.0, images PNG en EPSG:3857. Date de récupération : **16 octobre 2026**.
+- Les fonds sont transformés en WebP avec superposition des coordonnées du GPX officiel en EPSG:3857, sans déplacement ni simplification de la géométrie. Il ne s’agit pas des cartes SCAN 25.
+- Chaque carte et miniature porte `© IGN – Plan IGN · Licence Ouverte 2.0 · 2026-10-16`. Les JSON `assets/maps/{id}-ign.json` conservent l’emprise, les URL WMS exactes, les dimensions et les empreintes SHA-256 du fond reçu, de l’image produite et du GeoJSON.
+- Le point vert désigne le premier point du GPX officiel ; il ne constitue pas une vérification du parking. Le départ textuel de la fiche garde sa provenance initiale.
+- Les images des 20 circuits font partie du téléchargement hors ligne. La carte interactive peut les afficher dans leur emprise géographique sans réseau. Les tuiles OpenStreetMap restent en ligne et ne sont pas préchargées.

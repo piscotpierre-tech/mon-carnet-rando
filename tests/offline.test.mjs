@@ -29,11 +29,14 @@ test('le cache de l’application fonctionne dans un sous-dossier GitHub Pages',
   const r=await h.request('https://exemple.github.io/mon-carnet-rando/',{mode:'navigate'});
   assert.match(await r.text(),/index.html/);
 });
-test('une carte ouverte reste accessible après la perte du réseau',async()=>{
+test('une carte d’origine ou une nouvelle carte IGN garde son fond après la perte du réseau',async()=>{
   const h=harness();await h.lifecycle('install');
-  const url='https://exemple.github.io/mon-carnet-rando/assets/maps/19.webp';
-  const first=await h.request(url);assert.equal(await first.text(),'network:'+url);
-  h.offline(true);const second=await h.request(url);assert.equal(await second.text(),'network:'+url);
+  for(const path of ['maps/19.webp','maps/35-ign.webp','thumbs/35-ign.webp']) {
+    h.offline(false);
+    const url='https://exemple.github.io/mon-carnet-rando/assets/'+path;
+    const first=await h.request(url);assert.equal(await first.text(),'network:'+url);
+    h.offline(true);const second=await h.request(url);assert.equal(await second.text(),'network:'+url);
+  }
 });
 test('le code de l’application se rafraîchit en ligne et retombe sur sa copie sans réseau',async()=>{
   const h=harness();await h.lifecycle('install');
