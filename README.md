@@ -69,7 +69,9 @@ L’application ne donne pas un statut actuel d’ouverture des chemins. Les dis
 
 Les tests automatisés couvrent les filtres, les limites de distance, les données invalides, l’import avec conservation des sorties, les statistiques, le chronomètre et le service worker dans un sous-dossier GitHub Pages. Les contrôles de fichiers vérifient toutes les paires d’images, les traces GPX / GeoJSON et la provenance des profils, les chemins relatifs, les identifiants HTML et le manifeste.
 
-Les tests du service worker utilisent une simulation Node ; ils ne remplacent pas un test de navigateur. L’installation sur un téléphone Android réel et la disponibilité après arrêt complet de son navigateur restent à exécuter sur la version publiée.
+La publication du 16 octobre 2026 a réussi : **1329 parcours, 1312 GPX locaux et 1303 profils** à partir de 1617 références inventoriées. Les 30 tests JavaScript, 27 tests Python et les contrôles complets des fichiers ont passé. Chromium a vérifié 360, 390 et 430 px, les cinq départements, Maps, GPX, export/import et le fonctionnement hors ligne avec preuve de coupure réseau. Le bilan exact, les compteurs départementaux et les limites sont conservés dans [VERIFICATION.md](VERIFICATION.md).
+
+Les tests du service worker combinent une simulation Node et un véritable navigateur. L’installation sur un téléphone Android réel et la disponibilité après arrêt complet de son navigateur restent à exécuter sur la version publiée.
 
 ## Fond de carte et hors ligne
 
