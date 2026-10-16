@@ -1,4 +1,5 @@
-export const ROUTES = [
+import {CATALOGUE_ROUTES} from './catalogue-routes.js?v=normandie-20261016';
+export const ORIGINAL_ROUTES = [
   {
     "id": 1,
     "name": "Les quatre chemins",
@@ -1722,3 +1723,4 @@ export const ROUTES = [
   }
 ];
 export const SOURCE_DATE = "10 février 2022";
+export const ROUTES = [...ORIGINAL_ROUTES, ...CATALOGUE_ROUTES];

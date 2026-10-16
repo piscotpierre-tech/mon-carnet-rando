@@ -2,3 +2,11 @@ node_modules/
 .DS_Store
 *.log
 coverage/
+
+.generated-catalogue/
+**/__pycache__/
+catalogue/preparation.json
+assets/maps/[1-9][0-9][0-9][0-9]-ign.*
+assets/thumbs/[1-9][0-9][0-9][0-9]-ign.webp
+assets/traces/[1-9][0-9][0-9][0-9].*
+assets/profiles/[1-9][0-9][0-9][0-9].json

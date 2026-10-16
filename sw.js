@@ -3,7 +3,7 @@ const SHELL=PREFIX+'shell';
 const ASSETS=PREFIX+'assets';
 const ROOT=new URL('./',self.location.href);
 const INDEX=new URL('index.html',ROOT).href;
-const FILES=['./','index.html','styles.css?v=relief-20261016','app.js?v=relief-20261016','core.js?v=relief-20261016','data.js?v=relief-20261016','manifest.webmanifest','assets/icons/icon-192.png','assets/icons/icon-512.png','assets/vendor/leaflet/leaflet.js','assets/vendor/leaflet/leaflet.css'];
+const FILES=['./','index.html','styles.css?v=normandie-20261016','app.js?v=normandie-20261016','core.js?v=normandie-20261016','data.js?v=normandie-20261016','catalogue-routes.js?v=normandie-20261016','manifest.webmanifest','assets/catalogue.json','assets/icons/icon-192.png','assets/icons/icon-512.png','assets/vendor/leaflet/leaflet.js','assets/vendor/leaflet/leaflet.css'];
 self.addEventListener('install',event=>{event.waitUntil(caches.open(SHELL).then(cache=>cache.addAll(FILES.map(p=>new Request(new URL(p,ROOT).href,{cache:'reload'})))).then(()=>self.skipWaiting()));});
 self.addEventListener('activate',event=>{event.waitUntil(caches.keys().then(keys=>Promise.all(keys.filter(k=>k.startsWith('pierre-rando-')&&!k.startsWith(PREFIX)).map(k=>caches.delete(k)))).then(()=>self.clients.claim()));});
 self.addEventListener('fetch',event=>{

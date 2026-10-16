@@ -19,7 +19,9 @@ export function routeMapsUrl(route) {
   const url=new URL(route.ambiguous?'https://www.google.com/maps/search/':'https://www.google.com/maps/dir/');
   url.searchParams.set('api','1');
   const place=[route.ambiguous?null:route.start,route.town,route.departmentName,'France'].filter(Boolean).join(', ');
-  url.searchParams.set(route.ambiguous?'query':'destination',place);
+  const coordinate=route.startCoordinate;
+  const precise=!route.ambiguous&&Array.isArray(coordinate)&&coordinate.length===2&&coordinate.every(Number.isFinite)&&Math.abs(coordinate[0])<=180&&Math.abs(coordinate[1])<=90;
+  url.searchParams.set(route.ambiguous?'query':'destination',precise?`${coordinate[1]},${coordinate[0]}`:place);
   if(!route.ambiguous)url.searchParams.set('travelmode','driving');
   return url.href;
 }

@@ -264,3 +264,22 @@ Les pages et téléchargements ci-dessous ont été consultés le 16 octobre 202
 - **22 · Par monts et par vaux** · 17 km sur la fiche : [page officielle](https://www.tourisme-granville-terre-mer.com/offres/par-monts-et-par-vaux-coudeville-sur-mer-fr-5172262/) · [GPX officiel](https://cdt61.media.tourinsoft.eu/upload/Cirkwi-A-pied---Par-monts-et-par-vaux.gpx).
 - **24 · Les vallons de Cérences** · 20 km sur la fiche : [page officielle](https://www.tourisme-granville-terre-mer.com/offres/les-vallons-de-cerences-cerences-fr-5172252/) · [GPX officiel](https://cdt61.media.tourinsoft.eu/upload/pr5-les-vallons-de-cerences.gpx).
 - **27 · Les 3 cabanes Vauban** · 12.5 km sur la fiche : [page officielle](https://www.tourisme-granville-terre-mer.com/offres/les-3-cabanes-vauban-carolles-fr-5172233/) · [GPX officiel](https://cdt61.media.tourinsoft.eu/upload/PR8-3cabanesVauban.gpx).
+
+
+## Enrichissement régional du 16 octobre 2026
+
+- Catalogue public pédestre : https://www.normandie-tourisme.fr/preparer-son-sejour/a-voir-a-faire/activites-sportives/randonnee-pedestre/
+- Collecte : dix lots publics de 100 emplacements, identifiants SIT conservés ; 985 fiches et une bannière promotionnelle. L’API publique de recherche utilisée est décrite par les scripts du site et ne demande aucune authentification. Les routes privées WordPress ne sont pas utilisées.
+- Sources, liens GPX et coordonnées : `catalogue/inventaire-regional.json` et `catalogue/snapshots/*.json.gz`. Les textes descriptifs, photographies et scripts de suivi des offices n’ont pas été recopiés. Les fiches sans GPX ont été consultées individuellement : `catalogue/details-manquants.json`.
+- Contrôles : coordonnées françaises plausibles, segments conservés, longueur du GPX comparée à la distance de la fiche ; écart supérieur à 25 % et 1 km mis à vérifier. Les valeurs d’altitude vides restent inconnues. Doublons de géométrie détectés indépendamment du sens et du premier point des boucles, après normalisation à six décimales. Les autres différences de tracé ne sont pas automatiquement effacées.
+- Fonds : Plan IGN, WMS public sous Licence Ouverte 2.0. Une image pleine carte est demandée par circuit puis réduite pour la miniature ; toutes les emprises et empreintes sont publiées dans les JSON de provenance. Les traces ne sont pas simplifiées sur les cartes.
+- Dénivelés : relief IGN RGE ALTI de préférence ; repli sur les altitudes complètes du GPX lorsque nécessaire ; statut inconnu si ces deux méthodes échouent. Montées et descentes calculées séparément et arrondies à 5 m.
+- Le nombre réel de circuits utilisables et les motifs de report figurent dans `assets/catalogue.json` de la version publiée. Une fiche régionale n’est pas nécessairement un circuit distinct. Les 48 fiches antérieures gardent leurs identifiants.
+
+Sources complémentaires à rapprocher :
+
+- Calvados, circuits qualité : https://www.data.gouv.fr/datasets/itineraires-de-randonnee-circuits-qualite-departement-du-calvados (Licence Ouverte 2.0 ; téléchargement du GeoJSON renvoyant HTTP 502 lors de cette session).
+- Seine-Maritime, PDESI pédestre janvier 2025 : https://www.data.gouv.fr/datasets/itineraires-randonnees-pedestres-pdesi-cd76-janvier-2025 (291 lignes récupérées via le GeoService public ; premier rapprochement des noms archivé).
+- Calvados Tourisme : https://www.explore-calvados.com/sejour/activites/balades-et-randonnees/a-pied/
+- Orne Tourisme : https://www.ornetourisme.com/vivre-l-orne/balades-et-randonnees-orne/
+- Offices de tourisme locaux et portails départementaux : restent à croiser et documenter. La couverture complète de tous les itinéraires normands n’est pas démontrée.

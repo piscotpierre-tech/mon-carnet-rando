@@ -1,0 +1,1177 @@
+{
+  "checkedAt": "2026-10-16",
+  "publisher": "Département de la Seine-Maritime",
+  "datasetDate": "janvier 2025",
+  "source": "https://www.data.gouv.fr/datasets/itineraires-randonnees-pedestres-pdesi-cd76-janvier-2025",
+  "announcedTotal": 291,
+  "matchedByName": 213,
+  "matched": [
+    {
+      "name": "4- Le Val de l'Abbesse",
+      "sourceId": "ITINOR076V5002NB"
+    },
+    {
+      "name": "1- La Forêt d'Arelaune",
+      "sourceId": "ITINOR076V5002K3"
+    },
+    {
+      "name": "8- La Croix de Pierre",
+      "sourceId": "ITINOR076V5002JW"
+    },
+    {
+      "name": "12- Le Gibet",
+      "sourceId": "ITINOR076V5002N1"
+    },
+    {
+      "name": "7- La Chapelle du Bout du Vent",
+      "sourceId": "ITINOR076V5002IH"
+    },
+    {
+      "name": "20- Le Val Godard",
+      "sourceId": "ITINOR076V5002NL"
+    },
+    {
+      "name": "2- Entre Seine et Terre",
+      "sourceId": "ITINOR076V51ZQF0"
+    },
+    {
+      "name": "6- Les Chemins des textiles",
+      "sourceId": "ITINOR076V5023TA"
+    },
+    {
+      "name": "5- Le Hamel au Coeur",
+      "sourceId": "ITINOR076V5002N2"
+    },
+    {
+      "name": "9- Les Terres Romaines",
+      "sourceId": "ITINOR076V50HNRD"
+    },
+    {
+      "name": "25- La Coutume",
+      "sourceId": "ITINOR076V5002JR"
+    },
+    {
+      "name": "11- Sentier de la Gribane",
+      "sourceId": "ITINOR076V5002P9"
+    },
+    {
+      "name": "23- Les Bassins des Vallées",
+      "sourceId": "ITINOR076V50HNSE"
+    },
+    {
+      "name": "14- Circuit de Branmaze",
+      "sourceId": "ITINOR076V50HNSD"
+    },
+    {
+      "name": "1- La Reine Mère",
+      "sourceId": "ITINOR076V50IBJI"
+    },
+    {
+      "name": "2- La Bonne Entente",
+      "sourceId": "ITINOR076V50IBJL"
+    },
+    {
+      "name": "3- La Rieuse",
+      "sourceId": "ITINOR076V50IBJX"
+    },
+    {
+      "name": "6- Les Etangs",
+      "sourceId": "ITINOR076V50IBKT"
+    },
+    {
+      "name": "8- Maître Jean",
+      "sourceId": "ITINOR076V50IC75"
+    },
+    {
+      "name": "10- Le Moulin à Vent",
+      "sourceId": "ITINOR076V50IC8S"
+    },
+    {
+      "name": "11- Le Caud Soleil",
+      "sourceId": "ITINOR076V50IC8Y"
+    },
+    {
+      "name": "12- La Quesnoye",
+      "sourceId": "ITINOR076V50IC9D"
+    },
+    {
+      "name": "13- La Tour Mailly",
+      "sourceId": "ITINOR076V50IBRN"
+    },
+    {
+      "name": "15- Le Mont Gournoy",
+      "sourceId": "ITINOR076V50IBS1"
+    },
+    {
+      "name": "5- Le Torp",
+      "sourceId": "ITINOR076FS0003E"
+    },
+    {
+      "name": "6- Georges Cuvier",
+      "sourceId": "ITINOR076V50W405"
+    },
+    {
+      "name": "10- La Porte Verte",
+      "sourceId": "ITINOR076FS0006V"
+    },
+    {
+      "name": "24- La Sente aux Moines",
+      "sourceId": "ITINOR076V50CV9V"
+    },
+    {
+      "name": "26- Circuit des Crêtes",
+      "sourceId": "ITINOR076V50HNSC"
+    },
+    {
+      "name": "25- Sur les Traces de Saint-Martin",
+      "sourceId": "ITINOR076V50HNSF"
+    },
+    {
+      "name": "17- Circuit de la Pointe de Caux",
+      "sourceId": "ITINOR076V50HNSH"
+    },
+    {
+      "name": "22- Autour du Cap",
+      "sourceId": "ITINOR076V50CWKE"
+    },
+    {
+      "name": "3- Le Puy Valet",
+      "sourceId": "ITINOR076FS0003C"
+    },
+    {
+      "name": "4- La Tour Lanterne",
+      "sourceId": "ITINOR076FS0003D"
+    },
+    {
+      "name": "17- Bas de Bacqueville",
+      "sourceId": "ITINOR076V50IFJS"
+    },
+    {
+      "name": "16- La Pougaraise",
+      "sourceId": "ITINOR076V50HNJU"
+    },
+    {
+      "name": "13- Les Coquelicots",
+      "sourceId": "ITINOR076V50HNJA"
+    },
+    {
+      "name": "3- Le Clos Jacquet",
+      "sourceId": "ITINOR076V50CVWG"
+    },
+    {
+      "name": "9- Sissi",
+      "sourceId": "ITINOR076FS0006U"
+    },
+    {
+      "name": "10- Le Val Saint Etienne",
+      "sourceId": "ITINOR076V51K91R"
+    },
+    {
+      "name": "6- Les Six Frères",
+      "sourceId": "ITINOR076FS00051"
+    },
+    {
+      "name": "4- La Réformation",
+      "sourceId": "ITINOR076V51K918"
+    },
+    {
+      "name": "5- Le Chatelet",
+      "sourceId": "ITINOR076V51K913"
+    },
+    {
+      "name": "1- Les Hauts-Champs",
+      "sourceId": "ITINOR076V51K901"
+    },
+    {
+      "name": "2- Le Goulet",
+      "sourceId": "ITINOR076V51K8ZU"
+    },
+    {
+      "name": "1- Le Lihut",
+      "sourceId": "ITINOR076V51K9CH"
+    },
+    {
+      "name": "2- Le Jardin du Roi de Rome",
+      "sourceId": "ITINOR076V51K92J"
+    },
+    {
+      "name": "10- Le Chemin des Ecoliers",
+      "sourceId": "ITINOR076V51K9D5"
+    },
+    {
+      "name": "3- Le Puits Merveilleux",
+      "sourceId": "ITINOR076V51K9CP"
+    },
+    {
+      "name": "16- Le Bliquetuit",
+      "sourceId": "ITINOR076V5002N0"
+    },
+    {
+      "name": "14- Autour de Neufchatel",
+      "sourceId": "ITINOR076FS00066"
+    },
+    {
+      "name": "14- Autour de Beau Soleil",
+      "sourceId": "ITINOR076V51UH7D"
+    },
+    {
+      "name": "15- Autour de Guernesey",
+      "sourceId": "ITINOR076V51UP9N"
+    },
+    {
+      "name": "18- Le Domaine des Hogues",
+      "sourceId": "ITINOR076V51UHE7"
+    },
+    {
+      "name": "07- Les Chemins de Forrieres",
+      "sourceId": "ITINOR076FS00011"
+    },
+    {
+      "name": "09- Valleuse de Saussemare",
+      "sourceId": "ITINOR076V51FV6K"
+    },
+    {
+      "name": "13- Patrimoine de la Vallée du Dun",
+      "sourceId": "ITINOR076FS00015"
+    },
+    {
+      "name": "12- Sur la Rive du Dun",
+      "sourceId": "ITINOR076V51FJOW"
+    },
+    {
+      "name": "20- Terre du lin",
+      "sourceId": "ITINOR076V51FV6V"
+    },
+    {
+      "name": "21- Terre du Sucre",
+      "sourceId": "ITINOR076V51YSAV"
+    },
+    {
+      "name": "22- Beauville la Cité",
+      "sourceId": "ITINOR076V51FJOU"
+    },
+    {
+      "name": "15- Le Bois Balthazar",
+      "sourceId": "ITINOR076V51FJOY"
+    },
+    {
+      "name": "14- Silleron et Iclon",
+      "sourceId": "ITINOR076V51FJOO"
+    },
+    {
+      "name": "17- Le Coupe Gorge",
+      "sourceId": "ITINOR076V51FJOT"
+    },
+    {
+      "name": "16- La Plaine du Moulin",
+      "sourceId": "ITINOR076V51FJPZ"
+    },
+    {
+      "name": "19- Sur les Pas de Bourvil",
+      "sourceId": "ITINOR076FS00027"
+    },
+    {
+      "name": "1- Le Bourg Joli",
+      "sourceId": "ITINOR076V50HNI7"
+    },
+    {
+      "name": "5- La Corbière au Pont Rouge",
+      "sourceId": "ITINOR076V50CVYY"
+    },
+    {
+      "name": "2- L'arbalete et le Bosmelet",
+      "sourceId": "ITINOR076V50CVVM"
+    },
+    {
+      "name": "23- Au Fil des Chateaux",
+      "sourceId": "ITINOR076V50CWK9"
+    },
+    {
+      "name": "18- Un Vent de Liberte",
+      "sourceId": "ITINOR076V50CWI1"
+    },
+    {
+      "name": "24- Les Mesnils",
+      "sourceId": "ITINOR076V50CWKB"
+    },
+    {
+      "name": "9- Entre Varenne et Scie",
+      "sourceId": "ITINOR076V50HNIE"
+    },
+    {
+      "name": "10- La Varenne et l'Eawy",
+      "sourceId": "ITINOR076V50CWAB"
+    },
+    {
+      "name": "10- Aux Sources du Bebec",
+      "sourceId": "ITINOR076V5002HO"
+    },
+    {
+      "name": "1- Vers la Forêt d'Eawy",
+      "sourceId": "ITINOR076FS0005Q"
+    },
+    {
+      "name": "2- Vers la Forêt d'Eu",
+      "sourceId": "ITINOR076V50CWGC"
+    },
+    {
+      "name": "3- Le Marie-Cloche",
+      "sourceId": "ITINOR076FS0005S"
+    },
+    {
+      "name": "4- A partir de Fesques",
+      "sourceId": "ITINOR076FS0005T"
+    },
+    {
+      "name": "5- Au Fil de l'Eaulne",
+      "sourceId": "ITINOR076FS0005U"
+    },
+    {
+      "name": "6- Aux Sources de l'Eaulne",
+      "sourceId": "ITINOR076FS0004J"
+    },
+    {
+      "name": "7- La Mare aux Daims",
+      "sourceId": "ITINOR076FS0005W"
+    },
+    {
+      "name": "8- La Montagne",
+      "sourceId": "ITINOR076FS00060"
+    },
+    {
+      "name": "9- La Chapelle d'Hodeng",
+      "sourceId": "ITINOR076V50032S"
+    },
+    {
+      "name": "10- Vers les Bois de Neuville-Ferrières",
+      "sourceId": "ITINOR076FS00062"
+    },
+    {
+      "name": "11- Autour de Bully",
+      "sourceId": "ITINOR076FS00063"
+    },
+    {
+      "name": "12- Par les Hauts de Fresles",
+      "sourceId": "ITINOR076FS00064"
+    },
+    {
+      "name": "13- La Forêt du Hellet",
+      "sourceId": "ITINOR076FS0004I"
+    },
+    {
+      "name": "15- La Forêt de Ménonval",
+      "sourceId": "ITINOR076FS00067"
+    },
+    {
+      "name": "1- Le Bois de la Bretèque",
+      "sourceId": "ITINOR076V51KGA5"
+    },
+    {
+      "name": "3- Le Val au Cesne",
+      "sourceId": "ITINOR076V518QJT"
+    },
+    {
+      "name": "10- La Cavée aux Coqs",
+      "sourceId": "ITINOR076V5193YP"
+    },
+    {
+      "name": "6- Montigny",
+      "sourceId": "ITINOR076V50CWA9"
+    },
+    {
+      "name": "8- Des Glycines a la Porte Noire",
+      "sourceId": "ITINOR076V50CWA8"
+    },
+    {
+      "name": "19- Bracquemont- Piste des Faisans",
+      "sourceId": "ITINOR076V50HNK6"
+    },
+    {
+      "name": "4- Les Jacquemarts",
+      "sourceId": "ITINOR076V50CVYJ"
+    },
+    {
+      "name": "21- Des Sources de la Saane a la couture",
+      "sourceId": "ITINOR076V50VUUW"
+    },
+    {
+      "name": "20- Le Chemin des Frenettes",
+      "sourceId": "ITINOR076V50CWJP"
+    },
+    {
+      "name": "9- Au Pays de Bourvil",
+      "sourceId": "ITINOR076V51PC67"
+    },
+    {
+      "name": "3- Le Chateau d'Eau \"Fleur de Lin\"",
+      "sourceId": "ITINOR076V51PC52"
+    },
+    {
+      "name": "1- Le Bois Lambert",
+      "sourceId": "ITINOR076V51PC4V"
+    },
+    {
+      "name": "2- Sur les pas de Jehan le Povremoyne",
+      "sourceId": "ITINOR076V51PC4T"
+    },
+    {
+      "name": "14- Du Chemin Vert au Chemin de Fer",
+      "sourceId": "ITINOR076V50CWDJ"
+    },
+    {
+      "name": "1- Les Routhieux",
+      "sourceId": "ITINOR076V50RI03"
+    },
+    {
+      "name": "2- Le Four a Chaux",
+      "sourceId": "ITINOR076V50U2D1"
+    },
+    {
+      "name": "5- La Hetraie",
+      "sourceId": "ITINOR076V50U2FI"
+    },
+    {
+      "name": "6- Chemin des Perets",
+      "sourceId": "ITINOR076V50U2GA"
+    },
+    {
+      "name": "8- Le Bois du Temple",
+      "sourceId": "ITINOR076V50U2HE"
+    },
+    {
+      "name": "9- La Cote Blanche",
+      "sourceId": "ITINOR076V50VXIF"
+    },
+    {
+      "name": "10- Le Cirque de Fumechon",
+      "sourceId": "ITINOR076V50U2JR"
+    },
+    {
+      "name": "12- Les Bruyeres",
+      "sourceId": "ITINOR076V50U2ST"
+    },
+    {
+      "name": "14- De Part et d'Autre de l'Epte",
+      "sourceId": "ITINOR076V50U2T8"
+    },
+    {
+      "name": "11- Le Pont de Coq",
+      "sourceId": "ITINOR076V50U2SP"
+    },
+    {
+      "name": "4- Les Petits Bois",
+      "sourceId": "ITINOR076V50U2EQ"
+    },
+    {
+      "name": "1- La Forge",
+      "sourceId": "ITINOR076V50W3JH"
+    },
+    {
+      "name": "24- La Sente aux Moines",
+      "sourceId": "ITINOR076V50CV9V"
+    },
+    {
+      "name": "11- La Balade de Quiberville",
+      "sourceId": "ITINOR076V50HNIS"
+    },
+    {
+      "name": "12- Le Chemin de la Saane",
+      "sourceId": "ITINOR076V50CWCW"
+    },
+    {
+      "name": "25- Etocquigny",
+      "sourceId": "ITINOR076V51IXJJ"
+    },
+    {
+      "name": "8- Gratte-Panche",
+      "sourceId": "ITINOR076V51IXJU"
+    },
+    {
+      "name": "5- Gomare",
+      "sourceId": "ITINOR076V51PC6G"
+    },
+    {
+      "name": "26- Val du Roy",
+      "sourceId": "ITINOR076V51IXK1"
+    },
+    {
+      "name": "17- Circuit des Etangs",
+      "sourceId": "ITINOR076V51IXKI"
+    },
+    {
+      "name": "28- Grand Bois",
+      "sourceId": "ITINOR076V51YSE0"
+    },
+    {
+      "name": "15- Le Marais de Boscherville",
+      "sourceId": "ITINOR076V51B8PF"
+    },
+    {
+      "name": "06- Les Vergers",
+      "sourceId": "ITINOR076V51B8P2"
+    },
+    {
+      "name": "14- Le Tour d'Hénouville",
+      "sourceId": "ITINOR076V51IXMD"
+    },
+    {
+      "name": "02- De Seine en Forêt",
+      "sourceId": "ITINOR076V51B8MO"
+    },
+    {
+      "name": "01- Le Grand Tour du Trait",
+      "sourceId": "ITINOR076V51B8MG"
+    },
+    {
+      "name": "03- Les Vallons",
+      "sourceId": "ITINOR076V51B8OW"
+    },
+    {
+      "name": "05- Les Terres de l'Abbaye",
+      "sourceId": "ITINOR076V51B8OZ"
+    },
+    {
+      "name": "5- Aux Portes d'Yvetôt",
+      "sourceId": "ITINOR076V50SFBY"
+    },
+    {
+      "name": "6- La Bichotterie",
+      "sourceId": "ITINOR076V50SFDF"
+    },
+    {
+      "name": "7- Les Deux Chênes",
+      "sourceId": "ITINOR076V50SGZK"
+    },
+    {
+      "name": "8- Jérusalem",
+      "sourceId": "ITINOR076V51PC6J"
+    },
+    {
+      "name": "12- Le Chemin du Panorama",
+      "sourceId": "ITINOR076V51B8P7"
+    },
+    {
+      "name": "15- Dans le Bois de Grosfy",
+      "sourceId": "ITINOR076V51PC6F"
+    },
+    {
+      "name": "14- Sur les Traces de Voltaire",
+      "sourceId": "ITINOR076V51PC6E"
+    },
+    {
+      "name": "11- La Petite \"Lourdes\"",
+      "sourceId": "ITINOR076V51PC69"
+    },
+    {
+      "name": "12- Le Mont Lévêque",
+      "sourceId": "ITINOR076V51940P"
+    },
+    {
+      "name": "13- La Sente des Manoirs",
+      "sourceId": "ITINOR076V50ZKSX"
+    },
+    {
+      "name": "02- La Basse Vallée de la Durdent",
+      "sourceId": "ITINOR076V51FV6Q"
+    },
+    {
+      "name": "23- Le Nouveau Monde",
+      "sourceId": "ITINOR076FS0001J"
+    },
+    {
+      "name": "5- Gaillefontaine château",
+      "sourceId": "ITINOR076V51PC4R"
+    },
+    {
+      "name": "8- Saumont la Poterie",
+      "sourceId": "ITINOR076V51PC4S"
+    },
+    {
+      "name": "1- La Mésange",
+      "sourceId": "ITINOR076V51E5U4"
+    },
+    {
+      "name": "2- La Roulée",
+      "sourceId": "ITINOR076V51E5US"
+    },
+    {
+      "name": "3- Les Monts",
+      "sourceId": "ITINOR076V51E5V8"
+    },
+    {
+      "name": "5- Les Houx",
+      "sourceId": "ITINOR076V51E5VO"
+    },
+    {
+      "name": "6- Le Bièvredent",
+      "sourceId": "ITINOR076V51E5WJ"
+    },
+    {
+      "name": "7- Les Maréchaux",
+      "sourceId": "ITINOR076V51E5WO"
+    },
+    {
+      "name": "9- Les Grands Genêts",
+      "sourceId": "ITINOR076V51E5XK"
+    },
+    {
+      "name": "10- Montagny",
+      "sourceId": "ITINOR076V51E6MV"
+    },
+    {
+      "name": "11- La Cavée des Sabotiers",
+      "sourceId": "ITINOR076V51E6MX"
+    },
+    {
+      "name": "12- L'Andellix",
+      "sourceId": "ITINOR076V51E6NF"
+    },
+    {
+      "name": "13- La Vallée du Tôt",
+      "sourceId": "ITINOR076V51E6NU"
+    },
+    {
+      "name": "14- Saint Remy",
+      "sourceId": "ITINOR076V51E6OA"
+    },
+    {
+      "name": "15- La Verrerie de Carqueray",
+      "sourceId": "ITINOR076V51E6OC"
+    },
+    {
+      "name": "16- Le Chevreuil",
+      "sourceId": "ITINOR076V51E6OL"
+    },
+    {
+      "name": "17- Les Orchidées",
+      "sourceId": "ITINOR076V51E6OP"
+    },
+    {
+      "name": "18- La Chèvre d'Or",
+      "sourceId": "ITINOR076V51KG7S"
+    },
+    {
+      "name": "3- La Vallee Dollé",
+      "sourceId": "ITINOR076V50VXFA"
+    },
+    {
+      "name": "16- Le Mont Roti",
+      "sourceId": "ITINOR076V50IBSN"
+    },
+    {
+      "name": "8- Les Acres",
+      "sourceId": "ITINOR076V51E5WX"
+    },
+    {
+      "name": "11- Le Tour du Lac",
+      "sourceId": "ITINOR076V51BCJ9"
+    },
+    {
+      "name": "19- Entre bois et valleuses",
+      "sourceId": "ITINOR076V51UH58"
+    },
+    {
+      "name": "16- Sur les pas des ramendeuses",
+      "sourceId": "ITINOR076V51UH48"
+    },
+    {
+      "name": "20- Le Bois des Loges",
+      "sourceId": "ITINOR076V51UHFA"
+    },
+    {
+      "name": "13- Parcours du Village Fleuri",
+      "sourceId": "ITINOR076V5193ML"
+    },
+    {
+      "name": "14- La Plaine de Sonimare",
+      "sourceId": "ITINOR076V51942M"
+    },
+    {
+      "name": "12- Boucle de l'Hippodrome",
+      "sourceId": "ITINOR076V51GF8S"
+    },
+    {
+      "name": "7- Grumesnil",
+      "sourceId": "ITINOR076V5002WE"
+    },
+    {
+      "name": "3- Le Mont de Beaussault",
+      "sourceId": "ITINOR076V51PC4L"
+    },
+    {
+      "name": "11- Mauquenchy-Roncherolles en Bray",
+      "sourceId": "ITINOR076V5002VI"
+    },
+    {
+      "name": "04- Le Camp \"Lucky Strike\"",
+      "sourceId": "ITINOR076V51KGC2"
+    },
+    {
+      "name": "18- Les Hamouhoques",
+      "sourceId": "ITINOR076FS00022"
+    },
+    {
+      "name": "24- Chez le Roi des Canaries",
+      "sourceId": "ITINOR076V522GD5"
+    },
+    {
+      "name": "30- Les fermes traditionnelles",
+      "sourceId": "ITINOR076V51B9XF"
+    },
+    {
+      "name": "31- Autour du lac de Caniel",
+      "sourceId": "ITINOR076FS0001W"
+    },
+    {
+      "name": "08- Le Port d'Yville",
+      "sourceId": "ITINOR076V51LFIJ"
+    },
+    {
+      "name": "25- La Crapaudière",
+      "sourceId": "ITINOR076V51IX8F"
+    },
+    {
+      "name": "11- Le Vert Buisson",
+      "sourceId": "ITINOR076V51JIZF"
+    },
+    {
+      "name": "9- La Ferté Saint Samson",
+      "sourceId": "ITINOR076V51G82S"
+    },
+    {
+      "name": "29- Le Rougemont",
+      "sourceId": "ITINOR076V51KGAR"
+    },
+    {
+      "name": "28- Le Beau Chêne",
+      "sourceId": "ITINOR076V51KGC1"
+    },
+    {
+      "name": "10- Les Terres de l'Abbaye",
+      "sourceId": "ITINOR076V51B8OZ"
+    },
+    {
+      "name": "12- De Motteville à Flamanville",
+      "sourceId": "ITINOR076V51PC6B"
+    },
+    {
+      "name": "13- La Grange Dimière",
+      "sourceId": "ITINOR076V51PC6D"
+    },
+    {
+      "name": "16- Le Genetey",
+      "sourceId": "ITINOR076V51IXMI"
+    },
+    {
+      "name": "25- Les Basses Eaux",
+      "sourceId": "ITINOR076V51B9XA"
+    },
+    {
+      "name": "27- La Rue Verte",
+      "sourceId": "ITINOR076V51B9XC"
+    },
+    {
+      "name": "14- Les clos masures",
+      "sourceId": "ITINOR076V51LFIS"
+    },
+    {
+      "name": "18- Au Fil de la Lézarde",
+      "sourceId": "ITINOR076V50HNSG"
+    },
+    {
+      "name": "4- Routes par le Maroc",
+      "sourceId": "ITINOR076V51PC5L"
+    },
+    {
+      "name": "6- Autour du Chateau de Galleville",
+      "sourceId": "ITINOR076V51PC5S"
+    },
+    {
+      "name": "23- La Chouette",
+      "sourceId": "ITINOR076V51YVZX"
+    },
+    {
+      "name": "26- Le Marquet",
+      "sourceId": "ITINOR076V51YW0H"
+    },
+    {
+      "name": "25- Le Bois des Puits",
+      "sourceId": "ITINOR076V51YVY7"
+    },
+    {
+      "name": "17- Edruchon",
+      "sourceId": "ITINOR076V51YVY6"
+    },
+    {
+      "name": "8- Le Clos des Marnières",
+      "sourceId": "ITINOR076V51PC66"
+    },
+    {
+      "name": "5- La Voie Romaine",
+      "sourceId": "ITINOR076V51PC5N"
+    },
+    {
+      "name": "33- La Mare au Thym",
+      "sourceId": "ITINOR076V51B9XG"
+    },
+    {
+      "name": "Entre Caux et Bray",
+      "sourceId": "ITINOR076V51YUVL"
+    },
+    {
+      "name": "11- Les Démagnes",
+      "sourceId": "ITINOR076V51YSEH"
+    },
+    {
+      "name": "33- Pierre-Auguste Renoir",
+      "sourceId": "ITINOR076V51YSGK"
+    },
+    {
+      "name": "2- La Chevrette",
+      "sourceId": "ITINOR076V51YXAQ"
+    },
+    {
+      "name": "30- Circuit des Vallons",
+      "sourceId": "ITINOR076V50HNS2"
+    },
+    {
+      "name": "03-Les Comtes d'Evreux",
+      "sourceId": "ITINOR076V5002O3"
+    },
+    {
+      "name": "11- La Côte d'Orimont",
+      "sourceId": "ITINOR076V51FJOH"
+    },
+    {
+      "name": "12- La côte de la Vierge",
+      "sourceId": "ITINOR076V51UJ98"
+    },
+    {
+      "name": "2- Le Bosc aux Moines",
+      "sourceId": "ITINOR076V50Z8LB"
+    },
+    {
+      "name": "8- Le Hetre",
+      "sourceId": "ITINOR076FS0006T"
+    },
+    {
+      "name": "7- Creppeville a Vaudreville",
+      "sourceId": "ITINOR076V50CWA5"
+    }
+  ],
+  "toReview": [
+    {
+      "name": "18- Beau Soleil",
+      "possibleMatch": "Le Beau Soleil"
+    },
+    {
+      "name": "20- Porte Océane",
+      "possibleMatch": null
+    },
+    {
+      "name": "4- Circuit du Mont Madame",
+      "possibleMatch": null
+    },
+    {
+      "name": "5- Circuit de Gérente",
+      "possibleMatch": "Circuit des Crêtes"
+    },
+    {
+      "name": "7- Le Courval",
+      "possibleMatch": null
+    },
+    {
+      "name": "9- Le Val Jacob",
+      "possibleMatch": "Val Jacob"
+    },
+    {
+      "name": "14- Circuit du Pretre",
+      "possibleMatch": "Circuit des Crêtes"
+    },
+    {
+      "name": "Equestre 2- Sur la Route de l'Ouraille",
+      "possibleMatch": null
+    },
+    {
+      "name": "Equestre 3- En Bord de Seine",
+      "possibleMatch": null
+    },
+    {
+      "name": "Equestre 4- Sur les Traces de François 1er",
+      "possibleMatch": null
+    },
+    {
+      "name": "Equestre 5- La Presqu'ile",
+      "possibleMatch": null
+    },
+    {
+      "name": "05- Circuit de l'Enfer",
+      "possibleMatch": null
+    },
+    {
+      "name": "02- Circuit de Babylone",
+      "possibleMatch": "Circuit de Valmont"
+    },
+    {
+      "name": "29- La Plaine Cauvillaise",
+      "possibleMatch": null
+    },
+    {
+      "name": "24- Circuit de l'Arboretum",
+      "possibleMatch": null
+    },
+    {
+      "name": "4- La Plaine de Maucomble",
+      "possibleMatch": "La Plaine du Maucomble"
+    },
+    {
+      "name": "Equestre 1- Sur la Piste des Comtes d'Evreux",
+      "possibleMatch": null
+    },
+    {
+      "name": "Equestre 6 - Au Coeur d'Arelaune",
+      "possibleMatch": null
+    },
+    {
+      "name": "08- Escalier de Sotteville",
+      "possibleMatch": "L’escalier de Sotteville"
+    },
+    {
+      "name": "GRP nord",
+      "possibleMatch": null
+    },
+    {
+      "name": "Grande Boucle sud CVS",
+      "possibleMatch": null
+    },
+    {
+      "name": "03- La Guillebourdiere",
+      "possibleMatch": null
+    },
+    {
+      "name": "01- Le Bois de Tancarville",
+      "possibleMatch": null
+    },
+    {
+      "name": "06- La Belle Angerville",
+      "possibleMatch": null
+    },
+    {
+      "name": "22- La Sente aux Fees",
+      "possibleMatch": "Sente aux Fées"
+    },
+    {
+      "name": "7- Le Chemin de l'Ecole",
+      "possibleMatch": "Sur le chemin de l’école"
+    },
+    {
+      "name": "Chevauchée en Vallée de Seine",
+      "possibleMatch": null
+    },
+    {
+      "name": "Chevauchée en Vallée de Seine (variante)",
+      "possibleMatch": null
+    },
+    {
+      "name": "Chevauchée en Vallée de Seine (variante)",
+      "possibleMatch": null
+    },
+    {
+      "name": "Chevauchée en Vallée de Seine (variante)",
+      "possibleMatch": null
+    },
+    {
+      "name": "02- Circuit de la Coudrette",
+      "possibleMatch": "Circuit La Coudrette"
+    },
+    {
+      "name": "05- Circuit du Val Allard",
+      "possibleMatch": "Circuit le Val Allard"
+    },
+    {
+      "name": "03- Circuit de la Maison des Forets",
+      "possibleMatch": "Circuit La Maison des Forêts"
+    },
+    {
+      "name": "04- Circuit du Petit Essart",
+      "possibleMatch": "Circuit le Petit Essart"
+    },
+    {
+      "name": "17- Le Circuit des 13 Chenes",
+      "possibleMatch": "Circuit les 13 chênes"
+    },
+    {
+      "name": "Chemin de Compostelle",
+      "possibleMatch": null
+    },
+    {
+      "name": "13- Le Grimbourg",
+      "possibleMatch": null
+    },
+    {
+      "name": "7- Les Wagants",
+      "possibleMatch": "Les Wagands"
+    },
+    {
+      "name": "Chevauchée en Vallée de Seine",
+      "possibleMatch": null
+    },
+    {
+      "name": "Avenue Verte",
+      "possibleMatch": "La Rue Verte"
+    },
+    {
+      "name": "Chevauchée en Vallée de Seine",
+      "possibleMatch": null
+    },
+    {
+      "name": "Chevauchée en Vallée de Seine",
+      "possibleMatch": null
+    },
+    {
+      "name": "Chevauchée en Vallée de Seine",
+      "possibleMatch": null
+    },
+    {
+      "name": "Chemin de Compostelle",
+      "possibleMatch": null
+    },
+    {
+      "name": "18- Circuit de Pimont",
+      "possibleMatch": "Circuit Pimont"
+    },
+    {
+      "name": "36- Chemin Vert du Petit Caux",
+      "possibleMatch": "Le Chemin Vert du Petit Caux"
+    },
+    {
+      "name": "04- Yainville à Jumièges",
+      "possibleMatch": "De Yainville à Jumièges"
+    },
+    {
+      "name": "4- La Chapelle Saint Maurice",
+      "possibleMatch": "La Chappelle Saint-Maurice"
+    },
+    {
+      "name": "4- La Papillonnerie",
+      "possibleMatch": "La Papillonerie"
+    },
+    {
+      "name": "Chevauchée en Vallée de Seine (variante)",
+      "possibleMatch": null
+    },
+    {
+      "name": "Chevauchée en Vallée de Seine (variante)",
+      "possibleMatch": null
+    },
+    {
+      "name": "Boucle de la Forêt d'Eu",
+      "possibleMatch": null
+    },
+    {
+      "name": "Portion du GR21 sur chemin du Camp de César",
+      "possibleMatch": null
+    },
+    {
+      "name": "4- Le Chemin de Boscol",
+      "possibleMatch": "Chemin de Boscol"
+    },
+    {
+      "name": "03- Le Val Semel",
+      "possibleMatch": null
+    },
+    {
+      "name": "32- Pays du Grés",
+      "possibleMatch": "Le pays du grès"
+    },
+    {
+      "name": "Sentier du Littoral",
+      "possibleMatch": null
+    },
+    {
+      "name": "TRAIL Villequier 9- Retival",
+      "possibleMatch": null
+    },
+    {
+      "name": "TRAIL  Abbaye 1- L'Abbaye",
+      "possibleMatch": null
+    },
+    {
+      "name": "TRAIL  Abbaye 2- La Fontaine Murée",
+      "possibleMatch": null
+    },
+    {
+      "name": "Sentier du Littoral",
+      "possibleMatch": null
+    },
+    {
+      "name": "2- Plateau de Caux et Vallée",
+      "possibleMatch": "Plateau de Caux et Vallées"
+    },
+    {
+      "name": "Chevauchéee du Pays d'Auge à la Seine",
+      "possibleMatch": null
+    },
+    {
+      "name": "Chevauchéee du Pays d'Auge à la Seine",
+      "possibleMatch": null
+    },
+    {
+      "name": "21- De la Baie à la Costière",
+      "possibleMatch": null
+    },
+    {
+      "name": "27- Rebultot-Lezarde",
+      "possibleMatch": null
+    },
+    {
+      "name": "28- Circuit du Golf",
+      "possibleMatch": "Circuit du Courval"
+    },
+    {
+      "name": "27- Camp de César",
+      "possibleMatch": "Le Camp de César"
+    },
+    {
+      "name": "05- Autour de Saint Valéry",
+      "possibleMatch": null
+    },
+    {
+      "name": "Chevauchée en Forêt de Lyons",
+      "possibleMatch": null
+    },
+    {
+      "name": "Chevauchée en Forêt de Lyons (variante)",
+      "possibleMatch": null
+    },
+    {
+      "name": "11- A la découverte du Patrimoine de Bondeville",
+      "possibleMatch": null
+    },
+    {
+      "name": "13- Au coeur des deux vallées",
+      "possibleMatch": "Au Cœur des Deux Vallées"
+    },
+    {
+      "name": "Hocquélus",
+      "possibleMatch": null
+    },
+    {
+      "name": "Les Tournants",
+      "possibleMatch": null
+    },
+    {
+      "name": "Manoir du Val",
+      "possibleMatch": null
+    },
+    {
+      "name": "Le Val Boucheron",
+      "possibleMatch": null
+    },
+    {
+      "name": "Sentier du Littoral",
+      "possibleMatch": null
+    }
+  ],
+  "note": "Rapprochement des noms uniquement ; les géométries et les changements depuis janvier 2025 restent à contrôler."
+}

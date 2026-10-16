@@ -1,0 +1,1748 @@
+[
+  {
+    "sourceId": "ITINOR076V51N6BI",
+    "official": "https://www.normandie-tourisme.fr/itineraire/gournay-en-bray-ville-reconstruite/",
+    "facts": {
+      "code-insee": "76312",
+      "distance": "1"
+    },
+    "documentUrls": [],
+    "status": "detail-consulte"
+  },
+  {
+    "sourceId": "ITINOR076V51PC4L",
+    "official": "https://www.normandie-tourisme.fr/itineraire/le-mont-de-beaussault/",
+    "facts": {
+      "code-insee": "76065",
+      "distance": "9"
+    },
+    "documentUrls": [],
+    "status": "detail-consulte"
+  },
+  {
+    "sourceId": "ITINOR076V5002VI",
+    "official": "https://www.normandie-tourisme.fr/itineraire/mauquenchy-roncherolles-en-bray/",
+    "facts": {
+      "code-insee": "76420",
+      "distance": "6.7"
+    },
+    "documentUrls": [],
+    "status": "detail-consulte"
+  },
+  {
+    "sourceId": "ITINOR076V50HNS1",
+    "official": "https://www.normandie-tourisme.fr/itineraire/a-la-decouverte-du-littoral-cauvillais/",
+    "facts": {
+      "code-insee": "76167",
+      "distance": "23.3"
+    },
+    "documentUrls": [],
+    "status": "detail-consulte"
+  },
+  {
+    "sourceId": "ITINOR076V50OPQG",
+    "official": "https://www.normandie-tourisme.fr/itineraire/circuit-sur-les-pas-demma-bovary/",
+    "facts": {
+      "code-insee": "76548",
+      "distance": "1"
+    },
+    "documentUrls": [],
+    "status": "detail-consulte"
+  },
+  {
+    "sourceId": "ITINOR076V50SI6L",
+    "official": "https://www.normandie-tourisme.fr/itineraire/circuit-du-plus-petit-fleuve-de-france/",
+    "facts": {
+      "code-insee": "76735",
+      "distance": "3.5"
+    },
+    "documentUrls": [],
+    "status": "detail-consulte"
+  },
+  {
+    "sourceId": "ITINOR076V50SICC",
+    "official": "https://www.normandie-tourisme.fr/itineraire/circuit-de-decouverte-du-patrimoine-historique-et-culturel-de-vittefleur/",
+    "facts": {
+      "code-insee": "76748"
+    },
+    "documentUrls": [],
+    "status": "detail-consulte"
+  },
+  {
+    "sourceId": "ITINOR076V50SICR",
+    "official": "https://www.normandie-tourisme.fr/itineraire/circuit-de-decouverte-de-cany-cany-au-fil-de-leau/",
+    "facts": {
+      "code-insee": "76159"
+    },
+    "documentUrls": [],
+    "status": "detail-consulte"
+  },
+  {
+    "sourceId": "ITINOR076V50SKVN",
+    "official": "https://www.normandie-tourisme.fr/itineraire/le-sentier-du-plateau-boise/",
+    "facts": {
+      "code-insee": "76486",
+      "distance": "1.5"
+    },
+    "documentUrls": [],
+    "status": "detail-consulte"
+  },
+  {
+    "sourceId": "ITINOR076V50SKYD",
+    "official": "https://www.normandie-tourisme.fr/itineraire/le-sentier-du-vallon/",
+    "facts": {
+      "code-insee": "76486",
+      "distance": "1.4"
+    },
+    "documentUrls": [],
+    "status": "detail-consulte"
+  },
+  {
+    "sourceId": "ITINOR076V50SL5K",
+    "official": "https://www.normandie-tourisme.fr/itineraire/le-sentier-de-loppidum/",
+    "facts": {
+      "code-insee": "76486",
+      "distance": "3"
+    },
+    "documentUrls": [],
+    "status": "detail-consulte"
+  },
+  {
+    "sourceId": "ITINOR076V50SL6G",
+    "official": "https://www.normandie-tourisme.fr/itineraire/le-sentier-des-troglodytes/",
+    "facts": {
+      "code-insee": "76486",
+      "distance": "5.5"
+    },
+    "documentUrls": [],
+    "status": "detail-consulte"
+  },
+  {
+    "sourceId": "ITINOR076V50SLBR",
+    "official": "https://www.normandie-tourisme.fr/itineraire/la-mare-du-val-lalouette/",
+    "facts": {
+      "code-insee": "76122"
+    },
+    "documentUrls": [],
+    "status": "detail-consulte"
+  },
+  {
+    "sourceId": "ITINOR076V50SLCO",
+    "official": "https://www.normandie-tourisme.fr/itineraire/la-colline-saint-amador/",
+    "facts": {
+      "code-insee": "76427"
+    },
+    "documentUrls": [],
+    "status": "detail-consulte"
+  },
+  {
+    "sourceId": "ITINOR076V50SLE0",
+    "official": "https://www.normandie-tourisme.fr/itineraire/la-houpperie/",
+    "facts": {
+      "code-insee": "76465"
+    },
+    "documentUrls": [],
+    "status": "detail-consulte"
+  },
+  {
+    "sourceId": "ITINOR076V50SLJA",
+    "official": "https://www.normandie-tourisme.fr/itineraire/des-vasieres-a-la-roseliere/",
+    "facts": {
+      "code-insee": "76660",
+      "distance": "2"
+    },
+    "documentUrls": [],
+    "status": "detail-consulte"
+  },
+  {
+    "sourceId": "ITINOR076V50SLK4",
+    "official": "https://www.normandie-tourisme.fr/itineraire/le-bois-des-ecluses/",
+    "facts": {
+      "code-insee": "76684",
+      "distance": "6.5"
+    },
+    "documentUrls": [],
+    "status": "detail-consulte"
+  },
+  {
+    "sourceId": "ITINOR076V50SLLT",
+    "official": "https://www.normandie-tourisme.fr/itineraire/sur-la-trace-des-chevaux/",
+    "facts": {
+      "code-insee": "76657",
+      "distance": "4"
+    },
+    "documentUrls": [],
+    "status": "detail-consulte"
+  },
+  {
+    "sourceId": "ITINOR076V50SLNA",
+    "official": "https://www.normandie-tourisme.fr/itineraire/circuit-de-therouldeville-les-vieux-metiers/",
+    "facts": {
+      "code-insee": "76685"
+    },
+    "documentUrls": [],
+    "status": "detail-consulte"
+  },
+  {
+    "sourceId": "ITINOR076V50SLOC",
+    "official": "https://www.normandie-tourisme.fr/itineraire/circuit-de-valmont/",
+    "facts": {
+      "code-insee": "76719"
+    },
+    "documentUrls": [],
+    "status": "detail-consulte"
+  },
+  {
+    "sourceId": "ITINOR076V50SMSU",
+    "official": "https://www.normandie-tourisme.fr/itineraire/circuit-decouverte-du-patrimoine-du-centre-ville-dyvetot/",
+    "facts": {
+      "code-insee": "76758",
+      "distance": "3"
+    },
+    "documentUrls": [],
+    "status": "detail-consulte"
+  },
+  {
+    "sourceId": "ITINOR076V50SMT6",
+    "official": "https://www.normandie-tourisme.fr/itineraire/circuit-decouverte-du-patrimoine-autour-de-la-gare-et-du-manoir-du-fay/",
+    "facts": {
+      "code-insee": "76758",
+      "distance": "4"
+    },
+    "documentUrls": [],
+    "status": "detail-consulte"
+  },
+  {
+    "sourceId": "ITINOR076V50SMTT",
+    "official": "https://www.normandie-tourisme.fr/itineraire/la-promenade-litteraire-le-havre/",
+    "facts": {
+      "code-insee": "76351"
+    },
+    "documentUrls": [],
+    "status": "detail-consulte"
+  },
+  {
+    "sourceId": "ITINOR076V50SMXS",
+    "official": "https://www.normandie-tourisme.fr/itineraire/la-promenade-litteraire-raymond-queneau/",
+    "facts": {
+      "code-insee": "76351"
+    },
+    "documentUrls": [],
+    "status": "detail-consulte"
+  },
+  {
+    "sourceId": "ITINOR076V50SMYT",
+    "official": "https://www.normandie-tourisme.fr/itineraire/la-promenade-litteraire-jean-paul-sartre/",
+    "facts": {
+      "code-insee": "76351"
+    },
+    "documentUrls": [],
+    "status": "detail-consulte"
+  },
+  {
+    "sourceId": "ITINOR076V50SN4D",
+    "official": "https://www.normandie-tourisme.fr/itineraire/le-havre-grand-ecran/",
+    "facts": {
+      "code-insee": "76351"
+    },
+    "documentUrls": [],
+    "status": "detail-consulte"
+  },
+  {
+    "sourceId": "ITINOR076V50SN54",
+    "official": "https://www.normandie-tourisme.fr/itineraire/le-havre-impressionniste-et-fauve/",
+    "facts": {
+      "code-insee": "76351"
+    },
+    "documentUrls": [],
+    "status": "detail-consulte"
+  },
+  {
+    "sourceId": "ITINOR076V50SN5O",
+    "official": "https://www.normandie-tourisme.fr/itineraire/par-les-sentes-a-paniers/",
+    "facts": {
+      "code-insee": "76400"
+    },
+    "documentUrls": [],
+    "status": "detail-consulte"
+  },
+  {
+    "sourceId": "ITINOR076V50SN74",
+    "official": "https://www.normandie-tourisme.fr/itineraire/circuit-de-la-zone-humide-sainte-croix/",
+    "facts": {
+      "code-insee": "76711"
+    },
+    "documentUrls": [],
+    "status": "detail-consulte"
+  },
+  {
+    "sourceId": "ITINOR076V50SN7M",
+    "official": "https://www.normandie-tourisme.fr/itineraire/parcours-commemoratif-du-treport-1914-1918/",
+    "facts": {
+      "code-insee": "76711"
+    },
+    "documentUrls": [],
+    "status": "detail-consulte"
+  },
+  {
+    "sourceId": "ITINOR076V50SNDG",
+    "official": "https://www.normandie-tourisme.fr/itineraire/circuit-des-sites-et-des-falaises-du-treport/",
+    "facts": {
+      "code-insee": "76711"
+    },
+    "documentUrls": [],
+    "status": "detail-consulte"
+  },
+  {
+    "sourceId": "ITINOR076V50SO52",
+    "official": "https://www.normandie-tourisme.fr/itineraire/circuit-des-rues-et-des-monuments-du-treport/",
+    "facts": {
+      "code-insee": "76711"
+    },
+    "documentUrls": [],
+    "status": "detail-consulte"
+  },
+  {
+    "sourceId": "ITINOR076V50SO79",
+    "official": "https://www.normandie-tourisme.fr/itineraire/circuit-du-patrimoine-deu/",
+    "facts": {
+      "code-insee": "76255"
+    },
+    "documentUrls": [],
+    "status": "detail-consulte"
+  },
+  {
+    "sourceId": "ITINOR076V50SO8A",
+    "official": "https://www.normandie-tourisme.fr/itineraire/circuit-du-patrimoine-architectural-de-criel-sur-mer/",
+    "facts": {
+      "code-insee": "76192"
+    },
+    "documentUrls": [],
+    "status": "detail-consulte"
+  },
+  {
+    "sourceId": "ITINOR076V50SO9K",
+    "official": "https://www.normandie-tourisme.fr/itineraire/sentier-dinterpretation-du-marais-de-caudebec-en-caux/",
+    "facts": {
+      "code-insee": "76164"
+    },
+    "documentUrls": [],
+    "status": "detail-consulte"
+  },
+  {
+    "sourceId": "ITINOR076V50SOCL",
+    "official": "https://www.normandie-tourisme.fr/itineraire/circuit-du-patrimoine-de-bolbec/",
+    "facts": {
+      "code-insee": "76114"
+    },
+    "documentUrls": [],
+    "status": "detail-consulte"
+  },
+  {
+    "sourceId": "ITINOR076V50SODX",
+    "official": "https://www.normandie-tourisme.fr/itineraire/circuit-du-patrimoine-de-caudebec-en-caux/",
+    "facts": {
+      "code-insee": "76164"
+    },
+    "documentUrls": [],
+    "status": "detail-consulte"
+  },
+  {
+    "sourceId": "ITINOR076V50SOEU",
+    "official": "https://www.normandie-tourisme.fr/itineraire/circuit-du-patrimoine-de-gruchet-le-valasse/",
+    "facts": {
+      "code-insee": "76329"
+    },
+    "documentUrls": [],
+    "status": "detail-consulte"
+  },
+  {
+    "sourceId": "ITINOR076V50SOGA",
+    "official": "https://www.normandie-tourisme.fr/itineraire/circuit-du-patrimoine-de-lillebonne/",
+    "facts": {
+      "code-insee": "76384"
+    },
+    "documentUrls": [],
+    "status": "detail-consulte"
+  },
+  {
+    "sourceId": "ITINOR076V50SOJO",
+    "official": "https://www.normandie-tourisme.fr/itineraire/auffay-a-pied/",
+    "facts": {
+      "code-insee": "76034",
+      "distance": "3"
+    },
+    "documentUrls": [],
+    "status": "detail-consulte"
+  },
+  {
+    "sourceId": "ITINOR076V50SOLF",
+    "official": "https://www.normandie-tourisme.fr/itineraire/val-de-saane-a-pied/",
+    "facts": {
+      "code-insee": "76018"
+    },
+    "documentUrls": [],
+    "status": "detail-consulte"
+  },
+  {
+    "sourceId": "ITINOR076V50SOOF",
+    "official": "https://www.normandie-tourisme.fr/itineraire/parcours-poetique-clerois/",
+    "facts": {
+      "code-insee": "76179"
+    },
+    "documentUrls": [],
+    "status": "detail-consulte"
+  },
+  {
+    "sourceId": "ITINOR076V50SOQY",
+    "official": "https://www.normandie-tourisme.fr/itineraire/parcours-historique-de-montville/",
+    "facts": {
+      "code-insee": "76452"
+    },
+    "documentUrls": [],
+    "status": "detail-consulte"
+  },
+  {
+    "sourceId": "ITINOR076V50SORY",
+    "official": "https://www.normandie-tourisme.fr/itineraire/circuit-cote-de-la-vierge/",
+    "facts": {
+      "code-insee": "76259"
+    },
+    "documentUrls": [],
+    "status": "detail-consulte"
+  },
+  {
+    "sourceId": "ITINOR076V50SOT2",
+    "official": "https://www.normandie-tourisme.fr/itineraire/circuit-capitale-des-terre-neuvas/",
+    "facts": {
+      "code-insee": "76259"
+    },
+    "documentUrls": [],
+    "status": "detail-consulte"
+  },
+  {
+    "sourceId": "ITINOR076V50SOTH",
+    "official": "https://www.normandie-tourisme.fr/itineraire/circuit-ville-ducale-et-ville-abbatiale/",
+    "facts": {
+      "code-insee": "76259"
+    },
+    "documentUrls": [],
+    "status": "detail-consulte"
+  },
+  {
+    "sourceId": "ITINOR076V50SOTR",
+    "official": "https://www.normandie-tourisme.fr/itineraire/circuit-hommes-nouveaux-art-nouveau/",
+    "facts": {
+      "code-insee": "76259"
+    },
+    "documentUrls": [],
+    "status": "detail-consulte"
+  },
+  {
+    "sourceId": "ITINOR076V50SPMO",
+    "official": "https://www.normandie-tourisme.fr/itineraire/les-zones-humides/",
+    "facts": {
+      "code-insee": "76315"
+    },
+    "documentUrls": [],
+    "status": "detail-consulte"
+  },
+  {
+    "sourceId": "ITINOR076V50SPN3",
+    "official": "https://www.normandie-tourisme.fr/itineraire/a-travers-bois/",
+    "facts": {
+      "code-insee": "76315"
+    },
+    "documentUrls": [],
+    "status": "detail-consulte"
+  },
+  {
+    "sourceId": "ITINOR076V50ZK36",
+    "official": "https://www.normandie-tourisme.fr/itineraire/gournay-en-bray-au-fil-des-pas/",
+    "facts": {
+      "code-insee": "76312"
+    },
+    "documentUrls": [],
+    "status": "detail-consulte"
+  },
+  {
+    "sourceId": "ITINOR076V513ZM2",
+    "official": "https://www.normandie-tourisme.fr/itineraire/balade-au-coeur-de-neufchatel-dhier-et-daujourdhui/",
+    "facts": {
+      "code-insee": "76462"
+    },
+    "documentUrls": [],
+    "status": "detail-consulte"
+  },
+  {
+    "sourceId": "ITINOR076V514KRA",
+    "official": "https://www.normandie-tourisme.fr/itineraire/circuit-de-leau-mares-et-chateaux/",
+    "facts": {
+      "code-insee": "76286",
+      "distance": "6"
+    },
+    "documentUrls": [],
+    "status": "detail-consulte"
+  },
+  {
+    "sourceId": "ITINOR076V516EOF",
+    "official": "https://www.normandie-tourisme.fr/itineraire/circuit-du-patrimoine-de-gonzeville/",
+    "facts": {
+      "code-insee": "76309",
+      "distance": "4"
+    },
+    "documentUrls": [],
+    "status": "detail-consulte"
+  },
+  {
+    "sourceId": "ITINOR076V518JSV",
+    "official": "https://www.normandie-tourisme.fr/itineraire/parcours-du-saint-mellon/",
+    "facts": {
+      "code-insee": "76355",
+      "distance": "0.3"
+    },
+    "documentUrls": [],
+    "status": "detail-consulte"
+  },
+  {
+    "sourceId": "ITINOR076V5196RS",
+    "official": "https://www.normandie-tourisme.fr/itineraire/circuit-decouverte-de-duclair/",
+    "facts": {
+      "code-insee": "76222"
+    },
+    "documentUrls": [],
+    "status": "detail-consulte"
+  },
+  {
+    "sourceId": "ITINOR076V519SL9",
+    "official": "https://www.normandie-tourisme.fr/itineraire/parcours-valmont-dhier/",
+    "facts": {
+      "code-insee": "76719"
+    },
+    "documentUrls": [],
+    "status": "detail-consulte"
+  },
+  {
+    "sourceId": "ITINOR076V51AP9Y",
+    "official": "https://www.normandie-tourisme.fr/itineraire/le-marais-du-trait/",
+    "facts": {
+      "code-insee": "76709",
+      "distance": "3"
+    },
+    "documentUrls": [],
+    "status": "detail-consulte"
+  },
+  {
+    "sourceId": "ITINOR076V51APB6",
+    "official": "https://www.normandie-tourisme.fr/itineraire/le-bois-de-fecamp/",
+    "facts": {
+      "code-insee": "76271"
+    },
+    "documentUrls": [],
+    "status": "detail-consulte"
+  },
+  {
+    "sourceId": "ITINOR076V51B3ZV",
+    "official": "https://www.normandie-tourisme.fr/itineraire/le-sentier-des-mares/",
+    "facts": {
+      "code-insee": "76266",
+      "distance": "3"
+    },
+    "documentUrls": [],
+    "status": "detail-consulte"
+  },
+  {
+    "sourceId": "ITINOR076V51B40C",
+    "official": "https://www.normandie-tourisme.fr/itineraire/lespace-de-la-roseliere/",
+    "facts": {
+      "code-insee": "76271"
+    },
+    "documentUrls": [],
+    "status": "detail-consulte"
+  },
+  {
+    "sourceId": "ITINOR076V51BAN1",
+    "official": "https://www.normandie-tourisme.fr/itineraire/la-promenade-de-la-fontenelle/",
+    "facts": {
+      "code-insee": "76164",
+      "distance": "2.5"
+    },
+    "documentUrls": [],
+    "status": "detail-consulte"
+  },
+  {
+    "sourceId": "ITINOR076V51BCUE",
+    "official": "https://www.normandie-tourisme.fr/itineraire/circuit-memoire-dalbatre/",
+    "facts": {
+      "code-insee": "76493",
+      "distance": "1"
+    },
+    "documentUrls": [],
+    "status": "detail-consulte"
+  },
+  {
+    "sourceId": "ITINOR076V51E5U4",
+    "official": "https://www.normandie-tourisme.fr/itineraire/la-mesange/",
+    "facts": {
+      "code-insee": "76426",
+      "distance": "5.5"
+    },
+    "documentUrls": [],
+    "status": "detail-consulte"
+  },
+  {
+    "sourceId": "ITINOR076V51E6MX",
+    "official": "https://www.normandie-tourisme.fr/itineraire/la-cavee-des-sabotiers/",
+    "facts": {
+      "code-insee": "76469",
+      "distance": "7.5"
+    },
+    "documentUrls": [],
+    "status": "detail-consulte"
+  },
+  {
+    "sourceId": "ITINOR076V51E6OP",
+    "official": "https://www.normandie-tourisme.fr/itineraire/les-orchidees/",
+    "facts": {
+      "code-insee": "76263",
+      "distance": "9.4"
+    },
+    "documentUrls": [],
+    "status": "detail-consulte"
+  },
+  {
+    "sourceId": "ITINOR076V51F1O3",
+    "official": "https://www.normandie-tourisme.fr/itineraire/gr-21-littoral-de-la-normandie-du-treport-au-havre/",
+    "facts": {
+      "code-insee": "76711",
+      "distance": "194.63"
+    },
+    "documentUrls": [],
+    "status": "detail-consulte"
+  },
+  {
+    "sourceId": "ITINOR076V51GMQF",
+    "official": "https://www.normandie-tourisme.fr/itineraire/la-chappelle-saint-maurice/",
+    "facts": {
+      "code-insee": "76295",
+      "distance": "8.8"
+    },
+    "documentUrls": [],
+    "status": "detail-consulte"
+  },
+  {
+    "sourceId": "ITINOR076V51ISJL",
+    "official": "https://www.normandie-tourisme.fr/itineraire/longueville-sur-scie-a-pied/",
+    "facts": {
+      "code-insee": "76397",
+      "distance": "2.5"
+    },
+    "documentUrls": [],
+    "status": "detail-consulte"
+  },
+  {
+    "sourceId": "ITINOR076V51IU20",
+    "official": "https://www.normandie-tourisme.fr/itineraire/luneray-a-pied/",
+    "facts": {
+      "code-insee": "76400",
+      "distance": "5"
+    },
+    "documentUrls": [],
+    "status": "detail-consulte"
+  },
+  {
+    "sourceId": "ITINOR014FS000LE",
+    "official": "https://www.normandie-tourisme.fr/itineraire/villers-le-chemin-du-dinosaure/",
+    "facts": {
+      "code-insee": "14754",
+      "distance": "10.5"
+    },
+    "documentUrls": [],
+    "status": "detail-consulte"
+  },
+  {
+    "sourceId": "ITINOR014V5144VD",
+    "official": "https://www.normandie-tourisme.fr/itineraire/parcours-sportif-des-lais-de-mer-de-deauville/",
+    "facts": {
+      "code-insee": "14220",
+      "distance": "1.5"
+    },
+    "documentUrls": [],
+    "status": "detail-consulte"
+  },
+  {
+    "sourceId": "ITINOR014V51D05A",
+    "official": "https://www.normandie-tourisme.fr/itineraire/deauville-sur-les-pas-des-createurs/",
+    "facts": {
+      "code-insee": "14220",
+      "distance": "4"
+    },
+    "documentUrls": [],
+    "status": "detail-consulte"
+  },
+  {
+    "sourceId": "ITINOR014V52L14T",
+    "official": "https://www.normandie-tourisme.fr/itineraire/villerville-sur-les-pas-du-film-un-singe-en-hiver/",
+    "facts": {
+      "code-insee": "14755",
+      "distance": "1"
+    },
+    "documentUrls": [],
+    "status": "detail-consulte"
+  },
+  {
+    "sourceId": "ITINOR014V52L15O",
+    "official": "https://www.normandie-tourisme.fr/itineraire/villerville-circuit-decouverte-en-1h/",
+    "facts": {
+      "code-insee": "14755",
+      "distance": "2.5"
+    },
+    "documentUrls": [],
+    "status": "detail-consulte"
+  },
+  {
+    "sourceId": "ITINOR014V53GARV",
+    "official": "https://www.normandie-tourisme.fr/itineraire/remembernieres-ils-ont-libere-notre-village/",
+    "facts": {
+      "code-insee": "14066",
+      "distance": "1.5"
+    },
+    "documentUrls": [],
+    "status": "detail-consulte"
+  },
+  {
+    "sourceId": "ITINOR014V53OW1W",
+    "official": "https://www.normandie-tourisme.fr/itineraire/la-voie-douce-et-le-tour-du-lac/",
+    "facts": {
+      "code-insee": "14514",
+      "distance": "7.5"
+    },
+    "documentUrls": [],
+    "status": "detail-consulte"
+  },
+  {
+    "sourceId": "ITINOR014V53S8WU",
+    "official": "https://www.normandie-tourisme.fr/itineraire/circuit-du-patrimoine-de-port-en-bessin-huppain/",
+    "facts": {
+      "code-insee": "14515",
+      "distance": "1.5",
+      "document": [
+        {
+          "nom": "Circuit d'interprétation de Port-en-Bessin ",
+          "url": "https://cdt61.media.tourinsoft.eu/upload/Circuit-d-interpretation-de-Port-en-Bessin-.pdf",
+          "copyright": "Office de tourisme de Bayeux Intercom",
+          "legende": ""
+        }
+      ]
+    },
+    "documentUrls": [
+      "https://cdt61.media.tourinsoft.eu/upload/Circuit-d-interpretation-de-Port-en-Bessin-.pdf"
+    ],
+    "status": "detail-consulte"
+  },
+  {
+    "sourceId": "ITINOR014V53S99N",
+    "official": "https://www.normandie-tourisme.fr/itineraire/circuit-du-patrimoine-du-vieux-bayeux/",
+    "facts": {
+      "code-insee": "14047",
+      "distance": "2.5"
+    },
+    "documentUrls": [],
+    "status": "detail-consulte"
+  },
+  {
+    "sourceId": "ITINOR014V53S99Z",
+    "official": "https://www.normandie-tourisme.fr/itineraire/circuit-du-patrimoine-darromanches/",
+    "facts": {
+      "code-insee": "14021",
+      "distance": "1.5",
+      "document": [
+        {
+          "nom": "Circuit du patrimoine Arromanches",
+          "url": "https://cdt61.media.tourinsoft.eu/upload/Circuit-d-interpretation-Arromanches-2.pdf",
+          "copyright": "Office de tourisme de Bayeux Intercom",
+          "legende": ""
+        }
+      ]
+    },
+    "documentUrls": [
+      "https://cdt61.media.tourinsoft.eu/upload/Circuit-d-interpretation-Arromanches-2.pdf"
+    ],
+    "status": "detail-consulte"
+  },
+  {
+    "sourceId": "ITINOR027V505RYA",
+    "official": "https://www.normandie-tourisme.fr/itineraire/sentier-de-languille/",
+    "facts": {
+      "code-insee": "27604",
+      "distance": "4.2"
+    },
+    "documentUrls": [],
+    "status": "detail-consulte"
+  },
+  {
+    "sourceId": "ITINOR027V505RZO",
+    "official": "https://www.normandie-tourisme.fr/itineraire/circuit-des-fosses-royaux/",
+    "facts": {
+      "code-insee": "27521",
+      "distance": "7"
+    },
+    "documentUrls": [],
+    "status": "detail-consulte"
+  },
+  {
+    "sourceId": "ITINOR027V506OPY",
+    "official": "https://www.normandie-tourisme.fr/itineraire/avre-et-meuvette/",
+    "facts": {
+      "code-insee": "27002",
+      "distance": "10.2"
+    },
+    "documentUrls": [],
+    "status": "detail-consulte"
+  },
+  {
+    "sourceId": "ITINOR027V506OPZ",
+    "official": "https://www.normandie-tourisme.fr/itineraire/boucle-de-richard-coeur-de-lion/",
+    "facts": {
+      "code-insee": "27016",
+      "distance": "9.5"
+    },
+    "documentUrls": [],
+    "status": "detail-consulte"
+  },
+  {
+    "sourceId": "ITINOR027V506OQ0",
+    "official": "https://www.normandie-tourisme.fr/itineraire/boucle-de-saint-mathurin/",
+    "facts": {
+      "code-insee": "27338",
+      "distance": "6.5"
+    },
+    "documentUrls": [],
+    "status": "detail-consulte"
+  },
+  {
+    "sourceId": "ITINOR027V506OQ1",
+    "official": "https://www.normandie-tourisme.fr/itineraire/boucle-des-deux-plateaux/",
+    "facts": {
+      "code-insee": "27370",
+      "distance": "7.5"
+    },
+    "documentUrls": [],
+    "status": "detail-consulte"
+  },
+  {
+    "sourceId": "ITINOR027V506OQ2",
+    "official": "https://www.normandie-tourisme.fr/itineraire/boucle-des-sept-mares/",
+    "facts": {
+      "code-insee": "27245",
+      "distance": "7"
+    },
+    "documentUrls": [],
+    "status": "detail-consulte"
+  },
+  {
+    "sourceId": "ITINOR027V506OQ4",
+    "official": "https://www.normandie-tourisme.fr/itineraire/boucle-du-gros-chene/",
+    "facts": {
+      "code-insee": "27377",
+      "distance": "3"
+    },
+    "documentUrls": [],
+    "status": "detail-consulte"
+  },
+  {
+    "sourceId": "ITINOR027V506OQ5",
+    "official": "https://www.normandie-tourisme.fr/itineraire/boucle-du-papillon/",
+    "facts": {
+      "code-insee": "27104",
+      "distance": "5.5"
+    },
+    "documentUrls": [],
+    "status": "detail-consulte"
+  },
+  {
+    "sourceId": "ITINOR027V506OQ6",
+    "official": "https://www.normandie-tourisme.fr/itineraire/boucle-edmond-et-caliste/",
+    "facts": {
+      "code-insee": "27493",
+      "distance": "6"
+    },
+    "documentUrls": [],
+    "status": "detail-consulte"
+  },
+  {
+    "sourceId": "ITINOR027V506OQ7",
+    "official": "https://www.normandie-tourisme.fr/itineraire/cap-sur-le-panorama/",
+    "facts": {
+      "code-insee": "27229",
+      "distance": "8"
+    },
+    "documentUrls": [],
+    "status": "detail-consulte"
+  },
+  {
+    "sourceId": "ITINOR027V506OQ8",
+    "official": "https://www.normandie-tourisme.fr/itineraire/chemin-de-brisquet/",
+    "facts": {
+      "code-insee": "27480",
+      "distance": "18"
+    },
+    "documentUrls": [],
+    "status": "detail-consulte"
+  },
+  {
+    "sourceId": "ITINOR027V506OQ9",
+    "official": "https://www.normandie-tourisme.fr/itineraire/chemin-de-labbaye/",
+    "facts": {
+      "code-insee": "27174",
+      "distance": "7.7"
+    },
+    "documentUrls": [],
+    "status": "detail-consulte"
+  },
+  {
+    "sourceId": "ITINOR027V506OQA",
+    "official": "https://www.normandie-tourisme.fr/itineraire/chemin-de-lallee-des-granges/",
+    "facts": {
+      "code-insee": "27577",
+      "distance": "5.2"
+    },
+    "documentUrls": [],
+    "status": "detail-consulte"
+  },
+  {
+    "sourceId": "ITINOR027V506OQB",
+    "official": "https://www.normandie-tourisme.fr/itineraire/chemin-des-3-calvaires/",
+    "facts": {
+      "code-insee": "27021",
+      "distance": "9.5"
+    },
+    "documentUrls": [],
+    "status": "detail-consulte"
+  },
+  {
+    "sourceId": "ITINOR027V506OQC",
+    "official": "https://www.normandie-tourisme.fr/itineraire/chemin-des-4-gues/",
+    "facts": {
+      "code-insee": "27603",
+      "distance": "9.5"
+    },
+    "documentUrls": [],
+    "status": "detail-consulte"
+  },
+  {
+    "sourceId": "ITINOR027V506OQD",
+    "official": "https://www.normandie-tourisme.fr/itineraire/chemin-des-amoureux/",
+    "facts": {
+      "code-insee": "27209",
+      "distance": "7.3"
+    },
+    "documentUrls": [],
+    "status": "detail-consulte"
+  },
+  {
+    "sourceId": "ITINOR027V506OQE",
+    "official": "https://www.normandie-tourisme.fr/itineraire/chemin-des-ecoliers/",
+    "facts": {
+      "code-insee": "27377",
+      "distance": "5"
+    },
+    "documentUrls": [],
+    "status": "detail-consulte"
+  },
+  {
+    "sourceId": "ITINOR027V506OQF",
+    "official": "https://www.normandie-tourisme.fr/itineraire/chemin-des-ponts-et-gues/",
+    "facts": {
+      "code-insee": "27550",
+      "distance": "11.4"
+    },
+    "documentUrls": [],
+    "status": "detail-consulte"
+  },
+  {
+    "sourceId": "ITINOR027V506OQG",
+    "official": "https://www.normandie-tourisme.fr/itineraire/chemin-du-caillou-marais/",
+    "facts": {
+      "code-insee": "27538",
+      "distance": "4.5"
+    },
+    "documentUrls": [],
+    "status": "detail-consulte"
+  },
+  {
+    "sourceId": "ITINOR027V506OQH",
+    "official": "https://www.normandie-tourisme.fr/itineraire/chemin-du-rossignol/",
+    "facts": {
+      "code-insee": "27587",
+      "distance": "10.2"
+    },
+    "documentUrls": [],
+    "status": "detail-consulte"
+  },
+  {
+    "sourceId": "ITINOR027V506OQJ",
+    "official": "https://www.normandie-tourisme.fr/itineraire/circuit-de-barville/",
+    "facts": {
+      "code-insee": "27042",
+      "distance": "5.5"
+    },
+    "documentUrls": [],
+    "status": "detail-consulte"
+  },
+  {
+    "sourceId": "ITINOR027V506OQK",
+    "official": "https://www.normandie-tourisme.fr/itineraire/circuit-de-coulonges/",
+    "facts": {
+      "code-insee": "27198",
+      "distance": "7.5"
+    },
+    "documentUrls": [],
+    "status": "detail-consulte"
+  },
+  {
+    "sourceId": "ITINOR027V506OQM",
+    "official": "https://www.normandie-tourisme.fr/itineraire/circuit-de-la-calonne/",
+    "facts": {
+      "code-insee": "27252",
+      "distance": "8"
+    },
+    "documentUrls": [],
+    "status": "detail-consulte"
+  },
+  {
+    "sourceId": "ITINOR027V506OQN",
+    "official": "https://www.normandie-tourisme.fr/itineraire/circuit-de-la-chapelle-saint-firmin/",
+    "facts": {
+      "code-insee": "27571",
+      "distance": "9.6"
+    },
+    "documentUrls": [],
+    "status": "detail-consulte"
+  },
+  {
+    "sourceId": "ITINOR027V506OQO",
+    "official": "https://www.normandie-tourisme.fr/itineraire/circuit-de-la-fosse-aux-loups/",
+    "facts": {
+      "code-insee": "27620",
+      "distance": "5.6"
+    },
+    "documentUrls": [],
+    "status": "detail-consulte"
+  },
+  {
+    "sourceId": "ITINOR027V506OQQ",
+    "official": "https://www.normandie-tourisme.fr/itineraire/circuit-de-la-maladrerie/",
+    "facts": {
+      "code-insee": "27299",
+      "distance": "5.5"
+    },
+    "documentUrls": [],
+    "status": "detail-consulte"
+  },
+  {
+    "sourceId": "ITINOR027V506OQR",
+    "official": "https://www.normandie-tourisme.fr/itineraire/circuit-le-mont-pivin/",
+    "facts": {
+      "code-insee": "27016",
+      "distance": "9"
+    },
+    "documentUrls": [],
+    "status": "detail-consulte"
+  },
+  {
+    "sourceId": "ITINOR027V506OQV",
+    "official": "https://www.normandie-tourisme.fr/itineraire/circuit-de-labbaye-de-mortemer/",
+    "facts": {
+      "code-insee": "27377",
+      "distance": "4.5"
+    },
+    "documentUrls": [],
+    "status": "detail-consulte"
+  },
+  {
+    "sourceId": "ITINOR027V506OQX",
+    "official": "https://www.normandie-tourisme.fr/itineraire/circuit-de-malicorne/",
+    "facts": {
+      "code-insee": "27679",
+      "distance": "4"
+    },
+    "documentUrls": [],
+    "status": "detail-consulte"
+  },
+  {
+    "sourceId": "ITINOR027V506OQY",
+    "official": "https://www.normandie-tourisme.fr/itineraire/circuit-de-marcilly-sur-eure/",
+    "facts": {
+      "code-insee": "27391",
+      "distance": "8.5"
+    },
+    "documentUrls": [],
+    "status": "detail-consulte"
+  },
+  {
+    "sourceId": "ITINOR027V506OR4",
+    "official": "https://www.normandie-tourisme.fr/itineraire/circuit-des-mares/",
+    "facts": {
+      "code-insee": "27132",
+      "distance": "8.6"
+    },
+    "documentUrls": [],
+    "status": "detail-consulte"
+  },
+  {
+    "sourceId": "ITINOR027V506OR5",
+    "official": "https://www.normandie-tourisme.fr/itineraire/circuit-des-moulins/",
+    "facts": {
+      "code-insee": "27198",
+      "distance": "9.5"
+    },
+    "documentUrls": [],
+    "status": "detail-consulte"
+  },
+  {
+    "sourceId": "ITINOR027V506OR7",
+    "official": "https://www.normandie-tourisme.fr/itineraire/circuit-des-roches/",
+    "facts": {
+      "code-insee": "27118",
+      "distance": "5"
+    },
+    "documentUrls": [],
+    "status": "detail-consulte"
+  },
+  {
+    "sourceId": "ITINOR027V506OR8",
+    "official": "https://www.normandie-tourisme.fr/itineraire/circuit-des-rouliers/",
+    "facts": {
+      "code-insee": "27693",
+      "distance": "7"
+    },
+    "documentUrls": [],
+    "status": "detail-consulte"
+  },
+  {
+    "sourceId": "ITINOR027V506ORC",
+    "official": "https://www.normandie-tourisme.fr/itineraire/circuit-dhondouville/",
+    "facts": {
+      "code-insee": "27339",
+      "distance": "7.5"
+    },
+    "documentUrls": [],
+    "status": "detail-consulte"
+  },
+  {
+    "sourceId": "ITINOR027V506ORG",
+    "official": "https://www.normandie-tourisme.fr/itineraire/circuit-du-chateau-dhellenvilliers/",
+    "facts": {
+      "code-insee": "27198",
+      "distance": "12"
+    },
+    "documentUrls": [],
+    "status": "detail-consulte"
+  },
+  {
+    "sourceId": "ITINOR027V506ORI",
+    "official": "https://www.normandie-tourisme.fr/itineraire/circuit-du-leme/",
+    "facts": {
+      "code-insee": "27043",
+      "distance": "5"
+    },
+    "documentUrls": [],
+    "status": "detail-consulte"
+  },
+  {
+    "sourceId": "ITINOR027V506ORJ",
+    "official": "https://www.normandie-tourisme.fr/itineraire/circuit-du-pre-saule/",
+    "facts": {
+      "code-insee": "27108",
+      "distance": "6"
+    },
+    "documentUrls": [],
+    "status": "detail-consulte"
+  },
+  {
+    "sourceId": "ITINOR027V506ORK",
+    "official": "https://www.normandie-tourisme.fr/itineraire/circuit-du-sec-iton/",
+    "facts": {
+      "code-insee": "27281",
+      "distance": "8.5"
+    },
+    "documentUrls": [],
+    "status": "detail-consulte"
+  },
+  {
+    "sourceId": "ITINOR027V506ORW",
+    "official": "https://www.normandie-tourisme.fr/itineraire/parcours-de-decouverte-de-la-ville-de-rugles/",
+    "facts": {
+      "code-insee": "27502",
+      "distance": "2.5"
+    },
+    "documentUrls": [],
+    "status": "detail-consulte"
+  },
+  {
+    "sourceId": "ITINOR027V506ORY",
+    "official": "https://www.normandie-tourisme.fr/itineraire/que-lit-on-dans-le-lit-de-liton/",
+    "facts": {
+      "code-insee": "27198",
+      "distance": "2.5"
+    },
+    "documentUrls": [],
+    "status": "detail-consulte"
+  },
+  {
+    "sourceId": "ITINOR027V506ORZ",
+    "official": "https://www.normandie-tourisme.fr/itineraire/sentier-de-la-biodiversite/",
+    "facts": {
+      "code-insee": "27146",
+      "distance": "6.7"
+    },
+    "documentUrls": [],
+    "status": "detail-consulte"
+  },
+  {
+    "sourceId": "ITINOR027V506OS0",
+    "official": "https://www.normandie-tourisme.fr/itineraire/sentier-de-la-fontaineresse/",
+    "facts": {
+      "code-insee": "27377",
+      "distance": "6.5"
+    },
+    "documentUrls": [],
+    "status": "detail-consulte"
+  },
+  {
+    "sourceId": "ITINOR027V506OS3",
+    "official": "https://www.normandie-tourisme.fr/itineraire/sentier-du-fouillebroc/",
+    "facts": {
+      "code-insee": "27377",
+      "distance": "19.5"
+    },
+    "documentUrls": [],
+    "status": "detail-consulte"
+  },
+  {
+    "sourceId": "ITINOR027V506OS4",
+    "official": "https://www.normandie-tourisme.fr/itineraire/sentier-du-four-a-chaux/",
+    "facts": {
+      "code-insee": "27377",
+      "distance": "6.5"
+    },
+    "documentUrls": [],
+    "status": "detail-consulte"
+  },
+  {
+    "sourceId": "ITINOR027V506OS5",
+    "official": "https://www.normandie-tourisme.fr/itineraire/sur-la-route-de-compostelle/",
+    "facts": {
+      "code-insee": "27165",
+      "distance": "14"
+    },
+    "documentUrls": [],
+    "status": "detail-consulte"
+  },
+  {
+    "sourceId": "ITINOR027V506OS9",
+    "official": "https://www.normandie-tourisme.fr/itineraire/animaux-deau-animau-dos/",
+    "facts": {
+      "code-insee": "27112",
+      "distance": "1.5"
+    },
+    "documentUrls": [],
+    "status": "detail-consulte"
+  },
+  {
+    "sourceId": "ITINOR027V506YDP",
+    "official": "https://www.normandie-tourisme.fr/itineraire/chemin-des-sources-bleues/",
+    "facts": {
+      "code-insee": "27006",
+      "distance": "7.2"
+    },
+    "documentUrls": [],
+    "status": "detail-consulte"
+  },
+  {
+    "sourceId": "ITINOR027V50G193",
+    "official": "https://www.normandie-tourisme.fr/itineraire/chemin-de-larboretum/",
+    "facts": {
+      "code-insee": "27677",
+      "distance": "13.5"
+    },
+    "documentUrls": [],
+    "status": "detail-consulte"
+  },
+  {
+    "sourceId": "ITINOR027V50IB5F",
+    "official": "https://www.normandie-tourisme.fr/itineraire/la-belle-au-bois-normand/",
+    "facts": {
+      "code-insee": "27075",
+      "distance": "7.3"
+    },
+    "documentUrls": [],
+    "status": "detail-consulte"
+  },
+  {
+    "sourceId": "ITINOR027V50IFPG",
+    "official": "https://www.normandie-tourisme.fr/itineraire/entre-france-et-normandie/",
+    "facts": {
+      "code-insee": "27679",
+      "distance": "18.5"
+    },
+    "documentUrls": [],
+    "status": "detail-consulte"
+  },
+  {
+    "sourceId": "ITINOR027V50IFS4",
+    "official": "https://www.normandie-tourisme.fr/itineraire/les-bois-francs/",
+    "facts": {
+      "code-insee": "27481",
+      "distance": "10.5"
+    },
+    "documentUrls": [],
+    "status": "detail-consulte"
+  },
+  {
+    "sourceId": "ITINOR027V50INC2",
+    "official": "https://www.normandie-tourisme.fr/itineraire/le-fourneau-de-conde/",
+    "facts": {
+      "code-insee": "27198",
+      "distance": "5.6"
+    },
+    "documentUrls": [],
+    "status": "detail-consulte"
+  },
+  {
+    "sourceId": "ITINOR027V50IXVR",
+    "official": "https://www.normandie-tourisme.fr/itineraire/le-massif-forestier/",
+    "facts": {
+      "code-insee": "27565",
+      "distance": "14"
+    },
+    "documentUrls": [],
+    "status": "detail-consulte"
+  },
+  {
+    "sourceId": "ITINOR027V50IXWG",
+    "official": "https://www.normandie-tourisme.fr/itineraire/chemin-des-moines/",
+    "facts": {
+      "code-insee": "27685",
+      "distance": "6.7"
+    },
+    "documentUrls": [],
+    "status": "detail-consulte"
+  },
+  {
+    "sourceId": "ITINOR027V50IXY5",
+    "official": "https://www.normandie-tourisme.fr/itineraire/au-fil-du-sommaire/",
+    "facts": {
+      "code-insee": "27508",
+      "distance": "10"
+    },
+    "documentUrls": [],
+    "status": "detail-consulte"
+  },
+  {
+    "sourceId": "ITINOR027V50NZNE",
+    "official": "https://www.normandie-tourisme.fr/itineraire/cinema-a-la-rencontre-de-madame-bovary/",
+    "facts": {
+      "code-insee": "27377"
+    },
+    "documentUrls": [],
+    "status": "detail-consulte"
+  },
+  {
+    "sourceId": "ITINOR076V51V94G",
+    "official": "https://www.normandie-tourisme.fr/itineraire/boucle-de-lagrion-de-mercure/",
+    "facts": {
+      "code-insee": "76101",
+      "distance": "7"
+    },
+    "documentUrls": [],
+    "status": "detail-consulte"
+  },
+  {
+    "sourceId": "ITINOR014V54RIVX",
+    "official": "https://www.normandie-tourisme.fr/itineraire/circuit-du-patrimoine-de-la-batterie-allemande-de-longues-sur-mer/",
+    "facts": {
+      "code-insee": "14377",
+      "distance": "1"
+    },
+    "documentUrls": [],
+    "status": "detail-consulte"
+  },
+  {
+    "sourceId": "ITINOR076V51YSAV",
+    "official": "https://www.normandie-tourisme.fr/itineraire/terre-du-sucre/",
+    "facts": {
+      "code-insee": "76272",
+      "distance": "11.2"
+    },
+    "documentUrls": [],
+    "status": "detail-consulte"
+  },
+  {
+    "sourceId": "ITINOR076V51YSCT",
+    "official": "https://www.normandie-tourisme.fr/itineraire/le-camp-de-cesar/",
+    "facts": {
+      "code-insee": "76618",
+      "distance": "6"
+    },
+    "documentUrls": [],
+    "status": "detail-consulte"
+  },
+  {
+    "sourceId": "ITINOR076V51YSE0",
+    "official": "https://www.normandie-tourisme.fr/itineraire/grand-bois/",
+    "facts": {
+      "code-insee": "76618",
+      "distance": "10.5"
+    },
+    "documentUrls": [],
+    "status": "detail-consulte"
+  },
+  {
+    "sourceId": "ITINOR076V51YSEH",
+    "official": "https://www.normandie-tourisme.fr/itineraire/les-demagnes/",
+    "facts": {
+      "code-insee": "76624",
+      "distance": "8.3"
+    },
+    "documentUrls": [],
+    "status": "detail-consulte"
+  },
+  {
+    "sourceId": "ITINOR076V51YSGK",
+    "official": "https://www.normandie-tourisme.fr/itineraire/pierre-auguste-renoir/",
+    "facts": {
+      "code-insee": "76618",
+      "distance": "9.3"
+    },
+    "documentUrls": [],
+    "status": "detail-consulte"
+  },
+  {
+    "sourceId": "ITINOR076V51YSHI",
+    "official": "https://www.normandie-tourisme.fr/itineraire/circuit-du-manoir-au-val/",
+    "facts": {
+      "code-insee": "76288",
+      "distance": "8.5"
+    },
+    "documentUrls": [],
+    "status": "detail-consulte"
+  },
+  {
+    "sourceId": "ITINOR076V51YSIS",
+    "official": "https://www.normandie-tourisme.fr/itineraire/circuit-du-tournant/",
+    "facts": {
+      "code-insee": "76618",
+      "distance": "4"
+    },
+    "documentUrls": [],
+    "status": "detail-consulte"
+  },
+  {
+    "sourceId": "ITINOR076V51YSJF",
+    "official": "https://www.normandie-tourisme.fr/itineraire/circuit-du-val-boucheron/",
+    "facts": {
+      "code-insee": "76220",
+      "distance": "4.5"
+    },
+    "documentUrls": [],
+    "status": "detail-consulte"
+  },
+  {
+    "sourceId": "ITINOR076V51YSJY",
+    "official": "https://www.normandie-tourisme.fr/itineraire/circuit-de-hocquelus/",
+    "facts": {
+      "code-insee": "76665",
+      "distance": "3"
+    },
+    "documentUrls": [],
+    "status": "detail-consulte"
+  },
+  {
+    "sourceId": "ITINOR076FS0007O",
+    "official": "https://www.normandie-tourisme.fr/itineraire/la-chevrette/",
+    "facts": {
+      "code-insee": "76276",
+      "distance": "8"
+    },
+    "documentUrls": [],
+    "status": "detail-consulte"
+  },
+  {
+    "sourceId": "ITINOR076V51B9XG",
+    "official": "https://www.normandie-tourisme.fr/itineraire/la-mare-au-thym/",
+    "facts": {
+      "code-insee": "76730",
+      "distance": "3.2"
+    },
+    "documentUrls": [],
+    "status": "detail-consulte"
+  },
+  {
+    "sourceId": "ITINOR076V51YUVL",
+    "official": "https://www.normandie-tourisme.fr/itineraire/entre-caux-et-bray/",
+    "facts": {
+      "code-insee": "76204",
+      "distance": "15"
+    },
+    "documentUrls": [],
+    "status": "detail-consulte"
+  },
+  {
+    "sourceId": "ITINOR076V51YVY6",
+    "official": "https://www.normandie-tourisme.fr/itineraire/edruchon/",
+    "facts": {
+      "code-insee": "76739",
+      "distance": "11.6"
+    },
+    "documentUrls": [],
+    "status": "detail-consulte"
+  },
+  {
+    "sourceId": "ITINOR076V51YVY7",
+    "official": "https://www.normandie-tourisme.fr/itineraire/le-bois-des-puits/",
+    "facts": {
+      "code-insee": "76199",
+      "distance": "13.7"
+    },
+    "documentUrls": [],
+    "status": "detail-consulte"
+  },
+  {
+    "sourceId": "ITINOR076V51YVZX",
+    "official": "https://www.normandie-tourisme.fr/itineraire/la-chouette/",
+    "facts": {
+      "code-insee": "76344",
+      "distance": "11.2"
+    },
+    "documentUrls": [],
+    "status": "detail-consulte"
+  },
+  {
+    "sourceId": "ITINOR076V51YW0H",
+    "official": "https://www.normandie-tourisme.fr/itineraire/le-marquet/",
+    "facts": {
+      "code-insee": "76612",
+      "distance": "14.2"
+    },
+    "documentUrls": [],
+    "status": "detail-consulte"
+  },
+  {
+    "sourceId": "ITINOR076V51YXAQ",
+    "official": "https://www.normandie-tourisme.fr/itineraire/la-chevrette-2/",
+    "facts": {
+      "code-insee": "76276",
+      "distance": "7.8"
+    },
+    "documentUrls": [],
+    "status": "detail-consulte"
+  },
+  {
+    "sourceId": "ITINOR076V51ZYJQ",
+    "official": "https://www.normandie-tourisme.fr/itineraire/circuit-cote-de-la-vierge-test/",
+    "facts": {
+      "code-insee": "76259"
+    },
+    "documentUrls": [],
+    "status": "detail-consulte"
+  },
+  {
+    "sourceId": "ITINOR014FS000O5",
+    "official": "https://www.normandie-tourisme.fr/itineraire/sentier-dinterpretation-du-parc-les-marais-de-lelle/",
+    "facts": {
+      "code-insee": "14342",
+      "distance": "3"
+    },
+    "documentUrls": [],
+    "status": "detail-consulte"
+  },
+  {
+    "sourceId": "ITINOR076V520LPG",
+    "official": "https://www.normandie-tourisme.fr/itineraire/circuit-du-camp-cesar/",
+    "facts": {
+      "code-insee": "76618",
+      "distance": "6"
+    },
+    "documentUrls": [],
+    "status": "detail-consulte"
+  },
+  {
+    "sourceId": "ITINOR076V520LR7",
+    "official": "https://www.normandie-tourisme.fr/itineraire/circuit-pierre-auguste-renoir/",
+    "facts": {
+      "code-insee": "76618",
+      "distance": "9.5"
+    },
+    "documentUrls": [],
+    "status": "detail-consulte"
+  },
+  {
+    "sourceId": "ITINOR076V520LSZ",
+    "official": "https://www.normandie-tourisme.fr/itineraire/circuit-du-grand-bois/",
+    "facts": {
+      "code-insee": "76618",
+      "distance": "10"
+    },
+    "documentUrls": [],
+    "status": "detail-consulte"
+  },
+  {
+    "sourceId": "ITINOR014V55V1PI",
+    "official": "https://www.normandie-tourisme.fr/itineraire/le-coeur-actif-de-la-vallee-de-la-laize/",
+    "facts": {
+      "code-insee": "14100",
+      "distance": "4"
+    },
+    "documentUrls": [],
+    "status": "detail-consulte"
+  },
+  {
+    "sourceId": "ITINOR014V55V1U1",
+    "official": "https://www.normandie-tourisme.fr/itineraire/boulon-au-moyen-age/",
+    "facts": {
+      "code-insee": "14090",
+      "distance": "6.7"
+    },
+    "documentUrls": [],
+    "status": "detail-consulte"
+  },
+  {
+    "sourceId": "ITINOR014V55VCZ3",
+    "official": "https://www.normandie-tourisme.fr/itineraire/a-la-decouverte-de-la-vallee-des-vaux/",
+    "facts": {
+      "code-insee": "14689",
+      "distance": "6"
+    },
+    "documentUrls": [],
+    "status": "detail-consulte"
+  },
+  {
+    "sourceId": "ITINOR014V55VDH1",
+    "official": "https://www.normandie-tourisme.fr/itineraire/clecy-autrefois/",
+    "facts": {
+      "code-insee": "14162",
+      "distance": "3.5"
+    },
+    "documentUrls": [],
+    "status": "detail-consulte"
+  },
+  {
+    "sourceId": "ITINOR014V55VDMW",
+    "official": "https://www.normandie-tourisme.fr/itineraire/clecy-et-sa-nature/",
+    "facts": {
+      "code-insee": "14162",
+      "distance": "3"
+    },
+    "documentUrls": [],
+    "status": "detail-consulte"
+  },
+  {
+    "sourceId": "ITINOR014V55VDZR",
+    "official": "https://www.normandie-tourisme.fr/itineraire/clecy-et-son-histoire/",
+    "facts": {
+      "code-insee": "14162",
+      "distance": "4.5"
+    },
+    "documentUrls": [],
+    "status": "detail-consulte"
+  },
+  {
+    "sourceId": "ITINOR014V55VE17",
+    "official": "https://www.normandie-tourisme.fr/itineraire/clecy-et-les-peintres/",
+    "facts": {
+      "code-insee": "14162",
+      "distance": "4.5"
+    },
+    "documentUrls": [],
+    "status": "detail-consulte"
+  },
+  {
+    "sourceId": "ITINOR014V55VECE",
+    "official": "https://www.normandie-tourisme.fr/itineraire/moulins-et-tanneries-de-la-laize/",
+    "facts": {
+      "code-insee": "14290",
+      "distance": "6.5"
+    },
+    "documentUrls": [],
+    "status": "detail-consulte"
+  },
+  {
+    "sourceId": "ITINOR014V5671X3",
+    "official": "https://www.normandie-tourisme.fr/itineraire/sentier-des-voiles-de-la-liberte/",
+    "facts": {
+      "code-insee": "27064",
+      "distance": "12",
+      "document": [
+        {
+          "nom": "Berville sur mer - Les Voiles de la Liberté",
+          "url": "https://cdt61.media.tourinsoft.eu/upload/Berville-sur-mer---Les-Voiles-de-la-Liberte-3.pdf",
+          "copyright": "CCPHB",
+          "legende": ""
+        },
+        {
+          "nom": "01 - Les Voiles de la Liberté - UK",
+          "url": "https://cdt61.media.tourinsoft.eu/upload/01---Les-Voiles-de-la-Liberte---UK-3.pdf",
+          "copyright": "CCPHB",
+          "legende": ""
+        }
+      ]
+    },
+    "documentUrls": [
+      "https://cdt61.media.tourinsoft.eu/upload/01---Les-Voiles-de-la-Liberte---UK-3.pdf",
+      "https://cdt61.media.tourinsoft.eu/upload/Berville-sur-mer---Les-Voiles-de-la-Liberte-3.pdf"
+    ],
+    "status": "detail-consulte"
+  },
+  {
+    "sourceId": "ITINOR014V569IR5",
+    "official": "https://www.normandie-tourisme.fr/itineraire/sur-les-rives-de-la-mue-2/",
+    "facts": {
+      "code-insee": "14739",
+      "distance": "13.5"
+    },
+    "documentUrls": [],
+    "status": "detail-consulte"
+  },
+  {
+    "sourceId": "ITINOR027V506ORE",
+    "official": "https://www.normandie-tourisme.fr/itineraire/circuit-du-bois-de-saint-michel/",
+    "facts": {
+      "code-insee": "27229",
+      "distance": "10.3"
+    },
+    "documentUrls": [],
+    "status": "detail-consulte"
+  },
+  {
+    "sourceId": "ITINOR027V506ORP",
+    "official": "https://www.normandie-tourisme.fr/itineraire/la-vallee-bance/",
+    "facts": {
+      "code-insee": "27358",
+      "distance": "12.5"
+    },
+    "documentUrls": [],
+    "status": "detail-consulte"
+  },
+  {
+    "sourceId": "ITINOR076V525LTC",
+    "official": "https://www.normandie-tourisme.fr/itineraire/plateau-de-caux-et-vallees/",
+    "facts": {
+      "code-insee": "76057",
+      "distance": "26"
+    },
+    "documentUrls": [],
+    "status": "detail-consulte"
+  },
+  {
+    "sourceId": "ITINOR027V50Q1JA",
+    "official": "https://www.normandie-tourisme.fr/itineraire/la-cote-aux-oiseaux/",
+    "facts": {
+      "code-insee": "27249",
+      "distance": "9.9"
+    },
+    "documentUrls": [],
+    "status": "detail-consulte"
+  }
+]

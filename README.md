@@ -1,6 +1,8 @@
 # Mon carnet rando - Pierre
 
-Application personnelle de randonnée, autonome et compatible GitHub Pages. 48 circuits couvrent les cinq départements normands : 28 cartes viennent du fichier fourni **Plan Balisage GTM.PDF**, document de travail de la FFRandonnée Manche du 10 février 2022, complétés par 20 circuits et GPX officiels consultés le 15 octobre 2026.
+Application personnelle de randonnée, autonome et compatible GitHub Pages. Le catalogue est désormais construit à partir de 985 références pédestres officielles recensées le 16 octobre 2026. Son état exact est visible dans « Couverture par département » et dans `assets/catalogue.json`. Les références sans GPX, les incohérences de distance et les doublons restent identifiés. La couverture exhaustive de toute la Normandie n’est pas établie.
+
+Les 48 circuits précédents sont conservés : 28 cartes viennent du fichier fourni **Plan Balisage GTM.PDF**, document de travail de la FFRandonnée Manche du 10 février 2022, complétés par 20 circuits et GPX officiels consultés le 15 octobre 2026.
 
 ## Ce qui fonctionne
 
@@ -8,8 +10,8 @@ Application personnelle de randonnée, autonome et compatible GitHub Pages. 48 c
 - Recherche par nom, commune, département et numéro, sans tenir compte des accents.
 - Filtres jusqu’à 6 km, plus de 6 à 10 km, plus de 10 km ; plusieurs tris.
 - Favoris et repérage des circuits déjà parcourus.
-- Fiches et cartes agrandissables ; les 20 nouveaux circuits ont une vraie carte IGN avec leur tracé, visible dès la liste et téléchargeable hors ligne. Une carte Leaflet avec fond OpenStreetMap en ligne permet aussi d’explorer les alentours.
-- D+ et D− appariés et profils altimétriques pour 31 circuits, avec source et estimation indiquées ; 17 circuits restent explicitement non renseignés. Durée et niveau visibles sur les cartes lorsque fournis par les organismes.
+- Fiches et cartes agrandissables ; les circuits supplémentaires ont une vraie carte IGN avec leur tracé, visible dès la liste et téléchargeable hors ligne. Une carte Leaflet avec fond OpenStreetMap en ligne permet aussi d’explorer les alentours.
+- D+ et D− appariés et profils altimétriques pour les circuits dont le relief est calculable, avec source et estimation indiquées ; les données absentes restent explicitement non renseignées. Durée et niveau visibles sur les cartes lorsque fournis par les organismes.
 - Accès direct à Google Maps depuis chaque carte et chaque fiche : itinéraire en voiture vers le départ décrit, ou simple recherche de la commune si le départ est ambigu. Liens vers les PDF officiels et téléchargement GPX.
 - Tri du moins au plus de montée (ou l’inverse), avec les dénivelés inconnus toujours à la fin.
 - Recherche du lieu de départ dans Google Maps, sauf départs ambigus.
@@ -45,9 +47,12 @@ Exporter régulièrement les données depuis Mon carnet. Une suppression des don
 
 ## Vérifier et développer
 
-Node 22 ou plus récent, sans installation de dépendances :
+Node 22 ou plus récent, après construction du catalogue (Python 3.12 et Pillow 12.3.0) :
 
 ```bash
+python -m pip install Pillow==12.3.0
+python scripts/build-catalogue.py
+python -m unittest discover -s tests -p '*_test.py'
 npm test
 npm run check
 ```
@@ -56,13 +61,13 @@ Pour un développement local classique, servir le dossier avec un serveur HTTP l
 
 ## Sources et limites des cartes
 
-Voir [SOURCES.md](SOURCES.md). Les 28 cartes GTM sont des images non géoréférencées, dont les tracés n’ont pas été redessinés. Les 20 nouveaux parcours emploient les coordonnées des GPX officiels, superposées sans simplification au fond Plan IGN en EPSG:3857. Leurs cartes WebP et miniatures sont intégrées au dépôt ; les GeoJSON servent aussi à la carte interactive. Le fond Plan IGN est diffusé sous Licence Ouverte 2.0, avec attribution et date visibles sur chaque image. Les emprises, URL WMS et empreintes de contrôle sont documentées dans assets/maps/*-ign.json. Les PDF externes ne sont pas réhébergés. Les zones blanches sous les cartes ont été retirées ; la carte, sa légende, les logos et les mentions d’origine sont conservés. Cette adaptation personnelle ne prétend à aucune affiliation avec les organismes figurant sur les cartes.
+Voir [SOURCES.md](SOURCES.md). Les 28 cartes GTM sont des images non géoréférencées, dont les tracés n’ont pas été redessinés. Les parcours supplémentaires emploient les coordonnées des GPX officiels, superposées sans simplification au fond Plan IGN en EPSG:3857. Leurs cartes WebP et miniatures sont intégrées au site publié ; les cartes du grand catalogue sont reconstruites au déploiement depuis les instantanés de traces du dépôt ; les GeoJSON servent aussi à la carte interactive. Le fond Plan IGN est diffusé sous Licence Ouverte 2.0, avec attribution et date visibles sur chaque image. Les emprises, URL WMS et empreintes de contrôle sont documentées dans assets/maps/*-ign.json. Les PDF externes ne sont pas réhébergés. Les zones blanches sous les cartes ont été retirées ; la carte, sa légende, les logos et les mentions d’origine sont conservés. Cette adaptation personnelle ne prétend à aucune affiliation avec les organismes figurant sur les cartes.
 
 L’application ne donne pas un statut actuel d’ouverture des chemins. Les distances d’origine proviennent du document de 2022, à l’exception de la précision expliquée pour le circuit 27. Les nouvelles distances proviennent des fiches officielles citées dans SOURCES.md. Aucun dénivelé ou niveau de difficulté n’est inventé.
 
 ## Vérification de cette livraison
 
-Les tests automatisés couvrent les filtres, les limites de distance, les données invalides, l’import avec conservation des sorties, les statistiques, le chronomètre et le service worker dans un sous-dossier GitHub Pages. Les contrôles de fichiers vérifient les 48 paires d’images et 20 traces GPX / GeoJSON, les chemins relatifs, les identifiants HTML et le manifeste.
+Les tests automatisés couvrent les filtres, les limites de distance, les données invalides, l’import avec conservation des sorties, les statistiques, le chronomètre et le service worker dans un sous-dossier GitHub Pages. Les contrôles de fichiers vérifient toutes les paires d’images, les traces GPX / GeoJSON et la provenance des profils, les chemins relatifs, les identifiants HTML et le manifeste.
 
 Les tests du service worker utilisent une simulation Node ; ils ne remplacent pas un test de navigateur. L’installation sur un téléphone Android réel et la disponibilité après arrêt complet de son navigateur restent à exécuter sur la version publiée.
 
@@ -78,10 +83,24 @@ La clé de stockage et les identifiants des 28 anciens circuits sont conservés.
 
 ## Dénivelés et profils
 
-31 circuits ont une paire D+/D− et un profil. Pour 30 circuits, `python scripts/build-elevations.py` interroge le service public IGN `elevationLine.json` et la ressource `ign_rge_alti_wld` : échantillonnage visé tous les 25 mètres, mode simple. Les montées et descentes sont cumulées séparément, sans relier les segments disjoints, puis arrondies au multiple de 5 m le plus proche. Les courbes conservent les altitudes retournées et les distances calculées sur le GPX.
+La version antérieure comptait 31 circuits avec une paire D+/D− et un profil. Les compteurs actuels figurent dans le rapport de couverture. Pour 30 circuits, `python scripts/build-elevations.py` interroge le service public IGN `elevationLine.json` et la ressource `ign_rge_alti_wld` : échantillonnage visé tous les 25 mètres, mode simple. Les montées et descentes sont cumulées séparément, sans relier les segments disjoints, puis arrondies au multiple de 5 m le plus proche. Les courbes conservent les altitudes retournées et les distances calculées sur le GPX.
 
 Pour le circuit 41 (Goury), le relief IGN est incomplet sur la trace littorale : les altitudes complètes du GPX officiel sont utilisées et identifiées comme telles. La paire D+/D− vient entièrement de cette même source. Les anciens chiffres annoncés par les organismes restent stockés et visibles dans les fiches ; ils ne sont pas mélangés aux D+/D− estimés.
 
 11 GPX GTM actuels ont été rattachés aux circuits anciens après vérification du nom, de la commune, de la distance de la fiche et de la longueur du GPX. Les autres circuits anciens restent sans profil, notamment lorsque la fiche actuelle annonce une autre distance. Les 28 cartes de 2022 restent les mêmes.
 
 Les JSON `assets/profiles/{id}.json` conservent la provenance, l’empreinte SHA-256 de la géométrie, la méthode, l’échantillonnage, les cumuls bruts, la courbe et son résumé. Les données sont embarquées et ne demandent aucun appel IGN pendant l’utilisation du carnet. Le bouton hors ligne inclut désormais ces profils. Les favoris, sauvegardes, sorties et chronomètres gardent leur format précédent.
+
+## Inventaire régional et reprise de l’enrichissement
+
+`catalogue/inventaire-regional.json` contient les 985 fiches réelles des dix lots du catalogue pédestre public de Normandie Tourisme. Le total de 986 emplacements inclut une bannière promotionnelle. Répartition : Calvados 265, Eure 107, Manche 168, Orne 118, Seine-Maritime 325 et deux itinéraires interdépartementaux. 810 fiches publient un GPX dans la liste ; les 175 autres fiches ont aussi été consultées individuellement sans trouver de GPX. Les 43 distances non renseignées restent absentes dans l’inventaire ; une distance calculée sur une trace validée est explicitement présentée comme telle dans le carnet.
+
+Les instantanés `catalogue/snapshots/*.json.gz` conservent les coordonnées, altitudes réellement présentes, liens, empreintes des GPX et résultats des contrôles. Ils évitent de dépendre de centaines de téléchargements à chaque publication. `scripts/build-catalogue.py` construit les circuits supplémentaires, leurs cartes IGN, miniatures, GeoJSON, GPX et profils. Le GPX du carnet est une résérialisation des segments officiels, avec coordonnées à sept décimales et sans liaison fictive entre segments ; le GPX original reste lié séparément. Le point de départ de ces circuits est le premier point du GPX, pas un parking vérifié. Maps utilise ses coordonnées exactes.
+
+Les cartes et profils construits sont mis en cache dans `.generated-catalogue` et dans GitHub Actions. Ils sont publiés avec le site sans alourdir l’historique Git par des centaines d’images. Les données personnelles restent locales et les identifiants des anciens circuits ne changent pas. Les nouveaux identifiants sont réservés dans `catalogue/route-ids.json`. La construction suspend la publication si plus de 5 % des fonds de carte échouent.
+
+Le relief IGN est préféré pour les nouvelles importations. Si ce modèle n’est pas exploitable mais que le GPX contient toutes ses altitudes, un profil entièrement issu du GPX est utilisé avec sa source indiquée. Si aucune de ces sources n’est exploitable, le relief reste inconnu. Aucune descente n’est déduite automatiquement de la montée.
+
+La liste affiche 24 cartes à la fois ; recherche, filtres et tris portent toujours sur tous les circuits. Le hors-ligne peut être téléchargé par département et interrompu après la carte en cours. Les références encore incomplètes restent consultables dans le suivi, sans recevoir une fausse carte.
+
+`catalogue/comparaison-seine-maritime.json` amorce le rapprochement avec les 291 itinéraires pédestres du PDESI de janvier 2025. Les autres catalogues départementaux, les offices locaux, les GR et variantes restent à croiser ; ce chantier n’est pas annoncé comme exhaustif. Le briefing de reprise de 300 mots est conservé dans `BRIEFING.md`.

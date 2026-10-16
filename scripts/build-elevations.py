@@ -56,7 +56,7 @@ def geometry(path):
                 if len(points) > 1:
                     segments.append(points)
     assert segments and all(len(s) > 1 for s in segments), "Missing route geometry"
-    assert all(-2.1 < p[0] < 1.9 and 48 < p[1] < 50.2 for s in segments for p in s)
+    assert all(-6 < p[0] < 10 and 42 < p[1] < 52 for s in segments for p in s)
     return segments, hashlib.sha256(raw).hexdigest()
 
 

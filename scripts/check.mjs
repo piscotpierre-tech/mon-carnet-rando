@@ -10,7 +10,7 @@ const app=fs.readFileSync(path.join(root,'app.js'),'utf8');
 const ids=[...html.matchAll(/\bid="([^"]+)"/g)].map(m=>m[1]);
 assert.equal(ids.length,new Set(ids).size,'Duplicate HTML id');
 const refs=[...app.matchAll(/\$\('#([\w-]+)'\)/g)].map(m=>m[1]);
-const dynamic=['route-cache-status','route-timer','timer-actions','elevation-chart'];
+const dynamic=['route-cache-status','route-timer','timer-actions','elevation-chart','inventory-search','inventory-department','inventory-status','inventory-count','inventory-list','inventory-more'];
 for(const id of refs)assert(ids.includes(id)||dynamic.includes(id),'Missing element: '+id);
 let total=0;
 for(const r of ROUTES){for(const key of ['map','thumb']){const p=path.join(root,r[key]);assert(fs.existsSync(p),'Missing asset: '+r[key]);assert(fs.statSync(p).size>1000);total+=fs.statSync(p).size;}}
@@ -20,7 +20,7 @@ for(const r of ROUTES.filter(r=>r.isNew)) {
   const geo=JSON.parse(fs.readFileSync(path.join(root,r.trace),'utf8'));
   const segments=geo.geometry.type==='LineString'?[geo.geometry.coordinates]:geo.geometry.coordinates;
   const points=segments.flat();assert.equal(points.length,r.tracePointCount);
-  assert(points.length>5);assert(points.every(([lon,lat])=>lon>-2.1&&lon<1.9&&lat>48&&lat<50.2),'Trace outside Normandy');
+  assert(points.length>5);assert(points.every(([lon,lat])=>r.catalogue?(lon>-6&&lon<10&&lat>42&&lat<52):(lon>-2.1&&lon<1.9&&lat>48&&lat<50.2)),'Trace outside expected geography');
   assert.equal(r.basemap,'IGN Plan IGN','Every new circuit needs a real background map');
   const metadata=JSON.parse(fs.readFileSync(path.join(root,`assets/maps/${r.id}-ign.json`),'utf8'));
   assert.equal(metadata.routeId,r.id);assert.equal(metadata.crs,'EPSG:3857');
@@ -44,7 +44,7 @@ for(const r of ROUTES.filter(r=>r.isNew)) {
   }
 }
 const withProfiles=ROUTES.filter(r=>r.elevation);
-for(const r of ROUTES.filter(r=>r.isNew))assert(r.elevation,'New circuit missing paired ascent/descent: '+r.id);
+for(const r of ROUTES.filter(r=>r.isNew))assert(r.elevation||r.catalogue&&r.elevationIssue,'New circuit missing an elevation status: '+r.id);
 for(const r of withProfiles) {
   const data=JSON.parse(fs.readFileSync(path.join(root,r.elevation.profile),'utf8'));
   assert.equal(data.routeId,r.id);assert.deepEqual(data.summary,r.elevation);

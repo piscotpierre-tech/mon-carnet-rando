@@ -23,14 +23,28 @@ jobs:
         uses: actions/setup-node@v4
         with:
           node-version: '22'
+      - name: Installer Python pour les cartes
+        uses: actions/setup-python@v5
+        with:
+          python-version: '3.12'
+      - name: Installer le moteur d’images
+        run: python -m pip install Pillow==12.3.0
+      - name: Retrouver les cartes déjà construites
+        uses: actions/cache@v4
+        with:
+          path: .generated-catalogue
+          key: cartes-normandie-${{ hashFiles('catalogue/inventaire-regional.json', 'catalogue/route-ids.json', 'catalogue/snapshots/**', 'scripts/*catalogue.py', 'scripts/build-maps.py', 'scripts/build-elevations.py') }}
+      - name: Construire le catalogue, ses cartes IGN et ses profils
+        run: python -u scripts/build-catalogue.py
       - name: Vérifier les fonctions et les fichiers
         run: |
+          python -m unittest discover -s tests -p '*_test.py'
           npm test
           npm run check
       - name: Préparer les seuls fichiers publics
         run: |
           mkdir _site
-          cp index.html app.js core.js data.js styles.css sw.js manifest.webmanifest .nojekyll _site/
+          cp index.html app.js core.js data.js catalogue-routes.js styles.css sw.js manifest.webmanifest .nojekyll _site/
           cp -R assets _site/
       - name: Configurer Pages
         uses: actions/configure-pages@v5

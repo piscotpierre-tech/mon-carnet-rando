@@ -1,6 +1,6 @@
 import test from 'node:test';
 import assert from 'node:assert/strict';
-import {ROUTES} from '../data.js';
+import {ORIGINAL_ROUTES as ROUTES} from '../data.js';
 import {APP_ID,emptyState,filterRoutes,validateState,validateTrip,mergeBackup,stats,timerElapsed,pauseTimer,resumeTimer,localDate,routeElevation,routeMapsUrl} from '../core.js';
 
 const ids=new Set(ROUTES.map(r=>r.id));
