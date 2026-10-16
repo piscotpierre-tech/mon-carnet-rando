@@ -1,4 +1,4 @@
-import {ROUTES,SOURCE_DATE} from './data.js';
+import {ROUTES,SOURCE_DATE} from './data.js?v=ign-20261016';
 import {APP_ID,STORAGE_KEY,CACHE_NAME,emptyState,filterRoutes,validateState,validateTrip,mergeBackup,stats,timerElapsed,pauseTimer,resumeTimer,localDate} from './core.js';
 
 const $=s=>document.querySelector(s);
@@ -318,7 +318,7 @@ window.addEventListener('beforeinstallprompt',e=>{e.preventDefault();installProm
 window.addEventListener('appinstalled',()=>{$('#install-button').hidden=true;installPrompt=null;});
 window.addEventListener('storage',e=>{if(e.key!==STORAGE_KEY)return;try{state=e.newValue?validateState(JSON.parse(e.newValue),ROUTES):emptyState();renderCards();renderJournal();updateTimerUI();}catch{warning('Une autre fenêtre a enregistré des données illisibles. Ferme-la puis recharge le carnet.');}});
 for(const dialog of document.querySelectorAll('dialog'))dialog.addEventListener('click',e=>{if(e.target!==dialog)return;const r=dialog.getBoundingClientRect();if(e.clientX<r.left||e.clientX>r.right||e.clientY<r.top||e.clientY>r.bottom)dialog.close();});
-if('serviceWorker' in navigator && isSecureContext){navigator.serviceWorker.register('./sw.js').catch(()=>toast('Le mode hors ligne n’a pas pu être activé. Le carnet reste utilisable en ligne.'));}
+if('serviceWorker' in navigator && isSecureContext){navigator.serviceWorker.register('./sw.js?v=ign-20261016',{updateViaCache:'none'}).catch(()=>toast('Le mode hors ligne n’a pas pu être activé. Le carnet reste utilisable en ligne.'));}
 setInterval(updateTimerUI,1000);
 $('#total-routes').textContent=ROUTES.length;
 $('#distance-range').textContent=`${fmt(Math.min(...ROUTES.map(r=>r.km)))} à ${fmt(Math.max(...ROUTES.map(r=>r.km)))}`;

@@ -43,7 +43,7 @@ for(const r of ROUTES.filter(r=>r.isNew)) {
     assert.deepEqual(request.searchParams.get('BBOX').split(',').map(Number),metadata.bbox.map(v=>Number(v.toFixed(6))));
   }
 }
-for(const match of html.matchAll(/(?:src|href)="\.\/([^"#]+)"/g))assert(fs.existsSync(path.join(root,match[1])),'Missing HTML asset: '+match[1]);
+for(const match of html.matchAll(/(?:src|href)="\.\/([^"#]+)"/g))assert(fs.existsSync(path.join(root,match[1].split('?')[0])),'Missing HTML asset: '+match[1]);
 const manifest=JSON.parse(fs.readFileSync(path.join(root,'manifest.webmanifest'),'utf8'));
 assert.equal(manifest.scope,'./');assert.equal(manifest.start_url,'./#explorer');
 for(const icon of manifest.icons)assert(fs.existsSync(path.join(root,icon.src)));
